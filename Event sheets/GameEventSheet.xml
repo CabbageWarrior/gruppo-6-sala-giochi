@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEventSheet</name>
+    <events>
+        <include>_GlobalEventSheet</include>
+        <event-block sid="369790109725974">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="844644896238427" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="608524617889919" type="Player">
+                    <param id="0" name="Pin to">Player_Shadow</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
