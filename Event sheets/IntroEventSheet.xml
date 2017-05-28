@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IntroEventSheet</name>
+    <events>
+        <include>_GlobalEventSheet</include>
+        <event-block sid="657418671201653">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="221812450395585" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="861390482296353" type="System">
+                    <param id="0" name="Variable">CommandType</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="0" name="Call function" sid="533658169689038" type="Function">
+                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                    <param id="1" name="Parameter {n}">1</param>
+                </action>
+                <action id="0" name="Set text" sid="154813223311736" type="GameTutorialText">
+                    <param id="0" name="Text">replace(Self.Text, &quot;\n&quot;, newline)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="682236613464429">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="500070136741563" type="System">
+                            <param id="0" name="Variable">IsIntroViewed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="508898856286249" type="Audio">
+                            <param id="0" name="Audio file">INTRODUZIONE</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="772414799817402" type="GameStory" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="405742423705566" type="GameTitle" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="439548708931199" type="IntroTitleBackground" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="865130268920300" type="IntroTitleOverlay" />
+                        <action id="-9" name="Set value" sid="146783973801454" type="System">
+                            <param id="0" name="Variable">IsIntroViewed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="330265886093195">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="497583909503341" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="792238979802236" type="GameStory" />
+                        <action id="-9" name="Destroy" sid="524867529852889" type="GameTitle" />
+                        <action id="-9" name="Destroy" sid="241673124654784" type="IntroTitleBackground" />
+                        <action id="-9" name="Destroy" sid="963603637065066" type="IntroTitleOverlay" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="709471770698040">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="457122164337744" type="GameTitle" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="779613960096898" type="System">
+                    <param id="0" name="Variable">CommandType</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="398886465987152">
+                    <conditions>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="936820908305090" type="Audio">
+                            <param id="0" name="Tag">&quot;MenuBackgroundMusic&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="838881777404047" type="Audio">
+                            <param id="0" name="Audio file">intense suspense</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;MenuBackgroundMusic&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="861469533332530" title="Menu Intro">
+            <sub-events>
+                <event-group description="" sid="358765031454834" title="Menu Intro Controls">
+                    <sub-events>
+                        <event-block sid="978917615867204">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="238078487002583" type="System">
+                                    <param id="0" name="Variable">CommandType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Left</comment>
+                                <event-block sid="999760984154284">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="227333203366324" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">12</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="484505983647570" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="349612743596915">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="513711021203017" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">12</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="483191107825989" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="243559653017054">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="248990574478710" type="Gamepad">
+                                            <param id="0" name="Gamepad">2</param>
+                                            <param id="1" name="Button">12</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="606454434314711" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="199775182211626">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="850146458622621" type="Gamepad">
+                                            <param id="0" name="Gamepad">3</param>
+                                            <param id="1" name="Button">12</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="298459124355533" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="733074329118109">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="730646311160492" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="521045126287421" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Right</comment>
+                                <event-block sid="470559654534350">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="489634741914242" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="418933879329279" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="967516461193823">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="273357457833088" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="750622665184233" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="852197045346222">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="541901293378350" type="Gamepad">
+                                            <param id="0" name="Gamepad">2</param>
+                                            <param id="1" name="Button">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="417158113050953" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="468166197117855">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="604619587526223" type="Gamepad">
+                                            <param id="0" name="Gamepad">3</param>
+                                            <param id="1" name="Button">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="959178977451741" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="783253902937678">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="736454472200499" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="916088861045072" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Selection</comment>
+                                <event-block sid="377657918267183">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="982213893427853" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="892335692349669" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="221819489075020">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="112779430583330" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="336540050353142" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="712082674138010">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="639107549635512" type="Gamepad">
+                                            <param id="0" name="Gamepad">2</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="542975675296279" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="956164854511289">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="627067060403849" type="Gamepad">
+                                            <param id="0" name="Gamepad">3</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="637734892216578" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="729730514520994">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="341650795777477" type="Keyboard">
+                                            <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="712407819129239" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="512015251769254">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="235795884906600" type="System" />
+                                <condition id="-14" name="Compare variable" sid="419860358981682" type="System">
+                                    <param id="0" name="Variable">CommandType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="343685186428532">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="492919627426014" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="461633895990129" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="247813306219246">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="497902459608496" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="922429456096657" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="463147300743994">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="264116478168101" type="Gamepad">
+                                            <param id="0" name="Gamepad">2</param>
+                                            <param id="1" name="Button">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="187999428504599" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="586108640336579">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="145495666140626" type="Gamepad">
+                                            <param id="0" name="Gamepad">3</param>
+                                            <param id="1" name="Button">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="345776004490992" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="946111005699737">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="773012443855160" type="Keyboard">
+                                            <param id="0" name="Key">27 (Esc)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="387232208928466" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="606593292299567" title="Menu Intro Functions">
+                    <sub-events>
+                        <comment>Parametri: nessuno.</comment>
+                        <comment>Parametri: 0: Voce di menu da selezionare.</comment>
+                        <event-block sid="403246203010712">
+                            <conditions>
+                                <condition id="0" name="On function" sid="621670478666804" type="Function">
+                                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="840236416648992" type="IntroMenuSelected">
+                                    <param id="0" name="Instance variable">SelectedOrder</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="988187574061149" type="IntroMenuButton">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="307380662981539" type="IntroMenuSelected">
+                                    <param id="0" name="Instance variable">SelectedOrder</param>
+                                    <param id="1" name="Value">IntroMenuButton.Order</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="422953421118777" type="IntroMenuSelected">
+                                    <param id="0" name="Instance variable">SelectedValue</param>
+                                    <param id="1" name="Value">IntroMenuButton.Value</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="249111964230161" type="IntroMenuSelected">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">IntroMenuButton</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="980514044771882" type="IntroMenuSelected">
+                                    <param id="0" name="X">IntroMenuButton.X</param>
+                                    <param id="1" name="Y">IntroMenuButton.Y</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="504256528262483">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="324080084716709" type="System">
+                                            <param id="0" name="Object">IntroMenuText</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="497067308458907" type="IntroMenuText">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="443383971151564">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="215660450947618" type="IntroMenuText">
+                                            <param id="0" name="Instance variable">Order</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Function.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="555791155530430" type="IntroMenuText">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Parametri: 0: Comando da eseguire.</comment>
+                        <event-block sid="747769264907643">
+                            <conditions>
+                                <condition id="0" name="On function" sid="245812658386070" type="Function">
+                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="344807161522405">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="636195754258786" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;PlayBestOf5&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="802543734639828" type="System">
+                                            <param id="0" name="Variable">GameTypeBetterOfX</param>
+                                            <param id="1" name="Value">5</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="466207676441673" type="System">
+                                            <param id="0" name="Layout">CharacterSelection</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="429304518123222">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="815826920122953" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="306754979804293" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;PlayInfinite&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="570338100463769" type="System">
+                                            <param id="0" name="Variable">GameTypeBetterOfX</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="238161407291959" type="System">
+                                            <param id="0" name="Layout">CharacterSelection</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="916244507490543">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="952990754521097" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="758634282681168" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Tutorial&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="974952573517752" type="System">
+                                            <param id="0" name="Variable">CommandType</param>
+                                            <param id="1" name="Value">4</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="134370181069075" type="GameTutorialText">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="454132236641080" type="GameTutorialBackground">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="131071872698179">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="783119062688250" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="770145959473510" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TutorialClose&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="898356640437972" type="System">
+                                            <param id="0" name="Variable">CommandType</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="865699262755965" type="GameTutorialText">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="129120340979748" type="GameTutorialBackground">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="825494840160743">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="545190001780938" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="828926657843882" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Quit&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="583030469920423" type="Audio">
+                                            <param id="0" name="Tag">&quot;MenuBackgroundMusic&quot;</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="827168319928839" type="System">
+                                            <param id="0" name="Layout">Quit</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

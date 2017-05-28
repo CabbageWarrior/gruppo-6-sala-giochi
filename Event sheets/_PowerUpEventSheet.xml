@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_PowerUpEventSheet</name>
+    <events>
+        <include>_GlobalEventSheet</include>
+        <include>_PlayerEventSheet</include>
+        <event-group description="" sid="262831933753562" title="In-Game Power Ups Behaviors">
+            <sub-events>
+                <event-block sid="672936904715290">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="210133734003169" type="PowerUp" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="156070283493691" type="Function">
+                            <param id="0" name="Name">&quot;PowerUpSetRandomPower&quot;</param>
+                            <param id="1" name="Parameter {n}">PowerUp.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="CurrentPowerUp" sid="281683362615378" static="0" type="number">0</variable>
+                <event-block sid="830419932571719">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="609655884912470" type="PowerUp">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="962893107422988" type="System">
+                            <param id="0" name="Variable">CurrentPowerUp</param>
+                            <param id="1" name="Value">PowerUp.CurrentPowerUp</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="450742522611055" type="PowerUp">
+                            <param id="0" name="Object">PowerUpEvidence</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="671480299702444" type="PowerUp" />
+                        <action id="-28" name="Set effect parameter" sid="300153999785116" type="PowerUpEvidence">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">PowerUpsArray.At(CurrentPowerUp, 1)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="213461961178741" type="PowerUpEvidence">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">PowerUpsArray.At(CurrentPowerUp, 2)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="882872173087489" type="PowerUpEvidence">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">PowerUpsArray.At(CurrentPowerUp, 3)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="803862308041596" type="Function">
+                            <param id="0" name="Name">&quot;PowerUpAddToPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.UID{###}CurrentPowerUp</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="836387287909839">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="957667994757153" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="322364237554556">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="164197522514723" type="System">
+                                    <param id="0" name="Object">PowerUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="927060131863450" type="Function">
+                                    <param id="0" name="Name">&quot;PowerUpSetRandomPower&quot;</param>
+                                    <param id="1" name="Parameter {n}">PowerUp.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="450868798123144" title="In-Game Power Ups Functions">
+            <sub-events>
+                <event-block sid="189095983671145">
+                    <conditions>
+                        <condition id="0" name="On function" sid="123767591996709" type="Function">
+                            <param id="0" name="Name">&quot;PowerUpSpawnInLoop&quot;</param>
+                        </condition>
+                        <condition id="-16" name="Pick random instance" sid="538401625781224" type="System">
+                            <param id="0" name="Object">PowerUpSpawnPoint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="129394437473214" type="PowerUpSpawnPoint">
+                            <param id="0" name="Object">PowerUp</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="685511510218037" type="PowerUp">
+                            <param id="0" name="Angle">PowerUpSpawnPoint.PowerUpMovementAngle</param>
+                        </action>
+                        <action behavior="Sine" id="2" name="Set magnitude" sid="494544307880001" type="PowerUp">
+                            <param id="0" name="Magnitude">Self.Sine.Magnitude * choose(-1, 1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Parametri: 0: UID del Power Up.</comment>
+                <event-block sid="278325785791302">
+                    <conditions>
+                        <condition id="0" name="On function" sid="674314150061131" type="Function">
+                            <param id="0" name="Name">&quot;PowerUpSetRandomPower&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="282492486692749" type="PowerUp">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="645491275796231" type="PowerUp">
+                            <param id="0" name="Instance variable">CurrentPowerUp</param>
+                            <param id="1" name="Value">floor(random(0, PowerUpsArray.Width))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="235328501681600">
+                            <conditions>
+                                <condition id="-23" name="While" sid="437119154789414" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="105279584029472" type="PowerUp">
+                                    <param id="0" name="Instance variable">CurrentPowerUp</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PowerUpsArray.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="785141534316557" type="PowerUp">
+                                    <param id="0" name="Instance variable">CurrentPowerUp</param>
+                                    <param id="1" name="Value">floor(random(0, PowerUpsArray.Width))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="918280510793318">
+                            <conditions />
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="228256387320905" type="PowerUp">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">PowerUpsArray.At(Self.CurrentPowerUp, 1)</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="699630593572426" type="PowerUp">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">PowerUpsArray.At(Self.CurrentPowerUp, 2)</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="449366606646631" type="PowerUp">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">PowerUpsArray.At(Self.CurrentPowerUp, 3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <variable constant="0" name="PowerUpName" sid="308757644666647" static="0" type="text"></variable>
+                <event-block sid="278565449008357">
+                    <conditions>
+                        <condition id="0" name="On function" sid="591874227816950" type="Function">
+                            <param id="0" name="Name">&quot;PowerUpAddToPlayer&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="104340814946957" type="Player">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="351321705589619" type="LifeBarBackground">
+                            <param id="0" name="Instance variable">PlayerUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Player.UID</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="303806551433189" type="LifeBar">
+                            <param id="0" name="Instance variable">PlayerUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Player.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="858397949359455" type="System">
+                            <param id="0" name="Variable">PowerUpName</param>
+                            <param id="1" name="Value">PowerUpsArray.At(Function.Param(1), 0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="491865854315008">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="203398155708468" type="System">
+                                    <param id="0" name="Variable">PowerUpName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HealingPotion&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="461128989608799" type="Audio">
+                                    <param id="0" name="Audio file">Power Up Cura</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="359767508909198">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="231576974601642" type="Player">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Self.HPTotal</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="446893250710984" type="Player">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-6" name="Set height" sid="549003896378507" type="LifeBar">
+                                            <param id="0" name="Height">LifeBarBackground.Height * Player.HP / Player.HPTotal</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="808316537669301">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="679086155676100" type="System" />
+                                <condition id="-14" name="Compare variable" sid="336393431216986" type="System">
+                                    <param id="0" name="Variable">PowerUpName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;IncreaseSpeed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="526570672654169" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpSpeed</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="PowerUpTimer" id="0" name="Start timer" sid="545800615501667" type="Player">
+                                    <param id="0" name="Duration">10</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;PowerUpTimer&quot;</param>
+                                </action>
+                                <action behavior="8Direction" id="4" name="Set max speed" sid="108124016620755" type="Player">
+                                    <param id="0" name="Max Speed">Self.8Direction.MaxSpeed * 1.5</param>
+                                </action>
+                                <action id="0" name="Play" sid="254855720970595" type="Audio">
+                                    <param id="0" name="Audio file">Power Up Velocità</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="443589394598341">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="218603618990312" type="System" />
+                                <condition id="-14" name="Compare variable" sid="132396244494153" type="System">
+                                    <param id="0" name="Variable">PowerUpName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Shield&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="798447413005617" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpShield</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="PowerUpTimer" id="0" name="Start timer" sid="597659067718064" type="Player">
+                                    <param id="0" name="Duration">10</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;PowerUpTimer&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="622025532721938" type="Function">
+                                    <param id="0" name="Name">&quot;LifeBarSetColor&quot;</param>
+                                    <param id="1" name="Parameter {n}">LifeBar.UID{###}PowerUpsArray.At(Function.Param(1), 1){###}PowerUpsArray.At(Function.Param(1), 2){###}PowerUpsArray.At(Function.Param(1), 3)</param>
+                                </action>
+                                <action id="0" name="Play" sid="432504282452243" type="Audio">
+                                    <param id="0" name="Audio file">Power Up Invulnerabilità</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="986862530970023">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="101555404908710" type="System" />
+                                <condition id="-14" name="Compare variable" sid="872420440376564" type="System">
+                                    <param id="0" name="Variable">PowerUpName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Spiderman&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="779056894602165" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpSpiderman</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="PowerUpTimer" id="0" name="Start timer" sid="347307771872835" type="Player">
+                                    <param id="0" name="Duration">10</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;PowerUpTimer&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="351891536970901" type="Audio">
+                                    <param id="0" name="Audio file">Power Up Spiderman</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="253149592874608">
+                                    <conditions />
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="909540454964735" type="Player">
+                                            <param id="0" name="Object">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;SpidermanTop&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="268735460655330" type="System">
+                                            <param id="0" name="Object to create">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Player.X</param>
+                                            <param id="3" name="Y">Player.Y - (Player.Height / 2) + (PowerUpSpidermanBorder.Height / 2)</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="233141728212424" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Pin to">Player</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="579167710270878" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Width">Player.Width</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="828129079660858" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Instance variable">PlayerUID</param>
+                                            <param id="1" name="Value">Player.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="338051758524505">
+                                    <conditions />
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="497038709735292" type="Player">
+                                            <param id="0" name="Object">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;SpidermanBottom&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="279234521567008" type="System">
+                                            <param id="0" name="Object to create">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Player.X</param>
+                                            <param id="3" name="Y">Player.Y + (Player.Height / 2) - (PowerUpSpidermanBorder.Height / 2)</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="877759268917780" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Pin to">Player</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="611116671143549" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Width">Player.Width</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="941870342559657" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Instance variable">PlayerUID</param>
+                                            <param id="1" name="Value">Player.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="618028139447518">
+                                    <conditions />
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="839533580520098" type="Player">
+                                            <param id="0" name="Object">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;SpidermanLeft&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="375172553184924" type="System">
+                                            <param id="0" name="Object to create">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Player.X - (Player.Width / 2) + (PowerUpSpidermanBorder.Width / 2)</param>
+                                            <param id="3" name="Y">Player.Y</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="491571420003300" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Pin to">Player</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-6" name="Set height" sid="224317260435580" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Height">Player.Height</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="901578921240146" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Instance variable">PlayerUID</param>
+                                            <param id="1" name="Value">Player.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="261448223925077">
+                                    <conditions />
+                                    <actions>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="567912694966036" type="Player">
+                                            <param id="0" name="Object">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;SpidermanRight&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="572486845431526" type="System">
+                                            <param id="0" name="Object to create">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Player.X + (Player.Width / 2) - (PowerUpSpidermanBorder.Width / 2)</param>
+                                            <param id="3" name="Y">Player.Y</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="235652833410945" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Pin to">Player</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-6" name="Set height" sid="310518503456640" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Height">Player.Height</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="582009814103198" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Instance variable">PlayerUID</param>
+                                            <param id="1" name="Value">Player.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
