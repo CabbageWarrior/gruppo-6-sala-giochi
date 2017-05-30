@@ -1100,6 +1100,64 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TiledBackground2" sid="335810832064399">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\dbga_53\Downloads\Piano_4_-_Stelle.png" />
+        </object-type>
+        <object-type name="Sprite4" sid="650764697405616">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="902710088838257" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Downloads\Piano_3_-_Terra.png">
+                        <collision-poly>
+                            <point x="0.16875" y="0.28125" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8875" y="0.8125" />
+                            <point x="0.5" y="0.942708" />
+                            <point x="0.228125" y="0.619792" />
+                            <point x="0.196875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="990339156695775">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="587134436653867" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Downloads\Piano_1_-_Nuvole_1.png">
+                        <collision-poly>
+                            <point x="0.56875" y="0.947917" />
+                            <point x="0.5" y="0.463542" />
+                            <point x="0.978125" y="0.0364583" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.871875" y="0.786458" />
+                            <point x="0.5" y="0.552083" />
+                            <point x="0.428125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="983097634055935">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="417322673433430" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Downloads\Piano_2_-_Nuvole_2.png">
+                        <collision-poly>
+                            <point x="0.14375" y="0.239583" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.584375" y="0.692708" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.5" y="0.828125" />
+                            <point x="0.509375" y="0.151042" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
