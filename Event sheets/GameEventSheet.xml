@@ -3,2035 +3,238 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEventSheet</name>
     <events>
-        <variable constant="0" name="TimeStartLayout" sid="395280497992719" static="0" type="number">0</variable>
-        <variable constant="0" name="HowManyTeam1" sid="996746662363840" static="0" type="number">0</variable>
-        <variable constant="0" name="HowManyTeam2" sid="282976318598436" static="0" type="number">0</variable>
-        <variable comment="0: No; 1: Sì." constant="0" name="IsStarted" sid="930803259663557" static="0" type="number">0</variable>
-        <variable comment="0: No; 1: Sì." constant="0" name="IsFinished" sid="748547435721753" static="0" type="number">0</variable>
-        <variable constant="0" name="IsEntireChallengeEnded" sid="564987548607692" static="0" type="number">0</variable>
-        <variable comment="1-4" constant="0" name="PausedByPlayerNumber" sid="691139144864681" static="0" type="number">0</variable>
-        <variable comment="Used to sync correctly the timer." constant="0" name="DeltaTime" sid="194089171849972" static="0" type="number">0</variable>
-        <include>_GlobalEventSheet</include>
-        <include>_PlayerEventSheet</include>
-        <include>_PowerUpEventSheet</include>
-        <event-block sid="505421257834110">
+        <include>CameraEventSheet</include>
+        <event-block sid="899054706897429">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="212073954403541" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="907776665257420" type="Function">
-                    <param id="0" name="Name">&quot;ResetGlobalVariables&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action id="0" name="Set text" sid="891091723413179" type="GameTutorialText">
-                    <param id="0" name="Text">replace(Self.Text, &quot;\n&quot;, newline)</param>
-                </action>
-                <action id="0" name="Call function" sid="203371093106292" type="Function">
-                    <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
-                    <param id="1" name="Parameter {n}">CharactersArray.At(Human_1_SelectedCharacter - 1, 0){###}Human_1_SelectedCharacter - 1{###}1</param>
-                </action>
-                <action id="0" name="Call function" sid="650049895091141" type="Function">
-                    <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
-                    <param id="1" name="Parameter {n}">CharactersArray.At(Human_2_SelectedCharacter - 1, 0){###}Human_2_SelectedCharacter - 1{###}2</param>
-                </action>
-                <action id="0" name="Call function" sid="648062881952225" type="Function">
-                    <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
-                    <param id="1" name="Parameter {n}">CharactersArray.At(Human_3_SelectedCharacter - 1, 0){###}Human_3_SelectedCharacter - 1{###}3</param>
-                </action>
-                <action id="0" name="Call function" sid="159992080299037" type="Function">
-                    <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
-                    <param id="1" name="Parameter {n}">CharactersArray.At(Human_4_SelectedCharacter - 1, 0){###}Human_4_SelectedCharacter - 1{###}4</param>
-                </action>
-                <action id="0" name="Play" sid="173001992803416" type="Audio">
-                    <param id="0" name="Audio file">Avvio Partita</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-                <action id="6" name="Stop" sid="161534626459145" type="Audio">
-                    <param id="0" name="Tag">&quot;Vittoria Partita&quot;</param>
-                </action>
-                <action id="6" name="Stop" sid="407836992597409" type="Audio">
-                    <param id="0" name="Tag">&quot;Pareggio Partita&quot;</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="683159321117559">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="253332273168255" type="System">
-                            <param id="0" name="Variable">IsEntireChallengeEnded</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="466631007589785" type="System">
-                            <param id="0" name="Variable">Team1Score</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="957863391753627" type="System">
-                            <param id="0" name="Variable">Team2Score</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="592838570046395" type="System">
-                            <param id="0" name="Variable">IsEntireChallengeEnded</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="768701411013893">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="595494405577780" type="ScoreText">
-                            <param id="0" name="Instance variable">Team</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="990609936034930" type="ScoreText">
-                            <param id="0" name="Text">Team1Score</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="722135185371187">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="151650793363154" type="ScoreText">
-                            <param id="0" name="Instance variable">Team</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="719379346899403" type="ScoreText">
-                            <param id="0" name="Text">Team2Score</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="781176229777663">
-                    <conditions>
-                        <condition id="5" name="Is tag playing" sid="295095874137206" type="Audio">
-                            <param id="0" name="Tag">&quot;MenuBackgroundMusic&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="6" name="Stop" sid="819232514866181" type="Audio">
-                            <param id="0" name="Tag">&quot;MenuBackgroundMusic&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="297435391258995">
-                    <conditions>
-                        <condition id="5" inverted="1" name="Is tag playing" sid="116839819871760" type="Audio">
-                            <param id="0" name="Tag">&quot;GameBackgroundMusic&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="547054664927770" type="Audio">
-                            <param id="0" name="Audio file">Game</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-20</param>
-                            <param id="1" name="Tag (optional)">&quot;GameBackgroundMusic&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="913548935459765">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="621112787956094" type="System">
-                            <param id="0" name="Object">PlayerSpawnPoint</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="775502669293126" type="PlayerSpawnPoint" />
-                    </actions>
-                </event-block>
-                <event-block sid="809048253171453">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="216058003277318" type="System">
-                            <param id="0" name="Object">BallSpawnPoint</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="172579398907773" type="Function">
-                            <param id="0" name="Name">&quot;SpawnBall&quot;</param>
-                            <param id="1" name="Parameter {n}">BallSpawnPoint.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="902374387779778">
-                    <conditions />
-                    <actions>
-                        <action id="-10" name="Set value" sid="956982262721116" type="StartMatchCounter">
-                            <param id="0" name="Instance variable">CounterNumber</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="0" name="Set text" sid="499841376781438" type="StartMatchCounter">
-                            <param id="0" name="Text">Self.CounterNumber</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="450679001507555" type="StartMatchCounter" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="873665060327725">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="766265258741175" type="System" />
+                <condition id="-2" name="On start of layout" sid="367342970374275" type="System" />
             </conditions>
             <actions />
             <sub-events>
-                <comment>Correzione posizione su spostamento linea di centro campo.</comment>
-                <event-block sid="261661825734413">
+                <event-block sid="804664873114554">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="502767531549739" type="Player">
-                            <param id="0" name="Instance variable">Team</param>
+                        <condition id="-7" name="Compare instance variable" sid="594052389280562" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-1" name="Compare X" sid="346127980067987" type="Player">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="X co-ordinate">HalfWayLine.X - (Player.Width / 2)</param>
+                        <condition id="-7" name="Compare instance variable" sid="995227415571025" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="677713532945170" type="Player">
-                            <param id="0" name="X">HalfWayLine.X - (Player.Width / 2) - 1</param>
+                        <action behavior="PinToCollider" id="0" name="Pin to object" sid="801144652356351" type="ArcadeCabinato">
+                            <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                            <param id="1" name="Mode">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="186766330457693">
+                <event-block sid="966016304550318">
                     <conditions>
-                        <condition id="-22" name="Else" sid="448025881501860" type="System" />
-                        <condition id="-7" name="Compare instance variable" sid="792253976535379" type="Player">
-                            <param id="0" name="Instance variable">Team</param>
+                        <condition id="-7" name="Compare instance variable" sid="495351182513795" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
-                        <condition id="-1" name="Compare X" sid="671285256613451" type="Player">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="X co-ordinate">HalfWayLine.X + (Player.Width / 2)</param>
+                        <condition id="-7" name="Compare instance variable" sid="125088236728925" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="990548066976829" type="Player">
-                            <param id="0" name="X">HalfWayLine.X + (Player.Width / 2) + 1</param>
+                        <action behavior="PinToCollider" id="0" name="Pin to object" sid="774523272167472" type="ArcadeCabinato">
+                            <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                            <param id="1" name="Mode">1</param>
                         </action>
                     </actions>
-                </event-block>
-                <comment>Show Play Time</comment>
-                <event-block sid="193845015796609">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="538211737889414" type="System">
-                            <param id="0" name="Variable">IsStarted</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block any="1" sid="171328834547890">
-                            <conditions>
-                                <condition id="-2" inverted="1" name="Compare Y" sid="260261081397497" type="TimeTextHours">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                </condition>
-                                <condition id="-2" inverted="1" name="Compare Y" sid="736679530020066" type="TimeTextSeparator">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                </condition>
-                                <condition id="-2" inverted="1" name="Compare Y" sid="833307056191893" type="TimeTextMinutes">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="253219521329885">
-                                    <conditions>
-                                        <condition id="-2" name="Compare Y" sid="673334123566418" type="TimeTextHours">
-                                            <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Set Y" sid="114371163044999" type="TimeTextHours">
-                                            <param id="0" name="Y">Self.Y + dt * 50</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="469617591310490">
-                                    <conditions>
-                                        <condition id="-2" name="Compare Y" sid="618067986964633" type="TimeTextSeparator">
-                                            <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Set Y" sid="618796649090398" type="TimeTextSeparator">
-                                            <param id="0" name="Y">Self.Y + dt * 50</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="170669086327043">
-                                    <conditions>
-                                        <condition id="-2" name="Compare Y" sid="254908001381196" type="TimeTextMinutes">
-                                            <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Set Y" sid="468752520254208" type="TimeTextMinutes">
-                                            <param id="0" name="Y">Self.Y + dt * 50</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="917234407963947">
-                                    <conditions>
-                                        <condition id="-2" name="Compare Y" sid="533522495196097" type="TimeTextHours">
-                                            <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                        </condition>
-                                        <condition id="-2" name="Compare Y" sid="626518395983850" type="TimeTextSeparator">
-                                            <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                        </condition>
-                                        <condition id="-2" name="Compare Y" sid="626842215550168" type="TimeTextMinutes">
-                                            <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Set Y" sid="216845324294036" type="TimeTextHours">
-                                            <param id="0" name="Y">Self.Height / 2</param>
-                                        </action>
-                                        <action id="-2" name="Set Y" sid="423534003273334" type="TimeTextSeparator">
-                                            <param id="0" name="Y">Self.Height / 2</param>
-                                        </action>
-                                        <action id="-2" name="Set Y" sid="131466720795797" type="TimeTextMinutes">
-                                            <param id="0" name="Y">Self.Height / 2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>Time Counter</comment>
-                <event-block sid="991368178200541">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="540950061945715" type="System">
-                            <param id="0" name="Variable">IsFinished</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="154537013573856" type="TimeTextHours">
-                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout - DeltaTime) / 60 % 60), 2)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="927709395517414" type="TimeTextMinutes">
-                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout - DeltaTime) % 60), 2)</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="907678159151769">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="635390658418532" type="System">
-                                    <param id="0" name="Object">Ball</param>
-                                </condition>
-                                <condition behavior="BlinkSine" id="0" inverted="1" name="Is active" sid="447624088472673" type="Ball" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="519454327813739">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="160091464019016" type="Ball">
-                                            <param id="0" name="Object">PlayerGrabCollider</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Set opacity" sid="912165543961728" type="Ball">
-                                            <param id="0" name="Opacity">100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="359186215081238">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="593701822710438" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Set opacity" sid="253520900677581" type="Ball">
-                                            <param id="0" name="Opacity">75</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="759742611431605">
+        <event-block sid="163232111230541">
             <conditions>
-                <condition behavior="PowerUpSpawnTimer" id="0" name="On timer" sid="960443546469743" type="PlayFieldBackground">
-                    <param id="0" name="Tag">&quot;PowerUpSpawnTimer&quot;</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="928774579586834" type="System">
-                    <param id="0" name="Variable">IsFinished</param>
+                <condition id="-7" name="Compare instance variable" sid="998019004077607" type="ArcadePlayerCollider">
+                    <param id="0" name="Instance variable">PlayerNumber</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="843250212424987" type="Function">
-                    <param id="0" name="Name">&quot;PowerUpSpawnInLoop&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="390071352330039">
-            <conditions>
-                <condition behavior="Fade" id="0" name="On fade-out finished" sid="270540406531579" type="StartMatchCounter" />
             </conditions>
             <actions />
             <sub-events>
-                <variable constant="0" name="CountNumber" sid="153092380054386" static="0" type="number">0</variable>
-                <event-block sid="546108879547990">
-                    <conditions />
+                <event-block sid="394395969663004">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="674761099021569" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="598530622243320" type="System">
-                            <param id="0" name="Variable">CountNumber</param>
-                            <param id="1" name="Value">StartMatchCounter.CounterNumber - 1</param>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="944680756505743" type="ArcadePlayerCollider">
+                            <param id="0" name="Control">1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="495873099436417">
+                        <event-block sid="344300418636481">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="252715518084064" type="System">
-                                    <param id="0" name="Variable">CountNumber</param>
+                                <condition id="-7" name="Compare instance variable" sid="377278442539266" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="599649949144301" type="StartMatchCounter" />
-                                <action id="-9" name="Set value" sid="610017489659080" type="System">
-                                    <param id="0" name="Variable">IsStarted</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="639234802524087" type="System">
-                                    <param id="0" name="Variable">DeltaTime</param>
-                                    <param id="1" name="Value">time - TimeStartLayout</param>
-                                </action>
-                                <action behavior="PowerUpSpawnTimer" id="0" name="Start timer" sid="951687167936677" type="PlayFieldBackground">
-                                    <param id="0" name="Duration">POWER_UP_SPAWN_SECONDS_DELTA</param>
-                                    <param id="1" name="Type">1</param>
-                                    <param id="2" name="Tag">&quot;PowerUpSpawnTimer&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="615565447524246" type="System">
-                                    <param id="0" name="Variable">CommandType</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="7" name="Set mirrored" sid="681155501484726" type="ArcadeCabinato">
+                                    <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="727917115684928">
+                    </sub-events>
+                </event-block>
+                <event-block sid="435762647102460">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="330753979468706" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="452467495548700" type="ArcadePlayerCollider">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="414716263026054">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="422075122504622" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="318619476875877" type="ArcadePlayerCollider">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="546988473801357">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="324089805380834" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="306326852060529" type="ArcadePlayerCollider">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="690958576456820">
                             <conditions>
-                                <condition id="-22" name="Else" sid="108644717515859" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="924862069188316" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="616743659445813">
-                                    <conditions />
-                                    <actions>
-                                        <action behavior="Fade" id="1" name="Start fade" sid="228244261874094" type="StartMatchCounter" />
-                                        <action id="-10" name="Set value" sid="969311082044441" type="StartMatchCounter">
-                                            <param id="0" name="Instance variable">CounterNumber</param>
-                                            <param id="1" name="Value">CountNumber</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="395895381251073" type="StartMatchCounter">
-                                            <param id="0" name="Text">Self.CounterNumber</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="997940466592644" type="ArcadeCabinato">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="464065798356186">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="921903286185495" type="ArcadePlayerCollider">
+                    <param id="0" name="Instance variable">PlayerNumber</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="746417542862902">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="319540857382742" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="487976519650442" type="ArcadePlayerCollider">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="281323964289225">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="653809029190970" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="980927946207562" type="ArcadeCabinato">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="731692731973463">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="164715825846728" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="440272704059003" type="ArcadePlayerCollider">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="387039860778382">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="922998820228854" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="790748763504005" type="ArcadePlayerCollider">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="877184530221370">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="909499591355142" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="958051591458799" type="ArcadePlayerCollider">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="707602417480375">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="214060096938643" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="912956105143868" type="ArcadeCabinato">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="966546360194091" title="Menu">
-            <sub-events>
-                <event-group description="" sid="796696407256951" title="Menu Controls">
-                    <sub-events>
-                        <event-block sid="952203954594717">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="363989147917162" type="System">
-                                    <param id="0" name="Variable">CommandType</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="182573596941495">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="224285731642447" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">9</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="998665445578318" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">1{###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="508381628725446">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="302772542028590" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">9</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="890202862456709" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">2{###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="280451615330735">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="395988776836487" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">9</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="913744384039091" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">3{###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="953973236974016">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="457033674468281" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">9</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="128386740855580" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">4{###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="101270380541992">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="321043632862672" type="Keyboard">
-                                            <param id="0" name="Key">27 (Esc)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="741177463284167" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">1{###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="434608628493060">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="360860916126592" type="System" />
-                                <condition id="-14" name="Compare variable" sid="740614552798316" type="System">
-                                    <param id="0" name="Variable">CommandType</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <comment>Left</comment>
-                                <event-block sid="647994018751419">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="479480986929839" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">14</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="364471605856883" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="187483427838913">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="216854266636423" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">14</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="144760912451564" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="505109081022700">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="155854738327405" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">14</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="792943941791725" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="908969902189184">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="930736335643980" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">14</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="695351271004450" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="239365803919363">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="174298957976374" type="Keyboard">
-                                            <param id="0" name="Key">37 (Left arrow)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="511073616047655" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Right</comment>
-                                <event-block sid="472480881049020">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="445232020394239" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">15</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="158876366785155" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="548222725390190">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="333689678853745" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">15</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="518505274764460" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="168724911150919">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="206777756635855" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">15</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="669749924041834" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="588197805739493">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="528969010209573" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">15</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="934565715305288" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="876939934743416">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="205550992842121" type="Keyboard">
-                                            <param id="0" name="Key">39 (Right arrow)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="468531300432158" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Selection</comment>
-                                <event-block sid="236328835839367">
-                                    <conditions />
-                                    <actions />
-                                </event-block>
-                                <event-block sid="787722751684113">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="508403207475121" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="428086247983377" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedValue</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="790012038791296">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="185561670238915" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="240333805827852" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedValue</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="594160430122146">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="581036626729021" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="407417178736212" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedValue</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="165941674779644">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="726609509883541" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="321965621413121" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedValue</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="700300249463477">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="146925605723154" type="Keyboard">
-                                            <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="310561462193370" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">EndGameMenuSelected.SelectedValue</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="304933143357067">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="889774763459596" type="System" />
-                                <condition id="-14" name="Compare variable" sid="227499995965199" type="System">
-                                    <param id="0" name="Variable">CommandType</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <comment>Left</comment>
-                                <event-block sid="150191805025510">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="573795474463905" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">14</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="856717205319331" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="474744674602460">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="863004063680389" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">14</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="961766313448018" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="337365413386696">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="587524849202319" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">14</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="653497915553884" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="327899348990225">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="136308024177397" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">14</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="860918364782137" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="946957289726977">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="729719280333027" type="Keyboard">
-                                            <param id="0" name="Key">37 (Left arrow)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="798158398585066" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Right</comment>
-                                <event-block sid="350881522934817">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="770391950479955" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">15</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="527720083017904" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="538337049832409">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="225496589942281" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">15</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="962128732016546" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="609857807075304">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="651681908451022" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">15</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="951904831702614" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="903353354403665">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="430234559501928" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">15</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="888484912757634" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="261846595290247">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="652455537983835" type="Keyboard">
-                                            <param id="0" name="Key">39 (Right arrow)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="567518535238102" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Selection</comment>
-                                <event-block sid="674280785894146">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="899054240148394" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="913656525371288" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedValue{###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="411758353118225">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="706055392220391" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="125651158819410" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedValue{###}2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="186190980486820">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="993256845058306" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="127052909811275" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedValue{###}3</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="844561742824867">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="963023074257635" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="402450964627547" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedValue{###}4</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="443720741818588">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="762992961387528" type="Keyboard">
-                                            <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="799867497441428" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedValue{###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Torna al gioco</comment>
-                                <event-block sid="714656983465005">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="791022282926208" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="285403657523479" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">1{###}0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="150358048849710">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="326536964976632" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="255293531262828" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">2{###}0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="861951104157080">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="515301376748142" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="972258813468126" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">3{###}0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="228596075855886">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="186883074422587" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="946036260838537" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">4{###}0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="742683389072236">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="543488645696977" type="Keyboard">
-                                            <param id="0" name="Key">8 (Backspace)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="672350343735159" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">1{###}0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="676356860243313">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="151689979741535" type="System" />
-                                <condition id="-14" name="Compare variable" sid="708883367115315" type="System">
-                                    <param id="0" name="Variable">CommandType</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="138447878251805">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="113892480552999" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="343206982720192" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;{###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="638418156594556">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="245211521530430" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="167161335988878" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;{###}2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="447238505466056">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="124288318916709" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="261349964979540" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;{###}3</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="590327189015524">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="176673873872651" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="575907851666983" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;{###}4</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="220358311731620">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="151526141949643" type="Keyboard">
-                                            <param id="0" name="Key">8 (Backspace)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="391032357545439" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;{###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="691946609639933" title="Menu Functions">
-                    <sub-events>
-                        <event-group description="" sid="724540577072079" title="End Game Menu">
-                            <sub-events>
-                                <comment>Parametri: nessuno.</comment>
-                                <event-block sid="333501703323103">
-                                    <conditions>
-                                        <condition id="0" name="On function" sid="569127483256829" type="Function">
-                                            <param id="0" name="Name">&quot;ShowEndGameMenu&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="546393181732056">
-                                            <conditions>
-                                                <condition id="-11" name="For Each" sid="519305738715119" type="System">
-                                                    <param id="0" name="Object">EndGameMenuButton</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="128832968976991" type="EndGameMenuButton">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="109724994144635">
-                                            <conditions>
-                                                <condition id="-11" name="For Each" sid="695844111096640" type="System">
-                                                    <param id="0" name="Object">EndGameMenuText</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="699463917641559" type="EndGameMenuText">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="859319080007658">
-                                            <conditions />
-                                            <actions>
-                                                <action id="0" name="Call function" sid="164399947665797" type="Function">
-                                                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">1</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="487889784265422" type="System">
-                                                    <param id="0" name="Variable">CommandType</param>
-                                                    <param id="1" name="Value">2</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <comment>Parametri: 0: Voce di menu da selezionare.</comment>
-                                <event-block sid="936179856146551">
-                                    <conditions>
-                                        <condition id="0" name="On function" sid="238686076953757" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="389116331731615" type="EndGameMenuSelected">
-                                            <param id="0" name="Instance variable">SelectedOrder</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">Function.Param(0)</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="861112376430882" type="EndGameMenuButton">
-                                            <param id="0" name="Instance variable">Order</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">Function.Param(0)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="812344868374145" type="EndGameMenuSelected">
-                                            <param id="0" name="Instance variable">SelectedOrder</param>
-                                            <param id="1" name="Value">EndGameMenuButton.Order</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="776087602469798" type="EndGameMenuSelected">
-                                            <param id="0" name="Instance variable">SelectedValue</param>
-                                            <param id="1" name="Value">EndGameMenuButton.Value</param>
-                                        </action>
-                                        <action id="-29" name="Move to object" sid="535155125242973" type="EndGameMenuSelected">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Object">EndGameMenuButton</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="176620638308202" type="EndGameMenuSelected">
-                                            <param id="0" name="X">EndGameMenuButton.X</param>
-                                            <param id="1" name="Y">EndGameMenuButton.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="358478549921212" title="Pause Menu">
-                            <sub-events>
-                                <comment>Parametri: nessuno.</comment>
-                                <event-block sid="525227591971465">
-                                    <conditions>
-                                        <condition id="0" name="On function" sid="512110668782490" type="Function">
-                                            <param id="0" name="Name">&quot;ShowPauseMenu&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="675156647176707" type="PauseMenuTitle">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="557560419178406" type="PauseMenuPlayer">
-                                            <param id="0" name="Text">&quot;Player &quot; &amp; Function.Param(0)</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="243610349952831" type="PauseMenuPlayer">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="978660736598512" type="PauseMenuSelected">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="691724654883177">
-                                            <conditions>
-                                                <condition id="-11" name="For Each" sid="860306188782018" type="System">
-                                                    <param id="0" name="Object">PauseMenuButton</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="875496205186980" type="PauseMenuButton">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="990694357345673">
-                                            <conditions>
-                                                <condition id="-11" name="For Each" sid="204677725435126" type="System">
-                                                    <param id="0" name="Object">PauseMenuText</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="721442394766055" type="PauseMenuText">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="133580136842208">
-                                            <conditions>
-                                                <condition id="-11" name="For Each" sid="235828709170898" type="System">
-                                                    <param id="0" name="Object">MenuTutorialText</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="907092565940714" type="MenuTutorialText">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="530431397405964">
-                                            <conditions>
-                                                <condition id="-11" name="For Each" sid="234753443523865" type="System">
-                                                    <param id="0" name="Object">GamePadComponent</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="320671224201362" type="GamePadComponent">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="377661021917419">
-                                            <conditions />
-                                            <actions>
-                                                <action id="0" name="Call function" sid="587650691413658" type="Function">
-                                                    <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">1</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="639971555665979" type="System">
-                                                    <param id="0" name="Variable">CommandType</param>
-                                                    <param id="1" name="Value">3</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <comment>Parametri: 0: Voce di menu da selezionare.</comment>
-                                <event-block sid="276922391863703">
-                                    <conditions>
-                                        <condition id="0" name="On function" sid="434981953252682" type="Function">
-                                            <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="409222706440465" type="PauseMenuSelected">
-                                            <param id="0" name="Instance variable">SelectedOrder</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">Function.Param(0)</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="604759455701545" type="PauseMenuButton">
-                                            <param id="0" name="Instance variable">Order</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">Function.Param(0)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="573600945027908" type="PauseMenuSelected">
-                                            <param id="0" name="Instance variable">SelectedOrder</param>
-                                            <param id="1" name="Value">PauseMenuButton.Order</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="295215036960664" type="PauseMenuSelected">
-                                            <param id="0" name="Instance variable">SelectedValue</param>
-                                            <param id="1" name="Value">PauseMenuButton.Value</param>
-                                        </action>
-                                        <action id="-29" name="Move to object" sid="213357278950621" type="PauseMenuSelected">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Object">PauseMenuButton</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="303467905251281" type="PauseMenuSelected">
-                                            <param id="0" name="X">PauseMenuButton.X</param>
-                                            <param id="1" name="Y">PauseMenuButton.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <comment>Parametri: 0: Comando da eseguire.</comment>
-                        <event-block sid="534549954355683">
-                            <conditions>
-                                <condition id="0" name="On function" sid="743528728157203" type="Function">
-                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="662875524646085">
-                                    <conditions>
-                                        <condition id="1" name="Compare parameter" sid="880636660028551" type="Function">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Resume&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="787654353804350" type="Function">
-                                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                                            <param id="1" name="Parameter {n}">Function.Param(1){###}0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="374987012844241">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="381471120266654" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="745032327355867" type="Function">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Rematch&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set time scale" sid="109456494473491" type="System">
-                                            <param id="0" name="Time scale">1</param>
-                                        </action>
-                                        <action id="-26" name="Restart layout" sid="220714992252765" type="System" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="619152857131112">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="107539270007347" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="288227138798497" type="Function">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Change&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set time scale" sid="526772584631292" type="System">
-                                            <param id="0" name="Time scale">1</param>
-                                        </action>
-                                        <action id="6" name="Stop" sid="846119740442324" type="Audio">
-                                            <param id="0" name="Tag">&quot;GameBackgroundMusic&quot;</param>
-                                        </action>
-                                        <action id="-2" name="Go to layout" sid="700223244200277" type="System">
-                                            <param id="0" name="Layout">CharacterSelection</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="285517413088488">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="601668815256076" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="340293149462255" type="Function">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Menu&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set time scale" sid="428199613506837" type="System">
-                                            <param id="0" name="Time scale">1</param>
-                                        </action>
-                                        <action id="6" name="Stop" sid="841564992318274" type="Audio">
-                                            <param id="0" name="Tag">&quot;GameBackgroundMusic&quot;</param>
-                                        </action>
-                                        <action id="-2" name="Go to layout" sid="546649045546081" type="System">
-                                            <param id="0" name="Layout">Intro</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="470596249960499">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="602476500784091" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="658881531935105" type="Function">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Tutorial&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="333358644531583" type="System">
-                                            <param id="0" name="Variable">CommandType</param>
-                                            <param id="1" name="Value">4</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="226356063491971" type="GameTutorialText">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="573006356830627" type="GameTutorialBackground">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="717578318936319">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="622110211748960" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="331615116882988" type="Function">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;TutorialClose&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="978483794349794" type="System">
-                                            <param id="0" name="Variable">CommandType</param>
-                                            <param id="1" name="Value">3</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="162801190314559" type="GameTutorialText">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="966546529008389" type="GameTutorialBackground">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="598992833151879" title="Layout Functions">
-            <sub-events>
-                <comment>Parametri: 0: Team, 1: Character Number, 2: numero giocatore</comment>
-                <event-block sid="791878088576466">
-                    <conditions>
-                        <condition id="0" name="On function" sid="475281647779891" type="Function">
-                            <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="712343476414357" type="PlayerSpawnPoint">
-                            <param id="0" name="Instance variable">Team</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Function.Param(0)</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="618121854890675" type="PlayerSpawnPoint">
-                            <param id="0" name="Instance variable">Used</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="780618308346199">
-                            <conditions>
-                                <condition id="-16" name="Pick random instance" sid="397667464576409" type="System">
-                                    <param id="0" name="Object">PlayerSpawnPoint</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="353367695037990" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerCreate&quot;</param>
-                                    <param id="1" name="Parameter {n}">PlayerSpawnPoint.X{###}PlayerSpawnPoint.Y{###}Function.Param(1){###}Function.Param(2)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="324392847684267" type="PlayerSpawnPoint">
-                                    <param id="0" name="Instance variable">Used</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>Parametri: 0: UID del punto di spawn.</comment>
-                <event-block sid="811906448479719">
-                    <conditions>
-                        <condition id="0" name="On function" sid="249162581971651" type="Function">
-                            <param id="0" name="Name">&quot;SpawnBall&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="193425215664165" type="BallSpawnPoint">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="525445125758504" type="BallSpawnPoint">
-                            <param id="0" name="Object">Ball</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">&quot;Origin&quot;</param>
-                        </action>
-                        <action behavior="BlinkSine" id="0" name="Set active" sid="205643123111258" type="Ball">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="504572225353603" type="Ball">
-                            <param id="0" name="Pin to">BallSpawnPoint</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Parametri: nessuno.</comment>
-                <event-block sid="818019019824705">
-                    <conditions>
-                        <condition id="0" name="On function" sid="659952789030282" type="Function">
-                            <param id="0" name="Name">&quot;CheckVictory&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block any="1" sid="154491700087112">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="976641626062314" type="System">
-                                    <param id="0" name="Variable">HowManyTeam1</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="308365099232185" type="System">
-                                    <param id="0" name="Variable">HowManyTeam2</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="440135306210412" type="System">
-                                    <param id="0" name="Variable">IsFinished</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="996505494886916">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="320294564272658" type="System">
-                                            <param id="0" name="Object">Ball</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Spawn another object" sid="117435966151594" type="Ball">
-                                            <param id="0" name="Object">BallExplosion</param>
-                                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                                            <param id="2" name="Image point">&quot;Origin&quot;</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="383620401230950" type="Ball" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="582343151973280">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="843011941814928" type="System">
-                                            <param id="0" name="Object">PowerUp</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="GameFinishedFade" id="1" name="Start fade" sid="308690416303549" type="PowerUp" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="889874602071068">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="119001193477977" type="System">
-                                            <param id="0" name="Variable">HowManyTeam1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="189051653590319" type="System">
-                                            <param id="0" name="Variable">HowManyTeam2</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="676208592700255" type="Audio">
-                                            <param id="0" name="Audio file">Pareggio Partita</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;Pareggio Partita&quot;</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="496898054585106" type="TextDraft">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="765436190981009">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="923416409021944" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="979623966584218" type="Audio">
-                                            <param id="0" name="Audio file">Vittoria Partita</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;Vittoria Partita&quot;</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="742961930356863">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="679989692552085" type="System">
-                                                    <param id="0" name="Variable">HowManyTeam1</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="477021072476400" type="System">
-                                                    <param id="0" name="Variable">Team2Score</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                            <sub-events>
-                                                <event-block sid="213092366248894">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="213542344471158" type="TextYouWin">
-                                                            <param id="0" name="Instance variable">Team</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">2</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="639527831356584" type="TextYouWin">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="808113436778947">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="983806214917752" type="TextYouLose">
-                                                            <param id="0" name="Instance variable">Team</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">1</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="799645175942501" type="TextYouLose">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block sid="473183401793672">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="132243224996119" type="System" />
-                                                <condition id="-14" name="Compare variable" sid="579572147952061" type="System">
-                                                    <param id="0" name="Variable">HowManyTeam2</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="842518669616102" type="System">
-                                                    <param id="0" name="Variable">Team1Score</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                            <sub-events>
-                                                <event-block sid="852866302069725">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="594632308123908" type="TextYouWin">
-                                                            <param id="0" name="Instance variable">Team</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">1</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="616238027709762" type="TextYouWin">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="611654236805639">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="370188189377115" type="TextYouLose">
-                                                            <param id="0" name="Instance variable">Team</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">2</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="720339499084653" type="TextYouLose">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block sid="310297017885531">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="979223726517183" type="ScoreText">
-                                                    <param id="0" name="Instance variable">Team</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Set text" sid="562257082070912" type="ScoreText">
-                                                    <param id="0" name="Text">Team1Score</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="998837754393812">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="259672332230760" type="ScoreText">
-                                                    <param id="0" name="Instance variable">Team</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">2</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Set text" sid="634063831599126" type="ScoreText">
-                                                    <param id="0" name="Text">Team2Score</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <comment>Verifica fine challenge.</comment>
-                                <event-block sid="423705944777103">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="439861428864322" type="System">
-                                            <param id="0" name="Variable">GameTypeBetterOfX</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block any="1" sid="227120506988078">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="298077997117456" type="System">
-                                                    <param id="0" name="Variable">Team1Score</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">GameTypeBetterOfX / 2</param>
-                                                </condition>
-                                                <condition id="-14" name="Compare variable" sid="612015140286376" type="System">
-                                                    <param id="0" name="Variable">Team2Score</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">GameTypeBetterOfX / 2</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="414395138925625" type="System">
-                                                    <param id="0" name="Variable">IsEntireChallengeEnded</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                            <sub-events>
-                                                <event-block bookmark="1" sid="836082845982807">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="596195617222362" type="System">
-                                                            <param id="0" name="Variable">Team1Score</param>
-                                                            <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">GameTypeBetterOfX / 2</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="472539276290412">
-                                                            <conditions>
-                                                                <condition id="-11" name="For Each" sid="120522681134241" type="System">
-                                                                    <param id="0" name="Object">Coriandols</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-1" name="Set X" sid="105551524947336" type="Coriandols">
-                                                                    <param id="0" name="X">Self.X - LayoutWidth / 4</param>
-                                                                </action>
-                                                                <action id="1" name="Set rate" sid="453777293012259" type="Coriandols">
-                                                                    <param id="0" name="Rate">50</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                                <event-block sid="141450797892285">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="965778338472448" type="System" />
-                                                        <condition id="-14" name="Compare variable" sid="888354692187769" type="System">
-                                                            <param id="0" name="Variable">Team2Score</param>
-                                                            <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">GameTypeBetterOfX / 2</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="297659350175414">
-                                                            <conditions>
-                                                                <condition id="-11" name="For Each" sid="667533792521895" type="System">
-                                                                    <param id="0" name="Object">Coriandols</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-1" name="Set X" sid="965403113213797" type="Coriandols">
-                                                                    <param id="0" name="X">Self.X + LayoutWidth / 4</param>
-                                                                </action>
-                                                                <action id="1" name="Set rate" sid="980901575035234" type="Coriandols">
-                                                                    <param id="0" name="Rate">50</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <comment>Comparsa del Menu.</comment>
-                                <event-block sid="386826444027101">
-                                    <conditions />
-                                    <actions>
-                                        <action id="0" name="Call function" sid="177089769074556" type="Function">
-                                            <param id="0" name="Name">&quot;ShowEndGameMenu&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="907757504102319">
-                    <conditions>
-                        <condition id="0" name="On function" sid="419493755502813" type="Function">
-                            <param id="0" name="Name">&quot;ResetGlobalVariables&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="606725529607703" type="System">
-                            <param id="0" name="Variable">TimeStartLayout</param>
-                            <param id="1" name="Value">time</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="263539315542626" type="System">
-                            <param id="0" name="Variable">HowManyTeam1</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="999702821430971" type="System">
-                            <param id="0" name="Variable">HowManyTeam2</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="198346201804487" type="System">
-                            <param id="0" name="Variable">IsStarted</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="473308197347184" type="System">
-                            <param id="0" name="Variable">IsFinished</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="124576504902686" type="System">
-                            <param id="0" name="Variable">CommandType</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="641097617780825" type="System">
-                            <param id="0" name="Variable">DeltaTime</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="441646824386970">
-                    <conditions>
-                        <condition id="0" name="On function" sid="208143243073003" type="Function">
-                            <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="555026319173778">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="142590425687839" type="Function">
-                                    <param id="0" name="Index">1</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="1" name="Compare parameter" sid="376619863640610" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">PausedByPlayerNumber</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="243363010943078" type="System">
-                                    <param id="0" name="Variable">CommandType</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-13" name="Set time scale" sid="262341010487692" type="System">
-                                    <param id="0" name="Time scale">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="138501359189084" type="System">
-                                    <param id="0" name="Variable">PausedByPlayerNumber</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="178297929032637" type="PauseMenuTitle">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="207563952674940" type="PauseMenuPlayer">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="723149077208767" type="PauseMenuSelected">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="568476306366696">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="989465306292373" type="System">
-                                            <param id="0" name="Object">MenuTutorialText</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="371451656794177" type="MenuTutorialText">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="367585020360772">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="905681939445636" type="System">
-                                            <param id="0" name="Object">GamePadComponent</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="194833426567532" type="GamePadComponent">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="279084952786853">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="767075084174619" type="System">
-                                            <param id="0" name="Object">PauseMenuButton</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="162869506137164" type="PauseMenuButton">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="844719517269818">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="316680061876708" type="System">
-                                            <param id="0" name="Object">PauseMenuText</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="894172694714352" type="PauseMenuText">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="581726599328705">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="595492250679030" type="System" />
-                                <condition id="1" name="Compare parameter" sid="248371666079735" type="Function">
-                                    <param id="0" name="Index">1</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set time scale" sid="682022217027464" type="System">
-                                    <param id="0" name="Time scale">0</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="960350509227975" type="System">
-                                    <param id="0" name="Variable">PausedByPlayerNumber</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="0" name="Call function" sid="829233901884060" type="Function">
-                                    <param id="0" name="Name">&quot;ShowPauseMenu&quot;</param>
-                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
     </events>
 </c2eventsheet>

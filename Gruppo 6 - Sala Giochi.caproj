@@ -28,7 +28,9 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -38,8 +40,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>3000</width>
-        <height>1600</height>
+        <width>2500</width>
+        <height>1500</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -56,7 +58,7 @@
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
         <prop name="Preview browser">(default)</prop>
-        <prop name="Sampling">Linear</prop>
+        <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
@@ -792,6 +794,113 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="SalaGiochiEntities">
+            <object-folder name="Camera">
+                <object-type name="CameraOrb" sid="550617696239983">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="In case of fight." name="IsLocked" sid="938812835472307" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="ScrollTo" sid="606756605320414">
+                            <behavior id="scrollto" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="227282476201445" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CameraWallBack" sid="965443330491824">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="101444394801048">
+                            <behavior id="solid" />
+                        </behavior-type>
+                        <behavior-type name="Pin" sid="639512961379846">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296545017583866" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CameraWallForward" sid="211793319289277">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="463025234371068">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="740351142629250" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="HUD" />
+            <object-folder name="Player">
+                <object-type name="ArcadeCabinatoDK" sid="244701203354795">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542942744543841" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Desktop\cabinatoDK.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ArcadePlayerCollider" sid="126552006635280">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="PlayerNumber" sid="993251766214636" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="8Direction" sid="326379914905694">
+                            <behavior id="EightDir" />
+                        </behavior-type>
+                        <behavior-type name="BoundToLayout" sid="312326845889387">
+                            <behavior id="bound" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="629913328678531" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ArcadeCabinatoSF" sid="344012512770304">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927194393049460" speed="5">
+                            <frame duration="1" hotspotX="0.500276" hotspotY="0.5" original-source="C:\Users\dbga_53\Desktop\cabinatoSF.png">
+                                <collision-poly>
+                                    <point x="0.196794" y="0.196685" />
+                                    <point x="0.499724" y="0.0618785" />
+                                    <point x="0.68712" y="0.312707" />
+                                    <point x="0.751244" y="0.5" />
+                                    <point x="0.697623" y="0.69779" />
+                                    <point x="0.499724" y="0.960221" />
+                                    <point x="0.240464" y="0.759669" />
+                                    <point x="0.240464" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="FightPoint" sid="239343272745990">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156257173807171" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Keyboard" sid="542028558954637">
             <plugin id="Keyboard" />
         </object-type>
@@ -962,6 +1071,35 @@
         <object-type name="QuitText4" sid="752268733164766">
             <plugin id="Text" />
         </object-type>
+        <object-type name="TiledBackground" sid="505208680549117">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Alex\Desktop\Progetti Construct 2\The Purge\Sprite\pav.png" />
+        </object-type>
+        <object-type name="Sprite" sid="280324351838961">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="473669905446544" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="702487694544651">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="762954711024524" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="541280078210369">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648081666153531" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Desktop\cabinatoDK.png" />
+                    <frame duration="1" hotspotX="0.503356" hotspotY="0.503356" original-source="C:\Users\dbga_53\Desktop\cabinatoSF.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -1008,21 +1146,40 @@
                 <member>WinnerParticles2</member>
             </members>
         </family>
+        <family name="ArcadeCabinato" plugin-id="Sprite" sid="479528695286359">
+            <members>
+                <member>ArcadeCabinatoDK</member>
+                <member>ArcadeCabinatoSF</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="PlayerNumber" sid="471238417494604" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="PinToCollider" sid="309520120978813">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
     </families>
     <layout-folder>
         <layout>Intro.xml</layout>
         <layout>CharacterSelection.xml</layout>
         <layout>Game.xml</layout>
+        <layout>GameOld.xml</layout>
         <layout>Quit.xml</layout>
     </layout-folder>
     <event-folder>
+        <event-folder name="General">
+            <event-sheet>CameraEventSheet.xml</event-sheet>
+        </event-folder>
         <event-sheet>_GlobalEventSheet.xml</event-sheet>
-        <event-sheet>GameEventSheet.xml</event-sheet>
+        <event-sheet>GameOldEventSheet.xml</event-sheet>
         <event-sheet>_PlayerEventSheet.xml</event-sheet>
         <event-sheet>IntroEventSheet.xml</event-sheet>
         <event-sheet>CharacterSelectionEventSheet.xml</event-sheet>
         <event-sheet>QuitEventSheet.xml</event-sheet>
         <event-sheet>_PowerUpEventSheet.xml</event-sheet>
+        <event-sheet>GameEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

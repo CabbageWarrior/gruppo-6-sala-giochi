@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CameraEventSheet</name>
+    <events>
+        <event-group description="" sid="299406754403060" title="Camera">
+            <sub-events>
+                <event-block sid="833608205089147">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="172246291813447" type="CameraOrb">
+                            <param id="0" name="Instance variable">IsLocked</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="874430252501305" type="CameraWallBack">
+                            <param id="0" name="Object">ArcadeCabinato</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="818844981885785" type="ArcadeCabinato">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">CameraOrb.X</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="408779979975542" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="538355655983234">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="143000422354988" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="320025196632246" type="CameraOrb">
+                                    <param id="0" name="X">lerp(Self.X,ArcadeCabinato.X,0.008)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="244627134931899">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="182265236495331" type="CameraOrb">
+                            <param id="0" name="Instance variable">IsLocked</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="463083541755544" type="CameraWallBack">
+                            <param id="0" name="Object">ArcadeCabinato</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="812427885673542" type="ArcadeCabinato">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">CameraOrb.X</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="641142480697775" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="157515451880643">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="740970691421364" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="703020688747380" type="CameraOrb">
+                                    <param id="0" name="X">lerp(Self.X,ArcadeCabinato.X,0.008)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="341051793051289">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="280678808571053" type="CameraOrb">
+                            <param id="0" name="Object">FightPoint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="836535714072556" type="CameraOrb">
+                            <param id="0" name="Instance variable">IsLocked</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="405227684929437" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="815069615672128" type="FightPoint" />
+                        <action id="-13" name="Set boolean" sid="630476535735475" type="CameraOrb">
+                            <param id="0" name="Instance variable">IsLocked</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="966782617684068">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="523203113000133" type="CameraWallBack">
+                            <param id="0" name="Object">ArcadeCabinato</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="422677704241327" type="CameraWallForward">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="831991286283548">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="878826931217451" type="CameraWallBack">
+                            <param id="0" name="Object">ArcadeCabinato</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="520704033707046" type="CameraWallForward">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
