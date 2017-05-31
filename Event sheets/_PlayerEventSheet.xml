@@ -1536,12 +1536,6 @@
                                     <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
                                 </action>
                                 <action id="-25" name="Move to bottom" sid="552278383346357" type="PlayerGrabCollider" />
-                                <action id="-6" name="Set height" sid="603632261060191" type="PlayerGrabCollider">
-                                    <param id="0" name="Height">Player.Height + CHARACTER_GRAB_COLLISION_RANGE * 2</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="880709914049226" type="PlayerGrabCollider">
-                                    <param id="0" name="Width">Player.Width + CHARACTER_GRAB_COLLISION_RANGE * 2</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="438385487486841">

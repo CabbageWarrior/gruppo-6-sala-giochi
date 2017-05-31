@@ -3,14 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameOldEventSheet</name>
     <events>
-        <variable constant="0" name="TimeStartLayout" sid="395280497992719" static="0" type="number">0</variable>
         <variable constant="0" name="HowManyTeam1" sid="996746662363840" static="0" type="number">0</variable>
         <variable constant="0" name="HowManyTeam2" sid="282976318598436" static="0" type="number">0</variable>
-        <variable comment="0: No; 1: Sì." constant="0" name="IsStarted" sid="930803259663557" static="0" type="number">0</variable>
-        <variable comment="0: No; 1: Sì." constant="0" name="IsFinished" sid="748547435721753" static="0" type="number">0</variable>
         <variable constant="0" name="IsEntireChallengeEnded" sid="564987548607692" static="0" type="number">0</variable>
-        <variable comment="1-4" constant="0" name="PausedByPlayerNumber" sid="691139144864681" static="0" type="number">0</variable>
-        <variable comment="Used to sync correctly the timer." constant="0" name="DeltaTime" sid="194089171849972" static="0" type="number">0</variable>
         <include>_GlobalEventSheet</include>
         <include>_PlayerEventSheet</include>
         <include>_PowerUpEventSheet</include>
@@ -33,14 +28,6 @@
                 <action id="0" name="Call function" sid="650049895091141" type="Function">
                     <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
                     <param id="1" name="Parameter {n}">CharactersArray.At(Human_2_SelectedCharacter - 1, 0){###}Human_2_SelectedCharacter - 1{###}2</param>
-                </action>
-                <action id="0" name="Call function" sid="648062881952225" type="Function">
-                    <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
-                    <param id="1" name="Parameter {n}">CharactersArray.At(Human_3_SelectedCharacter - 1, 0){###}Human_3_SelectedCharacter - 1{###}3</param>
-                </action>
-                <action id="0" name="Call function" sid="159992080299037" type="Function">
-                    <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
-                    <param id="1" name="Parameter {n}">CharactersArray.At(Human_4_SelectedCharacter - 1, 0){###}Human_4_SelectedCharacter - 1{###}4</param>
                 </action>
                 <action id="0" name="Play" sid="173001992803416" type="Audio">
                     <param id="0" name="Audio file">Avvio Partita</param>
@@ -331,61 +318,8 @@
                             <param id="0" name="Text">zeropad(int((time - TimeStartLayout - DeltaTime) % 60), 2)</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="907678159151769">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="635390658418532" type="System">
-                                    <param id="0" name="Object">Ball</param>
-                                </condition>
-                                <condition behavior="BlinkSine" id="0" inverted="1" name="Is active" sid="447624088472673" type="Ball" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="519454327813739">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="160091464019016" type="Ball">
-                                            <param id="0" name="Object">PlayerGrabCollider</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Set opacity" sid="912165543961728" type="Ball">
-                                            <param id="0" name="Opacity">100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="359186215081238">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="593701822710438" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Set opacity" sid="253520900677581" type="Ball">
-                                            <param id="0" name="Opacity">75</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="759742611431605">
-            <conditions>
-                <condition behavior="PowerUpSpawnTimer" id="0" name="On timer" sid="960443546469743" type="PlayFieldBackground">
-                    <param id="0" name="Tag">&quot;PowerUpSpawnTimer&quot;</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="928774579586834" type="System">
-                    <param id="0" name="Variable">IsFinished</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="843250212424987" type="Function">
-                    <param id="0" name="Name">&quot;PowerUpSpawnInLoop&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
         </event-block>
         <event-block sid="390071352330039">
             <conditions>
@@ -1775,7 +1709,7 @@
                                 <event-block sid="423705944777103">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="439861428864322" type="System">
-                                            <param id="0" name="Variable">GameTypeBetterOfX</param>
+                                            <param id="0" name="Variable">GameTypeNumberOfPlayers</param>
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
@@ -1787,12 +1721,12 @@
                                                 <condition id="-14" name="Compare variable" sid="298077997117456" type="System">
                                                     <param id="0" name="Variable">Team1Score</param>
                                                     <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">GameTypeBetterOfX / 2</param>
+                                                    <param id="2" name="Value">GameTypeNumberOfPlayers / 2</param>
                                                 </condition>
                                                 <condition id="-14" name="Compare variable" sid="612015140286376" type="System">
                                                     <param id="0" name="Variable">Team2Score</param>
                                                     <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">GameTypeBetterOfX / 2</param>
+                                                    <param id="2" name="Value">GameTypeNumberOfPlayers / 2</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -1807,7 +1741,7 @@
                                                         <condition id="-14" name="Compare variable" sid="596195617222362" type="System">
                                                             <param id="0" name="Variable">Team1Score</param>
                                                             <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">GameTypeBetterOfX / 2</param>
+                                                            <param id="2" name="Value">GameTypeNumberOfPlayers / 2</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions />
@@ -1835,7 +1769,7 @@
                                                         <condition id="-14" name="Compare variable" sid="888354692187769" type="System">
                                                             <param id="0" name="Variable">Team2Score</param>
                                                             <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">GameTypeBetterOfX / 2</param>
+                                                            <param id="2" name="Value">GameTypeNumberOfPlayers / 2</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions />

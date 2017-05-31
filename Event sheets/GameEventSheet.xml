@@ -3,51 +3,381 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEventSheet</name>
     <events>
+        <variable constant="0" name="TimeStartLayout" sid="657696101831040" static="0" type="number">0</variable>
+        <variable comment="0: No; 1: Sì." constant="0" name="IsStarted" sid="635656972470344" static="0" type="number">0</variable>
+        <variable comment="0: No; 1: Sì." constant="0" name="IsFinished" sid="114693361163373" static="0" type="number">0</variable>
+        <variable comment="1-4" constant="0" name="PausedByPlayerNumber" sid="262362660870769" static="0" type="number">0</variable>
+        <variable comment="Used to sync correctly the timer." constant="0" name="DeltaTime" sid="898590272016251" static="0" type="number">0</variable>
+        <include>_GlobalEventSheet</include>
         <include>CameraEventSheet</include>
         <event-block sid="899054706897429">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="367342970374275" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="853061759929351" type="Function">
+                    <param id="0" name="Name">&quot;ResetGlobalVariables&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Set text" sid="958141089330475" type="GameTutorialText">
+                    <param id="0" name="Text">replace(Self.Text, &quot;\n&quot;, newline)</param>
+                </action>
+                <action id="0" name="Play" sid="972759801248922" type="Audio">
+                    <param id="0" name="Audio file">Avvio Partita</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="936405490246550" type="Audio">
+                    <param id="0" name="Tag">&quot;Vittoria Partita&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="850170265414785" type="Audio">
+                    <param id="0" name="Tag">&quot;Pareggio Partita&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="641312619121149" type="System">
+                    <param id="0" name="Variable">IsStarted</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="236079929885448" type="System">
+                    <param id="0" name="Variable">DeltaTime</param>
+                    <param id="1" name="Value">time - TimeStartLayout</param>
+                </action>
+                <action behavior="PowerUpSpawnTimer" id="0" name="Start timer" sid="981859991739830" type="PlayFieldBackground">
+                    <param id="0" name="Duration">POWER_UP_SPAWN_SECONDS_DELTA</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;PowerUpSpawnTimer&quot;</param>
+                </action>
+            </actions>
             <sub-events>
-                <event-block sid="804664873114554">
+                <event-block sid="384592812045286">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="594052389280562" type="ArcadeCabinato">
-                            <param id="0" name="Instance variable">PlayerNumber</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="995227415571025" type="ArcadePlayerCollider">
+                        <condition id="-7" name="Compare instance variable" sid="280530989227269" type="ArcadePlayerCollider">
                             <param id="0" name="Instance variable">PlayerNumber</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="PinToCollider" id="0" name="Pin to object" sid="801144652356351" type="ArcadeCabinato">
-                            <param id="0" name="Pin to">ArcadePlayerCollider</param>
-                            <param id="1" name="Mode">1</param>
+                        <action id="5" name="Set frame" sid="180457908362209" type="ArcadePlayerCollider">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="908957860019288">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="980435552939601" type="System">
+                                    <param id="0" name="Variable">Human_1_SelectedCharacter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="838810696346988" type="ArcadePlayerCollider">
+                                    <param id="0" name="Object">ArcadeCabinatoSF</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="157082583639566" type="ArcadeCabinatoSF">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                </action>
+                                <action behavior="PinToCollider" id="0" name="Pin to object" sid="455574885958942" type="ArcadeCabinatoSF">
+                                    <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="403087050514293">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="569884362368029" type="System" />
+                                <condition id="-14" name="Compare variable" sid="483493310869764" type="System">
+                                    <param id="0" name="Variable">Human_1_SelectedCharacter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="313770937876090" type="ArcadePlayerCollider">
+                                    <param id="0" name="Object">ArcadeCabinatoDK</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="651038169089722" type="ArcadeCabinatoDK">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                </action>
+                                <action behavior="PinToCollider" id="0" name="Pin to object" sid="629203962767218" type="ArcadeCabinatoDK">
+                                    <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="296758874690221">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="740355759244019" type="System" />
+                                <condition id="-14" name="Compare variable" sid="352226911863888" type="System">
+                                    <param id="0" name="Variable">Human_1_SelectedCharacter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="373578438254413" type="ArcadePlayerCollider">
+                                    <param id="0" name="Object">ArcadeCabinatoPM</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="917342068453179" type="ArcadeCabinatoPM">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                </action>
+                                <action behavior="PinToCollider" id="0" name="Pin to object" sid="442975187616747" type="ArcadeCabinatoPM">
+                                    <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="252481383587591">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="654338139066714" type="System" />
+                                <condition id="-14" name="Compare variable" sid="467662530283836" type="System">
+                                    <param id="0" name="Variable">Human_1_SelectedCharacter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="335221515807355" type="ArcadePlayerCollider">
+                                    <param id="0" name="Object">ArcadeCabinatoSM</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="523843478504021" type="ArcadeCabinatoSM">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                </action>
+                                <action behavior="PinToCollider" id="0" name="Pin to object" sid="101016295633589" type="ArcadeCabinatoSM">
+                                    <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="804664873114554">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="594052389280562" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="995227415571025" type="ArcadePlayerCollider">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="PinToCollider" id="0" name="Pin to object" sid="801144652356351" type="ArcadeCabinato">
+                                    <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="200958236829657">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="737782500196026" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="913834661009303">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="343518541558859" type="System">
+                                    <param id="0" name="Variable">GameTypeNumberOfPlayers</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="557868914079304" type="ArcadePlayerCollider" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="257482512446053">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="171301820140935" type="System" />
+                                <condition id="-14" name="Compare variable" sid="337948687834805" type="System">
+                                    <param id="0" name="Variable">GameTypeNumberOfPlayers</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="738079241689495" type="ArcadePlayerCollider">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="980238283771195">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="462539980996539" type="System">
+                                            <param id="0" name="Variable">Human_2_SelectedCharacter</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="253390434373504" type="ArcadePlayerCollider">
+                                            <param id="0" name="Object">ArcadeCabinatoSF</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="501797460862239" type="ArcadeCabinatoSF">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                        </action>
+                                        <action behavior="PinToCollider" id="0" name="Pin to object" sid="344009947099364" type="ArcadeCabinatoSF">
+                                            <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="766739546771001">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="406222051010250" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="100400287389696" type="System">
+                                            <param id="0" name="Variable">Human_2_SelectedCharacter</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="240936239483109" type="ArcadePlayerCollider">
+                                            <param id="0" name="Object">ArcadeCabinatoDK</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="640509752357515" type="ArcadeCabinatoDK">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                        </action>
+                                        <action behavior="PinToCollider" id="0" name="Pin to object" sid="520399132060936" type="ArcadeCabinatoDK">
+                                            <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="636597867178572">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="582800158277345" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="175323674980665" type="System">
+                                            <param id="0" name="Variable">Human_2_SelectedCharacter</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="865552415648003" type="ArcadePlayerCollider">
+                                            <param id="0" name="Object">ArcadeCabinatoPM</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="807798001610220" type="ArcadeCabinatoPM">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                        </action>
+                                        <action behavior="PinToCollider" id="0" name="Pin to object" sid="475245912571270" type="ArcadeCabinatoPM">
+                                            <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="526296933394558">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="202968388380363" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="118429322519799" type="System">
+                                            <param id="0" name="Variable">Human_2_SelectedCharacter</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="559803155413144" type="ArcadePlayerCollider">
+                                            <param id="0" name="Object">ArcadeCabinatoSM</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="993630102119474" type="ArcadeCabinatoSM">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                        </action>
+                                        <action behavior="PinToCollider" id="0" name="Pin to object" sid="774523272167472" type="ArcadeCabinatoSM">
+                                            <param id="0" name="Pin to">ArcadePlayerCollider</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="704709059194031">
+                    <conditions>
+                        <condition id="5" name="Is tag playing" sid="289986451598757" type="Audio">
+                            <param id="0" name="Tag">&quot;MenuBackgroundMusic&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="577968492566475" type="Audio">
+                            <param id="0" name="Tag">&quot;MenuBackgroundMusic&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="966016304550318">
+                <event-block sid="986270812577388">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="495351182513795" type="ArcadeCabinato">
-                            <param id="0" name="Instance variable">PlayerNumber</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="125088236728925" type="ArcadePlayerCollider">
-                            <param id="0" name="Instance variable">PlayerNumber</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="530158298124238" type="Audio">
+                            <param id="0" name="Tag">&quot;GameBackgroundMusic&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="PinToCollider" id="0" name="Pin to object" sid="774523272167472" type="ArcadeCabinato">
-                            <param id="0" name="Pin to">ArcadePlayerCollider</param>
-                            <param id="1" name="Mode">1</param>
+                        <action id="0" name="Play" sid="775651066227271" type="Audio">
+                            <param id="0" name="Audio file">Game</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;GameBackgroundMusic&quot;</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="240480905995245">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="704962993952776" type="System">
+                            <param id="0" name="Variable">CommandType</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="976267753930636">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="406070488824254" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="951331163422071">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="752612318585865" type="System">
+                            <param id="0" name="Object">ArcadeGraphicOnFloor</param>
+                            <param id="1" name="Expression">ArcadeGraphicOnFloor.Y</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="224683191639698" type="ArcadeGraphicOnFloor" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -69,26 +399,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="944680756505743" type="ArcadePlayerCollider">
-                            <param id="0" name="Control">1</param>
+                        <action id="0" name="Call function" sid="662025645879623" type="Function">
+                            <param id="0" name="Name">&quot;MoveToDirection&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}&quot;right&quot;</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="344300418636481">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="377278442539266" type="ArcadeCabinato">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="681155501484726" type="ArcadeCabinato">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="435762647102460">
                     <conditions>
@@ -97,8 +412,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="452467495548700" type="ArcadePlayerCollider">
-                            <param id="0" name="Control">3</param>
+                        <action id="0" name="Call function" sid="125408756821128" type="Function">
+                            <param id="0" name="Name">&quot;MoveToDirection&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}&quot;down&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -109,8 +425,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="318619476875877" type="ArcadePlayerCollider">
-                            <param id="0" name="Control">2</param>
+                        <action id="0" name="Call function" sid="522155713643300" type="Function">
+                            <param id="0" name="Name">&quot;MoveToDirection&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}&quot;up&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -121,26 +438,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="306326852060529" type="ArcadePlayerCollider">
-                            <param id="0" name="Control">0</param>
+                        <action id="0" name="Call function" sid="496270644047385" type="Function">
+                            <param id="0" name="Name">&quot;MoveToDirection&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}&quot;left&quot;</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="690958576456820">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="924862069188316" type="ArcadeCabinato">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="997940466592644" type="ArcadeCabinato">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -161,26 +463,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="487976519650442" type="ArcadePlayerCollider">
-                            <param id="0" name="Control">1</param>
+                        <action id="0" name="Call function" sid="820975084771276" type="Function">
+                            <param id="0" name="Name">&quot;MoveToDirection&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}&quot;right&quot;</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="281323964289225">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="653809029190970" type="ArcadeCabinato">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="980927946207562" type="ArcadeCabinato">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="731692731973463">
                     <conditions>
@@ -189,8 +476,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="440272704059003" type="ArcadePlayerCollider">
-                            <param id="0" name="Control">3</param>
+                        <action id="0" name="Call function" sid="514296722339928" type="Function">
+                            <param id="0" name="Name">&quot;MoveToDirection&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}&quot;down&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -201,8 +489,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="790748763504005" type="ArcadePlayerCollider">
-                            <param id="0" name="Control">2</param>
+                        <action id="0" name="Call function" sid="215178752538639" type="Function">
+                            <param id="0" name="Name">&quot;MoveToDirection&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}&quot;up&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -213,28 +502,158 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="958051591458799" type="ArcadePlayerCollider">
-                            <param id="0" name="Control">0</param>
+                        <action id="0" name="Call function" sid="328643309439631" type="Function">
+                            <param id="0" name="Name">&quot;MoveToDirection&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}&quot;left&quot;</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="496460035505117" title="Arcade Player Functions">
+            <sub-events>
+                <comment>Parametri: 0: Numero del giocatore, 1: Direzione testuale (&quot;up&quot;, &quot;down&quot;, &quot;left&quot;, &quot;right&quot;)</comment>
+                <event-block sid="715261654800093">
+                    <conditions>
+                        <condition id="0" name="On function" sid="966997231269845" type="Function">
+                            <param id="0" name="Name">&quot;MoveToDirection&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="373969278649646" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="375000928581045" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="707602417480375">
+                        <event-block sid="275009685843708">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="214060096938643" type="ArcadeCabinato">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                <condition id="1" name="Compare parameter" sid="949915136923126" type="Function">
+                                    <param id="0" name="Index">1</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="706152321225543">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="909278427245494" type="ArcadePlayerCollider">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">FloorLimitTop.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="421293441609305" type="ArcadePlayerCollider">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="296003654139666">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="739767596595115" type="System" />
+                                <condition id="1" name="Compare parameter" sid="755468993206248" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="930707623397301">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="800982993289033" type="ArcadePlayerCollider">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">FloorLimitBottom.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="882885681671007" type="ArcadePlayerCollider">
+                                            <param id="0" name="Control">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="163814261658126">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="180498199440899" type="System" />
+                                <condition id="1" name="Compare parameter" sid="657082683807362" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="912956105143868" type="ArcadeCabinato">
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="355916469559584" type="ArcadePlayerCollider">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="741361666787312" type="ArcadeCabinato">
                                     <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="304871750383938">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="315681073727215" type="System" />
+                                <condition id="1" name="Compare parameter" sid="660161841020243" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="376029226510941" type="ArcadePlayerCollider">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="262361693112054" type="ArcadeCabinato">
+                                    <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="664093754628313" title="Game Layout Functions">
+            <sub-events>
+                <event-block sid="879018059179133">
+                    <conditions>
+                        <condition id="0" name="On function" sid="434569214520108" type="Function">
+                            <param id="0" name="Name">&quot;ResetGlobalVariables&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="195833274180976" type="System">
+                            <param id="0" name="Variable">TimeStartLayout</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="919164404469114" type="System">
+                            <param id="0" name="Variable">IsStarted</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="726115298397833" type="System">
+                            <param id="0" name="Variable">IsFinished</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="942832311542258" type="System">
+                            <param id="0" name="Variable">CommandType</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="275372746722846" type="System">
+                            <param id="0" name="Variable">DeltaTime</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

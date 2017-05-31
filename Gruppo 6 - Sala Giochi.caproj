@@ -513,81 +513,6 @@
             <object-type name="EndGameMenuText" sid="540707769703792">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="CharacterSelector" sid="863668077788482">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="CharacterNumber" sid="498702146978231" type="number" />
-                    <instance-variable name="IsAlreadySelected" sid="978941691981344" type="boolean" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161135491042050" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\iron man.png">
-                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                            <collision-poly>
-                                <point x="0.210938" y="0.210938" />
-                                <point x="0.5" y="0.00585938" />
-                                <point x="0.751953" y="0.248047" />
-                                <point x="0.771484" y="0.5" />
-                                <point x="0.71875" y="0.71875" />
-                                <point x="0.5" y="0.990234" />
-                                <point x="0.238281" y="0.761719" />
-                                <point x="0.191406" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\war machine.png">
-                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\Black Widow.png">
-                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\black panther.png">
-                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\Captain America.png">
-                            <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\Winter Soldier.png">
-                            <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\Hawkeye.png">
-                            <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\falcon.png">
-                            <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="CharacterSelectorBackground" sid="881033064990641">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="PlayerNumber" sid="600621533177558" type="number" />
-                </instance-variables>
-                <effects>
-                    <effect-type name="SetColor">
-                        <effect id="setcolor" />
-                    </effect-type>
-                </effects>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="880268921151058" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="PadButtonAnchorTeam1" x="-0.181818" y="0.5" />
-                            <image-point name="PadButtonAnchorTeam2" x="1.18182" y="0.5" />
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="CharacterSelectorText" sid="950150200580367">
-                <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="PlayerNumber" sid="162138462781840" type="number" />
-                    <instance-variable name="SelectedCharacterNumber" sid="943889379559464" type="number" />
-                    <instance-variable name="IsConfirmed" sid="607268161582451" type="boolean" />
-                </instance-variables>
-            </object-type>
             <object-type name="CharacterRoleText" sid="807201377871587">
                 <plugin id="Text" />
             </object-type>
@@ -662,32 +587,6 @@
             </object-type>
             <object-type name="PauseMenuPlayer" sid="419533758371601">
                 <plugin id="Text" />
-            </object-type>
-            <object-type name="CharacterDetailBackground" sid="576063846722911">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="PlayerNumber" sid="749938460342522" type="number" />
-                    <instance-variable name="CharacterDetailNumber" sid="498982837474394" type="number" />
-                </instance-variables>
-                <effects>
-                    <effect-type name="SetColor">
-                        <effect id="setcolor" />
-                    </effect-type>
-                </effects>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="789685183710891" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="PadButtonAnchorTeam1" x="-0.181818" y="0.5" />
-                            <image-point name="PadButtonAnchorTeam2" x="1.18182" y="0.5" />
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="CharacterDetailTitle" sid="930446465738206">
-                <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="CharacterDetailNumber" sid="708701448865212" type="number" />
-                </instance-variables>
             </object-type>
             <object-type name="CharacterDetailMinorBackground" sid="677763582859077">
                 <plugin id="Sprite" />
@@ -842,13 +741,50 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-folder name="HUD" />
+            <object-folder name="HUD">
+                <object-type name="FloorLimitTop" sid="644682983322588">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="464930012652434" speed="5">
+                            <frame duration="1" hotspotX="0.964286" hotspotY="0.869565" original-source="C:\Users\rverz\Downloads\New Piskel (1).png">
+                                <collision-poly>
+                                    <point x="0.107143" y="0.0434783" />
+                                    <point x="0.535714" y="0.0869565" />
+                                    <point x="0.321429" y="0.826087" />
+                                    <point x="0.142857" y="0.565217" />
+                                    <point x="0.785714" y="0.869565" />
+                                    <point x="0.285714" y="0.869565" />
+                                    <point x="0.0357143" y="0.565217" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="FloorLimitBottom" sid="738975128843479">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="200351583585127" speed="5">
+                            <frame duration="1" hotspotX="0.964286" hotspotY="0.130435" original-source="C:\Users\rverz\Downloads\New Piskel.png">
+                                <collision-poly>
+                                    <point x="0.0867349" y="0.10397" />
+                                    <point x="0.57653" y="0.164461" />
+                                    <point x="0.331633" y="1" />
+                                    <point x="0.127551" y="0.829867" />
+                                    <point x="0.862245" y="1" />
+                                    <point x="0.290816" y="1" />
+                                    <point x="0.00510206" y="0.829867" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-folder name="Player">
                 <object-type name="ArcadeCabinatoDK" sid="244701203354795">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542942744543841" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Desktop\cabinatoDK.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_53\Desktop\cabinatoDK.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -867,8 +803,8 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="629913328678531" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -876,20 +812,246 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927194393049460" speed="5">
-                            <frame duration="1" hotspotX="0.500276" hotspotY="0.5" original-source="C:\Users\dbga_53\Desktop\cabinatoSF.png">
+                            <frame duration="1" hotspotX="0.500276" hotspotY="1" original-source="C:\Users\dbga_53\Desktop\cabinatoSF.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ArcadeCabinatoSM" sid="971561150434276">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="530545439104042" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_53\Desktop\cabinatoDK.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ArcadeCabinatoPM" sid="307933113520257">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268997811288166" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_53\Desktop\cabinatoDK.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="MOB">
+                <object-type name="AlienRed" sid="235714221269046">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="566475858364946" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="237641865656443" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="AlienYellow" sid="614057578630511">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="826849274569361" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <collision-poly>
-                                    <point x="0.196794" y="0.196685" />
-                                    <point x="0.499724" y="0.0618785" />
-                                    <point x="0.68712" y="0.312707" />
-                                    <point x="0.751244" y="0.5" />
-                                    <point x="0.697623" y="0.69779" />
-                                    <point x="0.499724" y="0.960221" />
-                                    <point x="0.240464" y="0.759669" />
-                                    <point x="0.240464" y="0.5" />
+                                    <point x="0.46875" y="0.234375" />
+                                    <point x="0.5" y="0.109375" />
+                                    <point x="0.53125" y="0.234375" />
+                                    <point x="0.625" y="0.8125" />
+                                    <point x="0.5" y="0.84375" />
+                                    <point x="0.46875" y="0.765625" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="324153462938983" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="AlienBlue" sid="589972291875099">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="785799411112026" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="3" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="539887264455778" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="3" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="255972772408204" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Menus">
+                <object-type name="CharacterSelector" sid="863668077788482">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="CharacterNumber" sid="498702146978231" type="number" />
+                        <instance-variable name="IsAlreadySelected" sid="978941691981344" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161135491042050" speed="0">
+                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
+                                <image-point name="SelectorBGPoint" x="0.447003" y="0.499831" />
+                                <collision-poly>
+                                    <point x="0.413139" y="0.413139" />
+                                    <point x="0.586522" y="0.413139" />
+                                    <point x="0.586522" y="0.586522" />
+                                    <point x="0.413139" y="0.586522" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
+                                <collision-poly>
+                                    <point x="0" y="0.16661" />
+                                    <point x="1" y="0.16661" />
+                                    <point x="1" y="0.833051" />
+                                    <point x="0" y="0.833051" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
+                                <collision-poly>
+                                    <point x="0" y="0.16661" />
+                                    <point x="1" y="0.16661" />
+                                    <point x="1" y="0.833051" />
+                                    <point x="0" y="0.833051" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
+                                <collision-poly>
+                                    <point x="0" y="0.16661" />
+                                    <point x="1" y="0.16661" />
+                                    <point x="1" y="0.833051" />
+                                    <point x="0" y="0.833051" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
+                                <collision-poly>
+                                    <point x="0" y="0.16661" />
+                                    <point x="1" y="0.16661" />
+                                    <point x="1" y="0.833051" />
+                                    <point x="0" y="0.833051" />
                                 </collision-poly>
                             </frame>
                         </animation>
                     </animation-folder>
+                </object-type>
+                <object-type name="CharacterSelectorBackground" sid="881033064990641">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="PlayerNumber" sid="600621533177558" type="number" />
+                    </instance-variables>
+                    <effects>
+                        <effect-type name="SetColor">
+                            <effect id="setcolor" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="880268921151058" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="PadButtonAnchorTeam1" x="-1" y="0.5" />
+                                <image-point name="PadButtonAnchorTeam2" x="2" y="0.5" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CharacterSelectorText" sid="950150200580367">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="PlayerNumber" sid="162138462781840" type="number" />
+                        <instance-variable name="SelectedCharacterNumber" sid="943889379559464" type="number" />
+                        <instance-variable name="IsConfirmed" sid="607268161582451" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="CharacterDetailTitle" sid="930446465738206">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="PlayerNumber" sid="803429609981783" type="number" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="CharacterDetailBackground" sid="576063846722911">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="PlayerNumber" sid="749938460342522" type="number" />
+                        <instance-variable name="CharacterDetailNumber" sid="498982837474394" type="number" />
+                    </instance-variables>
+                    <effects>
+                        <effect-type name="SetColor">
+                            <effect id="setcolor" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="789685183710891" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="PadButtonAnchorTeam1" x="-1" y="0.5" />
+                                <image-point name="PadButtonAnchorTeam2" x="2" y="0.5" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CharacterDetailImage" sid="199589720255177">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="PlayerNumber" sid="336544007729454" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="P1Idle" pingpong="0" repeatcount="1" repeatto="0" sid="153631012597244" speed="5">
+                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
+                                <collision-poly>
+                                    <point x="0" y="0.00799966" />
+                                    <point x="1" y="0.00799966" />
+                                    <point x="1" y="0.992" />
+                                    <point x="0" y="0.992" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="P2Idle" pingpong="0" repeatcount="1" repeatto="0" sid="418732526426022" speed="5">
+                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
+                                <collision-poly>
+                                    <point x="0" y="0.00799966" />
+                                    <point x="1" y="0.00799966" />
+                                    <point x="1" y="0.992" />
+                                    <point x="0" y="0.992" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="P3Idle" pingpong="0" repeatcount="1" repeatto="0" sid="189467714136636" speed="5">
+                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
+                                <collision-poly>
+                                    <point x="0" y="0.00799966" />
+                                    <point x="1" y="0.00799966" />
+                                    <point x="1" y="0.992" />
+                                    <point x="0" y="0.992" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="P4Idle" pingpong="0" repeatcount="1" repeatto="0" sid="459422344465955" speed="5">
+                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
+                                <collision-poly>
+                                    <point x="0" y="0.00799966" />
+                                    <point x="1" y="0.00799966" />
+                                    <point x="1" y="0.992" />
+                                    <point x="0" y="0.992" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CharacterDetailText" sid="976209830351082">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="PlayerNumber" sid="969614702785701" type="number" />
+                    </instance-variables>
                 </object-type>
             </object-folder>
             <object-type name="FightPoint" sid="239343272745990">
@@ -1158,6 +1320,45 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite7" sid="884261607263256">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662760961718449" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="930536189975822">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571579931092941" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BackgroundProva" sid="879590340677543">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite9" sid="321797734746207">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="365225999242368" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProvaXYZ" sid="792538635519221">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="167986007651543" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="261142293540335">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -1169,6 +1370,7 @@
             <members>
                 <member>CharacterDetailParamTitle</member>
                 <member>CharacterDetailParamValue</member>
+                <member>CharacterDetailText</member>
                 <member>CharacterDetailTitle</member>
                 <member>CharacterRoleText</member>
                 <member>CharacterSelectorText</member>
@@ -1207,7 +1409,9 @@
         <family name="ArcadeCabinato" plugin-id="Sprite" sid="479528695286359">
             <members>
                 <member>ArcadeCabinatoDK</member>
+                <member>ArcadeCabinatoPM</member>
                 <member>ArcadeCabinatoSF</member>
+                <member>ArcadeCabinatoSM</member>
             </members>
             <instance-variables>
                 <instance-variable name="PlayerNumber" sid="471238417494604" type="number" />
@@ -1216,7 +1420,28 @@
                 <behavior-type name="PinToCollider" sid="309520120978813">
                     <behavior id="Pin" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="408465863319981">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
+        </family>
+        <family name="ArcadeAlieno" plugin-id="Sprite" sid="232017883060565">
+            <members>
+                <member>AlienBlue</member>
+                <member>AlienRed</member>
+                <member>AlienYellow</member>
+            </members>
+        </family>
+        <family name="ArcadeGraphicOnFloor" plugin-id="Sprite" sid="555992175706816">
+            <members>
+                <member>AlienBlue</member>
+                <member>AlienRed</member>
+                <member>AlienYellow</member>
+                <member>ArcadeCabinatoDK</member>
+                <member>ArcadeCabinatoPM</member>
+                <member>ArcadeCabinatoSF</member>
+                <member>ArcadeCabinatoSM</member>
+            </members>
         </family>
     </families>
     <layout-folder>

@@ -131,35 +131,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="243559653017054">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="248990574478710" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">12</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="606454434314711" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="199775182211626">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="850146458622621" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">12</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="298459124355533" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder - 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="733074329118109">
+                                <event-block sid="733074329118109">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="730646311160492" type="Keyboard">
                                             <param id="0" name="Key">38 (Up arrow)</param>
@@ -201,35 +173,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="852197045346222">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="541901293378350" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">13</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="417158113050953" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="468166197117855">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="604619587526223" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">13</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="959178977451741" type="Function">
-                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedOrder + 1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="783253902937678">
+                                <event-block sid="783253902937678">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="736454472200499" type="Keyboard">
                                             <param id="0" name="Key">40 (Down arrow)</param>
@@ -271,35 +215,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="712082674138010">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="639107549635512" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="542975675296279" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedValue</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="956164854511289">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="627067060403849" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="637734892216578" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">IntroMenuSelected.SelectedValue</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="729730514520994">
+                                <event-block sid="729730514520994">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="341650795777477" type="Keyboard">
                                             <param id="0" name="Key">32 (Barra Spaziatrice)</param>
@@ -353,35 +269,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="463147300743994">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="264116478168101" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="187999428504599" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="586108640336579">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="145495666140626" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="345776004490992" type="Function">
-                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;TutorialClose&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="946111005699737">
+                                <event-block sid="946111005699737">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="773012443855160" type="Keyboard">
                                             <param id="0" name="Key">27 (Esc)</param>
@@ -483,13 +371,13 @@
                                         <condition id="1" name="Compare parameter" sid="636195754258786" type="Function">
                                             <param id="0" name="Index">0</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;PlayBestOf5&quot;</param>
+                                            <param id="2" name="Value">&quot;PlaySinglePlayer&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="802543734639828" type="System">
-                                            <param id="0" name="Variable">GameTypeBetterOfX</param>
-                                            <param id="1" name="Value">5</param>
+                                            <param id="0" name="Variable">GameTypeNumberOfPlayers</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-2" name="Go to layout" sid="466207676441673" type="System">
                                             <param id="0" name="Layout">CharacterSelection</param>
@@ -502,13 +390,13 @@
                                         <condition id="1" name="Compare parameter" sid="306754979804293" type="Function">
                                             <param id="0" name="Index">0</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;PlayInfinite&quot;</param>
+                                            <param id="2" name="Value">&quot;PlayMultiplayer&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="570338100463769" type="System">
-                                            <param id="0" name="Variable">GameTypeBetterOfX</param>
-                                            <param id="1" name="Value">0</param>
+                                            <param id="0" name="Variable">GameTypeNumberOfPlayers</param>
+                                            <param id="1" name="Value">2</param>
                                         </action>
                                         <action id="-2" name="Go to layout" sid="238161407291959" type="System">
                                             <param id="0" name="Layout">CharacterSelection</param>
