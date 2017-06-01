@@ -675,6 +675,13 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="CharactersArray" uid="47">
+            <properties>
+                <width>8</width>
+                <height>9</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>

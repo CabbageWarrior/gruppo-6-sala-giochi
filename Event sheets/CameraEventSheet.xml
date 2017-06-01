@@ -30,8 +30,9 @@
                                 <condition id="-1" name="Every tick" sid="143000422354988" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-1" name="Set X" sid="320025196632246" type="CameraOrb">
-                                    <param id="0" name="X">lerp(Self.X,ArcadeCabinato.X,0.008)</param>
+                                <action id="0" name="Call function" sid="694249731501534" type="Function">
+                                    <param id="0" name="Name">&quot;MoveCamera&quot;</param>
+                                    <param id="1" name="Parameter {n}">ArcadeCabinato.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -62,8 +63,9 @@
                                 <condition id="-1" name="Every tick" sid="740970691421364" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-1" name="Set X" sid="703020688747380" type="CameraOrb">
-                                    <param id="0" name="X">lerp(Self.X,ArcadeCabinato.X,0.008)</param>
+                                <action id="0" name="Call function" sid="676221045972849" type="Function">
+                                    <param id="0" name="Name">&quot;MoveCamera&quot;</param>
+                                    <param id="1" name="Parameter {n}">ArcadeCabinato.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -114,6 +116,34 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-group description="" sid="210940059525558" title="Camera Functions">
+                    <sub-events>
+                        <comment>Parametri: 0: Cabinato UID.</comment>
+                        <event-block sid="305722551334584">
+                            <conditions>
+                                <condition id="0" name="On function" sid="491083641045147" type="Function">
+                                    <param id="0" name="Name">&quot;MoveCamera&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="689289391844553" type="System">
+                                    <param id="0" name="Variable">CommandType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="764942254369048" type="CameraOrb">
+                                    <param id="0" name="Instance variable">IsLocked</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="643312111955806" type="ArcadeCabinato">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="744662833698650" type="CameraOrb">
+                                    <param id="0" name="X">lerp(Self.X,ArcadeCabinato.X,0.008)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

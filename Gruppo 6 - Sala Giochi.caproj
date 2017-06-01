@@ -1448,7 +1448,6 @@
         <layout>Intro.xml</layout>
         <layout>CharacterSelection.xml</layout>
         <layout>Game.xml</layout>
-        <layout>GameOld.xml</layout>
         <layout>Quit.xml</layout>
     </layout-folder>
     <event-folder>
@@ -1456,7 +1455,6 @@
             <event-sheet>CameraEventSheet.xml</event-sheet>
         </event-folder>
         <event-sheet>_GlobalEventSheet.xml</event-sheet>
-        <event-sheet>GameOldEventSheet.xml</event-sheet>
         <event-sheet>_PlayerEventSheet.xml</event-sheet>
         <event-sheet>IntroEventSheet.xml</event-sheet>
         <event-sheet>CharacterSelectionEventSheet.xml</event-sheet>
