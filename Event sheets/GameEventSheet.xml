@@ -8,6 +8,7 @@
         <variable comment="0: No; 1: Sì." constant="0" name="IsStarted" sid="635656972470344" static="0" type="number">0</variable>
         <variable comment="0: No; 1: Sì." constant="0" name="IsFinished" sid="114693361163373" static="0" type="number">0</variable>
         <variable comment="1-4" constant="0" name="PausedByPlayerNumber" sid="262362660870769" static="0" type="number">0</variable>
+        <variable comment="Tick in which player paused the game." constant="0" name="PausedAtTick" sid="295865420605826" static="0" type="number">0</variable>
         <variable comment="Used to sync correctly the timer." constant="0" name="DeltaTime" sid="898590272016251" static="0" type="number">0</variable>
         <include>_GlobalEventSheet</include>
         <include>_PlayerEventSheet</include>
@@ -432,6 +433,10 @@
                             <param id="0" name="Variable">DeltaTime</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="895671285328042" type="System">
+                            <param id="0" name="Variable">PausedAtTick</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -768,7 +773,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="837402457129417" type="Function">
                                                     <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1</param>
+                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1{###}ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -781,7 +786,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="406504887324845" type="Function">
                                                     <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1</param>
+                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1{###}ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -796,7 +801,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="223412653969390" type="Function">
                                                     <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1</param>
+                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1{###}ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -809,7 +814,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="948028761394153" type="Function">
                                                     <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1</param>
+                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1{###}ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -856,7 +861,19 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <comment>Da KEYBOARD si può solo selezionare attivamente RESUME.</comment>
+                                        <event-block sid="592638541345426">
+                                            <conditions>
+                                                <condition id="0" name="On key pressed" sid="144832383969542" type="Keyboard">
+                                                    <param id="0" name="Key">27 (Esc)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="180741135017654" type="Function">
+                                                    <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                                 <event-block sid="827741641683471">
@@ -880,7 +897,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="793800525713563" type="Function">
                                                     <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1</param>
+                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1{###}ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -893,7 +910,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="263694652419890" type="Function">
                                                     <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1</param>
+                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder - 1{###}ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -908,7 +925,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="733910352849805" type="Function">
                                                     <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1</param>
+                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1{###}ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -921,7 +938,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="506191619393168" type="Function">
                                                     <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1</param>
+                                                    <param id="1" name="Parameter {n}">PauseMenuSelected.SelectedOrder + 1{###}ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -968,7 +985,19 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <comment>Da KEYBOARD si può solo selezionare attivamente RESUME.</comment>
+                                        <event-block sid="552081469866593">
+                                            <conditions>
+                                                <condition id="0" name="On key pressed" sid="856605381876893" type="Keyboard">
+                                                    <param id="0" name="Key">8 (Backspace)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="254032418617791" type="Function">
+                                                    <param id="0" name="Name">&quot;PauseMenuToggle&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -1089,6 +1118,11 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">PausedByPlayerNumber</param>
                                         </condition>
+                                        <condition id="-14" name="Compare variable" sid="413257391298976" type="System">
+                                            <param id="0" name="Variable">PausedAtTick</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">tickcount</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="524890902252722" type="System">
@@ -1100,6 +1134,10 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="759292876225077" type="System">
                                             <param id="0" name="Variable">PausedByPlayerNumber</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="418231055060387" type="System">
+                                            <param id="0" name="Variable">PausedAtTick</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="158669897764385" type="PauseMenuTitle">
@@ -1180,6 +1218,10 @@
                                             <param id="0" name="Variable">PausedByPlayerNumber</param>
                                             <param id="1" name="Value">Function.Param(0)</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="417679839801795" type="System">
+                                            <param id="0" name="Variable">PausedAtTick</param>
+                                            <param id="1" name="Value">tickcount</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="363175941877024" type="Function">
                                             <param id="0" name="Name">&quot;ShowPauseMenu&quot;</param>
                                             <param id="1" name="Parameter {n}">Function.Param(0)</param>
@@ -1188,7 +1230,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Parametri: nessuno.</comment>
+                        <comment>Parametri: 0: Player Number.</comment>
                         <event-block sid="663850138782737">
                             <conditions>
                                 <condition id="0" name="On function" sid="357353339639773" type="Function">
@@ -1263,7 +1305,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="480602786309351" type="Function">
                                             <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
-                                            <param id="1" name="Parameter {n}">1</param>
+                                            <param id="1" name="Parameter {n}">1{###}Function.Param(0)</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="775073939814482" type="System">
                                             <param id="0" name="Variable">CommandType</param>
@@ -1273,11 +1315,16 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Parametri: 0: Voce di menu da selezionare.</comment>
+                        <comment>Parametri: 0: Voce di menu da selezionare; 1: Player Number.</comment>
                         <event-block sid="428931870663922">
                             <conditions>
                                 <condition id="0" name="On function" sid="614834376973617" type="Function">
                                     <param id="0" name="Name">&quot;SetPauseMenuValue&quot;</param>
+                                </condition>
+                                <condition id="1" name="Compare parameter" sid="583126015684033" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PausedByPlayerNumber</param>
                                 </condition>
                                 <condition id="-7" name="Compare instance variable" sid="255962085014976" type="PauseMenuSelected">
                                     <param id="0" name="Instance variable">SelectedOrder</param>
