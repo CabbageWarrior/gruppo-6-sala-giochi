@@ -899,6 +899,7 @@
                     <instance-variables>
                         <instance-variable name="CharacterNumber" sid="498702146978231" type="number" />
                         <instance-variable name="IsAlreadySelected" sid="978941691981344" type="boolean" />
+                        <instance-variable comment="0: Unlocked; 1: Locked." name="IsLocked" sid="858284975989085" type="number" />
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161135491042050" speed="0">
@@ -1431,6 +1432,11 @@
                 <member>AlienRed</member>
                 <member>AlienYellow</member>
             </members>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="824193179318370">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
         </family>
         <family name="ArcadeGraphicOnFloor" plugin-id="Sprite" sid="555992175706816">
             <members>

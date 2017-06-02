@@ -1242,7 +1242,7 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="864729633319244" type="PauseMenuPlayer">
-                                    <param id="0" name="Text">&quot;Player &quot; &amp; Function.Param(0)</param>
+                                    <param id="0" name="Text">&quot;Giocatore &quot; &amp; Function.Param(0)</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="969483045986389" type="PauseMenuPlayer">
                                     <param id="0" name="Visibility">1</param>

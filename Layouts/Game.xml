@@ -57,7 +57,7 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>0.12</x>
+                <x>0.01</x>
                 <y>1</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -78,11 +78,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3125</x>
+                        <x>2125</x>
                         <y>750</y>
                         <z>0</z>
-                        <width>1645.701416016</width>
-                        <height>987.420898438</height>
+                        <width>1745.529907227</width>
+                        <height>1047.317993164</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -98,7 +98,7 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>0.14</x>
+                <x>0.02</x>
                 <y>1</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -119,11 +119,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3375</x>
+                        <x>2375</x>
                         <y>625</y>
                         <z>0</z>
-                        <width>1185.854125977</width>
-                        <height>711.512512207</height>
+                        <width>1416.053710938</width>
+                        <height>849.632263184</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -139,7 +139,7 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>0.16</x>
+                <x>0.03</x>
                 <y>1</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -160,11 +160,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3625</x>
-                        <y>500</y>
+                        <x>2500</x>
+                        <y>625</y>
                         <z>0</z>
-                        <width>1118.034057617</width>
-                        <height>670.82043457</height>
+                        <width>1350.154296875</width>
+                        <height>810.092590332</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -435,11 +435,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1500</x>
-                        <y>1125</y>
+                        <x>875</x>
+                        <y>-125</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -457,11 +460,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1625</x>
-                        <y>1250</y>
+                        <x>1125</x>
+                        <y>-125</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -479,11 +485,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1750</x>
-                        <y>1125</y>
+                        <x>1375</x>
+                        <y>-125</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -911,7 +920,7 @@
                 </instance>
                 <instance type="PauseMenuTitle" uid="220">
                     <properties>
-                        <text>PAUSE</text>
+                        <text>PAUSA</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-96,400,0</font>
                         <color>255,255,255</color>
@@ -938,7 +947,7 @@
                 </instance>
                 <instance type="PauseMenuPlayer" uid="221">
                     <properties>
-                        <text>Player X</text>
+                        <text>&lt;Giocatore X&gt;</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-48,400,0</font>
                         <color>255,255,255</color>
@@ -1044,7 +1053,7 @@
                 </instance>
                 <instance type="PauseMenuText" uid="226">
                     <properties>
-                        <text>Resume!</text>
+                        <text>Continua!</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-29.6,400,0</font>
                         <color>255,255,255</color>
@@ -1071,7 +1080,7 @@
                 </instance>
                 <instance type="PauseMenuText" uid="228">
                     <properties>
-                        <text>Return to Menu!</text>
+                        <text>Torna al Menu!</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-29.6,400,0</font>
                         <color>255,255,255</color>
