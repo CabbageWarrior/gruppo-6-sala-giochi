@@ -1,0 +1,28 @@
+<?xml version='1.0' ?>
+<!--
+[Conventions]
+	[FILTERS]
+		@seq: sequence of read
+		@charnum: character number
+			- 1: Ryu
+			- 2: Donkey
+			- 3: Pacman
+			- 4: Sailor
+			- TBD...
+	[VALUES]
+		text(): text of the message
+		@name: display name
+-->
+<chapter1>
+	
+	<hint seq='1' charnum='1' name='Lottatole di stlada'>Ehi! Dove cacchialola siamo?</hint>
+	<hint seq='1' charnum='2' name='Don Keykong'>Picciotto... Dove spacchiu semo fornuti?</hint>
+	<hint seq='1' charnum='3' name='Pack Man'>Per tutti i francobolli! Dove siamo finiti?</hint>
+	<hint seq='1' charnum='4' name='Sailor Mooh'>Ehi, ma... dove ci troviaMOOH?</hint>
+	
+	<hint seq='2' charnum='1' name='Lottatole di stlada'>Salebbe ploplio melaviglioso sapello!</hint>
+	<hint seq='2' charnum='2' name='Don Keykong'>Picciotto... E io che ne posso sapere, AH?</hint>
+	<hint seq='2' charnum='3' name='Pack Man'>Non saprei... Non ho mai consegnato in questa zona...</hint>
+	<hint seq='2' charnum='4' name='Sailor Mooh'>MOOHoio dalla voglia di saperlo anch'io!</hint>
+
+</chapter1>

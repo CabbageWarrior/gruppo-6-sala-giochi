@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>_PowerUpEventSheet</name>
+    <name>_PowerUp_EventSheet</name>
     <events>
-        <include>_GlobalEventSheet</include>
-        <include>_PlayerEventSheet</include>
+        <include>_Global_EventSheet</include>
+        <include>_Player_EventSheet</include>
         <event-group description="" sid="262831933753562" title="In-Game Power Ups Behaviors">
             <sub-events>
                 <event-block sid="672936904715290">

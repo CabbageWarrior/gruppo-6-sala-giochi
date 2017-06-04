@@ -10,14 +10,17 @@
     <unique-id>h1rwguczlx2</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
@@ -899,6 +902,7 @@
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="CharacterNumber" sid="498702146978231" type="number" />
+                        <instance-variable comment="Player owner of this instance." name="PlayerNumber" sid="587430916743957" type="number" />
                         <instance-variable name="IsAlreadySelected" sid="978941691981344" type="boolean" />
                         <instance-variable comment="0: Unlocked; 1: Locked." name="IsLocked" sid="858284975989085" type="number" />
                     </instance-variables>
@@ -1386,6 +1390,22 @@
         <object-type name="Text" sid="261142293540335">
             <plugin id="Text" />
         </object-type>
+        <object-type name="AJAX" sid="708611061302451">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type global="1" name="XML" sid="147070488449742">
+            <plugin id="XML" />
+        </object-type>
+        <object-type name="DialogueBox" sid="565684253897216">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="DialogueText" sid="128532417033129">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="DialogueDisplayName" sid="712653597593459">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -1484,15 +1504,17 @@
     </layout-folder>
     <event-folder>
         <event-folder name="General">
-            <event-sheet>CameraEventSheet.xml</event-sheet>
+            <event-sheet>Camera_EventSheet.xml</event-sheet>
         </event-folder>
-        <event-sheet>_GlobalEventSheet.xml</event-sheet>
-        <event-sheet>_PlayerEventSheet.xml</event-sheet>
-        <event-sheet>IntroEventSheet.xml</event-sheet>
-        <event-sheet>CharacterSelectionEventSheet.xml</event-sheet>
-        <event-sheet>QuitEventSheet.xml</event-sheet>
-        <event-sheet>_PowerUpEventSheet.xml</event-sheet>
-        <event-sheet>GameEventSheet.xml</event-sheet>
+        <event-sheet>_Global_EventSheet.xml</event-sheet>
+        <event-sheet>_Player_EventSheet.xml</event-sheet>
+        <event-sheet>Intro_EventSheet.xml</event-sheet>
+        <event-sheet>CharacterSelection_EventSheet.xml</event-sheet>
+        <event-sheet>Quit_EventSheet.xml</event-sheet>
+        <event-sheet>_PowerUp_EventSheet.xml</event-sheet>
+        <event-sheet>Game_EventSheet.xml</event-sheet>
+        <event-sheet>GameMenu_EventSheet.xml</event-sheet>
+        <event-sheet>GameTexts_EventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
@@ -1516,6 +1538,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="AJAX" uid="15" />
     </global-instances>
     <sounds-folder>
         <file name="Avvio Partita.ogg" />
@@ -1551,6 +1574,9 @@
             <file name="icon-128.png" />
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Dialogues">
+            <file name="Level1Dialogues.xml" />
         </file-folder>
         <file name="stylesheet.css" />
         <file name="MonkeyIsland-1990-refined.ttf" />

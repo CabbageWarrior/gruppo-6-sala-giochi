@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>_PlayerEventSheet</name>
+    <name>_Player_EventSheet</name>
     <events>
-        <include>_GlobalEventSheet</include>
+        <include>_Global_EventSheet</include>
         <event-group description="" sid="630690809544065" title="Player Personal Controls">
             <sub-events>
                 <variable constant="1" name="PLAYER_LEFT_ANALOG_DEADZONE" sid="915950520092224" static="0" type="number">0</variable>

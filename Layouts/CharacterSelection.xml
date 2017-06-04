@@ -2,7 +2,7 @@
 <c2layout>
     <name>CharacterSelection</name>
     <sid>458942032258318</sid>
-    <event-sheet>CharacterSelectionEventSheet</event-sheet>
+    <event-sheet>CharacterSelection_EventSheet</event-sheet>
     <size>
         <width>2500</width>
         <height>1500</height>
@@ -99,6 +99,7 @@
                     </properties>
                     <instance-variables>
                         <CharacterNumber>1</CharacterNumber>
+                        <PlayerNumber>0</PlayerNumber>
                         <IsAlreadySelected>false</IsAlreadySelected>
                         <IsLocked>0</IsLocked>
                     </instance-variables>
@@ -133,6 +134,7 @@
                     </properties>
                     <instance-variables>
                         <CharacterNumber>2</CharacterNumber>
+                        <PlayerNumber>0</PlayerNumber>
                         <IsAlreadySelected>false</IsAlreadySelected>
                         <IsLocked>0</IsLocked>
                     </instance-variables>
@@ -167,6 +169,7 @@
                     </properties>
                     <instance-variables>
                         <CharacterNumber>3</CharacterNumber>
+                        <PlayerNumber>0</PlayerNumber>
                         <IsAlreadySelected>false</IsAlreadySelected>
                         <IsLocked>0</IsLocked>
                     </instance-variables>
@@ -201,6 +204,7 @@
                     </properties>
                     <instance-variables>
                         <CharacterNumber>4</CharacterNumber>
+                        <PlayerNumber>0</PlayerNumber>
                         <IsAlreadySelected>false</IsAlreadySelected>
                         <IsLocked>0</IsLocked>
                     </instance-variables>

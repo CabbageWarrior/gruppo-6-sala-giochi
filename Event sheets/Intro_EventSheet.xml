@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>IntroEventSheet</name>
+    <name>Intro_EventSheet</name>
     <events>
-        <include>_GlobalEventSheet</include>
+        <include>_Global_EventSheet</include>
         <event-block sid="657418671201653">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="221812450395585" type="System" />
@@ -19,6 +19,14 @@
                 </action>
                 <action id="0" name="Set text" sid="154813223311736" type="GameTutorialText">
                     <param id="0" name="Text">replace(Self.Text, &quot;\n&quot;, newline)</param>
+                </action>
+                <action id="-9" name="Set value" sid="418520785800883" type="System">
+                    <param id="0" name="Variable">Human_1_SelectedCharacter</param>
+                    <param id="1" name="Value">HUMAN_1_DEFAULT_CHARACTER</param>
+                </action>
+                <action id="-9" name="Set value" sid="626635347516369" type="System">
+                    <param id="0" name="Variable">Human_2_SelectedCharacter</param>
+                    <param id="1" name="Value">HUMAN_2_DEFAULT_CHARACTER</param>
                 </action>
             </actions>
             <sub-events>

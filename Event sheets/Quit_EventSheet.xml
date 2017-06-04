@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>QuitEventSheet</name>
+    <name>Quit_EventSheet</name>
     <events>
-        <include>_GlobalEventSheet</include>
+        <include>_Global_EventSheet</include>
         <event-block sid="233364535348375">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="121731112330448" type="System" />

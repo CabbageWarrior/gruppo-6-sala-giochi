@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>CharacterSelectionEventSheet</name>
+    <name>CharacterSelection_EventSheet</name>
     <events>
-        <include>_GlobalEventSheet</include>
+        <include>_Global_EventSheet</include>
         <event-block sid="991821666540234">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="812521210217568" type="System" />
@@ -879,6 +879,10 @@
                                                             <param id="0" name="Instance variable">IsAlreadySelected</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
+                                                        <action id="-10" name="Set value" sid="254583774111062" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                                            <param id="1" name="Value">Function.Param(0)</param>
+                                                        </action>
                                                         <action id="-10" name="Set value" sid="871854923727478" type="CharacterSelectorText">
                                                             <param id="0" name="Instance variable">SelectedCharacterNumber</param>
                                                             <param id="1" name="Value">CharacterSelector.CharacterNumber</param>
@@ -1062,6 +1066,10 @@
                                                     <actions>
                                                         <action id="-13" name="Set boolean" sid="205196610091313" type="CharacterSelector">
                                                             <param id="0" name="Instance variable">IsAlreadySelected</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="488391407084923" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">PlayerNumber</param>
                                                             <param id="1" name="Value">0</param>
                                                         </action>
                                                     </actions>

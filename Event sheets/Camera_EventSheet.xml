@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>CameraEventSheet</name>
+    <name>Camera_EventSheet</name>
     <events>
         <event-group description="" sid="299406754403060" title="Camera">
             <sub-events>

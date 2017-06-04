@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>_GlobalEventSheet</name>
+    <name>_Global_EventSheet</name>
     <events>
         <variable constant="1" name="CHARACTER_TYPE_DEFAULT" sid="525126073600669" static="0" type="number">1</variable>
         <variable constant="1" name="CHARACTER_TYPE_TANK" sid="497758715841600" static="0" type="number">2</variable>
@@ -15,7 +15,7 @@
         <variable constant="1" name="HUMAN_2_DEFAULT_CHARACTER" sid="798923984598612" static="0" type="number">2</variable>
         <variable constant="1" name="POWER_UP_SPAWN_SECONDS_DELTA" sid="303028600119413" static="0" type="number">15</variable>
         <variable comment="0: No; 1: Sì." constant="0" name="IsIntroViewed" sid="332694909704563" static="0" type="number">1</variable>
-        <variable comment="0: Main Menu; 1: Player; 2: End Game Menu; 3: Pause Menu; 4: Tutorial opened." constant="0" name="CommandType" sid="413793904628628" static="0" type="number">0</variable>
+        <variable comment="0: Main Menu; 1: Player; 2: End Game Menu; 3: Pause Menu; 4: Tutorial opened, 5: In-Game Texts." constant="0" name="CommandType" sid="413793904628628" static="0" type="number">0</variable>
         <variable constant="0" name="Human_1_SelectedCharacter" sid="260329936874057" static="0" type="number">1</variable>
         <variable constant="0" name="Human_2_SelectedCharacter" sid="351818965695792" static="0" type="number">2</variable>
         <variable constant="0" name="Team1Score" sid="708607705493034" static="0" type="number">0</variable>

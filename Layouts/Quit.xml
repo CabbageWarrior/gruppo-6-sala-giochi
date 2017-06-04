@@ -2,7 +2,7 @@
 <c2layout>
     <name>Quit</name>
     <sid>419643375322013</sid>
-    <event-sheet>QuitEventSheet</event-sheet>
+    <event-sheet>Quit_EventSheet</event-sheet>
     <size>
         <width>3000</width>
         <height>1600</height>

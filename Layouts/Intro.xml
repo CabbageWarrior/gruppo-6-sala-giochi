@@ -2,7 +2,7 @@
 <c2layout>
     <name>Intro</name>
     <sid>228117557936986</sid>
-    <event-sheet>IntroEventSheet</event-sheet>
+    <event-sheet>Intro_EventSheet</event-sheet>
     <size>
         <width>2500</width>
         <height>1500</height>
