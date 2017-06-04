@@ -145,6 +145,51 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="993631328025283">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="836228160643783" type="System">
+                            <param id="0" name="Object">CharacterSelector</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="340454218743791" type="CharacterSelector">
+                            <param id="0" name="Instance variable">IsLocked</param>
+                            <param id="1" name="Value">CharactersArray.At(Self.CharacterNumber - 1, 2)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="905420854674323">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="376707101017389" type="CharacterSelector">
+                                    <param id="0" name="Instance variable">IsLocked</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="497001930838659" type="CharacterSelector">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;HexagonalPixellate&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="797221440901025">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="669184984547636" type="CharacterSelector">
+                                    <param id="0" name="Instance variable">IsLocked</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="618348848175204" type="CharacterSelector">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;HexagonalPixellate&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="656491096926398">
@@ -860,11 +905,33 @@
                                                                     <param id="2" name="Value">Function.Param(0)</param>
                                                                 </condition>
                                                             </conditions>
-                                                            <actions>
-                                                                <action id="0" name="Set text" sid="960012031920797" type="CharacterDetailTitle">
-                                                                    <param id="0" name="Text">CharactersArray.At(ValueToTest - 1, 0)</param>
-                                                                </action>
-                                                            </actions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="929197331557342">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="545945218507167" type="CharacterSelector">
+                                                                            <param id="0" name="Instance variable">IsLocked</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Set text" sid="960012031920797" type="CharacterDetailTitle">
+                                                                            <param id="0" name="Text">CharactersArray.At(ValueToTest - 1, 0)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="964581355729988">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="913767401213219" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Set text" sid="356300354905769" type="CharacterDetailTitle">
+                                                                            <param id="0" name="Text">&quot;Chissà...&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
                                                         <event-block sid="436013454220095">
                                                             <conditions>
@@ -874,11 +941,33 @@
                                                                     <param id="2" name="Value">Function.Param(0)</param>
                                                                 </condition>
                                                             </conditions>
-                                                            <actions>
-                                                                <action id="0" name="Set text" sid="492822353250385" type="CharacterDetailText">
-                                                                    <param id="0" name="Text">CharactersArray.At(ValueToTest - 1, 1)</param>
-                                                                </action>
-                                                            </actions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="356127064333700">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="124990313394612" type="CharacterSelector">
+                                                                            <param id="0" name="Instance variable">IsLocked</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Set text" sid="492822353250385" type="CharacterDetailText">
+                                                                            <param id="0" name="Text">CharactersArray.At(ValueToTest - 1, 1)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="621874251151247">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="997037005404420" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Set text" sid="165557433511206" type="CharacterDetailText">
+                                                                            <param id="0" name="Text">&quot;Questo meraviglioso cabinato è bloccato! Sbloccalo, se ci riesci!&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
                                                         <event-block sid="561685267686529">
                                                             <conditions>
@@ -888,12 +977,35 @@
                                                                     <param id="2" name="Value">Function.Param(0)</param>
                                                                 </condition>
                                                             </conditions>
-                                                            <actions>
-                                                                <action id="4" name="Set animation" sid="271658589490252" type="CharacterDetailImage">
-                                                                    <param id="0" name="Animation">&quot;P&quot; &amp; ValueToTest &amp; &quot;Idle&quot;</param>
-                                                                    <param id="1" name="From">1</param>
-                                                                </action>
-                                                            </actions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="607453252974193">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="341707798413840" type="CharacterSelector">
+                                                                            <param id="0" name="Instance variable">IsLocked</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="271658589490252" type="CharacterDetailImage">
+                                                                            <param id="0" name="Animation">&quot;P&quot; &amp; ValueToTest &amp; &quot;Idle&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="433476364975991">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="240276831955259" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="769439285353847" type="CharacterDetailImage">
+                                                                            <param id="0" name="Animation">&quot;PBohIdleUser&quot; &amp; Function.Param(0)</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
                                                         <event-block sid="331962908385097">
                                                             <conditions>
@@ -987,15 +1099,32 @@
                                             <param id="2" name="Value">&quot;Confirm&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="202047048651567" type="CharacterSelectorText">
-                                            <param id="0" name="Instance variable">IsConfirmed</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="340327811022275" type="CharacterSelectorBackground">
-                                            <param id="0" name="Opacity">100</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="799463280771304">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="316545236216057" type="CharacterSelector">
+                                                    <param id="0" name="Instance variable">CharacterNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">CharacterSelectorText.SelectedCharacterNumber</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="342530259917055" type="CharacterSelector">
+                                                    <param id="0" name="Instance variable">IsLocked</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="202047048651567" type="CharacterSelectorText">
+                                                    <param id="0" name="Instance variable">IsConfirmed</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-16" name="Set opacity" sid="340327811022275" type="CharacterSelectorBackground">
+                                                    <param id="0" name="Opacity">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="356877873539666">
                                     <conditions>

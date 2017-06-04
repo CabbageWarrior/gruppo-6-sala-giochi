@@ -102,6 +102,13 @@
                         <IsAlreadySelected>false</IsAlreadySelected>
                         <IsLocked>0</IsLocked>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="HexagonalPixellate">
+                            <parameters>
+                                <scale>160</scale>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -129,6 +136,13 @@
                         <IsAlreadySelected>false</IsAlreadySelected>
                         <IsLocked>0</IsLocked>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="HexagonalPixellate">
+                            <parameters>
+                                <scale>160</scale>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -156,6 +170,13 @@
                         <IsAlreadySelected>false</IsAlreadySelected>
                         <IsLocked>0</IsLocked>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="HexagonalPixellate">
+                            <parameters>
+                                <scale>160</scale>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -181,8 +202,15 @@
                     <instance-variables>
                         <CharacterNumber>4</CharacterNumber>
                         <IsAlreadySelected>false</IsAlreadySelected>
-                        <IsLocked>1</IsLocked>
+                        <IsLocked>0</IsLocked>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="HexagonalPixellate">
+                            <parameters>
+                                <scale>160</scale>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

@@ -34,6 +34,7 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Evan Wallace" id="hexpixellate">Hexagonal pixellate</effect>
         <effect author="Scirra" id="setcolor">Set color</effect>
     </used-effects>
     <configurations>
@@ -901,6 +902,11 @@
                         <instance-variable name="IsAlreadySelected" sid="978941691981344" type="boolean" />
                         <instance-variable comment="0: Unlocked; 1: Locked." name="IsLocked" sid="858284975989085" type="number" />
                     </instance-variables>
+                    <effects>
+                        <effect-type name="HexagonalPixellate">
+                            <effect id="hexpixellate" />
+                        </effect-type>
+                    </effects>
                     <animation-folder>
                         <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161135491042050" speed="0">
                             <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
@@ -1006,6 +1012,26 @@
                         <instance-variable name="PlayerNumber" sid="336544007729454" type="number" />
                     </instance-variables>
                     <animation-folder>
+                        <animation framecount="1" loop="1" name="PBohIdleUser1" pingpong="0" repeatcount="1" repeatto="0" sid="375463915316975" speed="5">
+                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
+                                <collision-poly>
+                                    <point x="0" y="0.00799966" />
+                                    <point x="1" y="0.00799966" />
+                                    <point x="1" y="0.992" />
+                                    <point x="0" y="0.992" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="PBohIdleUser2" pingpong="0" repeatcount="1" repeatto="0" sid="271268540244817" speed="5">
+                            <frame duration="1" hotspotX="0.4995" hotspotY="0.5005">
+                                <collision-poly>
+                                    <point x="1" y="0.992" />
+                                    <point x="0" y="0.992" />
+                                    <point x="0" y="0.00799966" />
+                                    <point x="1" y="0.00799966" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                         <animation framecount="1" loop="1" name="P1Idle" pingpong="0" repeatcount="1" repeatto="0" sid="153631012597244" speed="5">
                             <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
                                 <collision-poly>
