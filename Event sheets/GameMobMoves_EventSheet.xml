@@ -265,8 +265,17 @@
                         <condition id="1" name="Is overlapping another object" sid="984911172634045" type="ArcadeAlieno">
                             <param id="0" name="Object">ArcadeAlieno</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="866407465129078" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">ArcadeAlieno.target</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="Bullet" id="4" name="Bounce off object" sid="291020820683180" type="ArcadeAlieno">
+                            <param id="0" name="Object">ArcadeAlieno</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="658332652449598">
                             <conditions>
