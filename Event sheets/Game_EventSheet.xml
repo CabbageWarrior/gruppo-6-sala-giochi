@@ -15,6 +15,7 @@
         <include>Camera_EventSheet</include>
         <include>GameMenu_EventSheet</include>
         <include>GameTexts_EventSheet</include>
+        <include>GameMobMoves_EventSheet</include>
         <event-block sid="899054706897429">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="367342970374275" type="System" />

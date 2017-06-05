@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameMobMoves_EventSheet</name>
+    <events>
+        <variable constant="1" name="PATROL_RIGHT" sid="133690809817975" static="0" type="number">0</variable>
+        <variable constant="1" name="PATROL_LEFT" sid="480395838782691" static="0" type="number">180</variable>
+        <variable constant="1" name="PATROL" sid="732156622078221" static="0" type="number">250</variable>
+        <event-group description="" sid="156341722623204" title="IA">
+            <sub-events>
+                <event-block sid="925171559425168">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="287293509997033" type="ArcadePlayerCollider" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="800435694533906">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="797394895324427" type="System">
+                                    <param id="0" name="Object">ArcadeAlieno</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Inseguimento</comment>
+                                <event-block sid="981026724922957">
+                                    <conditions>
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="201725380429062" type="ArcadeAlieno">
+                                            <param id="0" name="Object">ArcadePlayerCollider</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="517247690338105" type="ArcadeAlieno">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block any="1" sid="409385194095859">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="732283492449343" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">target</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="743200818226559" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">target</param>
+                                                    <param id="1" name="Value">ArcadePlayerCollider.PickedCount = 1 ? ArcadePlayerCollider.PlayerNumber : choose(1, 2)</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="265653423308047">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="682333128157422" type="Function">
+                                                            <param id="0" name="Name">&quot;FollowPlayer&quot;</param>
+                                                            <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeAlieno.target</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="632421321749806">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="815981437005621" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="193053456352237" type="ArcadePlayerCollider">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">ArcadeAlieno.target</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="864869854741469" type="Function">
+                                                    <param id="0" name="Name">&quot;FollowPlayer&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeAlieno.target</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="519454320114991">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="173422277799311" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="558919439397518" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">target</param>
+                                                    <param id="1" name="Value">ArcadePlayerCollider.PickedCount = 1 ? ArcadePlayerCollider.PlayerNumber : choose(1, 2)</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="553381284924330">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="849417769471211" type="Function">
+                                                            <param id="0" name="Name">&quot;FollowPlayer&quot;</param>
+                                                            <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeAlieno.target</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Pattugliamento</comment>
+                                <event-block sid="205664176597796">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="234793224373617" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="349327923000793" type="ArcadeAlieno">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="928169403198020" type="ArcadeAlieno">
+                                            <param id="0" name="Instance variable">target</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="132260597487213">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="608661682396477" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">allert</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="886477810636172" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Value">PATROL_RIGHT</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="513407302944169" type="ArcadeAlieno">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="686008169878676" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">currentX</param>
+                                                    <param id="1" name="Value">Self.X</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="319776585257040" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">allert</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Movimento alieni</comment>
+                                        <event-block sid="579128330336988">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="428514146127754" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">PATROL_RIGHT</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="938542219015739" type="ArcadeAlieno">
+                                                    <param id="0" name="X">Self.X+Self.speed</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="292707755430489">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="835022143785637" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="637888520169188" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">PATROL_LEFT</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="826713281453644" type="ArcadeAlieno">
+                                                    <param id="0" name="X">Self.X-Self.speed</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Cambio direzione alieni</comment>
+                                        <event-block sid="641142468279328">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="769390210087129" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">PATROL_RIGHT</param>
+                                                </condition>
+                                                <condition id="-1" name="Compare X" sid="450522274072768" type="ArcadeAlieno">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="X co-ordinate">Self.currentX+PATROL</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="960178695932724" type="ArcadeAlieno">
+                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="844875435285679" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="628212522261511" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="872228887109615" type="ArcadeAlieno">
+                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="871370604277859" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Value">PATROL_LEFT</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="264410724065461" type="ArcadeAlieno">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="411550286808960" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">currentX</param>
+                                                    <param id="1" name="Value">Self.X</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="810778760629996">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="479596349872288" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="904669304534603" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">PATROL_LEFT</param>
+                                                </condition>
+                                                <condition id="-1" name="Compare X" sid="389346807105864" type="ArcadeAlieno">
+                                                    <param id="0" name="Comparison">3</param>
+                                                    <param id="1" name="X co-ordinate">Self.currentX-PATROL</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="638746147573003" type="ArcadeAlieno">
+                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="990979541485688" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="913392547693250" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="613811672754717" type="ArcadeAlieno">
+                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="809719122886644" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Value">PATROL_RIGHT</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="267099585719612" type="ArcadeAlieno">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="175104808264901" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">currentX</param>
+                                                    <param id="1" name="Value">Self.X</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="714996063745827">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="984911172634045" type="ArcadeAlieno">
+                            <param id="0" name="Object">ArcadeAlieno</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="658332652449598">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="170401516908014" type="System">
+                                    <param id="0" name="Object">ArcadeAlieno</param>
+                                    <param id="1" name="Expression">distance(ArcadeAlieno.X, ArcadeAlieno.Y, ArcadePlayerCollider.X, ArcadePlayerCollider.Y)</param>
+                                    <param id="2" name="Order">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="462514208753959" type="ArcadeAlieno">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="128809551800701">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="764365867301653" type="ArcadeAlieno">
+                                            <param id="0" name="Instance variable">CollisionPreventionDirection</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="811132987090044" type="ArcadeAlieno">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">FloorLimitBottom.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="829221947464062" type="ArcadeAlieno">
+                                            <param id="0" name="Instance variable">CollisionPreventionDirection</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="991780382080489">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="838965932813000" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="381185653564572" type="ArcadeAlieno">
+                                            <param id="0" name="Instance variable">CollisionPreventionDirection</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="416670356384026" type="ArcadeAlieno">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Y co-ordinate">FloorLimitTop.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="448527913076531" type="ArcadeAlieno">
+                                            <param id="0" name="Instance variable">CollisionPreventionDirection</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="298788376057750">
+                                    <conditions />
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="511335379134672">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="795913885436752" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">CollisionPreventionDirection</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Set Y" sid="521016401836272" type="ArcadeAlieno">
+                                                    <param id="0" name="Y">Self.Y + Self.speed</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="464959795186942" type="ArcadeAlieno">
+                                                    <param id="0" name="X">Self.X + Self.speed / 2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="103152513248406">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="416027272040252" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Set Y" sid="869980767873635" type="ArcadeAlieno">
+                                                    <param id="0" name="Y">Self.Y - Self.speed</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="950076567659548" type="ArcadeAlieno">
+                                                    <param id="0" name="X">Self.X + Self.speed / 2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="971586000379548">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-24" name="Stop loop" sid="915221827678889" type="System" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="295217693097857">
+                    <conditions>
+                        <condition id="0" name="On function" sid="112317997963508" type="Function">
+                            <param id="0" name="Name">&quot;FollowPlayer&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="133071340165223" type="ArcadeAlieno">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="796249713370467" type="ArcadeAlieno">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="517993951951166">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="529680563765859" type="ArcadePlayerCollider">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(1)</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="825416586346102" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(1)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="994525580935400" type="DebugText">
+                                    <param id="0" name="Text">&quot;Alieno: &quot; &amp; ArcadeAlieno.X &amp; newline &amp; &quot;Player:&quot; &amp;ArcadePlayerCollider.X</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="830004724161355">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="468472512210848" type="ArcadeAlieno">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">ArcadePlayerCollider.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="683825149164588" type="ArcadeAlieno">
+                                            <param id="0" name="Instance variable">direction</param>
+                                            <param id="1" name="Value">PATROL_RIGHT</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="754522784372110" type="ArcadeAlieno">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="221053357368555">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="142452743439157" type="ArcadeAlieno">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">ArcadePlayerCollider.X - (abs(ArcadeCabinato.Width / 2))</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="188447290170471" type="ArcadeAlieno">
+                                                    <param id="0" name="Angle">angle(Self.X, Self.Y, ArcadePlayerCollider.X + (ArcadeCabinato.Width / 2), ArcadeCabinato.Y)</param>
+                                                </action>
+                                                <action behavior="Bullet" id="5" name="Set enabled" sid="240261272966230" type="ArcadeAlieno">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="740034611196407">
+                                                    <conditions>
+                                                        <condition id="2" inverted="1" name="Is playing" sid="913937830725226" type="ArcadeAlieno">
+                                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="965739456528526" type="ArcadeAlieno">
+                                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="812250541442516">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="329512907794011" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="557084830834921" type="ArcadeAlieno">
+                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="666782452853436">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="219795227584758" type="System" />
+                                        <condition id="-1" name="Compare X" sid="150450846717818" type="ArcadeAlieno">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">ArcadePlayerCollider.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="129159345227603" type="ArcadeAlieno">
+                                            <param id="0" name="Instance variable">direction</param>
+                                            <param id="1" name="Value">PATROL_LEFT</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="944774525295162" type="ArcadeAlieno">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="195818679361319">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="109413395625641" type="ArcadeAlieno">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">ArcadePlayerCollider.X + (abs(ArcadeCabinato.Width / 2))</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="886779407962103" type="ArcadeAlieno">
+                                                    <param id="0" name="Angle">angle(Self.X, Self.Y, ArcadePlayerCollider.X - (ArcadeCabinato.Width / 2), ArcadeCabinato.Y)</param>
+                                                </action>
+                                                <action behavior="Bullet" id="5" name="Set enabled" sid="163860158576056" type="ArcadeAlieno">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="546009266706128">
+                                                    <conditions>
+                                                        <condition id="2" inverted="1" name="Is playing" sid="151626816799570" type="ArcadeAlieno">
+                                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="875715500826760" type="ArcadeAlieno">
+                                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="997338534228810">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="631968255593322" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="961490313980774" type="ArcadeAlieno">
+                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="919858528459717">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="720463896632551" type="System" />
+                                        <condition id="2" inverted="1" name="Is playing" sid="942596897584310" type="ArcadeAlieno">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="397765997321184" type="ArcadeAlieno">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
