@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Game</name>
+    <name>Level1</name>
     <sid>898685768516353</sid>
     <event-sheet>Game_EventSheet</event-sheet>
     <size>
@@ -321,6 +321,7 @@
                                 <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -364,6 +365,7 @@
                                 <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -389,6 +391,13 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>1</PlayerNumber>
+                        <PlayerHP>75</PlayerHP>
+                        <PlayerDMG>1</PlayerDMG>
+                        <Special>0</Special>
+                        <PlayerHitsCount>0</PlayerHitsCount>
+                        <PlayerHP_Max>75</PlayerHP_Max>
+                        <Special_Max>200</Special_Max>
+                        <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -440,6 +449,13 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>2</PlayerNumber>
+                        <PlayerHP>75</PlayerHP>
+                        <PlayerDMG>1</PlayerDMG>
+                        <Special>0</Special>
+                        <PlayerHitsCount>0</PlayerHitsCount>
+                        <PlayerHP_Max>75</PlayerHP_Max>
+                        <Special_Max>200</Special_Max>
+                        <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -454,7 +470,7 @@
                         <width>250</width>
                         <height>250</height>
                         <depth>0</depth>
-                        <hotspotX>0.500276387</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -468,12 +484,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>2</AlienHP>
+                        <AlienAttack>5</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -519,12 +537,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>3</AlienHP>
+                        <AlienAttack>2</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -570,12 +590,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>5</AlienHP>
+                        <AlienAttack>3</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -622,6 +644,13 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>3</PlayerNumber>
+                        <PlayerHP>75</PlayerHP>
+                        <PlayerDMG>1</PlayerDMG>
+                        <Special>0</Special>
+                        <PlayerHitsCount>0</PlayerHitsCount>
+                        <PlayerHP_Max>75</PlayerHP_Max>
+                        <Special_Max>200</Special_Max>
+                        <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -651,6 +680,13 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>3</PlayerNumber>
+                        <PlayerHP>75</PlayerHP>
+                        <PlayerDMG>1</PlayerDMG>
+                        <Special>0</Special>
+                        <PlayerHitsCount>0</PlayerHitsCount>
+                        <PlayerHP_Max>75</PlayerHP_Max>
+                        <Special_Max>200</Special_Max>
+                        <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -679,12 +715,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>2</AlienHP>
+                        <AlienAttack>5</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -730,12 +768,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>3</AlienHP>
+                        <AlienAttack>2</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -781,12 +821,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>5</AlienHP>
+                        <AlienAttack>3</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -832,12 +874,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>2</AlienHP>
+                        <AlienAttack>5</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -883,12 +927,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>3</AlienHP>
+                        <AlienAttack>2</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -934,12 +980,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>5</AlienHP>
+                        <AlienAttack>3</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -985,12 +1033,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>2</AlienHP>
+                        <AlienAttack>5</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1036,12 +1086,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>3</AlienHP>
+                        <AlienAttack>2</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1087,12 +1139,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <currentX>0</currentX>
-                        <speed>5</speed>
-                        <allert>false</allert>
-                        <direction>-1</direction>
+                        <Allert>false</Allert>
                         <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <target>0</target>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>5</AlienHP>
+                        <AlienAttack>3</AlienAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1137,6 +1191,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <RobotteHp>30</RobotteHp>
+                        <RobotteAttack>7</RobotteAttack>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
@@ -1149,32 +1207,7 @@
                         <width>750</width>
                         <height>1000</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="BossRobotte" uid="57">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1000</x>
-                        <y>1250</y>
-                        <z>0</z>
-                        <width>750</width>
-                        <height>1000</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.583333313</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

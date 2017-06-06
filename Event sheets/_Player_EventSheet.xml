@@ -382,6 +382,18 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="312523258179545">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="260907607366627" type="ArcadePlayerCollider" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="913976734453602">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="222865664278224" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" disabled="1" sid="755217169858978" title="Player Timers">
@@ -483,92 +495,110 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="505293605370792">
+                                <event-block any="1" sid="646562121719392">
                                     <conditions>
-                                        <condition id="1" name="Compare parameter" sid="143564652155522" type="Function">
-                                            <param id="0" name="Index">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;up&quot;</param>
+                                        <condition id="2" name="Is playing" sid="778024434734055" type="ArcadeCabinato">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="413276590582084" type="ArcadeCabinato">
+                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="537548075559884" type="ArcadeCabinato">
+                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                            <param id="1" name="From">0</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
-                                        <event-block sid="450026303350243">
+                                        <event-block sid="505293605370792">
                                             <conditions>
-                                                <condition id="-2" name="Compare Y" sid="312112075342611" type="ArcadePlayerCollider">
-                                                    <param id="0" name="Comparison">4</param>
-                                                    <param id="1" name="Y co-ordinate">FloorLimitTop.Y</param>
+                                                <condition id="1" name="Compare parameter" sid="143564652155522" type="Function">
+                                                    <param id="0" name="Index">1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="450026303350243">
+                                                    <conditions>
+                                                        <condition id="-2" name="Compare Y" sid="312112075342611" type="ArcadePlayerCollider">
+                                                            <param id="0" name="Comparison">4</param>
+                                                            <param id="1" name="Y co-ordinate">FloorLimitTop.Y</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="315540253503679" type="ArcadePlayerCollider">
+                                                            <param id="0" name="Control">2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="992564330856686">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="858901007222862" type="System" />
+                                                <condition id="1" name="Compare parameter" sid="666372815028844" type="Function">
+                                                    <param id="0" name="Index">1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="160640967084414">
+                                                    <conditions>
+                                                        <condition id="-2" name="Compare Y" sid="266132099698173" type="ArcadePlayerCollider">
+                                                            <param id="0" name="Comparison">2</param>
+                                                            <param id="1" name="Y co-ordinate">FloorLimitBottom.Y</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="721702459360080" type="ArcadePlayerCollider">
+                                                            <param id="0" name="Control">3</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="253237897719111">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="453789441416538" type="System" />
+                                                <condition id="1" name="Compare parameter" sid="287435359000476" type="Function">
+                                                    <param id="0" name="Index">1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;left&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="8Direction" id="7" name="Simulate control" sid="315540253503679" type="ArcadePlayerCollider">
-                                                    <param id="0" name="Control">2</param>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="426452315828422" type="ArcadePlayerCollider">
+                                                    <param id="0" name="Control">0</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="243867162666897" type="ArcadeCabinato">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="543352704494506">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="709825349496985" type="System" />
+                                                <condition id="1" name="Compare parameter" sid="240982737175045" type="Function">
+                                                    <param id="0" name="Index">1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="510845027520437" type="ArcadePlayerCollider">
+                                                    <param id="0" name="Control">1</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="574811947229113" type="ArcadeCabinato">
+                                                    <param id="0" name="State">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-block>
-                                <event-block sid="992564330856686">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="858901007222862" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="666372815028844" type="Function">
-                                            <param id="0" name="Index">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;down&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="160640967084414">
-                                            <conditions>
-                                                <condition id="-2" name="Compare Y" sid="266132099698173" type="ArcadePlayerCollider">
-                                                    <param id="0" name="Comparison">2</param>
-                                                    <param id="1" name="Y co-ordinate">FloorLimitBottom.Y</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action behavior="8Direction" id="7" name="Simulate control" sid="721702459360080" type="ArcadePlayerCollider">
-                                                    <param id="0" name="Control">3</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="253237897719111">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="453789441416538" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="287435359000476" type="Function">
-                                            <param id="0" name="Index">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;left&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="426452315828422" type="ArcadePlayerCollider">
-                                            <param id="0" name="Control">0</param>
-                                        </action>
-                                        <action id="7" name="Set mirrored" sid="243867162666897" type="ArcadeCabinato">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="543352704494506">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="709825349496985" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="240982737175045" type="Function">
-                                            <param id="0" name="Index">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;right&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="510845027520437" type="ArcadePlayerCollider">
-                                            <param id="0" name="Control">1</param>
-                                        </action>
-                                        <action id="7" name="Set mirrored" sid="574811947229113" type="ArcadeCabinato">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>

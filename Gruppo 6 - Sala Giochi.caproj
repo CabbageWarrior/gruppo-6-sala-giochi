@@ -806,6 +806,9 @@
                         <behavior-type name="BoundToLayout" sid="312326845889387">
                             <behavior id="bound" />
                         </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="481184558138142">
+                            <behavior id="destroy" />
+                        </behavior-type>
                     </behaviors>
                     <animation-folder>
                         <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="629913328678531" speed="0">
@@ -817,8 +820,51 @@
                 <object-type name="ArcadeCabinatoSF" sid="344012512770304">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927194393049460" speed="5">
-                            <frame duration="1" hotspotX="0.500276" hotspotY="1" original-source="C:\Users\dbga_53\Desktop\cabinatoSF.png" />
+                        <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="927194393049460" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="129589328750103" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="2" loop="0" name="Attack" pingpong="1" repeatcount="1" repeatto="0" sid="878683397608147" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="18" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="808819683487892" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="8" loop="0" name="Special" pingpong="1" repeatcount="1" repeatto="0" sid="153043592851473" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1031,6 +1077,10 @@
                 </object-type>
                 <object-type name="BossRobotte" sid="838710632269921">
                     <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="RobotteHp" sid="233066080558134" type="number" />
+                        <instance-variable name="RobotteAttack" sid="807643532000406" type="number" />
+                    </instance-variables>
                     <behaviors>
                         <behavior-type name="DestroyOutsideLayout" sid="222658747414228">
                             <behavior id="destroy" />
@@ -1640,6 +1690,13 @@
             </members>
             <instance-variables>
                 <instance-variable name="PlayerNumber" sid="471238417494604" type="number" />
+                <instance-variable name="PlayerHP" sid="935163298560559" type="number" />
+                <instance-variable name="PlayerDMG" sid="791855590350020" type="number" />
+                <instance-variable comment="aumenta di 5 per colpo fino ad un massimo di 100" name="Special" sid="367519192986621" type="number" />
+                <instance-variable name="PlayerHitsCount" sid="465139807195015" type="number" />
+                <instance-variable name="PlayerHP_Max" sid="434043253092992" type="number" />
+                <instance-variable name="Special_Max" sid="195523650239040" type="number" />
+                <instance-variable name="PlayerHitsCount_Max" sid="752156120970867" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="PinToCollider" sid="309520120978813">
@@ -1657,12 +1714,14 @@
                 <member>AlienYellow</member>
             </members>
             <instance-variables>
-                <instance-variable name="currentX" sid="716445594819050" type="number" />
-                <instance-variable name="speed" sid="331514315853902" type="number" />
-                <instance-variable name="allert" sid="956734941535659" type="boolean" />
-                <instance-variable name="direction" sid="237455871580515" type="number" />
+                <instance-variable name="Allert" sid="956734941535659" type="boolean" />
                 <instance-variable name="CollisionPreventionDirection" sid="820027446341209" type="number" />
-                <instance-variable name="target" sid="937983050839487" type="number" />
+                <instance-variable name="CurrentX" sid="716445594819050" type="number" />
+                <instance-variable comment="-1: Idle; 0: Right; 180: Left." name="Direction" sid="237455871580515" type="number" />
+                <instance-variable name="Speed" sid="331514315853902" type="number" />
+                <instance-variable name="PlayerNumberTarget" sid="937983050839487" type="number" />
+                <instance-variable name="AlienHP" sid="223953263987626" type="number" />
+                <instance-variable name="AlienAttack" sid="641897445310244" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="824193179318370">
@@ -1692,7 +1751,8 @@
     <layout-folder>
         <layout>Intro.xml</layout>
         <layout>CharacterSelection.xml</layout>
-        <layout>Game.xml</layout>
+        <layout>Level1.xml</layout>
+        <layout>Level1_Boss.xml</layout>
         <layout>Quit.xml</layout>
     </layout-folder>
     <event-folder>
