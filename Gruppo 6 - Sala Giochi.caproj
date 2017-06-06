@@ -20,6 +20,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
@@ -1028,6 +1029,46 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="BossRobotte" sid="838710632269921">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="222658747414228">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="234820827479416" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="NamePinner" x="0.552083" y="0.179688" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="NamePinner" x="0.552083" y="0.195313" />
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="527598028766541" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="NamePinner" x="0.552083" y="0.226563" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="NamePinner" x="0.552083" y="0.179688" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="NamePinner" x="0.552083" y="0.242188" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="NamePinner" x="0.552083" y="0.179688" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BossRobotteName" sid="297136481495360">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759154435226656" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\dbga_53\Downloads\BossName.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Menus">
                 <object-type name="CharacterSelector" sid="863668077788482">
@@ -1538,6 +1579,11 @@
         <object-type name="DialogueDisplayName" sid="712653597593459">
             <plugin id="Text" />
         </object-type>
+        <object-type name="SpaceshipTilemap" sid="946457185340675">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\2_Progetti di gruppo\Group 02 - Construct 2\Construct 2 - Sala Giochi\Grafica\ENV\Tiles Navicella da 250x250 per Construct.png" />
+            <tiles />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -1639,6 +1685,7 @@
                 <member>ArcadeCabinatoPM</member>
                 <member>ArcadeCabinatoSF</member>
                 <member>ArcadeCabinatoSM</member>
+                <member>BossRobotte</member>
             </members>
         </family>
     </families>
@@ -1662,6 +1709,7 @@
         <event-sheet>GameMenu_EventSheet.xml</event-sheet>
         <event-sheet>GameTexts_EventSheet.xml</event-sheet>
         <event-sheet>GameMobMoves_EventSheet.xml</event-sheet>
+        <event-sheet>GameBossMoves_EventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
