@@ -303,6 +303,8 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>2</PlayerNumber>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -347,6 +349,8 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>1</PlayerNumber>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -492,6 +496,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>2</AlienHP>
                         <AlienAttack>5</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -545,6 +551,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>3</AlienHP>
                         <AlienAttack>2</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -598,6 +606,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>5</AlienHP>
                         <AlienAttack>3</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -723,6 +733,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>2</AlienHP>
                         <AlienAttack>5</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -776,6 +788,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>3</AlienHP>
                         <AlienAttack>2</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -829,6 +843,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>5</AlienHP>
                         <AlienAttack>3</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -882,6 +898,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>2</AlienHP>
                         <AlienAttack>5</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -935,6 +953,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>3</AlienHP>
                         <AlienAttack>2</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -988,6 +1008,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>5</AlienHP>
                         <AlienAttack>3</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1041,6 +1063,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>2</AlienHP>
                         <AlienAttack>5</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1094,6 +1118,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>3</AlienHP>
                         <AlienAttack>2</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1147,6 +1173,8 @@
                         <PlayerNumberTarget>0</PlayerNumberTarget>
                         <AlienHP>5</AlienHP>
                         <AlienAttack>3</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />

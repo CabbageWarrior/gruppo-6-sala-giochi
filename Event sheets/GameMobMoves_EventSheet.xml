@@ -580,5 +580,104 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="973466602246283" title="Aliens Behaviors">
+            <sub-events>
+                <event-block sid="640852294062195">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="728395538906470" type="AlienBlue">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="562981992866937" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="634455092009585" type="AlienBlue" />
+                    </actions>
+                </event-block>
+                <event-block sid="398156048552497">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="852616709568124" type="AlienRed">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="399990299594404" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="147518137938261" type="AlienRed" />
+                    </actions>
+                </event-block>
+                <event-block sid="533087650392051">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="969660942013400" type="AlienYellow">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="390448110047730" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="733085269960626" type="AlienYellow" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="403305624760042" title="Alien Functions">
+            <sub-events>
+                <comment>Parametri: 0: UID dell&apos;alieno; 1: Danni.</comment>
+                <event-block sid="403303528942836">
+                    <conditions>
+                        <condition id="0" name="On function" sid="452898516075693" type="Function">
+                            <param id="0" name="Name">&quot;HitAlien&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="884193991696260" type="ArcadeAlieno">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="375384046690724" type="ArcadeAlieno">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="378508078887351" type="ArcadeAlieno">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="974163788424574" type="ArcadeAlieno">
+                            <param id="0" name="Instance variable">AlienHP</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="984940897718844" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="609017174580180" type="ArcadeAlieno">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="674526724031355">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="345687106698248" type="ArcadeAlieno">
+                                    <param id="0" name="Instance variable">AlienHP</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="524949525102910" type="ArcadeAlieno">
+                                    <param id="0" name="Instance variable">IsStunned</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="389176895512538" type="ArcadeAlieno">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

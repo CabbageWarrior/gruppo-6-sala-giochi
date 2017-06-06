@@ -187,6 +187,19 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="550178275229073">
+                                            <conditions>
+                                                <condition id="0" name="On key pressed" sid="354811280267916" type="Keyboard">
+                                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="396487541133803" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -361,6 +374,19 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="875332969129803">
+                                            <conditions>
+                                                <condition id="0" name="On key pressed" sid="135541379918227" type="Keyboard">
+                                                    <param id="0" name="Key">13 (Return)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="837660041587809" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -382,17 +408,171 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Reset dell&apos;animazione quando il player si ferma dopo una passeggiata.</comment>
                 <event-block sid="312523258179545">
                     <conditions>
-                        <condition behavior="8Direction" id="0" name="Is moving" sid="260907607366627" type="ArcadePlayerCollider" />
+                        <condition id="-1" name="Every tick" sid="645508175836692" type="System" />
+                        <condition id="-11" name="For Each" sid="747819511018719" type="System">
+                            <param id="0" name="Object">ArcadePlayerCollider</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="190206801542981" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                        </condition>
                     </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block any="1" sid="603346588047023">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="785215331938675" type="ArcadeCabinato">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="227242687175969" type="ArcadeCabinato">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="641073560810030">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="855382808476856" type="ArcadeCabinato">
+                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                        </condition>
+                                        <condition behavior="8Direction" id="1" name="Compare speed" sid="756102961332242" type="ArcadePlayerCollider">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Speed">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="187588697392990" type="ArcadeCabinato">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="814489728259083">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="761337419745974" type="ArcadePlayerCollider">
+                                            <param id="0" name="Instance variable">CanAttack</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="224791076328925" type="ArcadePlayerCollider">
+                                            <param id="0" name="Instance variable">CanAttack</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="913976734453602">
+                <comment>End of Attack Animation</comment>
+                <event-block sid="674527724910719">
                     <conditions>
-                        <condition id="-22" name="Else" sid="222865664278224" type="System" />
+                        <condition id="4" name="On finished" sid="155422895608771" type="ArcadeCabinatoSF">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="305595257421231" type="Function">
+                            <param id="0" name="Name">&quot;PlayerAttackFinished&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoSF.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="226834291731571">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="709944019374453" type="ArcadeCabinatoDK">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="586713880117066" type="Function">
+                            <param id="0" name="Name">&quot;PlayerAttackFinished&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoDK.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="592248166873309">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="527334103802542" type="ArcadeCabinatoPM">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="614837201303541" type="Function">
+                            <param id="0" name="Name">&quot;PlayerAttackFinished&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoPM.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="275721613433360">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="244594002891953" type="ArcadeCabinatoSM">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="581873879102789" type="Function">
+                            <param id="0" name="Name">&quot;PlayerAttackFinished&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoSM.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>End of Special Animation</comment>
+                <event-block sid="723108351883013">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="806013318152586" type="ArcadeCabinatoSF">
+                            <param id="0" name="Animation">&quot;Special&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="771329507245622" type="ArcadeCabinatoSF">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="879611830631780">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="259927369109796" type="ArcadeCabinatoDK">
+                            <param id="0" name="Animation">&quot;Special&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="559246737767753" type="ArcadeCabinatoDK">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="617216619654223">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="593288242907539" type="ArcadeCabinatoPM">
+                            <param id="0" name="Animation">&quot;Special&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="238050760104566" type="ArcadeCabinatoPM">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="866886793905321">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="328868810797243" type="ArcadeCabinatoSM">
+                            <param id="0" name="Animation">&quot;Special&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="939155857383541" type="ArcadeCabinatoSM">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -504,13 +684,21 @@
                                             <param id="0" name="Animation">&quot;Walk&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="537548075559884" type="ArcadeCabinato">
-                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
-                                            <param id="1" name="From">0</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                     <sub-events>
+                                        <event-block sid="671130392999470">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="447317798939150" type="ArcadeCabinato">
+                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="537548075559884" type="ArcadeCabinato">
+                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="505293605370792">
                                             <conditions>
                                                 <condition id="1" name="Compare parameter" sid="143564652155522" type="Function">
@@ -602,43 +790,34 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Parametri: 0: UID del Player, 1: Angolo di rilascio, 2: Potenza della palla (&quot;Fast&quot;, &quot;Medium&quot;, &quot;Slow&quot;) in base alle statistiche e all&apos;azione compiuta sul personaggio.</comment>
+                        <comment>Parametri: 0: Numero del giocatore.</comment>
                         <event-block sid="388040140304503">
                             <conditions>
                                 <condition id="0" name="On function" sid="826903400649285" type="Function">
                                     <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="485227721633910" type="Player">
-                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                <condition id="-7" name="Compare instance variable" sid="207121963782677" type="ArcadePlayerCollider">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="948261940524577" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(0)</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
                                 <event-block sid="808999195570607">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="252088020452194" type="Player">
-                                            <param id="0" name="Instance variable">SkillGrabBallIsGrabbing</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="525346695221061" type="ArcadePlayerCollider">
+                                            <param id="0" name="Instance variable">CanAttack</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="452178963036824" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerReleaseBall&quot;</param>
-                                            <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="766737445402789">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="464727218877486" type="System" />
-                                        <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="272874978806505" type="Player">
-                                            <param id="0" name="Instance variable">PowerUpSpiderman</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="948998235693626" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerStartTryingToGrab&quot;</param>
+                                            <param id="0" name="Name">&quot;PlayerAttack&quot;</param>
                                             <param id="1" name="Parameter {n}">Function.Param(0)</param>
                                         </action>
                                     </actions>
@@ -974,126 +1153,73 @@
                 <event-block sid="774637854966525">
                     <conditions>
                         <condition id="0" name="On function" sid="189686384736957" type="Function">
-                            <param id="0" name="Name">&quot;PlayerStartTryingToGrab&quot;</param>
+                            <param id="0" name="Name">&quot;PlayerAttack&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="398061122151852" type="Player">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="587781074583480" type="Player">
-                            <param id="0" name="Instance variable">SkillGrabBallEnabled</param>
+                        <condition id="-7" name="Compare instance variable" sid="852672816731346" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
-                        <condition behavior="FlashDamage" id="0" inverted="1" name="Is flashing" sid="824248364574149" type="Player" />
-                        <condition id="-7" name="Compare instance variable" sid="617533201712830" type="PlayerGrabCollider">
-                            <param id="0" name="Instance variable">PlayerUID</param>
+                        <condition id="-7" name="Compare instance variable" sid="513769156775065" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Player.UID</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="937544603211154" type="Player">
-                            <param id="0" name="Instance variable">SkillGrabBallEnabled</param>
+                        <action id="-13" name="Set boolean" sid="730141249372086" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">CanAttack</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="624178804502202" type="Player">
-                            <param id="0" name="Instance variable">SkillGrabBallTryingToGrab</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="4" name="Set animation" sid="917638500904892" type="ArcadeCabinato">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="187000575041536" type="PlayerGrabCollider">
-                            <param id="0" name="Object">PlayerGrabShadow</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="681854354043617" type="PlayerGrabShadow">
-                            <param id="0" name="Width">PlayerGrabCollider.Width</param>
-                        </action>
-                        <action id="-6" name="Set height" sid="160205743336863" type="PlayerGrabShadow">
-                            <param id="0" name="Height">PlayerGrabCollider.Height</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="789318562272278" type="PlayerGrabShadow">
-                            <param id="0" name="Pin to">PlayerGrabCollider</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="440202877188855" type="PlayerGrabShadow">
-                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 6)</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="136418451923286" type="PlayerGrabShadow">
-                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                            <param id="1" name="Parameter index">1</param>
-                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 7)</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="480782384208530" type="PlayerGrabShadow">
-                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                            <param id="1" name="Parameter index">2</param>
-                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 8)</param>
-                        </action>
-                        <action id="-25" name="Move to bottom" sid="140364439976550" type="PlayerGrabShadow" />
-                        <action behavior="SineWidth" id="2" name="Set magnitude" sid="937325657803445" type="PlayerGrabShadow">
-                            <param id="0" name="Magnitude">Self.Width - Player.Width</param>
-                        </action>
-                        <action behavior="SineHeight" id="2" name="Set magnitude" sid="398645894833463" type="PlayerGrabShadow">
-                            <param id="0" name="Magnitude">Self.Height - Player.Height</param>
-                        </action>
-                        <action behavior="SineWidth" id="6" name="Update initial state" sid="951677419496151" type="PlayerGrabShadow" />
-                        <action behavior="SineHeight" id="6" name="Update initial state" sid="286619001697081" type="PlayerGrabShadow" />
-                        <action behavior="SineWidth" id="0" name="Set active" sid="670886051383286" type="PlayerGrabShadow">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="SineHeight" id="0" name="Set active" sid="290189611598543" type="PlayerGrabShadow">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="867199894417524" type="PlayerGrabShadow" />
-                        <action id="-25" name="Move to bottom" sid="343683523875413" type="PlayerGrabCollider" />
                     </actions>
+                </event-block>
+                <comment>Parametri: 0: UID del Player.</comment>
+                <event-block sid="714693732342936">
+                    <conditions>
+                        <condition id="0" name="On function" sid="149515006506793" type="Function">
+                            <param id="0" name="Name">&quot;PlayerAttackFinished&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="366509257361545" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="959198500110482" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="704652112552450">
+                        <event-block sid="277214135210867">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="941051980489086" type="PlayerGrabCollider">
-                                    <param id="0" name="Object">Ball</param>
+                                <condition id="-11" name="For Each" sid="407304778920134" type="System">
+                                    <param id="0" name="Object">ArcadeAlieno</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="213215509156811" type="ArcadeAlieno">
+                                    <param id="0" name="Instance variable">IsStunned</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="557567139500076" type="System">
+                                    <param id="0" name="First value">distance(ArcadeCabinato.ImagePointX(&quot;AttackPoint&quot;), ArcadeCabinato.ImagePointY(&quot;AttackPoint&quot;), ArcadeAlieno.X, ArcadeAlieno.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">50</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block any="1" sid="489488650283715">
-                                    <conditions>
-                                        <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="161142722287595" type="Ball" />
-                                        <condition id="-7" name="Compare instance variable" sid="928441964030082" type="Ball">
-                                            <param id="0" name="Instance variable">LastPlayerUID</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="895062502761025" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerStartGrabbing&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID{###}Ball.UID</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="617909236165606">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="298323730119882" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="353392555338034" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerStopTryingToGrab&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="900613354404123">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="889585093946133" type="System" />
-                            </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="449807233667636" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerStopTryingToGrab&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                <action id="-9" name="Destroy" sid="909807733520836" type="ArcadeAlieno" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="952601167791923">
+                            <conditions />
+                            <actions>
+                                <action id="4" name="Set animation" sid="945470458346425" type="ArcadeCabinato">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>

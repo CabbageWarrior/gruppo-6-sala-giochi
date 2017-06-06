@@ -789,8 +789,132 @@
                 <object-type name="ArcadeCabinatoDK" sid="244701203354795">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542942744543841" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_53\Desktop\cabinatoDK.png" />
+                        <animation framecount="3" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="542942744543841" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                        </animation>
+                        <animation framecount="6" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="711159182642072" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="860069128693182" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                        </animation>
+                        <animation framecount="21" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="778733757437695" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                        </animation>
+                        <animation framecount="7" loop="0" name="Special" pingpong="1" repeatcount="1" repeatto="0" sid="961223652865301" speed="5">
+                            <frame duration="1" hotspotX="0.487805" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.829268" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.487805" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.829268" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.487805" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.829268" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.487805" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.829268" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.487805" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.829268" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.487805" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.829268" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.487805" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.829268" y="1" />
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -798,6 +922,8 @@
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="PlayerNumber" sid="993251766214636" type="number" />
+                        <instance-variable name="CanAttack" sid="207701037068757" type="boolean" />
+                        <instance-variable name="IsStunned" sid="472092903507848" type="boolean" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="8Direction" sid="326379914905694">
@@ -821,50 +947,122 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="927194393049460" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
                         </animation>
                         <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="129589328750103" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
                         </animation>
-                        <animation framecount="2" loop="0" name="Attack" pingpong="1" repeatcount="1" repeatto="0" sid="878683397608147" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <animation framecount="2" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="878683397608147" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
                         </animation>
                         <animation framecount="18" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="808819683487892" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.9375" y="1" />
+                            </frame>
                         </animation>
                         <animation framecount="8" loop="0" name="Special" pingpong="1" repeatcount="1" repeatto="0" sid="153043592851473" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.833333" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.833333" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.833333" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.833333" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.833333" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.833333" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.833333" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="AttackPoint" x="0.833333" y="1" />
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -941,6 +1139,15 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="1" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="703884230537293" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="603271032543210" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="AlienYellow" sid="614057578630511">
@@ -997,6 +1204,15 @@
                                     <point x="0.25" y="0.5" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="673720948254200" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="902387812582816" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1072,6 +1288,19 @@
                                     <point x="0.25" y="0.5" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="806340647900181" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.171875" y="0.171875" />
+                                    <point x="0.765625" y="0.234375" />
+                                    <point x="0.28125" y="0.28125" />
+                                    <point x="0.1875" y="0.8125" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1722,6 +1951,8 @@
                 <instance-variable name="PlayerNumberTarget" sid="937983050839487" type="number" />
                 <instance-variable name="AlienHP" sid="223953263987626" type="number" />
                 <instance-variable name="AlienAttack" sid="641897445310244" type="number" />
+                <instance-variable name="CanAttack" sid="601701135252849" type="boolean" />
+                <instance-variable name="IsStunned" sid="816264414937051" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="824193179318370">
