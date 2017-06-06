@@ -463,6 +463,17 @@
                     <actions>
                         <action id="-24" name="Move to top" sid="224683191639698" type="ArcadeGraphicOnFloor" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="105863237754162">
+                            <conditions />
+                            <actions>
+                                <action id="-29" name="Move to object" sid="205351112695073" type="BossRobotteName">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">BossRobotte</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
