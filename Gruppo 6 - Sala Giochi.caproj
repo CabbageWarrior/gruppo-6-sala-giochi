@@ -1934,6 +1934,9 @@
                 <behavior-type name="DestroyOutsideLayout" sid="408465863319981">
                     <behavior id="destroy" />
                 </behavior-type>
+                <behavior-type name="Timer" sid="156327048544054">
+                    <behavior id="Timer" />
+                </behavior-type>
             </behaviors>
         </family>
         <family name="ArcadeAlieno" plugin-id="Sprite" sid="232017883060565">
@@ -1953,6 +1956,7 @@
                 <instance-variable name="AlienAttack" sid="641897445310244" type="number" />
                 <instance-variable name="CanAttack" sid="601701135252849" type="boolean" />
                 <instance-variable name="IsStunned" sid="816264414937051" type="boolean" />
+                <instance-variable name="SpecialPointsGivenWhenHit" sid="159424924173282" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="824193179318370">

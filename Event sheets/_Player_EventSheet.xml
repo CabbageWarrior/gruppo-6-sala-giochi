@@ -574,6 +574,20 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Timer: Combo Counter Expired</comment>
+                <event-block sid="262061324582484">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="336087705766895" type="ArcadeCabinato">
+                            <param id="0" name="Tag">&quot;ComboCounter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="917737037691837" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerHitsCount</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" disabled="1" sid="755217169858978" title="Player Timers">
@@ -1196,7 +1210,9 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="277214135210867">
+                        <variable comment="-1: Reset; 0: No; 1: Yes." constant="0" name="AlmostOneHit" sid="178383103838083" static="0" type="number">0</variable>
+                        <comment>Colpisce tutti gli alieni vicini al pugno e dà punti speciali al player.</comment>
+                        <event-block sid="865193617115224">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="407304778920134" type="System">
                                     <param id="0" name="Object">ArcadeAlieno</param>
@@ -1211,9 +1227,62 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="909807733520836" type="ArcadeAlieno" />
+                                <action id="-11" name="Add to" sid="294248820509297" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">Special</param>
+                                    <param id="1" name="Value">ArcadeAlieno.SpecialPointsGivenWhenHit</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="724284263403952">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="813485785930772" type="ArcadeCabinato">
+                                            <param id="0" name="Instance variable">PlayerHitsCount</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">Self.PlayerHitsCount_Max</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="205559176475178" type="Function">
+                                            <param id="0" name="Name">&quot;HitAlien&quot;</param>
+                                            <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinato.PlayerDMG * 2</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="539121398223157" type="System">
+                                            <param id="0" name="Variable">AlmostOneHit</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="473907185530415">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="453575860593517" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="236441061612774" type="Function">
+                                            <param id="0" name="Name">&quot;HitAlien&quot;</param>
+                                            <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinato.PlayerDMG</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="907102659242071">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="810601973841227" type="System">
+                                                    <param id="0" name="Variable">AlmostOneHit</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="841558586474445" type="System">
+                                                    <param id="0" name="Variable">AlmostOneHit</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
+                        <comment>Reimposta l&apos;animazione.</comment>
                         <event-block sid="952601167791923">
                             <conditions />
                             <actions>
@@ -1222,6 +1291,48 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <comment>Se trova almeno un MOB colpito, dà un colpo in più in totale alla combo del player.</comment>
+                                <event-block sid="736644391261923">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="326813073248744" type="System">
+                                            <param id="0" name="Variable">AlmostOneHit</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="524847200974508" type="ArcadeCabinato">
+                                            <param id="0" name="Instance variable">PlayerHitsCount</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="646661437021781" type="ArcadeCabinato">
+                                            <param id="0" name="Duration">10.0</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;ComboCounter&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="907407189668007">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="396960178775068" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="187311503772739" type="System">
+                                            <param id="0" name="Variable">AlmostOneHit</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="435884280600990" type="ArcadeCabinato">
+                                            <param id="0" name="Instance variable">PlayerHitsCount</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action behavior="Timer" id="1" name="Stop timer" sid="485459584483605" type="ArcadeCabinato">
+                                            <param id="0" name="Tag">&quot;ComboCounter&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
