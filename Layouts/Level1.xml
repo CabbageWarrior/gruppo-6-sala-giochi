@@ -526,7 +526,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FightPoint" uid="203">
+                <instance type="EventPoint" uid="203">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

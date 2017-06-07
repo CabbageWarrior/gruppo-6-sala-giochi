@@ -607,7 +607,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FightPoint" uid="73">
+                <instance type="EventPoint" uid="73">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

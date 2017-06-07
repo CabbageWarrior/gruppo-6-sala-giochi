@@ -74,7 +74,7 @@
                 <event-block sid="341051793051289">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="280678808571053" type="CameraOrb">
-                            <param id="0" name="Object">FightPoint</param>
+                            <param id="0" name="Object">EventPoint</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -85,7 +85,7 @@
                         <action id="-16" name="Wait" sid="405227684929437" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="815069615672128" type="FightPoint" />
+                        <action id="-9" name="Destroy" sid="815069615672128" type="EventPoint" />
                         <action id="-13" name="Set boolean" sid="630476535735475" type="CameraOrb">
                             <param id="0" name="Instance variable">IsLocked</param>
                             <param id="1" name="Value">0</param>

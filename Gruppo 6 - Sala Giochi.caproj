@@ -702,7 +702,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="FightPoint" sid="239343272745990">
+                <object-type name="EventPoint" sid="239343272745990">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156257173807171" speed="5">
