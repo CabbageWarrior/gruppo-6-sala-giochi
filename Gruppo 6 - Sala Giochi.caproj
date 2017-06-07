@@ -2279,6 +2279,24 @@
         <file name="Power Up Spiderman.ogg" />
         <file name="Power Up Velocità.m4a" />
         <file name="Power Up Velocità.ogg" />
+        <file name="boss fight.m4a" />
+        <file name="boss fight.ogg" />
+        <file name="hit alieno.m4a" />
+        <file name="hit alieno.ogg" />
+        <file name="navigazione menù.m4a" />
+        <file name="navigazione menù.ogg" />
+        <file name="punch.m4a" />
+        <file name="punch.ogg" />
+        <file name="schermata gameover.m4a" />
+        <file name="schermata gameover.ogg" />
+        <file name="selezione_pg_DonKey.m4a" />
+        <file name="selezione_pg_DonKey.ogg" />
+        <file name="selezione_pg_lottatore.m4a" />
+        <file name="selezione_pg_lottatore.ogg" />
+        <file name="selezione_pg_packman.m4a" />
+        <file name="selezione_pg_packman.ogg" />
+        <file name="vita bassa.m4a" />
+        <file name="vita bassa.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Game.ogg" />
