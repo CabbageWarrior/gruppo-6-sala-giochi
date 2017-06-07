@@ -149,34 +149,46 @@
                                                     </actions>
                                                 </event-block>
                                                 <comment>Movimento alieni</comment>
-                                                <event-block sid="579128330336988">
+                                                <event-block sid="650654765623293">
                                                     <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="428514146127754" type="ArcadeAlieno">
-                                                            <param id="0" name="Instance variable">Direction</param>
+                                                        <condition id="-14" name="Compare variable" sid="190483685574718" type="System">
+                                                            <param id="0" name="Variable">CommandType</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">PATROL_RIGHT</param>
+                                                            <param id="2" name="Value">1</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-1" name="Set X" sid="938542219015739" type="ArcadeAlieno">
-                                                            <param id="0" name="X">Self.X+Self.speed</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="292707755430489">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="835022143785637" type="System" />
-                                                        <condition id="-7" name="Compare instance variable" sid="637888520169188" type="ArcadeAlieno">
-                                                            <param id="0" name="Instance variable">Direction</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">PATROL_LEFT</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-1" name="Set X" sid="826713281453644" type="ArcadeAlieno">
-                                                            <param id="0" name="X">Self.X-Self.speed</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="579128330336988">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="428514146127754" type="ArcadeAlieno">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">PATROL_RIGHT</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-1" name="Set X" sid="938542219015739" type="ArcadeAlieno">
+                                                                    <param id="0" name="X">Self.X+Self.speed</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="292707755430489">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="835022143785637" type="System" />
+                                                                <condition id="-7" name="Compare instance variable" sid="637888520169188" type="ArcadeAlieno">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">PATROL_LEFT</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-1" name="Set X" sid="826713281453644" type="ArcadeAlieno">
+                                                                    <param id="0" name="X">Self.X-Self.speed</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <comment>Cambio direzione alieni</comment>
                                                 <event-block sid="641142468279328">
@@ -321,6 +333,11 @@
                 </event-block>
                 <event-block sid="714996063745827">
                     <conditions>
+                        <condition id="-14" name="Compare variable" sid="482681511302857" type="System">
+                            <param id="0" name="Variable">CommandType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                         <condition id="1" name="Is overlapping another object" sid="984911172634045" type="ArcadeAlieno">
                             <param id="0" name="Object">ArcadeAlieno</param>
                         </condition>
@@ -435,6 +452,65 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="973466602246283" title="Aliens Behaviors">
+            <sub-events>
+                <event-block sid="640852294062195">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="728395538906470" type="AlienBlue">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="309167502206105" type="Function">
+                            <param id="0" name="Name">&quot;AlienDeathAnimationEnded&quot;</param>
+                            <param id="1" name="Parameter {n}">AlienBlue.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="398156048552497">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="852616709568124" type="AlienRed">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="851107707793980" type="Function">
+                            <param id="0" name="Name">&quot;AlienDeathAnimationEnded&quot;</param>
+                            <param id="1" name="Parameter {n}">AlienRed.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="533087650392051">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="969660942013400" type="AlienYellow">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="485334416897226" type="Function">
+                            <param id="0" name="Name">&quot;AlienDeathAnimationEnded&quot;</param>
+                            <param id="1" name="Parameter {n}">AlienYellow.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="868505471730182">
+                    <conditions>
+                        <condition behavior="Flash" id="1" name="On flash ended" sid="327169936510372" type="ArcadeAlieno" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="609017174580180" type="ArcadeAlieno">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="403305624760042" title="Alien Functions">
+            <sub-events>
+                <comment>Parametri: 0: UID dell&apos;alieno; 1: Numero del player da seguire.</comment>
                 <event-block sid="295217693097857">
                     <conditions>
                         <condition id="0" name="On function" sid="112317997963508" type="Function">
@@ -610,64 +686,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="973466602246283" title="Aliens Behaviors">
-            <sub-events>
-                <event-block sid="640852294062195">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="728395538906470" type="AlienBlue">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="309167502206105" type="Function">
-                            <param id="0" name="Name">&quot;AlienDeathAnimationEnded&quot;</param>
-                            <param id="1" name="Parameter {n}">AlienBlue.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="398156048552497">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="852616709568124" type="AlienRed">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="851107707793980" type="Function">
-                            <param id="0" name="Name">&quot;AlienDeathAnimationEnded&quot;</param>
-                            <param id="1" name="Parameter {n}">AlienRed.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="533087650392051">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="969660942013400" type="AlienYellow">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="485334416897226" type="Function">
-                            <param id="0" name="Name">&quot;AlienDeathAnimationEnded&quot;</param>
-                            <param id="1" name="Parameter {n}">AlienYellow.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="868505471730182">
-                    <conditions>
-                        <condition behavior="Flash" id="1" name="On flash ended" sid="327169936510372" type="ArcadeAlieno" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="609017174580180" type="ArcadeAlieno">
-                            <param id="0" name="Instance variable">IsStunned</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="403305624760042" title="Alien Functions">
-            <sub-events>
                 <comment>Parametri: 0: UID dell&apos;alieno; 1: Danni.</comment>
                 <event-block sid="403303528942836">
                     <conditions>

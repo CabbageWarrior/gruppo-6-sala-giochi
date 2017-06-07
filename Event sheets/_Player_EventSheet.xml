@@ -6,7 +6,7 @@
         <include>_Global_EventSheet</include>
         <event-group description="" sid="630690809544065" title="Player Personal Controls">
             <sub-events>
-                <variable constant="1" name="PLAYER_LEFT_ANALOG_DEADZONE" sid="915950520092224" static="0" type="number">0</variable>
+                <variable constant="1" name="PLAYER_LEFT_ANALOG_DEADZONE" sid="915950520092224" static="0" type="number">50</variable>
                 <event-block sid="381495702823132">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="520407352072967" type="System">
@@ -151,6 +151,75 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-group>
+                                        <event-block sid="550178275229073">
+                                            <conditions>
+                                                <condition id="0" name="On key pressed" sid="354811280267916" type="Keyboard">
+                                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="396487541133803" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="130552298482677">
+                                            <conditions>
+                                                <condition id="6" name="On button pressed" sid="899365103505311" type="Gamepad">
+                                                    <param id="0" name="Gamepad">ArcadePlayerCollider.PlayerNumber - 1</param>
+                                                    <param id="1" name="Button">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="284903912349973" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="595133533618508">
+                                            <conditions>
+                                                <condition id="6" name="On button pressed" sid="277221955797727" type="Gamepad">
+                                                    <param id="0" name="Gamepad">ArcadePlayerCollider.PlayerNumber - 1</param>
+                                                    <param id="1" name="Button">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="767033846664063" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="875780400010091">
+                                            <conditions>
+                                                <condition id="6" name="On button pressed" sid="308730870889275" type="Gamepad">
+                                                    <param id="0" name="Gamepad">ArcadePlayerCollider.PlayerNumber - 1</param>
+                                                    <param id="1" name="Button">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="273465980787142" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="468916853381919">
+                                            <conditions>
+                                                <condition id="6" name="On button pressed" sid="774388218981322" type="Gamepad">
+                                                    <param id="0" name="Gamepad">ArcadePlayerCollider.PlayerNumber - 1</param>
+                                                    <param id="1" name="Button">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="259190787833696" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block any="1" disabled="1" sid="314980967248599">
                                             <conditions>
                                                 <condition id="6" name="On button pressed" sid="402135574232313" type="Gamepad">
@@ -184,19 +253,6 @@
                                                 <action id="0" name="Call function" sid="344703661357093" type="Function">
                                                     <param id="0" name="Name">&quot;PlayerIsMovingRightTrigger&quot;</param>
                                                     <param id="1" name="Parameter {n}">Player.UID{###}Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2){###}Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="550178275229073">
-                                            <conditions>
-                                                <condition id="0" name="On key pressed" sid="354811280267916" type="Keyboard">
-                                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="396487541133803" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -338,6 +394,75 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-group>
+                                        <event-block sid="875332969129803">
+                                            <conditions>
+                                                <condition id="0" name="On key pressed" sid="135541379918227" type="Keyboard">
+                                                    <param id="0" name="Key">13 (Return)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="837660041587809" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="169235304513623">
+                                            <conditions>
+                                                <condition id="6" name="On button pressed" sid="755915672627632" type="Gamepad">
+                                                    <param id="0" name="Gamepad">ArcadePlayerCollider.PlayerNumber - 1</param>
+                                                    <param id="1" name="Button">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="953145152345402" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="734054897783356">
+                                            <conditions>
+                                                <condition id="6" name="On button pressed" sid="132105256252107" type="Gamepad">
+                                                    <param id="0" name="Gamepad">ArcadePlayerCollider.PlayerNumber - 1</param>
+                                                    <param id="1" name="Button">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="366573151512839" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="154358149654663">
+                                            <conditions>
+                                                <condition id="6" name="On button pressed" sid="939791451207264" type="Gamepad">
+                                                    <param id="0" name="Gamepad">ArcadePlayerCollider.PlayerNumber - 1</param>
+                                                    <param id="1" name="Button">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="558820227841791" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="687367681973247">
+                                            <conditions>
+                                                <condition id="6" name="On button pressed" sid="413862337699821" type="Gamepad">
+                                                    <param id="0" name="Gamepad">ArcadePlayerCollider.PlayerNumber - 1</param>
+                                                    <param id="1" name="Button">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="310578192539226" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block any="1" disabled="1" sid="577955146771361">
                                             <conditions>
                                                 <condition id="6" name="On button pressed" sid="999535666890873" type="Gamepad">
@@ -371,19 +496,6 @@
                                                 <action id="0" name="Call function" sid="537980345401751" type="Function">
                                                     <param id="0" name="Name">&quot;PlayerIsMovingRightTrigger&quot;</param>
                                                     <param id="1" name="Parameter {n}">Player.UID{###}Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2){###}Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="875332969129803">
-                                            <conditions>
-                                                <condition id="0" name="On key pressed" sid="135541379918227" type="Keyboard">
-                                                    <param id="0" name="Key">13 (Return)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="837660041587809" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -774,13 +886,24 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="8Direction" id="7" name="Simulate control" sid="426452315828422" type="ArcadePlayerCollider">
-                                                    <param id="0" name="Control">0</param>
-                                                </action>
                                                 <action id="7" name="Set mirrored" sid="243867162666897" type="ArcadeCabinato">
                                                     <param id="0" name="State">0</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="107836089778633">
+                                                    <conditions>
+                                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="257690969053197" type="ArcadeCabinato">
+                                                            <param id="0" name="Object">CameraWallBack</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="426452315828422" type="ArcadePlayerCollider">
+                                                            <param id="0" name="Control">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="543352704494506">
                                             <conditions>
@@ -792,13 +915,24 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="8Direction" id="7" name="Simulate control" sid="510845027520437" type="ArcadePlayerCollider">
-                                                    <param id="0" name="Control">1</param>
-                                                </action>
                                                 <action id="7" name="Set mirrored" sid="574811947229113" type="ArcadeCabinato">
                                                     <param id="0" name="State">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="639851303067318">
+                                                    <conditions>
+                                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="170567613226483" type="ArcadeCabinato">
+                                                            <param id="0" name="Object">CameraWallForward</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="510845027520437" type="ArcadePlayerCollider">
+                                                            <param id="0" name="Control">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>

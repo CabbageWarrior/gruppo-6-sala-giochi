@@ -92,30 +92,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="966782617684068">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="523203113000133" type="CameraWallBack">
-                            <param id="0" name="Object">ArcadeCabinato</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="422677704241327" type="CameraWallForward">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="831991286283548">
-                    <conditions>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="878826931217451" type="CameraWallBack">
-                            <param id="0" name="Object">ArcadeCabinato</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="520704033707046" type="CameraWallForward">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-group description="" sid="210940059525558" title="Camera Functions">
                     <sub-events>
                         <comment>Parametri: 0: Cabinato UID.</comment>
