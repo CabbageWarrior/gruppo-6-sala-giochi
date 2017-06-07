@@ -191,23 +191,90 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="804664873114554">
+                        <comment>HUD Settings</comment>
+                        <event-block sid="433757797416271">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="594052389280562" type="ArcadeCabinato">
+                                <condition id="-7" name="Compare instance variable" sid="940062605212331" type="LifeBarBackground">
                                     <param id="0" name="Instance variable">PlayerNumber</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="995227415571025" type="ArcadePlayerCollider">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="PinToCollider" id="0" name="Pin to object" sid="801144652356351" type="ArcadeCabinato">
-                                    <param id="0" name="Pin to">ArcadePlayerCollider</param>
-                                    <param id="1" name="Mode">1</param>
+                                <action id="0" name="Spawn another object" sid="598475728842771" type="LifeBarBackground">
+                                    <param id="0" name="Object">LifeBar</param>
+                                    <param id="1" name="Layer">&quot;StaticHUD&quot;</param>
+                                    <param id="2" name="Image point">&quot;SpawnPoint&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="775953255011712">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="729492834304400" type="LifeBar">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Value">LifeBarBackground.PlayerNumber</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="542984559246259" type="LifeBar">
+                                            <param id="0" name="Angle">LifeBarBackground.Angle</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="615633062439873" type="LifeBar">
+                                            <param id="0" name="Width">LifeBarBackground.Width</param>
+                                        </action>
+                                        <action id="-6" name="Set height" sid="518516406775026" type="LifeBar">
+                                            <param id="0" name="Height">LifeBarBackground.Height</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="546572711417954">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="490273035055891" type="SpecialBarBackground">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="808875774959910" type="SpecialBarBackground">
+                                    <param id="0" name="Object">SpecialBar</param>
+                                    <param id="1" name="Layer">&quot;StaticHUD&quot;</param>
+                                    <param id="2" name="Image point">&quot;SpawnPoint&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="585324989551713">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="982251518026542" type="SpecialBar">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Value">SpecialBarBackground.PlayerNumber</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="706650084260987" type="SpecialBar">
+                                            <param id="0" name="Angle">SpecialBarBackground.Angle</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="567380869084479" type="SpecialBar">
+                                            <param id="0" name="Width">SpecialBarBackground.Width</param>
+                                        </action>
+                                        <action id="-6" name="Set height" sid="552217420737485" type="SpecialBar">
+                                            <param id="0" name="Height">SpecialBarBackground.Height /2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="804237243601982">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="385010293575110" type="CharacterDetailTitle">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="578203278697858" type="CharacterDetailTitle">
+                                    <param id="0" name="Text">CharactersArray.At(Human_1_SelectedCharacter - 1, 0)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -271,16 +338,16 @@
                                         <action id="-9" name="Destroy" sid="687734301532930" type="LifeBarBackground" />
                                     </actions>
                                 </event-block>
-                                <event-block sid="320882175232513">
+                                <event-block sid="149615716685405">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="265152712544491" type="SpecialBarBackground">
+                                        <condition id="-7" name="Compare instance variable" sid="761502434707030" type="SpecialBarBackground">
                                             <param id="0" name="Instance variable">PlayerNumber</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="851904261848422" type="SpecialBarBackground" />
+                                        <action id="-9" name="Destroy" sid="369261452344188" type="SpecialBarBackground" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="703246926706247">
@@ -433,6 +500,93 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>HUD Settings</comment>
+                                <event-block sid="827664426012631">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="633407904663944" type="LifeBarBackground">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="821742157801056" type="LifeBarBackground">
+                                            <param id="0" name="Object">LifeBar</param>
+                                            <param id="1" name="Layer">&quot;StaticHUD&quot;</param>
+                                            <param id="2" name="Image point">&quot;SpawnPoint&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="649976212720602">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="447561329184474" type="LifeBar">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Value">LifeBarBackground.PlayerNumber</param>
+                                                </action>
+                                                <action id="-8" name="Set angle" sid="394949993901119" type="LifeBar">
+                                                    <param id="0" name="Angle">LifeBarBackground.Angle</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="720253962293182" type="LifeBar">
+                                                    <param id="0" name="Width">LifeBarBackground.Width</param>
+                                                </action>
+                                                <action id="-6" name="Set height" sid="817135896892247" type="LifeBar">
+                                                    <param id="0" name="Height">LifeBarBackground.Height</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="501118826112305">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="897688289916274" type="SpecialBarBackground">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="337238888805823" type="SpecialBarBackground">
+                                            <param id="0" name="Object">SpecialBar</param>
+                                            <param id="1" name="Layer">&quot;StaticHUD&quot;</param>
+                                            <param id="2" name="Image point">&quot;SpawnPoint&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="214947256731731">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="182345409025161" type="SpecialBar">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Value">SpecialBarBackground.PlayerNumber</param>
+                                                </action>
+                                                <action id="-8" name="Set angle" sid="169386666541502" type="SpecialBar">
+                                                    <param id="0" name="Angle">SpecialBarBackground.Angle</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="832869048809424" type="SpecialBar">
+                                                    <param id="0" name="Width">SpecialBarBackground.Width</param>
+                                                </action>
+                                                <action id="-6" name="Set height" sid="917775444458652" type="SpecialBar">
+                                                    <param id="0" name="Height">SpecialBarBackground.Height /2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="348283536601645">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="767767462339539" type="CharacterDetailTitle">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="739283337230937" type="CharacterDetailTitle">
+                                            <param id="0" name="Text">CharactersArray.At(Human_2_SelectedCharacter - 1, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -472,113 +626,6 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="897800223606818">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="133452636337699" type="System">
-                            <param id="0" name="Object">LifeBarBackground</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="246323109818569" type="LifeBarBackground">
-                            <param id="0" name="Object">LifeBar</param>
-                            <param id="1" name="Layer">&quot;StaticHUD&quot;</param>
-                            <param id="2" name="Image point">&quot;SpawnPoint&quot;</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="979265777985341">
-                            <conditions />
-                            <actions>
-                                <action id="-10" name="Set value" sid="176515632029984" type="LifeBar">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Value">LifeBarBackground.PlayerNumber</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="455067896071517" type="LifeBar">
-                                    <param id="0" name="Angle">LifeBarBackground.Angle</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="962464575150415" type="LifeBar">
-                                    <param id="0" name="Width">LifeBarBackground.Width</param>
-                                </action>
-                                <action id="-6" name="Set height" sid="555616949381793" type="LifeBar">
-                                    <param id="0" name="Height">LifeBarBackground.Height</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="875320185287402">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="154197572592193" type="System">
-                            <param id="0" name="Object">SpecialBarBackground</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="775688795445383" type="SpecialBarBackground">
-                            <param id="0" name="Object">SpecialBar</param>
-                            <param id="1" name="Layer">&quot;StaticHUD&quot;</param>
-                            <param id="2" name="Image point">&quot;SpawnPoint&quot;</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="434399180032062">
-                            <conditions />
-                            <actions>
-                                <action id="-10" name="Set value" sid="930210413429078" type="SpecialBar">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Value">SpecialBarBackground.PlayerNumber</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="822882455976052" type="SpecialBar">
-                                    <param id="0" name="Angle">SpecialBarBackground.Angle</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="280260680690422" type="SpecialBar">
-                                    <param id="0" name="Width">SpecialBarBackground.Width</param>
-                                </action>
-                                <action id="-6" name="Set height" sid="654584190792590" type="SpecialBar">
-                                    <param id="0" name="Height">SpecialBarBackground.Height /2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="493787427680002">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="437298926282076" type="System">
-                            <param id="0" name="Object">CharacterDetailTitle</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="388925194620165">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="652122453915840" type="CharacterDetailTitle">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="407614257078496" type="CharacterDetailTitle">
-                                    <param id="0" name="Text">CharactersArray.At(Human_1_SelectedCharacter - 1, 0)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="111447659006703">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="524296433821667" type="System" />
-                                <condition id="-7" name="Compare instance variable" sid="621381294127648" type="CharacterDetailTitle">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="935977997585184" type="CharacterDetailTitle">
-                                    <param id="0" name="Text">CharactersArray.At(Human_2_SelectedCharacter - 1, 0)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

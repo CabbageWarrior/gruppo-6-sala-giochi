@@ -774,6 +774,9 @@
                         <behavior-type name="Pin" sid="561232080372539">
                             <behavior id="Pin" />
                         </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="338325841921836">
+                            <behavior id="destroy" />
+                        </behavior-type>
                     </behaviors>
                     <effects>
                         <effect-type name="SetColor">
@@ -819,6 +822,9 @@
                     <behaviors>
                         <behavior-type name="Pin" sid="325422287701473">
                             <behavior id="Pin" />
+                        </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="604046061946173">
+                            <behavior id="destroy" />
                         </behavior-type>
                     </behaviors>
                     <effects>
