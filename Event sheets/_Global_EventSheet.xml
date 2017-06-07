@@ -68,7 +68,7 @@
                                 <action id="3" name="Set at XY" sid="371030664892122" type="CharactersArray">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">0</param>
-                                    <param id="2" name="Value">&quot;Lottatole di stlada&quot;</param>
+                                    <param id="2" name="Value">&quot;Lyu&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="456025852697129" type="CharactersArray">
                                     <param id="0" name="X">0</param>

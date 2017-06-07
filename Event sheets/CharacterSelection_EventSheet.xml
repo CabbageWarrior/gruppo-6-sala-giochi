@@ -156,6 +156,7 @@
                             <param id="0" name="Instance variable">IsLocked</param>
                             <param id="1" name="Value">CharactersArray.At(Self.CharacterNumber - 1, 2)</param>
                         </action>
+                        <action id="-24" name="Move to top" sid="191579700625220" type="CharacterSelector" />
                     </actions>
                     <sub-events>
                         <event-block sid="905420854674323">
@@ -190,6 +191,26 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block disabled="1" sid="388308067986185">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="435131274515051" type="System">
+                            <param id="0" name="Object">CharacterSelectorBackground</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="672046810704265" type="CharacterSelectorBackground" />
+                    </actions>
+                </event-block>
+                <event-block sid="895268925426971">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="822266491397471" type="System">
+                            <param id="0" name="Object">CharacterSelectorText</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="244368832869076" type="CharacterSelectorText" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="656491096926398">
@@ -222,7 +243,7 @@
                     <conditions />
                     <actions>
                         <action id="-16" name="Wait" sid="158081597427367" type="System">
-                            <param id="0" name="Seconds">2</param>
+                            <param id="0" name="Seconds">5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="308066011922118" type="System">
                             <param id="0" name="Layout">Level1</param>
@@ -230,6 +251,59 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <comment>Reset animations when selected.</comment>
+        <event-block sid="197133598881137">
+            <conditions>
+                <condition id="4" name="On finished" sid="252405963435414" type="CharacterDetailImage">
+                    <param id="0" name="Animation">&quot;P1Selected&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="189773048085676" type="CharacterDetailImage">
+                    <param id="0" name="Animation">replace(Self.AnimationName, &quot;Selected&quot;, &quot;Idle&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="454074347435751">
+            <conditions>
+                <condition id="4" name="On finished" sid="947846634447497" type="CharacterDetailImage">
+                    <param id="0" name="Animation">&quot;P2Selected&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="907412411040937" type="CharacterDetailImage">
+                    <param id="0" name="Animation">replace(Self.AnimationName, &quot;Selected&quot;, &quot;Idle&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="641279297040498">
+            <conditions>
+                <condition id="4" name="On finished" sid="232431959434664" type="CharacterDetailImage">
+                    <param id="0" name="Animation">&quot;P3Selected&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="487183631800943" type="CharacterDetailImage">
+                    <param id="0" name="Animation">replace(Self.AnimationName, &quot;Selected&quot;, &quot;Idle&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="643838718707668">
+            <conditions>
+                <condition id="4" name="On finished" sid="325137486094818" type="CharacterDetailImage">
+                    <param id="0" name="Animation">&quot;P4Selected&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="668008318825038" type="CharacterDetailImage">
+                    <param id="0" name="Animation">replace(Self.AnimationName, &quot;Selected&quot;, &quot;Idle&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
         </event-block>
         <event-group description="" sid="298810847353940" title="Menu CharSelection">
             <sub-events>
@@ -1132,6 +1206,21 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="198082042219142">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="295517903299139" type="CharacterDetailImage">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="307316632940973" type="CharacterDetailImage">
+                                                    <param id="0" name="Animation">replace(Self.AnimationName, &quot;Idle&quot;, &quot;Selected&quot;)</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                                 <event-block sid="356877873539666">
@@ -1152,6 +1241,23 @@
                                             <param id="0" name="Opacity">50</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="158600969161969">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="682703750413607" type="CharacterDetailImage">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="863474896764962" type="CharacterDetailImage">
+                                                    <param id="0" name="Animation">replace(Self.AnimationName, &quot;Selected&quot;, &quot;Idle&quot;)</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="842854726036570">
                                     <conditions>

@@ -247,50 +247,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="LifeBar" sid="385589508316891">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="387491472830790" type="number" />
-                    <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="995638912094275" type="number" />
-                    <instance-variable name="PlayerUID" sid="892929521261137" type="number" />
-                    <instance-variable name="DefaultR" sid="107035248966432" type="number" />
-                    <instance-variable name="DefaultG" sid="113016018318686" type="number" />
-                    <instance-variable name="DefaultB" sid="855548540121720" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="561232080372539">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <effects>
-                    <effect-type name="SetColor">
-                        <effect id="setcolor" />
-                    </effect-type>
-                </effects>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506938514484861" speed="5">
-                        <frame duration="1" hotspotX="0.52" hotspotY="1" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="LifeBarBackground" sid="727864490839665">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="205693405155105" type="number" />
-                    <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="948327105049986" type="number" />
-                    <instance-variable name="PlayerUID" sid="370989306626139" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="514413528380115">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916155589376750" speed="5">
-                        <frame duration="1" hotspotX="0.52" hotspotY="1" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type global="1" name="CharactersArray" sid="603423552914452">
                 <plugin id="Arr" />
             </object-type>
@@ -784,6 +740,98 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="LifeBarBackground" sid="727864490839665">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="205693405155105" type="number" />
+                        <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="948327105049986" type="number" />
+                        <instance-variable name="PlayerUID" sid="370989306626139" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="514413528380115">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916155589376750" speed="5">
+                            <frame duration="1" hotspotX="0.52" hotspotY="1">
+                                <image-point name="SpawnPoint" x="0.52" y="0.973333" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="LifeBar" sid="385589508316891">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="387491472830790" type="number" />
+                        <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="995638912094275" type="number" />
+                        <instance-variable name="PlayerUID" sid="892929521261137" type="number" />
+                        <instance-variable name="DefaultR" sid="107035248966432" type="number" />
+                        <instance-variable name="DefaultG" sid="113016018318686" type="number" />
+                        <instance-variable name="DefaultB" sid="855548540121720" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="561232080372539">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <effects>
+                        <effect-type name="SetColor">
+                            <effect id="setcolor" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506938514484861" speed="5">
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.973333" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpecialBarBackground" sid="114339537391230">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="661551708669580" type="number" />
+                        <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="112233579689838" type="number" />
+                        <instance-variable name="PlayerUID" sid="144564170153228" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="680039632468762">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="788354539266654" speed="5">
+                            <frame duration="1" hotspotX="0.52" hotspotY="1">
+                                <image-point name="SpawnPoint" x="0.52" y="0.973333" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpecialBar" sid="925262586581599">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="544935139812453" type="number" />
+                        <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="897940129715467" type="number" />
+                        <instance-variable name="PlayerUID" sid="488880357611558" type="number" />
+                        <instance-variable name="DefaultR" sid="160693458690409" type="number" />
+                        <instance-variable name="DefaultG" sid="905282171097278" type="number" />
+                        <instance-variable name="DefaultB" sid="195689047947028" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="325422287701473">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <effects>
+                        <effect-type name="SetColor">
+                            <effect id="setcolor" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="773153443142350" speed="5">
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.973333" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Player">
                 <object-type name="ArcadeCabinatoDK" sid="244701203354795">
@@ -1139,10 +1187,14 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="703884230537293" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <animation framecount="5" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="703884230537293" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         </animation>
-                        <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="603271032543210" speed="5">
+                        <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="603271032543210" speed="2">
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -1205,10 +1257,13 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="673720948254200" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <animation framecount="4" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="673720948254200" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         </animation>
-                        <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="902387812582816" speed="5">
+                        <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="902387812582816" speed="2">
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -1289,7 +1344,7 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="806340647900181" speed="5">
+                        <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="806340647900181" speed="2">
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <collision-poly>
                                     <point x="0.171875" y="0.171875" />
@@ -1365,8 +1420,8 @@
                     </effects>
                     <animation-folder>
                         <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161135491042050" speed="0">
-                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
-                                <image-point name="SelectorBGPoint" x="0.447003" y="0.499831" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="SelectorBGPoint" x="0.5" y="0.5" />
                                 <collision-poly>
                                     <point x="0.413139" y="0.413139" />
                                     <point x="0.586522" y="0.413139" />
@@ -1374,7 +1429,9 @@
                                     <point x="0.413139" y="0.586522" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\2_Progetti di gruppo\Group 02 - Construct 2\Construct 2 - Sala Giochi\Grafica\cabinati\Sprite Dialoghi\Ryu\Ryu Normale.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\2_Progetti di gruppo\Group 02 - Construct 2\Construct 2 - Sala Giochi\Grafica\cabinati\Sprite Dialoghi\DK\DK Normale.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="0" y="0.16661" />
                                     <point x="1" y="0.16661" />
@@ -1382,23 +1439,7 @@
                                     <point x="0" y="0.833051" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
-                                <collision-poly>
-                                    <point x="0" y="0.16661" />
-                                    <point x="1" y="0.16661" />
-                                    <point x="1" y="0.833051" />
-                                    <point x="0" y="0.833051" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
-                                <collision-poly>
-                                    <point x="0" y="0.16661" />
-                                    <point x="1" y="0.16661" />
-                                    <point x="1" y="0.833051" />
-                                    <point x="0" y="0.833051" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.500169" hotspotY="0.500169">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="0" y="0.16661" />
                                     <point x="1" y="0.16661" />
@@ -1468,8 +1509,114 @@
                         <instance-variable name="PlayerNumber" sid="336544007729454" type="number" />
                     </instance-variables>
                     <animation-folder>
+                        <animation-folder name="P1">
+                            <animation framecount="4" loop="1" name="P1Idle" pingpong="0" repeatcount="1" repeatto="0" sid="153631012597244" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0" y="0.00799966" />
+                                        <point x="1" y="0.00799966" />
+                                        <point x="1" y="0.992" />
+                                        <point x="0" y="0.992" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                            <animation framecount="8" loop="0" name="P1Selected" pingpong="1" repeatcount="1" repeatto="0" sid="408086523413861" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.644444">
+                                    <collision-poly>
+                                        <point x="0" y="0.00799966" />
+                                        <point x="1" y="0.00799966" />
+                                        <point x="1" y="0.992" />
+                                        <point x="0" y="0.992" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.644444" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.644444" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.644444" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.644444" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.644444" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.644444" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.644444" />
+                            </animation>
+                        </animation-folder>
+                        <animation-folder name="P2">
+                            <animation framecount="3" loop="1" name="P2Idle" pingpong="0" repeatcount="1" repeatto="0" sid="418732526426022" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0" y="0.00799966" />
+                                        <point x="1" y="0.00799966" />
+                                        <point x="1" y="0.992" />
+                                        <point x="0" y="0.992" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                            <animation framecount="7" loop="0" name="P2Selected" pingpong="1" repeatcount="1" repeatto="0" sid="733796919687952" speed="5">
+                                <frame duration="1" hotspotX="0.487805" hotspotY="0.6">
+                                    <collision-poly>
+                                        <point x="0" y="0.00799966" />
+                                        <point x="1" y="0.00799966" />
+                                        <point x="1" y="0.992" />
+                                        <point x="0" y="0.992" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.487805" hotspotY="0.6" />
+                                <frame duration="1" hotspotX="0.487805" hotspotY="0.6" />
+                                <frame duration="1" hotspotX="0.487805" hotspotY="0.6" />
+                                <frame duration="1" hotspotX="0.487805" hotspotY="0.6" />
+                                <frame duration="1" hotspotX="0.487805" hotspotY="0.6" />
+                                <frame duration="1" hotspotX="0.487805" hotspotY="0.6" />
+                            </animation>
+                        </animation-folder>
+                        <animation-folder name="P3">
+                            <animation framecount="1" loop="1" name="P3Idle" pingpong="0" repeatcount="1" repeatto="0" sid="189467714136636" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0" y="0.00799966" />
+                                        <point x="1" y="0.00799966" />
+                                        <point x="1" y="0.992" />
+                                        <point x="0" y="0.992" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="P3Selected" pingpong="1" repeatcount="1" repeatto="0" sid="614185978930105" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0" y="0.00799966" />
+                                        <point x="1" y="0.00799966" />
+                                        <point x="1" y="0.992" />
+                                        <point x="0" y="0.992" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                        <animation-folder name="P4">
+                            <animation framecount="1" loop="1" name="P4Idle" pingpong="0" repeatcount="1" repeatto="0" sid="459422344465955" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0" y="0.00799966" />
+                                        <point x="1" y="0.00799966" />
+                                        <point x="1" y="0.992" />
+                                        <point x="0" y="0.992" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="P4Selected" pingpong="1" repeatcount="1" repeatto="0" sid="770899723933986" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0" y="0.00799966" />
+                                        <point x="1" y="0.00799966" />
+                                        <point x="1" y="0.992" />
+                                        <point x="0" y="0.992" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
                         <animation framecount="1" loop="1" name="PBohIdleUser1" pingpong="0" repeatcount="1" repeatto="0" sid="375463915316975" speed="5">
-                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="0" y="0.00799966" />
                                     <point x="1" y="0.00799966" />
@@ -1479,52 +1626,12 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="1" name="PBohIdleUser2" pingpong="0" repeatcount="1" repeatto="0" sid="271268540244817" speed="5">
-                            <frame duration="1" hotspotX="0.4995" hotspotY="0.5005">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="1" y="0.992" />
                                     <point x="0" y="0.992" />
                                     <point x="0" y="0.00799966" />
                                     <point x="1" y="0.00799966" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="1" name="P1Idle" pingpong="0" repeatcount="1" repeatto="0" sid="153631012597244" speed="5">
-                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
-                                <collision-poly>
-                                    <point x="0" y="0.00799966" />
-                                    <point x="1" y="0.00799966" />
-                                    <point x="1" y="0.992" />
-                                    <point x="0" y="0.992" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="1" name="P2Idle" pingpong="0" repeatcount="1" repeatto="0" sid="418732526426022" speed="5">
-                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
-                                <collision-poly>
-                                    <point x="0" y="0.00799966" />
-                                    <point x="1" y="0.00799966" />
-                                    <point x="1" y="0.992" />
-                                    <point x="0" y="0.992" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="1" name="P3Idle" pingpong="0" repeatcount="1" repeatto="0" sid="189467714136636" speed="5">
-                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
-                                <collision-poly>
-                                    <point x="0" y="0.00799966" />
-                                    <point x="1" y="0.00799966" />
-                                    <point x="1" y="0.992" />
-                                    <point x="0" y="0.992" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="1" name="P4Idle" pingpong="0" repeatcount="1" repeatto="0" sid="459422344465955" speed="5">
-                            <frame duration="1" hotspotX="0.5005" hotspotY="0.5005">
-                                <collision-poly>
-                                    <point x="0" y="0.00799966" />
-                                    <point x="1" y="0.00799966" />
-                                    <point x="1" y="0.992" />
-                                    <point x="0" y="0.992" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1728,8 +1835,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="702487694544651">
+        <object-type name="HUDCharacterBackground" sid="702487694544651">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="PlayerNumber" sid="448455707735578" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="762954711024524" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1878,6 +1988,8 @@
                 <member>CharacterDetailTitle</member>
                 <member>CharacterRoleText</member>
                 <member>CharacterSelectorText</member>
+                <member>DialogueDisplayName</member>
+                <member>DialogueText</member>
                 <member>EndGameMenuText</member>
                 <member>GameMode</member>
                 <member>GameStory</member>
@@ -1967,6 +2079,12 @@
                 </behavior-type>
                 <behavior-type name="Bullet" sid="518619567799047">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="698778413827037">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="DeathFade" sid="149710260119437">
+                    <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
         </family>
