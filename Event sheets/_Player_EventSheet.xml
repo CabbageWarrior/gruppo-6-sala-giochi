@@ -1360,13 +1360,34 @@
                                     <param id="2" name="Second value">50</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="294248820509297" type="ArcadeCabinato">
-                                    <param id="0" name="Instance variable">Special</param>
-                                    <param id="1" name="Value">ArcadeAlieno.SpecialPointsGivenWhenHit</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
+                                <event-block sid="292059961953702">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="541723130447733" type="ArcadeCabinato">
+                                            <param id="0" name="Instance variable">Special_Max</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">Self.Special + ArcadeAlieno.SpecialPointsGivenWhenHit</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="884513942356844" type="ArcadeCabinato">
+                                            <param id="0" name="Instance variable">Special</param>
+                                            <param id="1" name="Value">Self.Special_Max</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="505937261648545">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="330760754266728" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="294248820509297" type="ArcadeCabinato">
+                                            <param id="0" name="Instance variable">Special</param>
+                                            <param id="1" name="Value">ArcadeAlieno.SpecialPointsGivenWhenHit</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="724284263403952">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="813485785930772" type="ArcadeCabinato">

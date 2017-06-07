@@ -583,7 +583,7 @@
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
                         <PlayerHP_Max>75</PlayerHP_Max>
-                        <Special_Max>200</Special_Max>
+                        <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                     </instance-variables>
                     <behavior-instances>
@@ -642,7 +642,7 @@
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
                         <PlayerHP_Max>75</PlayerHP_Max>
-                        <Special_Max>200</Special_Max>
+                        <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                     </instance-variables>
                     <behavior-instances>
@@ -877,7 +877,7 @@
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
                         <PlayerHP_Max>75</PlayerHP_Max>
-                        <Special_Max>200</Special_Max>
+                        <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                     </instance-variables>
                     <behavior-instances>
@@ -914,7 +914,7 @@
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
                         <PlayerHP_Max>75</PlayerHP_Max>
-                        <Special_Max>200</Special_Max>
+                        <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                     </instance-variables>
                     <behavior-instances>
