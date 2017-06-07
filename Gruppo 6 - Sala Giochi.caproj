@@ -2313,6 +2313,8 @@
                 <instance-variable name="CanAttack" sid="601701135252849" type="boolean" />
                 <instance-variable name="IsStunned" sid="816264414937051" type="boolean" />
                 <instance-variable name="SpecialPointsGivenWhenHit" sid="159424924173282" type="number" />
+                <instance-variable comment="1: Melee; 2: Ranged." name="Type" sid="133461841734294" type="number" />
+                <instance-variable name="AttackTimer" sid="842003840373864" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="824193179318370">

@@ -684,6 +684,8 @@
                         <CanAttack>true</CanAttack>
                         <IsStunned>false</IsStunned>
                         <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
+                        <Type>2</Type>
+                        <AttackTimer>0</AttackTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -750,6 +752,8 @@
                         <CanAttack>true</CanAttack>
                         <IsStunned>false</IsStunned>
                         <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
+                        <Type>1</Type>
+                        <AttackTimer>0</AttackTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -816,6 +820,8 @@
                         <CanAttack>true</CanAttack>
                         <IsStunned>false</IsStunned>
                         <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
+                        <Type>1</Type>
+                        <AttackTimer>0</AttackTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
