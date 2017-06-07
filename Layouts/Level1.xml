@@ -504,6 +504,7 @@
                         <PlayerHP_Max>75</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
+                        <HasHitSomeone>false</HasHitSomeone>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -563,6 +564,7 @@
                         <PlayerHP_Max>75</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
+                        <HasHitSomeone>false</HasHitSomeone>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -804,6 +806,7 @@
                         <PlayerHP_Max>75</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
+                        <HasHitSomeone>false</HasHitSomeone>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -841,6 +844,7 @@
                         <PlayerHP_Max>75</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
+                        <HasHitSomeone>false</HasHitSomeone>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -1509,6 +1513,71 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="ArcadeCabinatoAttackGlove" uid="151">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <PlayerNumber>0</PlayerNumber>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>100</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1375</x>
+                        <y>-500</y>
+                        <z>0</z>
+                        <width>375</width>
+                        <height>375</height>
+                        <depth>0</depth>
+                        <hotspotX>0.375</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ArcadeHitExplosion" uid="152">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <PlayerNumber>0</PlayerNumber>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1625</x>
+                        <y>-625</y>
+                        <z>0</z>
+                        <width>375</width>
+                        <height>375</height>
+                        <depth>0</depth>
+                        <hotspotX>0.34375</hotspotX>
+                        <hotspotY>0.5625</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1870,7 +1939,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>125</x>
-                        <y>-1125</y>
+                        <y>500</y>
                         <z>0</z>
                         <width>1000</width>
                         <height>250</height>

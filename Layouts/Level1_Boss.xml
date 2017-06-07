@@ -585,6 +585,7 @@
                         <PlayerHP_Max>75</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
+                        <HasHitSomeone>false</HasHitSomeone>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -644,6 +645,7 @@
                         <PlayerHP_Max>75</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
+                        <HasHitSomeone>false</HasHitSomeone>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -885,6 +887,7 @@
                         <PlayerHP_Max>75</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
+                        <HasHitSomeone>false</HasHitSomeone>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -922,6 +925,7 @@
                         <PlayerHP_Max>75</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
+                        <HasHitSomeone>false</HasHitSomeone>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
