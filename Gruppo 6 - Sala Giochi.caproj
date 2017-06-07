@@ -1389,7 +1389,6 @@
                     <animation-folder>
                         <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="234820827479416" speed="5">
                             <frame duration="1" hotspotX="0.583333" hotspotY="1">
-                                <image-point name="NamePinner" x="0.552083" y="0.179688" />
                                 <image-point name="BaseCollision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
@@ -1403,7 +1402,6 @@
                         </animation>
                         <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="527598028766541" speed="5">
                             <frame duration="1" hotspotX="0.583333" hotspotY="1">
-                                <image-point name="NamePinner" x="0.552083" y="0.226563" />
                                 <image-point name="BaseCollision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
@@ -1461,6 +1459,51 @@
                                 <image-point name="Ranged" x="0" y="0.90625" />
                             </frame>
                             <frame duration="1" hotspotX="0.729167" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                        </animation>
+                        <animation framecount="15" loop="0" name="Laser" pingpong="0" repeatcount="1" repeatto="0" sid="916010873176270" speed="5">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
                                 <image-point name="BaseCollision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
@@ -2084,6 +2127,14 @@
             <plugin id="Tilemap" />
             <texture original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\2_Progetti di gruppo\Group 02 - Construct 2\Construct 2 - Sala Giochi\Grafica\ENV\Tiles Navicella da 250x250 per Construct.png" />
             <tiles />
+        </object-type>
+        <object-type name="BossRobotte_MeleeDamageArea" sid="888796868571353">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244760466352896" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
