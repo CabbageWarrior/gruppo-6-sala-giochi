@@ -1370,33 +1370,100 @@
                     <instance-variables>
                         <instance-variable name="RobotteHp" sid="233066080558134" type="number" />
                         <instance-variable name="RobotteAttack" sid="807643532000406" type="number" />
+                        <instance-variable name="MeleeTimer" sid="871364535049264" type="number" />
+                        <instance-variable name="RangedTimer" sid="125339204987280" type="number" />
+                        <instance-variable name="AimTimer" sid="360961023212471" type="number" />
+                        <instance-variable name="Movement" sid="343203371455837" type="number" />
+                        <instance-variable name="PlayerX" sid="596730097346430" type="number" />
+                        <instance-variable name="PlayerY" sid="456339149384670" type="number" />
+                        <instance-variable name="RangedAimTimer" sid="544778030286261" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="DestroyOutsideLayout" sid="222658747414228">
                             <behavior id="destroy" />
+                        </behavior-type>
+                        <behavior-type name="Bullet" sid="314072802158637">
+                            <behavior id="Bullet" />
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
                         <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="234820827479416" speed="5">
                             <frame duration="1" hotspotX="0.583333" hotspotY="1">
                                 <image-point name="NamePinner" x="0.552083" y="0.179688" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                             </frame>
                             <frame duration="1" hotspotX="0.583333" hotspotY="1">
                                 <image-point name="NamePinner" x="0.552083" y="0.195313" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                             </frame>
                         </animation>
                         <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="527598028766541" speed="5">
                             <frame duration="1" hotspotX="0.583333" hotspotY="1">
                                 <image-point name="NamePinner" x="0.552083" y="0.226563" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                             </frame>
                             <frame duration="1" hotspotX="0.583333" hotspotY="1">
                                 <image-point name="NamePinner" x="0.552083" y="0.179688" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                             </frame>
                             <frame duration="1" hotspotX="0.583333" hotspotY="1">
                                 <image-point name="NamePinner" x="0.552083" y="0.242188" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                             </frame>
                             <frame duration="1" hotspotX="0.583333" hotspotY="1">
                                 <image-point name="NamePinner" x="0.552083" y="0.179688" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                        </animation>
+                        <animation framecount="3" loop="0" name="Melee" pingpong="0" repeatcount="1" repeatto="0" sid="139179780880820" speed="5">
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.59375" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="0" name="Wave" pingpong="0" repeatcount="1" repeatto="0" sid="528482950233752" speed="5">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.645833" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.729167" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                             </frame>
                         </animation>
                     </animation-folder>
@@ -1406,6 +1473,45 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759154435226656" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\dbga_53\Downloads\BossName.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BossRobotte_HitArea" sid="401645163953679">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="249886906894729">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="915381565308053" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BossRobotte_MeleeArea" sid="793652298124531">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="643215207330090">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155862207046247" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BossRobotte_RangeLimit" sid="933896303320347">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="744856031578413">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970717811755522" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
