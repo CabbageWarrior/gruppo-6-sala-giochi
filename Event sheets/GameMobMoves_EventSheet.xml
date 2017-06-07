@@ -573,6 +573,9 @@
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="188447290170471" type="ArcadeAlieno">
                                                     <param id="0" name="Angle">angle(Self.X, Self.Y, ArcadePlayerCollider.X + (ArcadeCabinato.Width / 2), ArcadeCabinato.Y)</param>
                                                 </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="867833070072155" type="ArcadeAlieno">
+                                                    <param id="0" name="Angle">angle(0, Self.Y, 0, ArcadeCabinato.Y)</param>
+                                                </action>
                                                 <action behavior="Bullet" id="5" name="Set enabled" sid="240261272966230" type="ArcadeAlieno">
                                                     <param id="0" name="State">1</param>
                                                 </action>

@@ -2010,7 +2010,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TiledBackground2" sid="335810832064399">
+        <object-type name="TiledBackgroundSpace" sid="335810832064399">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\dbga_53\Downloads\Piano_4_-_Stelle.png" />
         </object-type>
@@ -2135,6 +2135,87 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Earth" sid="906730679464240">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="855384409360539" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Piano_3_-_Terra.png">
+                        <collision-poly>
+                            <point x="0.16875" y="0.28125" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8875" y="0.8125" />
+                            <point x="0.5" y="0.942708" />
+                            <point x="0.228125" y="0.619792" />
+                            <point x="0.196875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EarthClouds1" sid="602860729725598">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="137405648004600" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Piano_2_-_Nuvole_2.png">
+                        <collision-poly>
+                            <point x="0.14375" y="0.239583" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.584375" y="0.692708" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.5" y="0.828125" />
+                            <point x="0.509375" y="0.151042" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EarthClouds2" sid="747657911299277">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244928421460604" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Piano_1_-_Nuvole_1.png">
+                        <collision-poly>
+                            <point x="0.56875" y="0.947917" />
+                            <point x="0.5" y="0.463542" />
+                            <point x="0.978125" y="0.0364583" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.871875" y="0.786458" />
+                            <point x="0.5" y="0.552083" />
+                            <point x="0.428125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite18" sid="201569832546740">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="260476751171037" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.692857" original-source="C:\Users\dbga_37\Downloads\Sfondo-Laboratorio-Tutto-Insieme.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TileBackground" sid="848319398989828">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\dbga_37\Downloads\Tiles Navicella da 250x250 per Construct.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TilePavimento" sid="671629275100810">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\dbga_37\Downloads\Tiles Navicella2 250x250.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TileForward" sid="781049828832408">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\dbga_37\Downloads\Tiles Navicella da 250x250 per Construct.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TiledBackgroundLaboratory" sid="448941390793624">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\dbga_53\Downloads\Sfondo-Laboratorio-Tutto-Insieme_LARGE.png" />
         </object-type>
     </object-folder>
     <families>
