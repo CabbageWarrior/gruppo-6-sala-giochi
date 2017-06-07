@@ -291,7 +291,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="TilePavimento" uid="148">
@@ -533,11 +533,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <EventType>KillEnemies</EventType>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3247</x>
-                        <y>790</y>
+                        <x>3250</x>
+                        <y>750</y>
                         <z>0</z>
                         <width>109</width>
                         <height>1616</height>
@@ -545,7 +548,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="ArcadeCabinatoSF" uid="208">
@@ -1578,6 +1581,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="EventPoint" uid="153">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EventType>GoToBoss</EventType>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>8875</x>
+                        <y>750</y>
+                        <z>0</z>
+                        <width>109</width>
+                        <height>1616</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1624,7 +1652,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="CameraWallForward" uid="210">
@@ -1653,7 +1681,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="Sprite" uid="211">
@@ -1939,7 +1967,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>125</x>
-                        <y>500</y>
+                        <y>-1125</y>
                         <z>0</z>
                         <width>1000</width>
                         <height>250</height>

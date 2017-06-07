@@ -82,13 +82,9 @@
                             <param id="0" name="Instance variable">IsLocked</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="405227684929437" type="System">
-                            <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="815069615672128" type="EventPoint" />
-                        <action id="-13" name="Set boolean" sid="630476535735475" type="CameraOrb">
-                            <param id="0" name="Instance variable">IsLocked</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="0" name="Call function" sid="438969955221612" type="Function">
+                            <param id="0" name="Name">&quot;CheckEvent&quot;</param>
+                            <param id="1" name="Parameter {n}">EventPoint.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -115,6 +111,71 @@
                             <actions>
                                 <action id="-1" name="Set X" sid="744662833698650" type="CameraOrb">
                                     <param id="0" name="X">lerp(Self.X,ArcadeCabinato.X,0.008)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Parametri: 0: EventPoint UID.</comment>
+                        <event-block sid="799977334313712">
+                            <conditions>
+                                <condition id="0" name="On function" sid="993432079065010" type="Function">
+                                    <param id="0" name="Name">&quot;CheckEvent&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="956029439918837" type="EventPoint">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="487593214589385">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="592134182606186" type="EventPoint">
+                                            <param id="0" name="Instance variable">EventType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;GoToBoss&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="402244654797601" type="System">
+                                            <param id="0" name="Layout">Level1_Boss</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="618271913258412">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="463664940116966" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="750385903629057" type="EventPoint">
+                                            <param id="0" name="Instance variable">EventType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;KillEnemies&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="578534796418651" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="987155073729617" type="Function">
+                                            <param id="0" name="Name">&quot;DestroyEventPoint&quot;</param>
+                                            <param id="1" name="Parameter {n}">EventPoint.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Parametri: 0: EventPoint UID.</comment>
+                        <event-block sid="669581974863452">
+                            <conditions>
+                                <condition id="0" name="On function" sid="437679364419198" type="Function">
+                                    <param id="0" name="Name">&quot;DestroyEventPoint&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="684695176205624" type="EventPoint">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="124185986489074" type="EventPoint" />
+                                <action id="-13" name="Set boolean" sid="630476535735475" type="CameraOrb">
+                                    <param id="0" name="Instance variable">IsLocked</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>

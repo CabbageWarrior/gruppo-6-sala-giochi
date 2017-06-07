@@ -704,6 +704,9 @@
                 </object-type>
                 <object-type name="EventPoint" sid="239343272745990">
                     <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="EventType" sid="258879524602573" type="string" />
+                    </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156257173807171" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
