@@ -2217,6 +2217,29 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\dbga_53\Downloads\Sfondo-Laboratorio-Tutto-Insieme_LARGE.png" />
         </object-type>
+        <object-type name="Bullet" sid="469708919824731">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="144506297598791">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="751499698901110">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371761167711948" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\dbga_57\Desktop\gruppo-6-sala-giochi-master\Proiettile Verde Alien Giallo.png">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0" y="0.03125" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -2344,6 +2367,7 @@
                 <member>ArcadeCabinatoSF</member>
                 <member>ArcadeCabinatoSM</member>
                 <member>BossRobotte</member>
+                <member>Bullet</member>
             </members>
         </family>
     </families>

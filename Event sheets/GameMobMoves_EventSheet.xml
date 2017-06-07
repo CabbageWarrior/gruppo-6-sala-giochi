@@ -122,6 +122,10 @@
                                                     <param id="0" name="Instance variable">PlayerNumberTarget</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
+                                                <action id="-10" name="Set value" sid="120660279321528" type="ArcadeAlieno">
+                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
                                             </actions>
                                             <sub-events>
                                                 <event-block sid="132260597487213">
@@ -506,6 +510,43 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="659649042144863">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="181469113515205" type="AlienYellow">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="773924971676886" type="AlienYellow">
+                            <param id="0" name="Instance variable">AttackTimer</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="226574952683043" type="AlienYellow">
+                            <param id="0" name="Object">Bullet</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="220525981010080" type="Bullet">
+                            <param id="0" name="Angle">AlienYellow.Direction</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="429523003968329" type="AlienYellow">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="658274500166378">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="383733477313001" type="AlienYellow" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="609473587691819" type="Bullet">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="403305624760042" title="Alien Functions">
@@ -763,6 +804,56 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="474445059213431">
+                                            <conditions />
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="954352847035889">
+                                                    <conditions>
+                                                        <condition id="-2" name="Compare Y" sid="485585806451627" type="ArcadeCabinato">
+                                                            <param id="0" name="Comparison">5</param>
+                                                            <param id="1" name="Y co-ordinate">((ArcadeAlieno.ImagePointY(&quot;Origin&quot;))-(ArcadeAlieno.ImageHeight/2))</param>
+                                                        </condition>
+                                                        <condition id="-2" name="Compare Y" sid="100067337166778" type="ArcadeCabinato">
+                                                            <param id="0" name="Comparison">3</param>
+                                                            <param id="1" name="Y co-ordinate">((ArcadeAlieno.ImagePointY(&quot;Origin&quot;))+(ArcadeAlieno.ImageHeight/2))</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="952797626257241">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="388736694883007" type="ArcadeAlieno">
+                                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                                    <param id="1" name="Comparison">3</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="108964285185893" type="ArcadeAlieno">
+                                                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="944693386449793">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="269795636383024" type="System" />
+                                                                <condition id="2" inverted="1" name="Is playing" sid="685379883411491" type="ArcadeAlieno">
+                                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="500362512931046" type="ArcadeAlieno">
+                                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                         <event-block sid="117117725672551">
                                             <conditions>
                                                 <condition id="2" inverted="1" name="Is playing" sid="573943197864570" type="ArcadeAlieno">
@@ -787,20 +878,6 @@
                                                 <action id="4" name="Set animation" sid="180894501366381" type="ArcadeAlieno">
                                                     <param id="0" name="Animation">&quot;Walk&quot;</param>
                                                     <param id="1" name="From">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="441908621039700">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="648602548022892" type="System" />
-                                                <condition id="2" inverted="1" name="Is playing" sid="685379883411491" type="ArcadeAlieno">
-                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="893953063091899" type="ArcadeAlieno">
-                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                                    <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
