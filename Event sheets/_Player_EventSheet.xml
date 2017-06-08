@@ -1582,7 +1582,7 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action behavior="Timer" id="0" name="Start timer" sid="646661437021781" type="ArcadeCabinato">
-                                            <param id="0" name="Duration">10</param>
+                                            <param id="0" name="Duration">0.5</param>
                                             <param id="1" name="Type">0</param>
                                             <param id="2" name="Tag">&quot;ComboCounter&quot;</param>
                                         </action>
