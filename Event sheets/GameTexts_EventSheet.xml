@@ -26,7 +26,7 @@
                 <action id="0" name="Load" sid="391813128718170" type="XML">
                     <param id="0" name="XML">AJAX.LastData</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="373644991717322" type="Function">
+                <action id="0" name="Call function" sid="373644991717322" type="Function">
                     <param id="0" name="Name">&quot;SetDialogueText&quot;</param>
                     <param id="1" name="Parameter {n}">1{###}TextFlow_NumberOfLines{###}Human_1_SelectedCharacter</param>
                 </action>

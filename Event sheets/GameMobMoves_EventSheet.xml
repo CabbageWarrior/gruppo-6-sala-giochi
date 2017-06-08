@@ -699,14 +699,10 @@
                                             </actions>
                                         </event-block>
                                         <comment>Comportamenti alieni</comment>
-                                        <event-block any="1" sid="830004724161355">
+                                        <event-block sid="830004724161355">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="468472512210848" type="ArcadeAlieno">
-                                                    <param id="0" name="Comparison">2</param>
-                                                    <param id="1" name="X co-ordinate">ArcadePlayerCollider.X</param>
-                                                </condition>
-                                                <condition id="-1" name="Compare X" sid="835933615249721" type="ArcadeAlieno">
-                                                    <param id="0" name="Comparison">4</param>
+                                                <condition id="-1" name="Compare X" sid="210902026316661" type="ArcadeAlieno">
+                                                    <param id="0" name="Comparison">1</param>
                                                     <param id="1" name="X co-ordinate">ArcadePlayerCollider.X</param>
                                                 </condition>
                                             </conditions>
