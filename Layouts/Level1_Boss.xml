@@ -524,11 +524,13 @@
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
                         <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -562,11 +564,13 @@
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
                         <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -804,11 +808,13 @@
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
                         <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -842,11 +848,13 @@
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
                         <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

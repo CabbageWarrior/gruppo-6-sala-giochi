@@ -1017,7 +1017,14 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="629913328678531" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.496" y="0.996" />
+                                    <point x="0.504" y="0.996" />
+                                    <point x="0.504" y="1" />
+                                    <point x="0.496" y="1" />
+                                </collision-poly>
+                            </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         </animation>
                     </animation-folder>
@@ -2443,6 +2450,7 @@
                 <instance-variable name="Special_Max" sid="195523650239040" type="number" />
                 <instance-variable name="PlayerHitsCount_Max" sid="752156120970867" type="number" />
                 <instance-variable comment="Used during Attack animation." name="HasHitSomeone" sid="381723361535470" type="boolean" />
+                <instance-variable name="IsStunned" sid="179504234957214" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="PinToCollider" sid="309520120978813">
@@ -2453,6 +2461,9 @@
                 </behavior-type>
                 <behavior-type name="Timer" sid="156327048544054">
                     <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="613624663746772">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
         </family>

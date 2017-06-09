@@ -706,6 +706,10 @@
                             <param id="0" name="Instance variable">AttackTimer</param>
                             <param id="1" name="Value">3</param>
                         </action>
+                        <action id="0" name="Call function" sid="669550549537677" type="Function">
+                            <param id="0" name="Name">&quot;HitPlayersInArea&quot;</param>
+                            <param id="1" name="Parameter {n}">AlienBlue.UID</param>
+                        </action>
                         <action id="4" name="Set animation" sid="913997973586514" type="AlienBlue">
                             <param id="0" name="Animation">&quot;Idle&quot;</param>
                             <param id="1" name="From">1</param>
@@ -722,6 +726,10 @@
                         <action id="-10" name="Set value" sid="890399984862110" type="AlienRed">
                             <param id="0" name="Instance variable">AttackTimer</param>
                             <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Call function" sid="430771875852562" type="Function">
+                            <param id="0" name="Name">&quot;HitPlayersInArea&quot;</param>
+                            <param id="1" name="Parameter {n}">AlienRed.UID</param>
                         </action>
                         <action id="4" name="Set animation" sid="945707638823095" type="AlienRed">
                             <param id="0" name="Animation">&quot;Idle&quot;</param>
@@ -875,6 +883,39 @@
                                             </actions>
                                         </event-block>
                                         <comment>Comportamenti alieni</comment>
+                                        <event-block sid="367905591722788">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="751981645204829" type="ArcadeAlieno_AttackCollider">
+                                                    <param id="0" name="Instance variable">AlienUID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">ArcadeAlieno.UID</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="498013829105481" type="ArcadeAlieno_AttackCollider">
+                                                    <param id="0" name="Object">ArcadePlayerCollider</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="650004858484676">
+                                                    <conditions>
+                                                        <condition id="2" inverted="1" name="Is playing" sid="313304339053365" type="ArcadeAlieno">
+                                                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="532885157610154" type="ArcadeAlieno">
+                                                            <param id="0" name="Instance variable">AttackTimer</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="487003029640098" type="ArcadeAlieno">
+                                                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                         <event-block sid="830004724161355">
                                             <conditions>
                                                 <condition id="-1" name="Compare X" sid="210902026316661" type="ArcadeAlieno">
@@ -884,49 +925,6 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="367905591722788">
-                                                    <conditions>
-                                                        <condition id="-2" name="Compare Y" sid="209444765339092" type="ArcadeCabinato">
-                                                            <param id="0" name="Comparison">5</param>
-                                                            <param id="1" name="Y co-ordinate">((ArcadeAlieno.ImagePointY(&quot;Origin&quot;))-(ArcadeAlieno.ImageHeight/2))</param>
-                                                        </condition>
-                                                        <condition id="-2" name="Compare Y" sid="140385114296466" type="ArcadeCabinato">
-                                                            <param id="0" name="Comparison">3</param>
-                                                            <param id="1" name="Y co-ordinate">((ArcadeAlieno.ImagePointY(&quot;Origin&quot;))+(ArcadeAlieno.ImageHeight/2))</param>
-                                                        </condition>
-                                                        <condition id="-8" name="Compare two values" sid="331722122403406" type="System">
-                                                            <param id="0" name="First value">distance(ArcadeAlieno.X, 0, ArcadeCabinato.X, 0)</param>
-                                                            <param id="1" name="Comparison">3</param>
-                                                            <param id="2" name="Second value">abs(ArcadeCabinato.Width / 2) + 100</param>
-                                                        </condition>
-                                                        <condition id="-8" name="Compare two values" sid="658924490466773" type="System">
-                                                            <param id="0" name="First value">distance(ArcadeAlieno.X, 0, ArcadeCabinato.X, 0)</param>
-                                                            <param id="1" name="Comparison">5</param>
-                                                            <param id="2" name="Second value">abs(ArcadeCabinato.Width / 2) - 100</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="650004858484676">
-                                                            <conditions>
-                                                                <condition id="2" inverted="1" name="Is playing" sid="313304339053365" type="ArcadeAlieno">
-                                                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
-                                                                </condition>
-                                                                <condition id="-7" name="Compare instance variable" sid="532885157610154" type="ArcadeAlieno">
-                                                                    <param id="0" name="Instance variable">AttackTimer</param>
-                                                                    <param id="1" name="Comparison">3</param>
-                                                                    <param id="2" name="Value">0</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="4" name="Set animation" sid="487003029640098" type="ArcadeAlieno">
-                                                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
-                                                                    <param id="1" name="From">1</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
                                                 <event-block sid="221053357368555">
                                                     <conditions>
                                                         <condition id="2" inverted="1" name="Is playing" sid="355641463933299" type="ArcadeAlieno">
@@ -1203,6 +1201,42 @@
                     <actions>
                         <action behavior="DeathFade" id="1" name="Start fade" sid="768745381311943" type="ArcadeAlieno" />
                     </actions>
+                </event-block>
+                <comment>Parametri: 0: UID alieno.</comment>
+                <event-block sid="754248301713248">
+                    <conditions>
+                        <condition id="0" name="On function" sid="441526683332802" type="Function">
+                            <param id="0" name="Name">&quot;HitPlayersInArea&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="322887803001951" type="ArcadeAlieno">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="786901947716347" type="ArcadeAlieno_AttackCollider">
+                            <param id="0" name="Instance variable">AlienUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="100040564878384">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="472086467409785" type="System">
+                                    <param id="0" name="Object">ArcadeCabinato</param>
+                                </condition>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="646293948471401" type="ArcadeCabinato" />
+                                <condition id="1" name="Is overlapping another object" sid="454106606174535" type="ArcadeCabinato">
+                                    <param id="0" name="Object">ArcadeAlieno_AttackCollider</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="406888629590977" type="Function">
+                                    <param id="0" name="Name">&quot;HitPlayer&quot;</param>
+                                    <param id="1" name="Parameter {n}">ArcadeCabinato.PlayerNumber{###}ArcadeAlieno.AlienAttack</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

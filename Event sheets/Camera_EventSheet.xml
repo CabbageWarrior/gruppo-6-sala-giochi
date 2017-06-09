@@ -110,7 +110,7 @@
                             </conditions>
                             <actions>
                                 <action id="-1" name="Set X" sid="744662833698650" type="CameraOrb">
-                                    <param id="0" name="X">lerp(Self.X,ArcadeCabinato.X,0.008)</param>
+                                    <param id="0" name="X">lerp(Self.X,ArcadeCabinato.X,0.03)</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -686,6 +686,112 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>End of Stun Animation</comment>
+                <event-block sid="927100920091714">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="245946471657592" type="ArcadeCabinatoSF">
+                            <param id="0" name="Animation">&quot;Stun&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="971534866200664" type="Function">
+                            <param id="0" name="Name">&quot;PlayerStunFinished&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoSF.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="459667408640259">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="315362501413432" type="ArcadeCabinatoDK">
+                            <param id="0" name="Animation">&quot;Stun&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="358946184487124" type="Function">
+                            <param id="0" name="Name">&quot;PlayerStunFinished&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoDK.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="791060111780432">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="761303893693009" type="ArcadeCabinatoPM">
+                            <param id="0" name="Animation">&quot;Stun&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="523954935290196" type="Function">
+                            <param id="0" name="Name">&quot;PlayerStunFinished&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoPM.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="426398724239369">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="371695701087870" type="ArcadeCabinatoSM">
+                            <param id="0" name="Animation">&quot;Stun&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="248649795612912" type="Function">
+                            <param id="0" name="Name">&quot;PlayerStunFinished&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoSM.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>End of Death Animation</comment>
+                <event-block sid="395339830693199">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="508592374639897" type="ArcadeCabinatoSF">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="854832046767139" type="Function">
+                            <param id="0" name="Name">&quot;PlayerDeathAnimationEnded&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoSF.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="143317647238254">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="592895308779577" type="ArcadeCabinatoDK">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="675525054078638" type="Function">
+                            <param id="0" name="Name">&quot;PlayerDeathAnimationEnded&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoDK.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="632924233701026">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="964202226900063" type="ArcadeCabinatoPM">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="232268940824441" type="Function">
+                            <param id="0" name="Name">&quot;PlayerDeathAnimationEnded&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoPM.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="748394353689999">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="941363509273841" type="ArcadeCabinatoSM">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="291968710653298" type="Function">
+                            <param id="0" name="Name">&quot;PlayerDeathAnimationEnded&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinatoSM.PlayerNumber</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="755217169858978" title="Player Timers">
@@ -1247,110 +1353,115 @@
                 <event-block sid="702592898035684">
                     <conditions>
                         <condition id="0" name="On function" sid="377701676431935" type="Function">
-                            <param id="0" name="Name">&quot;PlayerHit&quot;</param>
+                            <param id="0" name="Name">&quot;HitPlayer&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="199307831889287" type="Player">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        <condition id="-7" name="Compare instance variable" sid="199307831889287" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="515114063192760" type="Player">
-                            <param id="0" name="Instance variable">HP</param>
+                        <action id="-13" name="Set boolean" sid="747006097943683" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="515114063192760" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerHP</param>
                             <param id="1" name="Value">Function.Param(1)</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="323825159790798">
+                        <event-block sid="399559020162259">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="321008176634467" type="Player">
-                                    <param id="0" name="Instance variable">HP</param>
+                                <condition id="-7" name="Compare instance variable" sid="889429796168983" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">PlayerHP</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="631995265933415" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerKill&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                <action id="4" name="Set animation" sid="739012272019020" type="ArcadeCabinato">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="527205489428472">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="270408886224579" type="ArcadePlayerCollider">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ArcadeCabinato.PlayerNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="269162334070131" type="ArcadePlayerCollider" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="438525703575503">
+                        <event-block sid="627531064909599">
                             <conditions>
-                                <condition id="-22" name="Else" sid="660974447989137" type="System" />
+                                <condition id="-22" name="Else" sid="160234794659285" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="FlashDamage" id="0" name="Flash" sid="387418656448263" type="Player">
+                                <action id="4" name="Set animation" sid="624372277362601" type="ArcadeCabinato">
+                                    <param id="0" name="Animation">&quot;Stun&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="387418656448263" type="ArcadeCabinato">
                                     <param id="0" name="&apos;On&apos; time">0.05</param>
                                     <param id="1" name="&apos;Off&apos; time">0.05</param>
-                                    <param id="2" name="Duration">0.2</param>
+                                    <param id="2" name="Duration">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Parametri: 0: UID del Player.</comment>
+                <event-block sid="290925979401135">
+                    <conditions>
+                        <condition id="0" name="On function" sid="755290594443105" type="Function">
+                            <param id="0" name="Name">&quot;PlayerStunFinished&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="360117285439308" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="101751912975383" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="705875808034948" type="ArcadeCabinato">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <comment>Parametri: 0: UID del Player</comment>
                 <event-block sid="692499632576191">
                     <conditions>
                         <condition id="0" name="On function" sid="329295584294709" type="Function">
-                            <param id="0" name="Name">&quot;PlayerKill&quot;</param>
+                            <param id="0" name="Name">&quot;PlayerDeathAnimationEnded&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="174145956068518" type="Player">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        <condition id="-7" name="Compare instance variable" sid="430361038538670" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <comment>rompe il collisore del pugno e il collisore di movimento del player</comment>
-                        <event-block sid="655330145088794">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="769421737889670" type="PlayerGrabCollider">
-                                    <param id="0" name="Instance variable">PlayerUID</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Player.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="793284435973178" type="PlayerGrabCollider" />
-                            </actions>
-                        </event-block>
-                        <comment>add animazione morte</comment>
-                        <event-block sid="814583973146503">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Play" sid="654883152186828" type="Audio">
-                                    <param id="0" name="Audio file">Esplosione Barretta</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="823566744076543" type="Player">
-                                    <param id="0" name="Object">PlayerExplosion</param>
-                                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                                    <param id="2" name="Image point">&quot;Origin&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-16" name="Wait" sid="407134538233829" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="831027462585951" type="ArcadeCabinato" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="741635490399398">
-            <conditions>
-                <condition id="4" name="On finished" sid="986370581110506" type="ArcadeCabinatoDK">
-                    <param id="0" name="Animation">&quot;Death&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="226060543451638" type="System">
-                    <param id="0" name="Seconds">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="596474355477704" type="Player" />
-                <action id="0" name="Call function" sid="822164388836057" type="Function">
-                    <param id="0" name="Name">&quot;CheckVictory&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
