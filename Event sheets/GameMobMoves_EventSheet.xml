@@ -1240,5 +1240,24 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="620160148890945" title="Bullets Behavior">
+            <sub-events>
+                <event-block sid="927992343562423">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="372362907176917" type="Bullet">
+                            <param id="0" name="Object">ArcadePlayerCollider</param>
+                        </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="416549833647912" type="ArcadeCabinato" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="553999594345758" type="Function">
+                            <param id="0" name="Name">&quot;HitPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}Bullet.Damage</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="606753623559392" type="Bullet" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

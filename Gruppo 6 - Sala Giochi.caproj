@@ -1735,6 +1735,9 @@
                 </object-type>
                 <object-type name="Bullet" sid="469708919824731">
                     <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Damage" sid="540617565346955" type="number" />
+                    </instance-variables>
                     <behaviors>
                         <behavior-type name="Bullet" sid="144506297598791">
                             <behavior id="Bullet" />
@@ -1745,12 +1748,12 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371761167711948" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\dbga_57\Desktop\gruppo-6-sala-giochi-master\Proiettile Verde Alien Giallo.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0.8" original-source="C:\Users\dbga_57\Desktop\gruppo-6-sala-giochi-master\Proiettile Verde Alien Giallo.png">
                                 <collision-poly>
-                                    <point x="0.5" y="0" />
-                                    <point x="0.5" y="0.03125" />
-                                    <point x="0" y="0.03125" />
-                                    <point x="0" y="0" />
+                                    <point x="0.625" y="0.7" />
+                                    <point x="0.625" y="0.9" />
+                                    <point x="0.25" y="0.9" />
+                                    <point x="0.25" y="0.7" />
                                 </collision-poly>
                             </frame>
                         </animation>
