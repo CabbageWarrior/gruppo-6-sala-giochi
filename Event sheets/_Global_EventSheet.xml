@@ -50,14 +50,6 @@
                         <comment>Nome</comment>
                         <comment>Descrizione</comment>
                         <comment>IsLocked --&gt; 0: No; 1: Sì.</comment>
-                        <comment>HP Max</comment>
-                        <comment>Vel. Max</comment>
-                        <comment>Power Max</comment>
-                        <comment>Colore (R) --&gt; 0-100</comment>
-                        <comment>Colore (G) --&gt; 0-100</comment>
-                        <comment>Colore (B) --&gt; 0-100</comment>
-                        <comment>Tipo</comment>
-                        <comment>Team</comment>
                         <event-block sid="913204772615419">
                             <conditions />
                             <actions>

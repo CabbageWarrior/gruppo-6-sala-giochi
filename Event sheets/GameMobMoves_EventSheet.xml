@@ -753,6 +753,10 @@
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">&quot;Origin&quot;</param>
                         </action>
+                        <action id="-10" name="Set value" sid="271204541546410" type="Bullet">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">AlienYellow.AlienAttack</param>
+                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="220525981010080" type="Bullet">
                             <param id="0" name="Angle">AlienYellow.Direction</param>
                         </action>

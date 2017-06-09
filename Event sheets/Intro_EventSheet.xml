@@ -468,9 +468,6 @@
                                         <action id="6" name="Stop" sid="583030469920423" type="Audio">
                                             <param id="0" name="Tag">&quot;MenuBackgroundMusic&quot;</param>
                                         </action>
-                                        <action id="-2" name="Go to layout" sid="827168319928839" type="System">
-                                            <param id="0" name="Layout">Quit</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>

@@ -31,7 +31,6 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -105,306 +104,6 @@
                     </behavior-type>
                 </behaviors>
                 <texture />
-            </object-type>
-        </object-folder>
-        <object-folder name="Ball">
-            <object-type name="Ball" sid="646891843161450">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="Last team who controlled the ball. 1: Stark; 2: Cap." name="LastTeam" sid="899644538489256" type="number" />
-                    <instance-variable comment="Last Player Number of the player who controlled the ball. 1-4 = Player Number." name="LastPlayerNumber" sid="865514842274887" type="number" />
-                    <instance-variable name="LastPlayerUID" sid="720312124280558" type="number" />
-                    <instance-variable name="LastMovementAngle" sid="155592332346368" type="number" />
-                    <instance-variable name="LastSpeed" sid="860033532951364" type="number" />
-                    <instance-variable name="DefaultSpeed" sid="602519304237523" type="number" />
-                    <instance-variable name="DefaultDamage" sid="250006956807136" type="number" />
-                    <instance-variable name="Damage" sid="564350853660523" type="number" />
-                    <instance-variable name="BlinkSeconds" sid="902357064926555" type="number" />
-                    <instance-variable name="CurrentNormalSpeed" sid="300282142526611" type="number" />
-                    <instance-variable name="IsDirectShot" sid="250799473910773" type="number" />
-                    <instance-variable name="NoLastPlayerDamageTimer" sid="113207469035836" type="number" />
-                    <instance-variable comment="1: Sì; 0: No." name="SpecularShotEnabled" sid="204571500995552" type="number" />
-                    <instance-variable name="SpecularShotTimer" sid="537544003347083" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Solid" sid="361987747890016">
-                        <behavior id="solid" />
-                    </behavior-type>
-                    <behavior-type name="Bullet" sid="326377706564812">
-                        <behavior id="Bullet" />
-                    </behavior-type>
-                    <behavior-type name="BlinkSine" sid="553523782788779">
-                        <behavior id="Sin" />
-                    </behavior-type>
-                    <behavior-type name="Pin" sid="860061782276998">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                    <behavior-type name="DestroyOutsideLayout" sid="169221712600777">
-                        <behavior id="destroy" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148657605407932" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.5" y="0" />
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
-                                <point x="0.5" y="1" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.5" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="0.5" y="0" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BallSpawnPoint" sid="495428811280009">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831756479786413" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="SpawnToLeft" x="-0.2" y="0.5" />
-                            <image-point name="SpawnToRight" x="1.2" y="0.5" />
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BallExplosion" sid="350214413588686">
-                <plugin id="Particles" />
-                <texture />
-            </object-type>
-        </object-folder>
-        <object-folder name="Player">
-            <object-type name="Player" sid="630767457233651">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="427794266003993" type="number" />
-                    <instance-variable name="CharacterNumber" sid="930006056575049" type="number" />
-                    <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="647201793282606" type="number" />
-                    <instance-variable name="HP" sid="402025276858831" type="number" />
-                    <instance-variable comment="Total amount of HP." name="HPTotal" sid="321058058233023" type="number" />
-                    <instance-variable name="Vel" sid="731549782333269" type="number" />
-                    <instance-variable name="VelTotal" sid="877324444502908" type="number" />
-                    <instance-variable name="Pow" sid="469756034753470" type="number" />
-                    <instance-variable name="PowTotal" sid="658942924274822" type="number" />
-                    <instance-variable name="SkillGrabBallEnabled" sid="486677607566552" type="number" />
-                    <instance-variable name="SkillGrabBallTryingToGrab" sid="171465504804379" type="number" />
-                    <instance-variable name="SkillGrabBallIsGrabbing" sid="747493869920378" type="number" />
-                    <instance-variable name="PowerUpSpeed" sid="162384625385008" type="boolean" />
-                    <instance-variable name="PowerUpShield" sid="509675313025513" type="boolean" />
-                    <instance-variable name="PowerUpSpiderman" sid="967790593737874" type="boolean" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Solid" sid="903587181961033">
-                        <behavior id="solid" />
-                    </behavior-type>
-                    <behavior-type name="8Direction" sid="841699245598175">
-                        <behavior id="EightDir" />
-                    </behavior-type>
-                    <behavior-type name="FlashDamage" sid="972984145052342">
-                        <behavior id="Flash" />
-                    </behavior-type>
-                    <behavior-type name="DestroyOutsideLayout" sid="839685813228765">
-                        <behavior id="destroy" />
-                    </behavior-type>
-                    <behavior-type name="PowerUpTimer" sid="285471026071250">
-                        <behavior id="Timer" />
-                    </behavior-type>
-                </behaviors>
-                <effects>
-                    <effect-type name="SetColor">
-                        <effect id="setcolor" />
-                    </effect-type>
-                </effects>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="675822147814457" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="LifePin" x="0.5" y="0.8" />
-                            <image-point name="SpidermanTop" x="0.5" y="0.025" />
-                            <image-point name="SpidermanBottom" x="0.5" y="0.975" />
-                            <image-point name="SpidermanLeft" x="0.1" y="0.5" />
-                            <image-point name="SpidermanRight" x="0.9" y="0.5" />
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="PlayerSpawnPoint" sid="899073177102879">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="264548491010704" type="number" />
-                    <instance-variable name="Used" sid="875426463971964" type="number" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="559380962477695" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="PlayerGrabCollider" sid="457532051117181">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="PlayerNumber" sid="532272351057615" type="number" />
-                    <instance-variable name="Team" sid="886496001632203" type="number" />
-                    <instance-variable name="PlayerUID" sid="174837232172656" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="992381750368493">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="465109584474639" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="PlayerGrabShadow" sid="330690955313748">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Fade" sid="565639611576775">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                    <behavior-type name="Pin" sid="226458198901943">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                    <behavior-type name="SineWidth" sid="687306504722142">
-                        <behavior id="Sin" />
-                    </behavior-type>
-                    <behavior-type name="SineHeight" sid="713403816140060">
-                        <behavior id="Sin" />
-                    </behavior-type>
-                </behaviors>
-                <effects>
-                    <effect-type name="SetColor">
-                        <effect id="setcolor" />
-                    </effect-type>
-                </effects>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="494933203410024" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="PlayerExplosion" sid="669083922991446">
-                <plugin id="Particles" />
-                <effects>
-                    <effect-type name="SetColor">
-                        <effect id="setcolor" />
-                    </effect-type>
-                </effects>
-                <texture />
-            </object-type>
-            <object-type name="PlayerSpeedShadow" sid="151301229446479">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Fade" sid="264660964528564">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                </behaviors>
-                <effects>
-                    <effect-type name="SetColor">
-                        <effect id="setcolor" />
-                    </effect-type>
-                </effects>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832887966992246" speed="5">
-                        <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
-        <object-folder name="Power-Up">
-            <object-type name="PowerUpSpawnPoint" sid="284767617379747">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="90: Top to Down; -90: Down to Top." name="PowerUpMovementAngle" sid="675340491974079" type="number" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847616791077734" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="PowerUp" sid="957990521659287">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="CurrentPowerUp" sid="798347485467022" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Bullet" sid="419726922656006">
-                        <behavior id="Bullet" />
-                    </behavior-type>
-                    <behavior-type name="Sine" sid="441277737395628">
-                        <behavior id="Sin" />
-                    </behavior-type>
-                    <behavior-type name="DestroyOutsideLayout" sid="199924686908577">
-                        <behavior id="destroy" />
-                    </behavior-type>
-                    <behavior-type name="GameFinishedFade" sid="792090142104227">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                </behaviors>
-                <effects>
-                    <effect-type name="SetColor">
-                        <effect id="setcolor" />
-                    </effect-type>
-                </effects>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404485051171170" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type global="1" name="PowerUpsArray" sid="875335363509595">
-                <plugin id="Arr" />
-            </object-type>
-            <object-type name="PowerUpEvidence" sid="805487023122269">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Fade" sid="769797366815513">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                    <behavior-type name="Sine" sid="409036516629031">
-                        <behavior id="Sin" />
-                    </behavior-type>
-                </behaviors>
-                <effects>
-                    <effect-type name="SetColor">
-                        <effect id="setcolor" />
-                    </effect-type>
-                </effects>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="629996465719169" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="PowerUpSpidermanBorder" sid="656053154828871">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="PlayerUID" sid="866185772918099" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="665068589458006">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                    <behavior-type name="FlashDamage" sid="253418402709017">
-                        <behavior id="Flash" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="328839251922263" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Menus">
@@ -2410,6 +2109,108 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\dbga_53\Downloads\Sfondo-Laboratorio-Tutto-Insieme_LARGE.png" />
         </object-type>
+        <object-type name="Sprite20" sid="989877407827677">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="581087550880300" speed="5">
+                    <frame duration="1" hotspotX="0.484127" hotspotY="0.336735" original-source="C:\Users\dbga_37\Downloads\CasseHangar.png">
+                        <collision-poly>
+                            <point x="0.380952" y="0.204082" />
+                            <point x="0.484127" y="0.0102041" />
+                            <point x="0.626984" y="0.153061" />
+                            <point x="0.865079" y="0.336735" />
+                            <point x="0.992063" y="0.989796" />
+                            <point x="0.484127" y="0.989796" />
+                            <point x="0.00793651" y="0.94898" />
+                            <point x="0.126984" y="0.336735" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite23" sid="829637138834971">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="334026552598687" speed="5">
+                    <frame duration="1" hotspotX="0.484127" hotspotY="0.0151515" original-source="C:\Users\dbga_37\Downloads\CasseHangar (3).png">
+                        <collision-poly>
+                            <point x="0.992063" y="0.0151515" />
+                            <point x="0.992063" y="0.984848" />
+                            <point x="0.484127" y="0.984848" />
+                            <point x="0.00793651" y="0.924242" />
+                            <point x="0.00793651" y="0.0151515" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite24" sid="306049044783685">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="179155936771762" speed="5">
+                    <frame duration="1" hotspotX="0.484127" hotspotY="0.0151515" original-source="C:\Users\dbga_37\Downloads\CasseHangar (4).png">
+                        <collision-poly>
+                            <point x="0.746032" y="0.0151515" />
+                            <point x="0.992063" y="0.984848" />
+                            <point x="0.484127" y="0.984848" />
+                            <point x="0.00793651" y="0.924242" />
+                            <point x="0.00793651" y="0.0151515" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite26" sid="471807845745603">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="893718292069525" speed="5">
+                    <frame duration="1" hotspotX="0.953125" hotspotY="0.0151515" original-source="C:\Users\dbga_37\Downloads\CasseHangar (6).png">
+                        <collision-poly>
+                            <point x="0.953125" y="0.5" />
+                            <point x="0.5" y="0.454545" />
+                            <point x="0.5" y="0.0151515" />
+                            <point x="0.953125" y="0.984848" />
+                            <point x="0.015625" y="0.924242" />
+                            <point x="0.015625" y="0.0151515" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite21" sid="191158159193317">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="522173769994984" speed="5">
+                    <frame duration="1" hotspotX="0.642105" hotspotY="0.0151515" original-source="C:\Users\dbga_37\Downloads\CasseHangar (1).png">
+                        <collision-poly>
+                            <point x="0.663158" y="0.0151515" />
+                            <point x="0.989474" y="0.515152" />
+                            <point x="0.642105" y="0.984848" />
+                            <point x="0.0105263" y="0.924242" />
+                            <point x="0.0105263" y="0.0151515" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite22" sid="734281401802090">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806617043798663" speed="5">
+                    <frame duration="1" hotspotX="0.484127" hotspotY="0.336735" original-source="C:\Users\dbga_37\Downloads\CasseHangar (2).png">
+                        <collision-poly>
+                            <point x="0.230159" y="0.0102041" />
+                            <point x="0.738095" y="0.0102041" />
+                            <point x="0.992063" y="0.336735" />
+                            <point x="0.992063" y="0.989796" />
+                            <point x="0.484127" y="0.989796" />
+                            <point x="0.00793651" y="0.94898" />
+                            <point x="0.00793651" y="0.336735" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -2566,7 +2367,6 @@
         <layout>CharacterSelection.xml</layout>
         <layout>Level1.xml</layout>
         <layout>Level1_Boss.xml</layout>
-        <layout>Quit.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="General">
@@ -2576,7 +2376,6 @@
         <event-sheet>_Player_EventSheet.xml</event-sheet>
         <event-sheet>Intro_EventSheet.xml</event-sheet>
         <event-sheet>CharacterSelection_EventSheet.xml</event-sheet>
-        <event-sheet>Quit_EventSheet.xml</event-sheet>
         <event-sheet>Game_EventSheet.xml</event-sheet>
         <event-sheet>GameMenu_EventSheet.xml</event-sheet>
         <event-sheet>GameTexts_EventSheet.xml</event-sheet>

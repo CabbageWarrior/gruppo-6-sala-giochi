@@ -220,42 +220,6 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block any="1" disabled="1" sid="314980967248599">
-                                            <conditions>
-                                                <condition id="6" name="On button pressed" sid="402135574232313" type="Gamepad">
-                                                    <param id="0" name="Gamepad">Player.PlayerNumber - 1</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="365540132941929" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" disabled="1" sid="808035614840848">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="870499117898725" type="Gamepad">
-                                                    <param id="0" name="Gamepad">Player.PlayerNumber - 1</param>
-                                                    <param id="1" name="Axis">2</param>
-                                                    <param id="2" name="Comparison">1</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                                <condition id="5" name="Compare axis" sid="110205973239438" type="Gamepad">
-                                                    <param id="0" name="Gamepad">Player.PlayerNumber - 1</param>
-                                                    <param id="1" name="Axis">3</param>
-                                                    <param id="2" name="Comparison">1</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="344703661357093" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerIsMovingRightTrigger&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2){###}Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -460,42 +424,6 @@
                                                 <action id="0" name="Call function" sid="310578192539226" type="Function">
                                                     <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
                                                     <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" disabled="1" sid="577955146771361">
-                                            <conditions>
-                                                <condition id="6" name="On button pressed" sid="999535666890873" type="Gamepad">
-                                                    <param id="0" name="Gamepad">Player.PlayerNumber - 1</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="981261590062471" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" disabled="1" sid="822085625629637">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="976549366527625" type="Gamepad">
-                                                    <param id="0" name="Gamepad">Player.PlayerNumber - 1</param>
-                                                    <param id="1" name="Axis">2</param>
-                                                    <param id="2" name="Comparison">1</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                                <condition id="5" name="Compare axis" sid="129412130565703" type="Gamepad">
-                                                    <param id="0" name="Gamepad">Player.PlayerNumber - 1</param>
-                                                    <param id="1" name="Axis">3</param>
-                                                    <param id="2" name="Comparison">1</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="537980345401751" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerIsMovingRightTrigger&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2){###}Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)</param>
                                                 </action>
                                             </actions>
                                         </event-block>

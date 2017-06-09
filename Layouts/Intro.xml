@@ -603,13 +603,6 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="PowerUpsArray" uid="110">
-            <properties>
-                <width>4</width>
-                <height>4</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
         <instance type="CharactersArray" uid="47">
             <properties>
                 <width>4</width>
