@@ -351,7 +351,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="BossRobotte_HitArea" uid="19">
@@ -376,7 +376,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="BossRobotte_MeleeArea" uid="115">
@@ -392,8 +392,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2000</x>
-                        <y>-625</y>
+                        <x>2019</x>
+                        <y>-554</y>
                         <z>0</z>
                         <width>283</width>
                         <height>258</height>
@@ -401,7 +401,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="BossRobotte_MeleeDamageArea" uid="118">
@@ -423,7 +423,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
@@ -456,6 +456,7 @@
                         <PlayerNumber>2</PlayerNumber>
                         <CanAttack>true</CanAttack>
                         <IsStunned>false</IsStunned>
+                        <KnockbackY>0</KnockbackY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -502,6 +503,7 @@
                         <PlayerNumber>1</PlayerNumber>
                         <CanAttack>true</CanAttack>
                         <IsStunned>false</IsStunned>
+                        <KnockbackY>0</KnockbackY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">

@@ -986,6 +986,7 @@
                         <instance-variable name="PlayerNumber" sid="993251766214636" type="number" />
                         <instance-variable name="CanAttack" sid="207701037068757" type="boolean" />
                         <instance-variable name="IsStunned" sid="472092903507848" type="boolean" />
+                        <instance-variable name="KnockbackY" sid="841353396478479" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="8Direction" sid="326379914905694">

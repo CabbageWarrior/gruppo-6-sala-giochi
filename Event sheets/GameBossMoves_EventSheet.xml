@@ -223,6 +223,9 @@
                 </event-block>
                 <event-block sid="980285615080266">
                     <conditions>
+                        <condition id="2" inverted="1" name="Is playing" sid="599347390550046" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="114417819214358" type="BossRobotte">
                             <param id="0" name="Instance variable">AimTimer</param>
                             <param id="1" name="Comparison">3</param>
@@ -266,6 +269,9 @@
                 <event-block sid="146735095034701">
                     <conditions>
                         <condition id="-22" name="Else" sid="159374424571386" type="System" />
+                        <condition id="2" inverted="1" name="Is playing" sid="747138722671725" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="315712495708344" type="BossRobotte">
                             <param id="0" name="Instance variable">AimTimer</param>
                             <param id="1" name="Comparison">3</param>
@@ -454,57 +460,158 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" disabled="1" sid="993679398928549" title="KnockBack">
+        <event-group description="" sid="993679398928549" title="KnockBack">
             <sub-events>
-                <event-block disabled="1" sid="563161024383672">
+                <event-block sid="110059721630588">
                     <conditions>
-                        <condition id="4" name="On finished" sid="906130295167725" type="BossRobotte">
+                        <condition id="2" name="Is playing" sid="600711446775961" type="BossRobotte">
                             <param id="0" name="Animation">&quot;Wave&quot;</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="848896017802179" type="ArcadePlayerCollider">
-                            <param id="0" name="Object">BossRobotte_HitArea</param>
-                        </condition>
-                        <condition id="-2" name="Compare Y" sid="571162249700995" type="ArcadePlayerCollider">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Y co-ordinate">BossRobotte_HitArea.ImagePointY(&quot;Origin&quot;) + (BossRobotte_HitArea.ImageHeight/2)</param>
-                        </condition>
-                        <condition id="-2" name="Compare Y" sid="344597765666430" type="ArcadePlayerCollider">
+                        <condition id="3" name="Compare frame" sid="652125085698021" type="BossRobotte">
                             <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">BossRobotte_HitArea.ImagePointY(&quot;Origin&quot;) - (BossRobotte_HitArea.ImageHeight/2)</param>
+                            <param id="1" name="Number">3</param>
                         </condition>
-                        <condition id="-1" name="Compare X" sid="832934478310855" type="ArcadePlayerCollider">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="X co-ordinate">BossRobotte.X</param>
+                        <condition id="-7" name="Compare instance variable" sid="747264258309112" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">KnockbackY</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="114861272690481" type="ArcadePlayerCollider">
-                            <param id="0" name="X">lerp(Self.X,(Self.X+300),0.01)</param>
+                        <action id="-10" name="Set value" sid="791484610838271" type="ArcadePlayerCollider">
+                            <param id="0" name="Instance variable">KnockbackY</param>
+                            <param id="1" name="Value">choose(600,-600)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="333669575886264" type="Function">
+                            <param id="0" name="Name">&quot;KnockbackPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.UID</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="946173660190452">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="676840602703115" type="ArcadePlayerCollider">
+                                    <param id="0" name="Instance variable">KnockbackY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="100764032689936">
+                <event-block sid="461188487766000">
                     <conditions>
-                        <condition id="4" name="On finished" sid="474317567112734" type="BossRobotte">
-                            <param id="0" name="Animation">&quot;Wave&quot;</param>
+                        <condition id="0" name="On function" sid="506604702462642" type="Function">
+                            <param id="0" name="Name">&quot;KnockbackPlayer&quot;</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="704094207989697" type="ArcadePlayerCollider">
-                            <param id="0" name="Object">BossRobotte_HitArea</param>
-                        </condition>
-                        <condition id="-2" name="Compare Y" sid="476861567251710" type="ArcadePlayerCollider">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Y co-ordinate">BossRobotte_HitArea.ImagePointY(&quot;Origin&quot;) + (BossRobotte_HitArea.ImageHeight/2)</param>
-                        </condition>
-                        <condition id="-2" name="Compare Y" sid="433588619646474" type="ArcadePlayerCollider">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">BossRobotte_HitArea.ImagePointY(&quot;Origin&quot;) - (BossRobotte_HitArea.ImageHeight/2)</param>
-                        </condition>
-                        <condition id="-1" name="Compare X" sid="333572725907486" type="ArcadePlayerCollider">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="X co-ordinate">BossRobotte.X</param>
+                        <condition id="-14" name="Pick by unique ID" sid="291618788527484" type="ArcadePlayerCollider">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block sid="563161024383672">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="848896017802179" type="ArcadePlayerCollider">
+                                    <param id="0" name="Object">BossRobotte_HitArea</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="571162249700995" type="ArcadePlayerCollider">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">BossRobotte_HitArea.ImagePointY(&quot;Origin&quot;) + (BossRobotte_HitArea.ImageHeight/2)</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="344597765666430" type="ArcadePlayerCollider">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">BossRobotte_HitArea.ImagePointY(&quot;Origin&quot;) - (BossRobotte_HitArea.ImageHeight/2)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="356473284517775">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="683557564498998" type="ArcadePlayerCollider">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">FloorLimitTop.Y</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="805666487725101" type="ArcadePlayerCollider">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Y co-ordinate">FloorLimitBottom.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="114861272690481" type="ArcadePlayerCollider">
+                                            <param id="0" name="Y">lerp(Self.y,Self.y+Self.KnockbackY,0.03)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="612996580579226">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="832934478310855" type="ArcadePlayerCollider">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="X co-ordinate">BossRobotte.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="803437225206775" type="ArcadePlayerCollider">
+                                            <param id="0" name="X">lerp(Self.X,(Self.X+600),0.03)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="939838294427937">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="561429715215752" type="System" />
+                                        <condition id="-1" name="Compare X" sid="850570087692749" type="ArcadePlayerCollider">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">BossRobotte.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="436344111062528" type="ArcadePlayerCollider">
+                                            <param id="0" name="X">lerp(Self.X,(Self.X-600),0.03)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="335755286850408" title="BossAttack">
+            <sub-events>
+                <event-block sid="113352269306813">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="314716213662796" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;Wave&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="942308943533146" type="BossRobotte">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="142239402677050">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="850280758911710" type="ArcadePlayerCollider">
+                                    <param id="0" name="Object">BossRobotte_MeleeArea</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="111674058917946" type="ArcadePlayerCollider">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">BossRobotte_MeleeArea.ImagePointY(&quot;Origin&quot;) + (BossRobotte_MeleeArea.ImageHeight/2)</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="316930143904975" type="ArcadePlayerCollider">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">BossRobotte_MeleeArea.ImagePointY(&quot;Origin&quot;) - (BossRobotte_MeleeArea.ImageHeight/2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="729340212388383" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">PlayerHP</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

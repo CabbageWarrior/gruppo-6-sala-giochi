@@ -407,6 +407,7 @@
                         <PlayerNumber>2</PlayerNumber>
                         <CanAttack>true</CanAttack>
                         <IsStunned>false</IsStunned>
+                        <KnockbackY>0</KnockbackY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -453,6 +454,7 @@
                         <PlayerNumber>1</PlayerNumber>
                         <CanAttack>true</CanAttack>
                         <IsStunned>false</IsStunned>
+                        <KnockbackY>0</KnockbackY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
