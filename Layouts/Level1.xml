@@ -291,7 +291,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="TilePavimento" uid="148">
@@ -412,7 +412,7 @@
                     <behavior-instances>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>300</max-speed>
+                                <max-speed>500</max-speed>
                                 <acceleration>100000</acceleration>
                                 <deceleration>150000</deceleration>
                                 <directions>8 directions</directions>
@@ -459,7 +459,7 @@
                     <behavior-instances>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>300</max-speed>
+                                <max-speed>500</max-speed>
                                 <acceleration>100000</acceleration>
                                 <deceleration>150000</deceleration>
                                 <directions>8 directions</directions>
@@ -516,8 +516,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>625</x>
-                        <y>-500</y>
+                        <x>653</x>
+                        <y>-506</y>
                         <z>0</z>
                         <width>375</width>
                         <height>375</height>
@@ -942,8 +942,8 @@
                 <instance type="AlienBlue" uid="50">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-animation>Attack</initial-animation>
+                        <initial-frame>2</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
@@ -998,7 +998,7 @@
                         <x>4250</x>
                         <y>1500</y>
                         <z>0</z>
-                        <width>375</width>
+                        <width>-375</width>
                         <height>375</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1792,6 +1792,62 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="AlienRed_AttackCollider" uid="0">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AlienUID>0</AlienUID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2421</x>
+                        <y>-410</y>
+                        <z>0</z>
+                        <width>262</width>
+                        <height>127</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AlienBlue_AttackCollider" uid="3">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AlienUID>0</AlienUID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2823</x>
+                        <y>-394</y>
+                        <z>0</z>
+                        <width>165</width>
+                        <height>131</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>

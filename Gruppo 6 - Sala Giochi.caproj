@@ -247,9 +247,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type global="1" name="CharactersArray" sid="603423552914452">
-                <plugin id="Arr" />
-            </object-type>
             <object-type name="PlayerGrabCollider" sid="457532051117181">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -709,6 +706,25 @@
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156257173807171" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CameraShake" sid="158421120368752">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="In case of fight." name="IsLocked" sid="878619006065293" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="ScrollTo" sid="968827902258202">
+                            <behavior id="scrollto" />
+                        </behavior-type>
+                        <behavior-type name="Pin" sid="427796463643811">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703422821142736" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
@@ -1188,6 +1204,9 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type global="1" name="CharactersArray" sid="603423552914452">
+                    <plugin id="Arr" />
+                </object-type>
             </object-folder>
             <object-folder name="MOB">
                 <object-type name="AlienRed" sid="235714221269046">
@@ -1245,12 +1264,11 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="5" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="703884230537293" speed="10">
+                        <animation framecount="4" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="703884230537293" speed="10">
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.53125" hotspotY="1" />
                         </animation>
                         <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="603271032543210" speed="2">
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -1415,6 +1433,9 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         </animation>
+                        <animation framecount="1" loop="0" name="Stun" pingpong="0" repeatcount="1" repeatto="0" sid="746242496877604" speed="1">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="BossRobotte" sid="838710632269921">
@@ -1429,6 +1450,7 @@
                         <instance-variable name="PlayerX" sid="596730097346430" type="number" />
                         <instance-variable name="PlayerY" sid="456339149384670" type="number" />
                         <instance-variable name="RangedAimTimer" sid="544778030286261" type="number" />
+                        <instance-variable name="Spit" sid="982671847074698" type="boolean" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="DestroyOutsideLayout" sid="222658747414228">
@@ -1537,14 +1559,46 @@
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
                             </frame>
-                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.625" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.625" hotspotY="1">
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                            </frame>
                             <frame duration="1" hotspotX="0.625" hotspotY="1">
                                 <image-point name="BaseCollision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
@@ -1606,7 +1660,69 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970717811755522" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.4" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="AlienRed_AttackCollider" sid="948734800127758">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="448167401206881" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="AlienBlue_AttackCollider" sid="572623142525337">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233799572907456" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Boss_Bullet" sid="930975331681373">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="788591179819216">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="559152484711197">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490815528344812" speed="5">
+                            <frame duration="1" hotspotX="2.5" hotspotY="1.1875" original-source="C:\Users\dbga_57\Desktop\gruppo-6-sala-giochi-master\Proiettile Verde Alien Giallo.png">
+                                <collision-poly>
+                                    <point x="0.5" y="0" />
+                                    <point x="0.5" y="0.03125" />
+                                    <point x="0" y="0.03125" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Bullet" sid="469708919824731">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="144506297598791">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="751499698901110">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371761167711948" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\dbga_57\Desktop\gruppo-6-sala-giochi-master\Proiettile Verde Alien Giallo.png">
+                                <collision-poly>
+                                    <point x="0.5" y="0" />
+                                    <point x="0.5" y="0.03125" />
+                                    <point x="0" y="0.03125" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2261,29 +2377,6 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\dbga_53\Downloads\Sfondo-Laboratorio-Tutto-Insieme_LARGE.png" />
         </object-type>
-        <object-type name="Bullet" sid="469708919824731">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="144506297598791">
-                    <behavior id="Bullet" />
-                </behavior-type>
-                <behavior-type name="DestroyOutsideLayout" sid="751499698901110">
-                    <behavior id="destroy" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371761167711948" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\dbga_57\Desktop\gruppo-6-sala-giochi-master\Proiettile Verde Alien Giallo.png">
-                        <collision-poly>
-                            <point x="0.5" y="0" />
-                            <point x="0.5" y="0.03125" />
-                            <point x="0" y="0.03125" />
-                            <point x="0" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -2411,9 +2504,24 @@
                 <member>ArcadeCabinatoPM</member>
                 <member>ArcadeCabinatoSF</member>
                 <member>ArcadeCabinatoSM</member>
+                <member>Boss_Bullet</member>
                 <member>BossRobotte</member>
                 <member>Bullet</member>
             </members>
+        </family>
+        <family name="ArcadeAlieno_AttackCollider" plugin-id="Sprite" sid="333371599522378">
+            <members>
+                <member>AlienBlue_AttackCollider</member>
+                <member>AlienRed_AttackCollider</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="AlienUID" sid="250377056203844" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="744943921904571">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
@@ -2432,7 +2540,6 @@
         <event-sheet>Intro_EventSheet.xml</event-sheet>
         <event-sheet>CharacterSelection_EventSheet.xml</event-sheet>
         <event-sheet>Quit_EventSheet.xml</event-sheet>
-        <event-sheet>_PowerUp_EventSheet.xml</event-sheet>
         <event-sheet>Game_EventSheet.xml</event-sheet>
         <event-sheet>GameMenu_EventSheet.xml</event-sheet>
         <event-sheet>GameTexts_EventSheet.xml</event-sheet>

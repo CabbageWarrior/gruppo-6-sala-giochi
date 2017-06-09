@@ -612,8 +612,8 @@
         </instance>
         <instance type="CharactersArray" uid="47">
             <properties>
-                <width>8</width>
-                <height>9</height>
+                <width>4</width>
+                <height>3</height>
                 <depth>1</depth>
             </properties>
         </instance>

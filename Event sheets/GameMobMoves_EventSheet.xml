@@ -6,6 +6,92 @@
         <variable constant="1" name="PATROL_RIGHT" sid="133690809817975" static="0" type="number">0</variable>
         <variable constant="1" name="PATROL_LEFT" sid="480395838782691" static="0" type="number">180</variable>
         <variable constant="1" name="PATROL" sid="732156622078221" static="0" type="number">250</variable>
+        <event-block sid="276076221599353">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="405819950452390" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Per ogni alieno melee, creo un collider dedicato e associo ad esso l&apos;ID univoco dell&apos;alieno genitore, per successivi utilizzi.</comment>
+                <event-block sid="660989785937141">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="944638719478738" type="System">
+                            <param id="0" name="Object">AlienBlue</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="897343095722017" type="AlienBlue">
+                            <param id="0" name="Object">AlienBlue_AttackCollider</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="388689558449781" type="AlienBlue_AttackCollider">
+                            <param id="0" name="Instance variable">AlienUID</param>
+                            <param id="1" name="Value">AlienBlue.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="598168456456490">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="172618437004669" type="System">
+                            <param id="0" name="Object">AlienRed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="365649318876498" type="AlienRed">
+                            <param id="0" name="Object">AlienRed_AttackCollider</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="980304577552476" type="AlienRed_AttackCollider">
+                            <param id="0" name="Instance variable">AlienUID</param>
+                            <param id="1" name="Value">AlienRed.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Per ogni alieno in scena, recupero il suo collider. Assegno al collider la posizione dell&apos;origine del suo alieno e lo mirroro se l&apos;alieno è mirrorato.</comment>
+        <event-block sid="819746238366854">
+            <conditions>
+                <condition id="-11" name="For Each" sid="180943054506680" type="System">
+                    <param id="0" name="Object">ArcadeAlieno</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="258916921524962" type="ArcadeAlieno_AttackCollider">
+                    <param id="0" name="Instance variable">AlienUID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">ArcadeAlieno.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="384734328978947" type="ArcadeAlieno_AttackCollider">
+                    <param id="0" name="X">ArcadeAlieno.X</param>
+                    <param id="1" name="Y">ArcadeAlieno.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="531890175558726">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="874351760310498" type="ArcadeAlieno" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="805644269053310" type="ArcadeAlieno_AttackCollider">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="656413229688387">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="175565804559696" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="293595097989260" type="ArcadeAlieno_AttackCollider">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-group description="" sid="156341722623204" title="IA">
             <sub-events>
                 <event-block sid="925171559425168">
@@ -157,6 +243,20 @@
                                                             <param id="1" name="Value">1</param>
                                                         </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="487707889707067">
+                                                            <conditions>
+                                                                <condition id="-14" name="Pick by unique ID" sid="560266772760966" type="ArcadeAlieno_AttackCollider">
+                                                                    <param id="0" name="Unique ID">ArcadeAlieno.UID</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="576486580917440" type="ArcadeAlieno_AttackCollider">
+                                                                    <param id="0" name="State">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <comment>Movimento alieni</comment>
                                                 <event-block sid="650654765623293">
@@ -283,6 +383,42 @@
                                                             <param id="1" name="Value">Self.X</param>
                                                         </action>
                                                     </actions>
+                                                </event-block>
+                                                <event-block sid="405431569586257">
+                                                    <conditions />
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block disabled="1" sid="862218159807735">
+                                                            <conditions>
+                                                                <condition id="-14" name="Pick by unique ID" sid="617201681998749" type="ArcadeAlieno_AttackCollider">
+                                                                    <param id="0" name="Unique ID">ArcadeAlieno.UID</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block disabled="1" sid="644153577651040">
+                                                                    <conditions>
+                                                                        <condition id="7" name="Is mirrored" sid="278395757540348" type="ArcadeAlieno" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="7" name="Set mirrored" sid="164522969641717" type="ArcadeAlieno_AttackCollider">
+                                                                            <param id="0" name="State">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block disabled="1" sid="117867377917262">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="907013659989623" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="7" name="Set mirrored" sid="754573455583066" type="ArcadeAlieno_AttackCollider">
+                                                                            <param id="0" name="State">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -507,14 +643,54 @@
                     </actions>
                 </event-block>
                 <comment>Stunni</comment>
-                <event-block sid="868505471730182">
+                <event-block sid="843292865618111">
                     <conditions>
-                        <condition behavior="Flash" id="1" name="On flash ended" sid="327169936510372" type="ArcadeAlieno" />
+                        <condition id="4" name="On finished" sid="532761264260618" type="AlienBlue">
+                            <param id="0" name="Animation">&quot;Stun&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="609017174580180" type="ArcadeAlieno">
+                        <action id="-13" name="Set boolean" sid="876152385201673" type="AlienBlue">
                             <param id="0" name="Instance variable">IsStunned</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="870814981642651" type="AlienBlue">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="860142933395641">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="627078234245678" type="AlienRed">
+                            <param id="0" name="Animation">&quot;Stun&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="124638877944922" type="AlienRed">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="998333216315394" type="AlienRed">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="336867065203232">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="328416534018572" type="AlienYellow">
+                            <param id="0" name="Animation">&quot;Stun&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="406963882871059" type="AlienYellow">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="695171536719727" type="AlienYellow">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -960,9 +1136,6 @@
                         <condition id="-14" name="Pick by unique ID" sid="884193991696260" type="ArcadeAlieno">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="375384046690724" type="ArcadeAlieno">
-                            <param id="0" name="Instance variable">IsStunned</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="378508078887351" type="ArcadeAlieno">
@@ -989,16 +1162,29 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="399179178386563">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="674019552979736" type="ArcadeAlieno_AttackCollider">
+                                            <param id="0" name="Instance variable">AlienUID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ArcadeAlieno.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="651804695751796" type="ArcadeAlieno_AttackCollider" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="926706765793172">
                             <conditions>
                                 <condition id="-22" name="Else" sid="792414311131333" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="Flash" id="0" name="Flash" sid="766749450226999" type="ArcadeAlieno">
-                                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">1.0</param>
+                                <action id="4" name="Set animation" sid="663338931861780" type="ArcadeAlieno">
+                                    <param id="0" name="Animation">&quot;Stun&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>

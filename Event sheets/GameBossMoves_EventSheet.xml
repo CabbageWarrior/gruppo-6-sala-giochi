@@ -3,6 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameBossMoves_EventSheet</name>
     <events>
+        <event-block sid="717904005343938">
+            <conditions>
+                <condition disabled="1" id="-2" name="On start of layout" sid="205416249394876" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="228962909673157" type="CameraShake">
+                    <param id="0" name="Pin to">BossRobotte</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="120399987036116">
             <conditions>
                 <condition id="-1" name="Every tick" sid="828083794498116" type="System" />
@@ -424,16 +435,12 @@
                     <param id="0" name="Animation">&quot;Laser&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-16" name="Wait" sid="328793355451061" type="System">
+                    <param id="0" name="Seconds">3.5</param>
+                </action>
                 <action id="-10" name="Set value" sid="219846941277037" type="BossRobotte">
                     <param id="0" name="Instance variable">RangedTimer</param>
                     <param id="1" name="Value">6</param>
-                </action>
-                <action id="-16" name="Wait" sid="360030666803074" type="System">
-                    <param id="0" name="Seconds">2</param>
-                </action>
-                <action id="4" name="Set animation" sid="373252935889337" type="BossRobotte">
-                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -486,12 +493,26 @@
                             <param id="0" name="Name">&quot;KnockbackPlayer&quot;</param>
                             <param id="1" name="Parameter {n}">ArcadePlayerCollider.UID</param>
                         </action>
+                        <action disabled="1" id="-20" name="Set layout scale" sid="571719849081753" type="System">
+                            <param id="0" name="Scale">1.1</param>
+                        </action>
+                        <action behavior="ScrollTo" disabled="1" id="0" name="Shake" sid="293601863794184" type="CameraShake">
+                            <param id="0" name="Magnitude">50</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="426372539793574" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action disabled="1" id="-20" name="Set layout scale" sid="367251787622386" type="System">
+                            <param id="0" name="Scale">1.0</param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="946173660190452">
+                        <event-block sid="934422613797247">
                             <conditions />
                             <actions>
-                                <action id="-10" name="Set value" sid="676840602703115" type="ArcadePlayerCollider">
+                                <action id="-10" name="Set value" sid="797161080041624" type="ArcadePlayerCollider">
                                     <param id="0" name="Instance variable">KnockbackY</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -549,6 +570,10 @@
                                             <param id="0" name="Comparison">5</param>
                                             <param id="1" name="X co-ordinate">BossRobotte.X</param>
                                         </condition>
+                                        <condition id="-2" name="Compare Y" sid="980432807286049" type="ArcadePlayerCollider">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">FloorLimitTop.Y</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-1" name="Set X" sid="803437225206775" type="ArcadePlayerCollider">
@@ -563,6 +588,10 @@
                                             <param id="0" name="Comparison">3</param>
                                             <param id="1" name="X co-ordinate">BossRobotte.X</param>
                                         </condition>
+                                        <condition id="-2" name="Compare Y" sid="366930215595755" type="ArcadePlayerCollider">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">FloorLimitTop.Y</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-1" name="Set X" sid="436344111062528" type="ArcadePlayerCollider">
@@ -576,38 +605,64 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" disabled="1" sid="335755286850408" title="BossAttack">
+        <event-group description="" sid="335755286850408" title="BossAttack">
             <sub-events>
-                <event-block sid="113352269306813">
+                <event-block sid="855946547801009">
                     <conditions>
-                        <condition id="2" name="Is playing" sid="314716213662796" type="BossRobotte">
-                            <param id="0" name="Animation">&quot;Wave&quot;</param>
+                        <condition id="2" name="Is playing" sid="714741959206926" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;Laser&quot;</param>
                         </condition>
-                        <condition id="3" name="Compare frame" sid="942308943533146" type="BossRobotte">
+                        <condition id="3" name="Compare frame" sid="369029827332582" type="BossRobotte">
                             <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Number">2</param>
+                            <param id="1" name="Number">8</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="803430416886319" type="BossRobotte">
+                            <param id="0" name="Instance variable">Spit</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="532722362797735" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;Laser&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="142239402677050">
+                        <event-block sid="218558530565783">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="850280758911710" type="ArcadePlayerCollider">
-                                    <param id="0" name="Object">BossRobotte_MeleeArea</param>
-                                </condition>
-                                <condition id="-2" name="Compare Y" sid="111674058917946" type="ArcadePlayerCollider">
-                                    <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="Y co-ordinate">BossRobotte_MeleeArea.ImagePointY(&quot;Origin&quot;) + (BossRobotte_MeleeArea.ImageHeight/2)</param>
-                                </condition>
-                                <condition id="-2" name="Compare Y" sid="316930143904975" type="ArcadePlayerCollider">
-                                    <param id="0" name="Comparison">5</param>
-                                    <param id="1" name="Y co-ordinate">BossRobotte_MeleeArea.ImagePointY(&quot;Origin&quot;) - (BossRobotte_MeleeArea.ImageHeight/2)</param>
-                                </condition>
+                                <condition id="7" name="Is mirrored" sid="726851435444765" type="BossRobotte" />
                             </conditions>
                             <actions>
-                                <action id="-12" name="Subtract from" sid="729340212388383" type="ArcadeCabinato">
-                                    <param id="0" name="Instance variable">PlayerHP</param>
-                                    <param id="1" name="Value">5</param>
+                                <action id="0" name="Spawn another object" sid="753820155995130" type="BossRobotte">
+                                    <param id="0" name="Object">Boss_Bullet</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="812145904238493" type="Boss_Bullet">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="528839400077247" type="Boss_Bullet">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="946334723282320" type="BossRobotte">
+                                    <param id="0" name="Instance variable">Spit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="575975393869789">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="665483234313059" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="980857689760999" type="BossRobotte">
+                                    <param id="0" name="Object">Boss_Bullet</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="970055972344360" type="Boss_Bullet">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="785983632853841" type="BossRobotte">
+                                    <param id="0" name="Instance variable">Spit</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -615,5 +670,26 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="934371239314511">
+            <conditions>
+                <condition id="2" name="Is playing" sid="334041923696326" type="BossRobotte">
+                    <param id="0" name="Animation">&quot;Laser&quot;</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="856783108609358" type="BossRobotte">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Number">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="373252935889337" type="BossRobotte">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="401996872104806" type="BossRobotte">
+                    <param id="0" name="Instance variable">Spit</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

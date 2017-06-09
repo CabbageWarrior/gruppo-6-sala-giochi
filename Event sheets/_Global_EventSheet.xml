@@ -34,10 +34,6 @@
                     <param id="0" name="Name">&quot;CharactersArrayCreate&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="0" name="Call function" sid="939543539652080" type="Function">
-                    <param id="0" name="Name">&quot;PowerUpsArrayCreate&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
             </actions>
         </event-block>
         <event-group description="" sid="889988918962937" title="Characters Functions">
@@ -80,46 +76,6 @@
                                     <param id="1" name="Y">2</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="118276190759180" type="CharactersArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="748753477961563" type="CharactersArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="936302417238020" type="CharactersArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="945621166763538" type="CharactersArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="228076825475539" type="CharactersArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">7</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="855986064793036" type="CharactersArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">8</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="986122821702970" type="CharactersArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">9</param>
-                                    <param id="2" name="Value">CHARACTER_TYPE_DEFAULT</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="654635706968727" type="CharactersArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">10</param>
-                                    <param id="2" name="Value">1</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="610155887148922">
@@ -139,46 +95,6 @@
                                     <param id="0" name="X">1</param>
                                     <param id="1" name="Y">2</param>
                                     <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="263333200199443" type="CharactersArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT + 2</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="349794784567482" type="CharactersArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="946422180537086" type="CharactersArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="316686076930872" type="CharactersArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">60</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="628579321673209" type="CharactersArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">7</param>
-                                    <param id="2" name="Value">60</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="628623082227759" type="CharactersArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">8</param>
-                                    <param id="2" name="Value">60</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="132396163351718" type="CharactersArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">9</param>
-                                    <param id="2" name="Value">CHARACTER_TYPE_TANK</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="111159106850035" type="CharactersArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">10</param>
-                                    <param id="2" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -200,46 +116,6 @@
                                     <param id="1" name="Y">2</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="729761684875001" type="CharactersArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="574569028614967" type="CharactersArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="726060493784276" type="CharactersArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT + 2</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="141985251055137" type="CharactersArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="100497924421216" type="CharactersArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">7</param>
-                                    <param id="2" name="Value">30</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="979550278101798" type="CharactersArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">8</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="411554420503075" type="CharactersArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">9</param>
-                                    <param id="2" name="Value">CHARACTER_TYPE_POWERED</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="207771757370270" type="CharactersArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">10</param>
-                                    <param id="2" name="Value">1</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="599529829936253">
@@ -259,161 +135,6 @@
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">2</param>
                                     <param id="2" name="Value">1</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="654809234086710" type="CharactersArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="504028613462107" type="CharactersArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT + 2</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="166513173974454" type="CharactersArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="698874802399907" type="CharactersArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="467390544539231" type="CharactersArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">7</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="988525098853291" type="CharactersArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">8</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="140479290512171" type="CharactersArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">9</param>
-                                    <param id="2" name="Value">CHARACTER_TYPE_RUNNER</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="913295892246376" type="CharactersArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">10</param>
-                                    <param id="2" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="240037802959857" title="Power Ups Functions">
-            <sub-events>
-                <event-block sid="953434855183283">
-                    <conditions>
-                        <condition id="0" name="On function" sid="986256312296542" type="Function">
-                            <param id="0" name="Name">&quot;PowerUpsArrayCreate&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <comment>[Asse Y] 0: Nome logico, 1: Colore (R), 2: Colore (G), 3: Colore (B). NB: Le tonalità RGB in questo caso vanno da 0 a 100!</comment>
-                        <event-block sid="104139350963454">
-                            <conditions />
-                            <actions>
-                                <action id="3" name="Set at XY" sid="256658922234159" type="PowerUpsArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">0</param>
-                                    <param id="2" name="Value">&quot;HealingPotion&quot;</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="131829287746217" type="PowerUpsArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="576193428462227" type="PowerUpsArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="648913525928692" type="PowerUpsArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="491812715250102">
-                            <conditions />
-                            <actions>
-                                <action id="3" name="Set at XY" sid="539421905493958" type="PowerUpsArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">0</param>
-                                    <param id="2" name="Value">&quot;IncreaseSpeed&quot;</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="241825313269215" type="PowerUpsArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="104492268886920" type="PowerUpsArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="755756769402294" type="PowerUpsArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="677654252507591">
-                            <conditions />
-                            <actions>
-                                <action id="3" name="Set at XY" sid="789924550342771" type="PowerUpsArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">0</param>
-                                    <param id="2" name="Value">&quot;Shield&quot;</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="229681769791746" type="PowerUpsArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="923899952266530" type="PowerUpsArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="864828100899087" type="PowerUpsArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="478300313460774">
-                            <conditions />
-                            <actions>
-                                <action id="3" name="Set at XY" sid="430920499590032" type="PowerUpsArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">0</param>
-                                    <param id="2" name="Value">&quot;Spiderman&quot;</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="492295241020080" type="PowerUpsArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">80</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="971791784248426" type="PowerUpsArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="554816511766917" type="PowerUpsArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">100</param>
                                 </action>
                             </actions>
                         </event-block>
