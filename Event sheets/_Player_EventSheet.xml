@@ -509,16 +509,46 @@
         </event-group>
         <event-group description="" sid="384742301337729" title="Player Behaviors">
             <sub-events>
-                <comment>Reset opacity when flash ends.</comment>
-                <event-block disabled="1" sid="621665193799236">
+                <comment>Per ogni cabinato in scena, recupero il suo collider. Assegno al collider la posizione dell&apos;origine del suo cabinato e lo mirroro se l&apos;alieno è mirrorato.</comment>
+                <event-block sid="285304728813488">
                     <conditions>
-                        <condition behavior="FlashDamage" id="1" name="On flash ended" sid="825534686383363" type="Player" />
+                        <condition id="-11" name="For Each" sid="274660289381450" type="System">
+                            <param id="0" name="Object">ArcadeCabinato</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="621652903940486" type="ArcadeCabinato_AttackCollider">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">ArcadeCabinato.PlayerNumber</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="794010570144861" type="Player">
-                            <param id="0" name="Opacity">100</param>
+                        <action id="-3" name="Set position" sid="663496085881572" type="ArcadeCabinato_AttackCollider">
+                            <param id="0" name="X">ArcadeCabinato.X</param>
+                            <param id="1" name="Y">ArcadeCabinato.Y</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="564603998179979">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="579316026183345" type="ArcadeCabinato" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="279426773932629" type="ArcadeCabinato_AttackCollider">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="231805514847294">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="579315601732988" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="606865330185011" type="ArcadeCabinato_AttackCollider">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Reset dell&apos;animazione quando il player si ferma dopo una passeggiata.</comment>
                 <event-block sid="312523258179545">
@@ -1024,6 +1054,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="882600410305130" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="730141249372086" type="ArcadePlayerCollider">
@@ -1123,7 +1156,13 @@
                             </actions>
                         </event-block>
                         <event-block sid="770108487032632">
-                            <conditions />
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="702727438666163" type="ArcadeCabinato_AttackCollider">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ArcadeCabinato.PlayerNumber</param>
+                                </condition>
+                            </conditions>
                             <actions />
                             <sub-events>
                                 <variable comment="-1: Reset; 0: No; 1: Yes." constant="0" name="AlmostOneHit" sid="211931962727034" static="0" type="number">0</variable>
@@ -1133,10 +1172,13 @@
                                         <condition id="-11" name="For Each" sid="749303074212230" type="System">
                                             <param id="0" name="Object">ArcadeAlieno</param>
                                         </condition>
-                                        <condition id="-8" name="Compare two values" sid="253757277772190" type="System">
-                                            <param id="0" name="First value">distance(ArcadeCabinato.ImagePointX(&quot;AttackPoint&quot;), ArcadeCabinato.ImagePointY(&quot;AttackPoint&quot;), ArcadeAlieno.X, ArcadeAlieno.Y)</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Second value">50</param>
+                                        <condition id="-36" name="Pick overlapping point" sid="571425823812581" type="System">
+                                            <param id="0" name="Object">ArcadeCabinato_AttackCollider</param>
+                                            <param id="1" name="X">ArcadeAlieno.X</param>
+                                            <param id="2" name="Y">ArcadeAlieno.Y</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="878401464052719" type="ArcadeAlieno">
+                                            <param id="0" name="Animation">&quot;Death&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1248,7 +1290,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Parametri: 0: UID del Player.</comment>
+                <comment>Parametri: Player Number.</comment>
                 <event-block sid="714693732342936">
                     <conditions>
                         <condition id="0" name="On function" sid="149515006506793" type="Function">
@@ -1373,6 +1415,23 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="939490826063960">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="386826309151805" type="ArcadeCabinato">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="762044071574798" type="ArcadeCabinato">
+                                    <param id="0" name="Instance variable">HasHitSomeone</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="973885273790226" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerAttackFinished&quot;</param>
+                                    <param id="1" name="Parameter {n}">ArcadeCabinato.PlayerNumber</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="399559020162259">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="889429796168983" type="ArcadeCabinato">

@@ -68,6 +68,15 @@
                         <action id="5" name="Set frame" sid="180457908362209" type="ArcadePlayerCollider">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="293552055563071" type="ArcadePlayerCollider">
+                            <param id="0" name="Object">ArcadeCabinato_AttackCollider</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="415456019856695" type="ArcadeCabinato_AttackCollider">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="874729024320776">
@@ -376,6 +385,15 @@
                             <actions>
                                 <action id="5" name="Set frame" sid="738079241689495" type="ArcadePlayerCollider">
                                     <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="270961535845458" type="ArcadePlayerCollider">
+                                    <param id="0" name="Object">ArcadeCabinato_AttackCollider</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="280150000966504" type="ArcadePlayerCollider">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
                                 </action>
                             </actions>
                             <sub-events>
