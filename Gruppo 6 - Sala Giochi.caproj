@@ -770,9 +770,7 @@
                 <object-type name="LifeBarBackground" sid="727864490839665">
                     <plugin id="Sprite" />
                     <instance-variables>
-                        <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="205693405155105" type="number" />
                         <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="948327105049986" type="number" />
-                        <instance-variable name="PlayerUID" sid="370989306626139" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Pin" sid="514413528380115">
@@ -819,9 +817,7 @@
                 <object-type name="SpecialBarBackground" sid="114339537391230">
                     <plugin id="Sprite" />
                     <instance-variables>
-                        <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="661551708669580" type="number" />
                         <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="112233579689838" type="number" />
-                        <instance-variable name="PlayerUID" sid="144564170153228" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Pin" sid="680039632468762">

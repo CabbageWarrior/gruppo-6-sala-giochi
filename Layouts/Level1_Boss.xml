@@ -614,7 +614,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>500</range>
+                                <range>800</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -682,7 +682,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>500</range>
+                                <range>800</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -750,7 +750,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>500</range>
+                                <range>800</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -1333,9 +1333,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Team>0</Team>
                         <PlayerNumber>1</PlayerNumber>
-                        <PlayerUID>0</PlayerUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -1363,9 +1361,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Team>0</Team>
                         <PlayerNumber>2</PlayerNumber>
-                        <PlayerUID>0</PlayerUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -1393,9 +1389,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Team>0</Team>
                         <PlayerNumber>1</PlayerNumber>
-                        <PlayerUID>0</PlayerUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -1423,9 +1417,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Team>0</Team>
                         <PlayerNumber>2</PlayerNumber>
-                        <PlayerUID>0</PlayerUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />

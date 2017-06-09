@@ -1360,6 +1360,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="692781466993212" type="ArcadeCabinato" />
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="747006097943683" type="ArcadeCabinato">
@@ -1398,6 +1399,32 @@
                                     <actions>
                                         <action id="-9" name="Destroy" sid="269162334070131" type="ArcadePlayerCollider" />
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="517304229824790">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="453818488947512" type="LifeBar">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="778266210662311" type="LifeBar" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="416582068462192">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="528177936114627" type="SpecialBar">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="600821248324712" type="SpecialBar" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
