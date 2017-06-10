@@ -772,6 +772,16 @@
                             </conditions>
                             <actions>
                                 <action id="7" name="Set mirrored" sid="609473587691819" type="Bullet">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="363578172908998">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="854458030103106" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="612301072673826" type="Bullet">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
