@@ -2,7 +2,7 @@
 <c2layout>
     <name>Level1</name>
     <sid>898685768516353</sid>
-    <event-sheet>Game_EventSheet</event-sheet>
+    <event-sheet>Level1_EventSheet</event-sheet>
     <size>
         <width>50000</width>
         <height>1500</height>
@@ -2378,8 +2378,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>120</x>
-                        <y>-1150</y>
+                        <x>250</x>
+                        <y>500</y>
                         <z>0</z>
                         <width>1000</width>
                         <height>250</height>

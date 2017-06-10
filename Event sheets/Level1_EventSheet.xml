@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level1_EventSheet</name>
+    <events>
+        <include>_Global_EventSheet</include>
+        <include>Game_EventSheet</include>
+        <include>_Player_EventSheet</include>
+        <include>Camera_EventSheet</include>
+        <include>GameMenu_EventSheet</include>
+        <include>GameTexts_EventSheet</include>
+        <include>GameMobMoves_EventSheet</include>
+        <event-block sid="706094033883481">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="969335326906215" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="607797398396909" type="Function">
+                    <param id="0" name="Name">&quot;SetDialogueText&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;intro-&quot; &amp; (GameTypeNumberOfPlayers = 1 ? &quot;S&quot; : &quot;M&quot;) &amp; &quot;-&quot; &amp; (GameTypeNumberOfPlayers = 1 ? Human_1_SelectedCharacter : min(Human_1_SelectedCharacter, Human_2_SelectedCharacter) &amp; max(Human_1_SelectedCharacter, Human_2_SelectedCharacter)){###}1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

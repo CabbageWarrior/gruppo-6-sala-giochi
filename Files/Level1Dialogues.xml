@@ -1,28 +1,248 @@
 <?xml version='1.0' ?>
 <!--
 [Conventions]
+	[NODE NAMES]
+		<sequence-type>-<S|M>-<P1Num>[-<P2Num>]
+		
+		<sequence-type>: intro, pre-boss...
+		<S|M>: Single player or Multiplayer
+		<P1Num>: Number of P1
+		<P2Num>: Number of P2
+
 	[FILTERS]
 		@seq: sequence of read
+	[VALUES]
 		@charnum: character number
 			- 1: Ryu
 			- 2: Donkey
 			- 3: Pacman
 			- 4: Sailor
+			- 5: Robotte
 			- TBD...
-	[VALUES]
+		@mood: happy, normal, angry
 		text(): text of the message
-		@name: display name
 -->
-<chapter1>
+<texts>
 	
-	<hint seq='1' charnum='1' name='Lottatole di stlada'>Ehi! Dove cacchialola siamo?</hint>
-	<hint seq='1' charnum='2' name='Don Keykong'>Picciotto... Dove spacchiu semo fornuti?</hint>
-	<hint seq='1' charnum='3' name='Pack Man'>Per tutti i francobolli! Dove siamo finiti?</hint>
-	<hint seq='1' charnum='4' name='Sailor Mooh'>Ehi, ma... dove ci troviaMOOH?</hint>
+	<!-- INTRO -->
+	<intro-S-1>
+		<hint seq='1' charnum='1' mood='normal'>Ehi ma dove mi tlovo? Avete visto altli musi gialli?</hint>
+	</intro-S-1>
+	<intro-S-2>
+		<hint seq='1' charnum='2' mood='normal'>Uhm... Dove sono finito? Questo posto non assomiglia al bar di casa mia. Andrò alla ricerca di un pò di grog... AH!</hint>
+	</intro-S-2>
+	<intro-S-3>
+		<hint seq='1' charnum='3' mood='normal'>Waka waka? Waka waka waka waka!? Waka waka waka. (Cosa... Dove mi trovo? Questa non è la soltita Salagiochi!? Ho un bruttissimo presentimento.)</hint>
+	</intro-S-3>
+	<intro-S-4>
+		<hint seq='1' charnum='4' mood='normal'>... Dove mi trovo? Cos'è questo posto? Per fortuna la luna illuminerà il mio cammino...</hint>
+	</intro-S-4>
 	
-	<hint seq='2' charnum='1' name='Lottatole di stlada'>Salebbe ploplio melaviglioso sapello!</hint>
-	<hint seq='2' charnum='2' name='Don Keykong'>Picciotto... E io che ne posso sapere, AH?</hint>
-	<hint seq='2' charnum='3' name='Pack Man'>Non saprei... Non ho mai consegnato in questa zona...</hint>
-	<hint seq='2' charnum='4' name='Sailor Mooh'>MOOHoio dalla voglia di saperlo anch'io!</hint>
-
-</chapter1>
+	<intro-M-1-2>
+		<hint seq='1' charnum='1' mood='normal'>Ma dove ci tloviamo? Tu lo sai, Don?</hint>
+		<hint seq='2' charnum='2' mood='normal'>Non saprei, ma so solo che dovremmo trovare un po' di grog, no?</hint>
+		<hint seq='3' charnum='1' mood='normal'>Semple il solito ubliacone! Muoviamoci ad uscile di qui!</hint>
+	</intro-M-1-2>
+	<intro-M-2-3>
+		<hint seq='1' charnum='3' mood='normal'>Waka, waka waka? (Come siamo finiti qui, e che ci fai tu?)</hint>
+		<hint seq='2' charnum='2' mood='normal'>Non so, ma tu mi ricordi tanto un limone parlante... Per caso sai dov'è la mia bottiglia di grog?</hint>
+	</intro-M-2-3>
+	<intro-M-1-3>
+		<hint seq='1' charnum='1' mood='normal'>Che stlano questo posto... Tu ne sai qualcosa, alancino?</hint>
+		<hint seq='2' charnum='3' mood='normal'>Waka waka... (Non ne ho proprio la minima idea...)</hint>
+	</intro-M-1-3>
+	<intro-M-2-4>
+		<hint seq='1' charnum='4' mood='normal'>Ah... Dove sono? COs'è questo posto?</hint>
+		<hint seq='2' charnum='2' mood='happy'>BURP! Ehi, bella pupetta! Vuoi un goccio?</hint>
+		<hint seq='3' charnum='4' mood='angry'>Ah! Che schifo! Stammi lontano!</hint>
+		<hint seq='4' charnum='2' mood='happy'>BURP!</hint>
+	</intro-M-2-4>
+	<intro-M-1-4>
+		<hint seq='1' charnum='4' mood='normal'>Ah... Dove sono?</hint>
+		<hint seq='2' charnum='1' mood='normal'>Siamo in una zona dominata da folze oscule... Dobbiamo uscile di qui!</hint>
+	</intro-M-1-4>
+	<intro-M-3-4>
+		<hint seq='1' charnum='4' mood='normal'>Ah... La mia scheda madre... Che dolore...</hint>
+		<hint seq='2' charnum='3' mood='normal'>Waka waka, waka waka waka! (Dobbiamo andarcene da qui, non è un posto sicuro!)</hint>
+		<hint seq='3' charnum='4' mood='normal'>Anche tu qualche problema di scheda madre?</hint>
+		<hint seq='4' charnum='3' mood='normal'>Waka waka, waka waka waka. (No.)</hint>
+	</intro-M-3-4>
+	
+	
+	<!-- LABORATORIO -->
+	<lab-S-1>
+		<hint seq='1' charnum='1' mood='normal'>Mi è semblato ploplio di vedele qualcuno uscile da lì...</hint>
+	</lab-S-1>
+	<lab-S-2>
+		<hint seq='1' charnum='2' mood='normal'>Che zona è questa? Quello è san...VINOH!! DEVE ESSERE MIO!!! Iniziamo a fare un pò di baruffa! AHAHAH!</hint>
+	</lab-S-2>
+	<lab-S-3>
+		<hint seq='1' charnum='3' mood='normal'>Waka waka waka? Waka waka waka. (Cosa sta succedendo qui? Sarà meglio muoversi, sto perdendo l'appetito.)</hint>
+	</lab-S-3>
+	<lab-S-3>
+		<hint seq='1' charnum='4' mood='normal'>Oddio... Sangue... L'oscurità domina questo posto... La luce lunare la sconfiggerà!</hint>
+	</lab-S-3>
+	
+	<lab-M-1-2>
+		<hint seq='1' charnum='1' mood='normal'>Ma da dove ploviene tutto questo sangue?</hint>
+		<hint seq='2' charnum='2' mood='happy'>WOW! Che tipo di bevanda è?</hint>
+		<hint seq='3' charnum='1' mood='normal'>... Lasciamo peldele...</hint>
+	</lab-M-1-2>
+	<lab-M-2-3>
+		<hint seq='1' charnum='3' mood='normal'>Waka waka... (Tutto questo sangue mi mette i brividi...)</hint>
+		<hint seq='2' charnum='2' mood='happy'>Già, ma sembra davvero un'ottima bevanda...</hint>
+	</lab-M-2-3>
+	<lab-M-1-3>
+		<hint seq='1' charnum='3' mood='normal'>Waka? Waka waka waka? (Hai visto? Cosa staranno facendo lì dentro?)</hint>
+		<hint seq='2' charnum='1' mood='normal'>Non ne ho idea, alancino, ma è meglio andalsene via il plima possibile!</hint>
+	</lab-M-1-3>
+	<lab-M-2-4>
+		<hint seq='1' charnum='4' mood='normal'>Sangue... Oh no! Devo uscire di qui!</hint>
+		<hint seq='2' charnum='2' mood='happy'>VINOH!</hint>
+		<hint seq='3' charnum='4' mood='angry'>AAAAAAAH! Vattene via, ubriacone!</hint>
+	</lab-M-2-4>
+	<lab-M-1-4>
+		<hint seq='1' charnum='1' mood='normal'>Sangue... Uselò le mie alti malziali pel scacciale il nemico!</hint>
+		<hint seq='2' charnum='4' mood='normal'>Ti darò supporto con la mia luce!</hint>
+	</lab-M-1-4>
+	<lab-M-3-4>
+		<hint seq='1' charnum='3' mood='normal'>Waka... Waka waka waka! (Segni di violenza... QUesta navicella è piena di sorprese!)</hint>
+		<hint seq='2' charnum='4' mood='normal'>Dobbiamo muoverci! In due ce la possiamo fare!</hint>
+	</lab-M-3-4>
+	
+	
+	<!-- FINE LIVELLO -->
+	<lvlend-S-1>
+		<hint seq='1' charnum='1' mood='happy'>Uff che fatica! Spelo che siano ploplio finiti anche pelchè hanno un pessimo odole.....Adesso ho solo bisogno di una bella linflescata.</hint>
+	</lvlend-S-1>
+	<lvlend-S-2>
+		<hint seq='1' charnum='2' mood='happy'>È l'ora dell'aperitivo! Dammi un pò di grog... Mi sento stanco.</hint>
+	</lvlend-S-2>
+	<lvlend-S-3>
+		<hint seq='1' charnum='3' mood='happy'>Waka! Waka waka, waka waka... (Un'uscita! Non vedo l'ora di andarmene, sto morendo di fame...)</hint>
+	</lvlend-S-3>
+	<lvlend-S-4>
+		<hint seq='1' charnum='4' mood='happy'>L'oscurità è stata sconfitta! Ma sento ancora una presenza molto potente qui... Ho bisogno di energia! Luce lunare che domina i cieli... Vieni a me!</hint>
+	</lvlend-S-4>
+	
+	<lvlend-M-1-2>
+		<hint seq='1' charnum='2' mood='happy'>BURP! Finalmente è l'ora di un bel drink! Tu cosa preferisci, tappetto?</hint>
+		<hint seq='2' charnum='1' mood='happy'>Niente, glazie. L'alcol collompe lo spilito del guellielo.</hint>
+	</lvlend-M-1-2>
+	<lvlend-M-2-3>
+		<hint seq='1' charnum='3' mood='happy'>Waka! Waka waka, waka... (Un'uscita! Non vedo l'ora di andarmene, sto morendo di fame...)</hint>
+		<hint seq='2' charnum='2' mood='happy'>Perfetto, così ci fermiamo anche a bere qualcosa... Eheh...</hint>
+	</lvlend-M-2-3>
+	<lvlend-M-1-3>
+		<hint seq='1' charnum='3' mood='happy'>Waka... Waka...  Waka Waka! (Uff... Che stanchezza... Ho bisogno di mangiare qualcosa!)</hint>
+		<hint seq='2' charnum='1' mood='happy'>Non pleoccupalti... Anch'io sono molto affamato...</hint>
+	</lvlend-M-1-3>
+	<lvlend-M-2-4>
+		<hint seq='1' charnum='4' mood='normal'>Ho bisogno di energia... Sento un'altra presenza oscura...</hint>
+		<hint seq='2' charnum='2' mood='happy'>Tieni... Bevi che fa bene!</hint>
+		<hint seq='3' charnum='4' mood='normal'>...</hint>
+	</lvlend-M-2-4>
+	<lvlend-M-1-4>
+		<hint seq='1' charnum='1' mood='normal'>Sembla che abbiamo vinto... Andiamo!</hint>
+		<hint seq='2' charnum='4' mood='angry'>Aspetta... Sento un'altra presenza oscura nelle vicinanze...</hint>
+	</lvlend-M-1-4>
+	<lvlend-M-3-4>
+		<hint seq='1' charnum='4' mood='normal'>Sembra che non ci sia più nessuno qui.</hint>
+		<hint seq='2' charnum='3' mood='angry'>Il mio processore rileva una presenza minacciosa più avanti.</hint>
+	</lvlend-M-3-4>
+	
+	
+	<!-- INIZIO BOSS -->
+	<boss-S-1>
+		<hint seq='1' charnum='1' mood='angry'>E tu chi sei? Dall'odole cledo di avel capito. Afflontami e sconfiggimi... se ci liesci!!!</hint>
+		<hint seq='2' charnum='5' mood='normal'>Attento a come parli al grande Robotte, surimi col kimono! Sei stato un ottimo combattente ma i miei soldati erano delle nullità. Con me non hai speranza!</hint>
+	</boss-S-1>
+	<boss-S-2>
+		<hint seq='1' charnum='2' mood='happy'>Salve amico! Vuole un pò di grog da condividere in compagnia?</hint>
+		<hint seq='2' charnum='2' mood='angry'>Mi sta antipatica la gente sobria. Ti sbronzo come un babà rum!</hint>
+		<hint seq='3' charnum='5' mood='normal'>Attento a come parli al grande Robotte, mangiabanane! Sei stato un ottimo combattente ma i miei soldati erano delle nullità. Con me non hai speranza!</hint>
+	</boss-S-2>
+	<boss-S-3>
+		<hint seq='1' charnum='3' mood='angry'>Waka waka waka waakaaa! (Preparati: sono una macchina da guerra Gialla e affamata!!!)</hint>
+		<hint seq='2' charnum='5' mood='normal'>Attento a come parli al grande Robotte, palla da tennis! Sei stato un ottimo combattente ma i miei soldati erano delle nullità. Con me non hai speranza!</hint>
+	</boss-S-3>
+	<boss-S-4>
+		<hint seq='1' charnum='4' mood='angry'>Allora sei tu che comanda il male su questa navicella! Nel nome della luna io ti sconfiggerò!</hint>
+		<hint seq='2' charnum='5' mood='normal'>Attenta a come parli al grande Robotte, bionda! Sei stata un'ottima combattente, ma i miei soldati erano delle nullità. Con me non hai speranza!</hint>
+	</boss-S-4>
+	
+	<boss-M-1-2>
+		<hint seq='1' charnum='1' mood='angry'>Ehi Don, fai attenzione. Questo nemico ha un'aula potentissima!</hint>
+		<hint seq='2' charnum='2' mode='happy'>WOW! Una grande bottiglia di grog che cammina!</hint>
+		<hint seq='3' charnum='5' mood='normal'>Attenti a come parlate al grande Robotte! Siete stati ottimi combattenti, ma i miei soldati erano delle nullità. Con me non avete speranza!</hint>
+	</boss-M-1-2>
+	<boss-M-2-3>
+		<hint seq='1' charnum='3' mood='angry'>Waka? Waka waka, waka... (E tu chi saresti? Speravo di mangiare qualche ciliegia, invece trovo solo un ammasso di ferraglia...)</hint>
+		<hint seq='2' charnum='2' mode='happy'>WOW! Una grande bottiglia di grog che cammina!</hint>
+		<hint seq='3' charnum='5' mood='normal'>Attenti a come parlate al grande Robotte! Siete stati ottimi combattenti, ma i miei soldati erano delle nullità. Con me non avete speranza!</hint>
+	</boss-M-2-3>
+	<boss-M-1-3>
+		<hint seq='1' charnum='3' mood='angry'>Waka? Waka waka! (E chi sarebbe questo essere? Speriamo sia commestibile!)</hint>
+		<hint seq='2' charnum='1' mode='happy'>Attento alancino, potlesti fale indigestione!</hint>
+		<hint seq='3' charnum='5' mood='normal'>Attenti a come parlate al grande Robotte! Siete stati ottimi combattenti, ma i miei soldati erano delle nullità. Con me non avete speranza!</hint>
+	</boss-M-1-3>
+	<boss-M-2-4>
+		<hint seq='1' charnum='2' mood='angry'>È qui la festa?</hint>
+		<hint seq='2' charnum='4' mode='angry'>Ti distruggerò in nome della luna!</hint>
+		<hint seq='3' charnum='5' mood='normal'>Attenti a come parlate al grande Robotte! Siete stati ottimi combattenti, ma i miei soldati erano delle nullità. Con me non avete speranza!</hint>
+		<hint seq='4' charnum='2' mood='angry'>Sì sì, certo...</hint>
+	</boss-M-2-4>
+	<boss-M-1-4>
+		<hint seq='1' charnum='1' mood='angry'>Avevi lagione... sembla molto più folte lispetto agli altli. Stiamo attenti!</hint>
+		<hint seq='2' charnum='5' mood='normal'>Attenti a come parlate al grande Robotte! Siete stati ottimi combattenti, ma i miei soldati erano delle nullità. Con me non avete speranza!</hint>
+		<hint seq='3' charnum='4' mode='angry'>Sì... Ha un'aura oscura potentissima...</hint>
+	</boss-M-1-4>
+	<boss-M-3-4>
+		<hint seq='1' charnum='3' mood='angry'>Waka! Waka waka! Waka waka waka! (È lui! Stiamo attenti! È più forte rispetto agli altri!)</hint>
+		<hint seq='2' charnum='4' mode='angry'>Sembra molto pericoloso... Ma la mia luce riuscirà a distruggerlo!</hint>
+		<hint seq='3' charnum='5' mood='normal'>Attenti a come parlate al grande Robotte! Siete stati ottimi combattenti, ma i miei soldati erano delle nullità. Con me non avete speranza!</hint>
+	</boss-M-3-4>
+	
+	
+	<!-- FINE BOSS -->
+	<bossend-S-1>
+		<hint seq='1' charnum='1' mood='happy'>Bhe dai, è stato più facile del plevisto... Ma adesso che succedelà?</hint>
+	</bossend-S-1>
+	<bossend-S-2>
+		<hint seq='1' charnum='2' mood='happy'>AHHHHHHH! Visto? L'alcool è l'arma migliore! L'ho sempre detto! AHAHAH! Vuoi farti un goccio?</hint>
+	</bossend-S-2>
+	<bossend-S-3>
+		<hint seq='1' charnum='3' mood='happy'>Finalente è finita! Ora torniamo a casa e poi ci facciamo una bella pizza!</hint>
+	</bossend-S-3>
+	<bossend-S-4>
+		<hint seq='1' charnum='4' mood='happy'>Vedi... Giustizia e luce dominano sempre l'oscurità. HIHIHI!</hint>
+	</bossend-S-4>
+	
+	<bossend-M-1-2>
+		<hint seq='1' charnum='1' mood='happy'>Finalmente, tappetto... Adesso posso finire di bere in pace...</hint>
+		<hint seq='2' charnum='2' mode='happy'>Ben fatto, Don. Ma ola... dove andlemo?</hint>
+	</bossend-M-1-2>
+	<bossend-M-2-3>
+		<hint seq='1' charnum='2' mood='happy'>Finalmente possiamo farci un bell'aperitivo e festeggiare! Tsamina mina eh eh...</hint>
+		<hint seq='2' charnum='3' mode='happy'>Waka waka... (Waka waka...)</hint>
+		<hint seq='3' charnum='2' mood='happy'>Eh eh!</hint>
+	</bossend-M-2-3>
+	<bossend-M-1-3>
+		<hint seq='1' charnum='1' mood='happy'>La mia alte malziale non può fallile! Salà finalmente l'ola dello spuntino?</hint>
+		<hint seq='2' charnum='3' mode='happy'>Waka waka! Waka... waka? (Spero proprio di sì! Ma... come si esce da qui?)</hint>
+	</bossend-M-1-3>
+	<bossend-M-2-4>
+		<hint seq='1' charnum='4' mood='happy'>La luna trionfa sempre! HIHIHI!</hint>
+		<hint seq='2' charnum='2' mode='happy'>BURP!</hint>
+	</bossend-M-2-4>
+	<bossend-M-1-4>
+		<hint seq='1' charnum='1' mood='happy'>Ce l'abbiamo fatta! Nessuno sconfigge la potenza delle alti malziali!</hint>
+		<hint seq='2' charnum='4' mode='happy'>La luna trionfa sempre! HIHIHI!</hint>
+	</bossend-M-1-4>
+	<bossend-M-3-4>
+		<hint seq='1' charnum='3' mood='happy'>Waka! Waka waka! Waka waka waka! (Sì! È stato facile! Ora torno a mangiare il mio frutto preferito... Le ciliege!)</hint>
+		<hint seq='2' charnum='4' mode='happy'>HIHIHI! Me ne puoi lasciare qualcuna?</hint>
+	</bossend-M-3-4>
+	
+	
+</texts>
