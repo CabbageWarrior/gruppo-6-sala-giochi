@@ -1170,6 +1170,79 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="752964233240208">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="206070975531867" type="ArcadeCabinato_AttackCollider">
+                                            <param id="0" name="Object">BossRobotte_HitArea</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="902396769847674" type="BossRobotte">
+                                            <param id="0" name="Animation">&quot;DeathLeft&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="319979803114975" type="BossRobotte">
+                                            <param id="0" name="Animation">&quot;DeathRight&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="854950325940237" type="ArcadeCabinato">
+                                            <param id="0" name="Instance variable">HasHitSomeone</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="413323331814413">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="554341320094691" type="ArcadeCabinato">
+                                                    <param id="0" name="Instance variable">Special_Max</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">Self.Special +BossRobotte.SpecialPointGivenWhenHit</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="894200013961435" type="ArcadeCabinato">
+                                                    <param id="0" name="Instance variable">Special</param>
+                                                    <param id="1" name="Value">Self.Special_Max</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="255752133026032">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="156961349385887" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="212235965647777" type="ArcadeCabinato">
+                                                    <param id="0" name="Instance variable">Special</param>
+                                                    <param id="1" name="Value">BossRobotte.SpecialPointGivenWhenHit</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="502538339125492">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="186108516242333" type="ArcadeCabinato">
+                                                    <param id="0" name="Instance variable">PlayerHitsCount</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">Self.PlayerHitsCount_Max</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="700693581717604" type="Function">
+                                                    <param id="0" name="Name">&quot;HitRobotte&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadeCabinato.PlayerDMG*2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="227355658755534">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="107104425155949" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="176458007028216" type="Function">
+                                                    <param id="0" name="Name">&quot;HitRobotte&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArcadeCabinato.PlayerDMG</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <event-block sid="587941962502971">
                                     <conditions />
                                     <actions />

@@ -914,9 +914,10 @@
                         <PlayerY>0</PlayerY>
                         <RangedAimTimer>2</RangedAimTimer>
                         <Spit>false</Spit>
-                        <MeleeHit>false</MeleeHit>
+                        <SpecialPointGivenWhenHit>5</SpecialPointGivenWhenHit>
                         <RobotteWaveAttack>14</RobotteWaveAttack>
                         <RobotteRangedAttack>10</RobotteRangedAttack>
+                        <IsStunned>false</IsStunned>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
