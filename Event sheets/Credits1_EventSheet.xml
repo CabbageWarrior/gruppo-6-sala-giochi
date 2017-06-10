@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Credits1_EventSheet</name>
+    <events>
+        <include>_Global_EventSheet</include>
+        <event-block sid="850268620100056">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="605016504552134" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="570289758133521" type="Audio" />
+            </actions>
+        </event-block>
+        <comment>Destra</comment>
+        <event-block sid="622102250950111">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="714914558008874" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="880553110537566" type="Credits1_Btn2">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="582820262009948" type="Credits1_Btn1">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="457577503428505">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="913850987780337" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="357520608668037" type="Credits1_Btn2">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="694524731626123" type="Credits1_Btn1">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Sinistra</comment>
+        <event-block sid="512320614996879">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="193499177997300" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="384045062909525" type="Credits1_Btn2">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="626546879965504" type="Credits1_Btn1">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="197907289799285">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="254747995418684" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="169494882332615" type="Credits1_Btn2">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="106280639547702" type="Credits1_Btn1">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Seleziona</comment>
+        <event-block sid="303060857882883">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="447831134582070" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="830346862915450">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="831149303531778" type="Credits1_Btn1">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="565936323539917" type="Audio">
+                            <param id="0" name="Audio file">Florence_The_Machine_-_Stand_By_Me</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;CreditsMusic&quot;</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="513168770130545" type="System">
+                            <param id="0" name="Layout">&quot;Credits2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="711208211279795">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="215591508366824" type="System" />
+                        <condition id="3" name="Compare frame" sid="699674433937937" type="Credits1_Btn2">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="677247666818318" type="Audio">
+                            <param id="0" name="Audio file">Rick_Astley_-_Never_Gonna_Give_You_Up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;CreditsMusic&quot;</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="668590590345922" type="System">
+                            <param id="0" name="Layout">&quot;Credits2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="697507521510286">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="919216023434660" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="971303583169297">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="604757532760175" type="Credits1_Btn1">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="312517758506614" type="Audio">
+                            <param id="0" name="Audio file">Florence_The_Machine_-_Stand_By_Me</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;CreditsMusic&quot;</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="853368946673094" type="System">
+                            <param id="0" name="Layout">&quot;Credits2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="201345888123380">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="391586800118068" type="System" />
+                        <condition id="3" name="Compare frame" sid="908805267598893" type="Credits1_Btn2">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="727725491448396" type="Audio">
+                            <param id="0" name="Audio file">Rick_Astley_-_Never_Gonna_Give_You_Up</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;CreditsMusic&quot;</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="444130456018258" type="System">
+                            <param id="0" name="Layout">&quot;Credits2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Torna al menu</comment>
+        <event-block sid="534904630873532">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="129085164258552" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="386846366136288" type="Audio">
+                    <param id="0" name="Tag">&quot;CreditsMusic&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="681311165801435" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="524638732933584">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="851213492991620" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="579611389557514" type="Audio">
+                    <param id="0" name="Tag">&quot;CreditsMusic&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="127902891113816" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

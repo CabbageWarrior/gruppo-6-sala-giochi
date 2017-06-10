@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Saturno_EventSheet</name>
+    <events>
+        <event-block sid="814118038504968">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="785032496559708" type="System" />
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="874556589332056" type="System">
+                    <param id="0" name="Scale">1.4</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="234266808143353" type="PacManCutScenes">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="215628944195375" type="PacManCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="763194756911007" type="PacManCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="718396428682070" type="PacManCutScenes">
+                    <param id="0" name="Speed">-180</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="773038072750196" type="DonkeyKongCutScenes">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="325136381833032" type="DonkeyKongCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="105453116339364" type="DonkeyKongCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="576693777041474" type="DonkeyKongCutScenes">
+                    <param id="0" name="Speed">-180</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="970829176146292" type="StreetFighterCutScenes">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="527149123765983" type="StreetFighterCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="942860206158759" type="StreetFighterCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="232185224047450" type="StreetFighterCutScenes">
+                    <param id="0" name="Speed">-180</param>
+                </action>
+                <action id="-16" name="Wait" sid="209290289889138" type="System">
+                    <param id="0" name="Seconds">10.5</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="714584904801771" type="System">
+                    <param id="0" name="Layout">&quot;Giove&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

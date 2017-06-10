@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Credits2_EventSheet</name>
+    <events>
+        <include>_Global_EventSheet</include>
+        <event-block sid="754705371387515">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="354965802551760" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="555868987504680" type="Text1Credits">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="239488071538000" type="Text2Credits">
+                    <param id="0" name="Angle">270</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="193281478510066">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="301387592162185" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="751571890934489">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="675067723283970" type="Text2Credits">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">-100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="798337068056973" type="Text2Credits" />
+                    </actions>
+                </event-block>
+                <event-block sid="710456419198209">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="323592433876599" type="System">
+                            <param id="0" name="First value">Text2Credits.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="436881052064885" type="Audio">
+                            <param id="0" name="Tag">&quot;CreditsMusic&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="154103715003903" type="System">
+                            <param id="0" name="Layout">Intro</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Torna al menu</comment>
+        <event-block sid="196262342966807">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="954119208597866" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="744825057983999" type="Audio">
+                    <param id="0" name="Tag">&quot;CreditsMusic&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="763511622020078" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="492820206815742">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="295107480687727" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="537436829633956" type="Audio">
+                    <param id="0" name="Tag">&quot;CreditsMusic&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="791609171963408" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

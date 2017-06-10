@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Sala Giochi_EventSheet</name>
+    <events>
+        <event-block sid="117792859106284">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="205201491269675" type="System" />
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="569573327206296" type="System">
+                    <param id="0" name="Scale">1.35</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="863267568556791" type="PacManCutScenes">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="818562802532259" type="PacManCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="133935376839005" type="StreetFighterCutScenes">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="463019799624554" type="StreetFighterCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="687871058410730" type="DonkeyKongCutScenes">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="592168558753170" type="DonkeyKongCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="676086452289067" type="System">
+                    <param id="0" name="Seconds">6</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="654050190363374" type="PacManCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="983479070541059" type="DonkeyKongCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="965884427925348" type="StreetFighterCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="164528089739077" type="DonkeyKongCutScenes">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="240218854739235" type="PacManCutScenes">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="556320494863460" type="StreetFighterCutScenes">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="218808751491709" type="DonkeyKongCutScenes">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="596680144565465" type="PacManCutScenes">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="407727832778980" type="StreetFighterCutScenes">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="623037139079695" type="Sprite33CutScenes">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="807461019088069" type="Sprite33CutScenes" />
+            </actions>
+        </event-block>
+        <event-block sid="285892533495921">
+            <conditions>
+                <condition behavior="Fade" id="1" name="On fade-in finished" sid="885032851438488" type="Sprite33CutScenes" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="923678154583531" type="System">
+                    <param id="0" name="Layout">HistoryFinished</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Marte_EventSheet</name>
+    <events>
+        <variable constant="0" name="SizeSF" sid="349676352361215" static="0" type="number">0</variable>
+        <variable constant="0" name="SizeDK" sid="435533596910149" static="0" type="number">0</variable>
+        <variable constant="0" name="SizePM" sid="987944734059124" static="0" type="number">0</variable>
+        <event-block sid="474339242019455">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="385654725067868" type="System" />
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="968904448161090" type="System">
+                    <param id="0" name="Scale">1.35</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="836629764762167" type="MarsCutScenes">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="560643953154680" type="EarthCutScenes2">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="925984288720932" type="PacManCutScenes">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="593952671499331" type="PacManCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="330758050564671" type="PacManCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="394402984712736" type="PacManCutScenes">
+                    <param id="0" name="Speed">-180</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="779343753240651" type="DonkeyKongCutScenes">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="560702183413618" type="DonkeyKongCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="762821264473392" type="DonkeyKongCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="858974299633116" type="DonkeyKongCutScenes">
+                    <param id="0" name="Speed">-180</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="852887779710854" type="StreetFighterCutScenes">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="487586925422456" type="StreetFighterCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="681756672148346" type="StreetFighterCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="235507425296316" type="StreetFighterCutScenes">
+                    <param id="0" name="Speed">-180</param>
+                </action>
+                <action id="-16" name="Wait" sid="844249458675237" type="System">
+                    <param id="0" name="Seconds">6</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="829061087165500" type="MarsCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="649173307228452" type="EarthCutScenes2">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="380301312868272" type="PacManCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="579763360921511" type="DonkeyKongCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="653447651558619" type="StreetFighterCutScenes">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="612518081103381" type="System">
+                    <param id="0" name="Group name">&quot;Falling&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="596439946430967" title="Falling">
+            <sub-events>
+                <event-block sid="631875938886392">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="781075385810835" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="956025000871973" type="StreetFighterCutScenes">
+                            <param id="0" name="Width">(StreetFighterCutScenes.Width)+1</param>
+                            <param id="1" name="Height">(StreetFighterCutScenes.Height)-1.5</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="869471889067069" type="PacManCutScenes">
+                            <param id="0" name="Width">(PacManCutScenes.Width)+1</param>
+                            <param id="1" name="Height">(PacManCutScenes.Height)-1.5</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="670291625264243" type="DonkeyKongCutScenes">
+                            <param id="0" name="Width">(DonkeyKongCutScenes.Width)+1</param>
+                            <param id="1" name="Height">(DonkeyKongCutScenes.Height)-1.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="683577384664294">
+            <conditions>
+                <condition id="-6" name="Compare height" sid="320981259348276" type="DonkeyKongCutScenes">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Height">0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="967661929462821" type="DonkeyKongCutScenes">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="839075439106270" type="DonkeyKongCutScenes" />
+            </actions>
+        </event-block>
+        <event-block sid="421487554709951">
+            <conditions>
+                <condition id="-6" name="Compare height" sid="517780048450301" type="PacManCutScenes">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Height">0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="406941446734136" type="PacManCutScenes">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="830925858471309" type="PacManCutScenes" />
+            </actions>
+        </event-block>
+        <event-block sid="202507782901964">
+            <conditions>
+                <condition id="-6" name="Compare height" sid="195613240921688" type="StreetFighterCutScenes">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Height">0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="746536610894220" type="StreetFighterCutScenes">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="317989625958758" type="StreetFighterCutScenes" />
+            </actions>
+        </event-block>
+        <event-block sid="340004567953215">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="348683351303303" type="StreetFighterCutScenes" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="694937415858389" type="System">
+                    <param id="0" name="Layout">&quot;Terra&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

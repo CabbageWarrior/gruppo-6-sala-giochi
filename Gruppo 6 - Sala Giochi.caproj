@@ -31,6 +31,7 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -2995,6 +2996,860 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="StreetFighterCutScenesIntro" sid="661170902800125">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="834778260331894">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="680317084827871">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="866561574079086" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\cabinati per pitch.png">
+                        <collision-poly>
+                            <point x="0" y="0.673831" />
+                            <point x="0.803698" y="0.348925" />
+                            <point x="0" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13CutScenesIntro" sid="973067250202136">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="299803031151279" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Cabinato (1).png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.0546875" />
+                            <point x="0.8125" y="0.046875" />
+                            <point x="0.75" y="0.9375" />
+                            <point x="0.25" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite16CutScenesIntro" sid="720620543990939">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804405048408524" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite14CutScenesIntro" sid="406340557849649">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802094710456331" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite17CutScenesIntro" sid="648514927642373">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="198451679472111" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Neon.png">
+                        <collision-poly>
+                            <point x="0.046875" y="0.09375" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0.953125" y="0.09375" />
+                            <point x="0.671875" y="0.34375" />
+                            <point x="0.328125" y="0.34375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite15CutScenesIntro" sid="204966695248828">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="858534327606348" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DonkeyKongCutScenesIntro" sid="220975590834316">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="471788916167445">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="785194995174211">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="973428115290001" speed="5">
+                    <frame duration="1" hotspotX="0.448656" hotspotY="0.516894" original-source="C:\Users\dbga_37\Downloads\cabinati per pitch.png">
+                        <collision-poly>
+                            <point x="0.217781" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.941316" />
+                            <point x="0.149552" y="0.26556" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite18CutScenesIntro" sid="611200790690321">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="624354463142084" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite33CutScenesIntro" sid="756659580596405">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="183128462724653">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938924255039154" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RaggioneIntro" sid="920995915750093">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="200585777585180" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PacManCutScenesIntro" sid="901820867496840">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="356258227854231">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="327997384649520">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="334241186362629" speed="5">
+                    <frame duration="1" hotspotX="0.500396" hotspotY="0.500273" original-source="C:\Users\dbga_37\Downloads\cabinato 32 con ciuffo-0.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.832672" y="0" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0.966102" />
+                            <point x="0" y="0.34281" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite9CutScenes" sid="963719912172221">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565337575717129" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Planets\Houston_Stars_A.0528_print.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EarthCutscenes" sid="492254670639445">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="537077484132539" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Planets\earth_PNG39.png">
+                        <collision-poly>
+                            <point x="0.168125" y="0.168125" />
+                            <point x="0.5" y="0.03" />
+                            <point x="0.83375" y="0.16625" />
+                            <point x="0.974375" y="0.5" />
+                            <point x="0.83625" y="0.83625" />
+                            <point x="0.5" y="0.975" />
+                            <point x="0.165625" y="0.834375" />
+                            <point x="0.029375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BloccoCabinatiIntro" sid="859993869153365">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225416144070327" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3CutScenesIntro" sid="655843721251948">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="916602311611988">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="761925626810299" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AstronaveCutScenes" sid="178222467780502">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="788903720217080" speed="5">
+                    <frame duration="1" hotspotX="0.500994" hotspotY="0.495833" original-source="C:\Users\Mandalore\Downloads\g4dBO6P - Imgur.png">
+                        <collision-poly>
+                            <point x="0.304175" y="0.0833333" />
+                            <point x="0.500994" y="0.0250008" />
+                            <point x="0.693837" y="0.0916658" />
+                            <point x="0.930417" y="0.495833" />
+                            <point x="0.725646" y="0.966666" />
+                            <point x="0.500994" y="0.841666" />
+                            <point x="0.276342" y="0.966666" />
+                            <point x="0.0695821" y="0.495833" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteCutScenesIntro" sid="354760117003915">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="336865279581885" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ThanksForPlayingText" sid="957869246873765">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="TextSeqNumber" sid="711545192166753" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="934554438920929">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="StreetFighterCutScenes" sid="797716512408873">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="560668522694581">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="506391815566461">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="453932639609629" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\cabinati per pitch.png">
+                        <collision-poly>
+                            <point x="0" y="0.673831" />
+                            <point x="0.803698" y="0.348925" />
+                            <point x="0" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Background1CutScenes" sid="903410643500093">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="655475649946025" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Planets\asteroid_rings_final_by_deviantvicky.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DonkeyKongCutScenes" sid="729570421315310">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="246145428725415">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="424138308144137">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="972578967298116" speed="5">
+                    <frame duration="1" hotspotX="0.448656" hotspotY="0.516894" original-source="C:\Users\dbga_37\Downloads\cabinati per pitch.png">
+                        <collision-poly>
+                            <point x="0.217781" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.941316" />
+                            <point x="0.149552" y="0.26556" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Background2CutScenes" sid="522584528626836">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="841789769784634" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BloccoSchermoCutScenes" sid="517618269476126">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="592984121270125">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="516865034994439" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PacManCutScenes" sid="218521528522851">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="810438190920770">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="528364953479652">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="758947796679788" speed="5">
+                    <frame duration="1" hotspotX="0.500396" hotspotY="0.500273" original-source="C:\Users\dbga_37\Downloads\cabinato 32 con ciuffo-0.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.832672" y="0" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0.966102" />
+                            <point x="0" y="0.34281" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BackgroundSaturnCutScenes" sid="903070832570016">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="229030076868208" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Planets\Houston_Stars_A.0528_print.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite21CutScenes" sid="878753331684173">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="261868828601923">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310370179484509" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Martello.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.15625" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.53125" y="0.5" />
+                            <point x="0.53125" y="0.53125" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite19CutScenes" sid="994209582062817">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="917987676816510">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="635503489115537" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Barile.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.15625" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.84375" y="0.84375" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.15625" y="0.84375" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite20CutScenes" sid="329960289268820">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="600235383614360">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="190693879822393" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Barile.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.15625" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.84375" y="0.84375" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.15625" y="0.84375" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SaturnCutScenes" sid="947497002582939">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="496310115829572" speed="5">
+                    <frame duration="1" hotspotX="0.500345" hotspotY="0.500527" original-source="C:\Users\dbga_37\Downloads\Planets\Saturnx.png">
+                        <collision-poly>
+                            <point x="0.271222" y="0.41412" />
+                            <point x="0.499655" y="0.149631" />
+                            <point x="0.979296" y="0.0316122" />
+                            <point x="0.747412" y="0.499473" />
+                            <point x="0.73499" y="0.595364" />
+                            <point x="0.499655" y="0.863014" />
+                            <point x="0.0207039" y="0.968388" />
+                            <point x="0.257419" y="0.499473" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite22CutScenes" sid="749045897446943">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="373259442248283">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840245333134827" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Martello.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.15625" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.53125" y="0.5" />
+                            <point x="0.53125" y="0.53125" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="JupiterCutScenes" sid="181276778679064">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="356100321691852">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="289332487757030" speed="5">
+                    <frame duration="1" hotspotX="0.500642" hotspotY="0.500647" original-source="C:\Users\dbga_37\Downloads\Planets\Jupiter_(transparent).png">
+                        <collision-poly>
+                            <point x="0.146341" y="0.147477" />
+                            <point x="0.499358" y="0" />
+                            <point x="0.853659" y="0.147477" />
+                            <point x="1" y="0.499353" />
+                            <point x="0.853659" y="0.852523" />
+                            <point x="0.499358" y="1" />
+                            <point x="0.146341" y="0.852523" />
+                            <point x="0" y="0.499353" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite25CutScenes" sid="273695307006230">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="486339675352212">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735319756760842" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Original_PacMan.png">
+                        <collision-poly>
+                            <point x="0.154762" y="0.154762" />
+                            <point x="0.5" y="0.0190476" />
+                            <point x="0.888095" y="0.111905" />
+                            <point x="0.504762" y="0.5" />
+                            <point x="0.869048" y="0.869048" />
+                            <point x="0.5" y="0.969048" />
+                            <point x="0.161905" y="0.838095" />
+                            <point x="0.0142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BackgroundJupiterCutScenes" sid="184678170883304">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="879592801029976" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Planets\Houston_Stars_A.0528_print.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite23CutScenes" sid="303945922242809">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="470315856078047">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739222825683032" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Arcade\Pac-Man-Ghost-PNG-Transparent-Image.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.796875" y="0.203125" />
+                            <point x="0.921875" y="0.5" />
+                            <point x="0.90625" y="0.90625" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.0185547" y="0.981445" />
+                            <point x="0.078125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite26CutScenes" sid="425863117083406">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="649335786166167">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="414622849542591" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Arcade\Pac-Man-Ghost-PNG-Transparent-Image.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.796875" y="0.203125" />
+                            <point x="0.921875" y="0.5" />
+                            <point x="0.90625" y="0.90625" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.0185547" y="0.981445" />
+                            <point x="0.078125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite24CutScenes" sid="932759744837796">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="331140846595535">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958717840801085" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Arcade\Pac-Man-Ghost-PNG-Transparent-Image.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.796875" y="0.203125" />
+                            <point x="0.921875" y="0.5" />
+                            <point x="0.90625" y="0.90625" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.0185547" y="0.981445" />
+                            <point x="0.078125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite27CutScenes" sid="344804731641042">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="917502167595545">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="519590875050825" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Arcade\Pac-Man-Ghost-PNG-Transparent-Image.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.796875" y="0.203125" />
+                            <point x="0.921875" y="0.5" />
+                            <point x="0.90625" y="0.90625" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.0185547" y="0.981445" />
+                            <point x="0.078125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EarthCutScenes2" sid="324453653447756">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="388610718602736">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472848419872416" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Planets\earth_PNG39.png">
+                        <collision-poly>
+                            <point x="0.168125" y="0.168125" />
+                            <point x="0.5" y="0.03" />
+                            <point x="0.83375" y="0.16625" />
+                            <point x="0.974375" y="0.5" />
+                            <point x="0.83625" y="0.83625" />
+                            <point x="0.5" y="0.975" />
+                            <point x="0.165625" y="0.834375" />
+                            <point x="0.029375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MarsCutScenes" sid="996257564464451">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="633971336011377">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="834612187527554" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Planets\Mars_transparent.png">
+                        <collision-poly>
+                            <point x="0.184" y="0.184" />
+                            <point x="0.5" y="0.052" />
+                            <point x="0.818" y="0.182" />
+                            <point x="0.95" y="0.5" />
+                            <point x="0.818" y="0.818" />
+                            <point x="0.5" y="0.95" />
+                            <point x="0.182" y="0.818" />
+                            <point x="0.052" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite32CutScenes" sid="199886032646560">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="462590635666933">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310018383811146" speed="5">
+                    <frame duration="1" hotspotX="0.484906" hotspotY="0.479221" original-source="C:\Users\dbga_37\Downloads\SFA3_Ken.png">
+                        <collision-poly>
+                            <point x="0.122642" y="0.22987" />
+                            <point x="0.484906" y="0.0012987" />
+                            <point x="0.907547" y="0.188312" />
+                            <point x="0.786792" y="0.479221" />
+                            <point x="0.922642" y="0.780519" />
+                            <point x="0.484906" y="0.697403" />
+                            <point x="0.183019" y="0.687013" />
+                            <point x="0.303774" y="0.479221" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BackgroundMarsCutScenes" sid="885237496681337">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499938016462906" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Planets\Houston_Stars_A.0528_print.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite30CutScenes" sid="334230867589896">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="489174032678690">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="727247187508725" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Arcade\SFA3_Ken.gif">
+                        <collision-poly>
+                            <point x="0.212121" y="0.148936" />
+                            <point x="0.5" y="0.0106383" />
+                            <point x="0.833333" y="0.117021" />
+                            <point x="0.80303" y="0.5" />
+                            <point x="0.984848" y="0.989362" />
+                            <point x="0.5" y="0.712766" />
+                            <point x="0.030303" y="0.978723" />
+                            <point x="0.318182" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite15CutScenes" sid="896148750426174">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619169549785554" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite14CutScenes" sid="154576058058286">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359198454327109" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite18CutScenes" sid="423474514020398">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952319504562417" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13CutScenes" sid="911627575778989">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="543344788487322" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Cabinato (1).png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.0546875" />
+                            <point x="0.8125" y="0.046875" />
+                            <point x="0.75" y="0.9375" />
+                            <point x="0.25" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite16CutScenes" sid="135385563610742">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="252555831850973" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite33CutScenes" sid="135674863717976">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="724032259521967">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867048746554103" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite17CutScenes" sid="314041420419547">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="926706240337438" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Neon.png">
+                        <collision-poly>
+                            <point x="0.046875" y="0.09375" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0.953125" y="0.09375" />
+                            <point x="0.671875" y="0.34375" />
+                            <point x="0.328125" y="0.34375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CharacterUnlockedText" sid="899117894068749">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="215852463558727">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Credits1_Btn1" sid="439569958331577">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="250940798282141" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Credits1_Btn2" sid="876301681680281">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="231795617267503" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Credits1_BG" sid="148799526468942">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="261140083016656" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text1Credits" sid="628068515692449">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="741053503627255">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Text2Credits" sid="142248196815143">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="915431613552950">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -3010,6 +3865,7 @@
                 <member>CharacterDetailTitle</member>
                 <member>CharacterRoleText</member>
                 <member>CharacterSelectorText</member>
+                <member>CharacterUnlockedText</member>
                 <member>DialogueDisplayName</member>
                 <member>DialogueText</member>
                 <member>EndGameMenuText</member>
@@ -3030,9 +3886,12 @@
                 <member>QuitTextFromTop</member>
                 <member>ScoreText</member>
                 <member>StartMatchCounter</member>
+                <member>Text1Credits</member>
+                <member>Text2Credits</member>
                 <member>TextDraft</member>
                 <member>TextYouLose</member>
                 <member>TextYouWin</member>
+                <member>ThanksForPlayingText</member>
                 <member>TimeTextHours</member>
                 <member>TimeTextMinutes</member>
                 <member>TimeTextSeparator</member>
@@ -3147,14 +4006,45 @@
         </family>
     </families>
     <layout-folder>
+        <layout-folder name="CutscenesEnd">
+            <layout>Astronave.xml</layout>
+            <layout>Saturno.xml</layout>
+            <layout>Giove.xml</layout>
+            <layout>Marte.xml</layout>
+            <layout>Terra.xml</layout>
+            <layout>Sala Giochi.xml</layout>
+        </layout-folder>
+        <layout-folder name="Credits">
+            <layout>Credits1.xml</layout>
+            <layout>Credits2.xml</layout>
+        </layout-folder>
+        <layout>CutsceneIntro1.xml</layout>
+        <layout>CutsceneIntro2.xml</layout>
         <layout>Intro.xml</layout>
         <layout>CharacterSelection.xml</layout>
         <layout>Level1.xml</layout>
         <layout>Level1_Boss.xml</layout>
+        <layout>HistoryFinished.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="General">
             <event-sheet>Camera_EventSheet.xml</event-sheet>
+        </event-folder>
+        <event-folder name="CutscenesIntro">
+            <event-sheet>CutsceneIntro1_EventSheet.xml</event-sheet>
+            <event-sheet>CutsceneIntro2_EventSheet.xml</event-sheet>
+        </event-folder>
+        <event-folder name="CutscenesEnd">
+            <event-sheet>Astronave_EventSheet.xml</event-sheet>
+            <event-sheet>Saturno_EventSheet.xml</event-sheet>
+            <event-sheet>Giove_EventSheet.xml</event-sheet>
+            <event-sheet>Marte_EventSheet.xml</event-sheet>
+            <event-sheet>Terra_EventSheet.xml</event-sheet>
+            <event-sheet>Sala Giochi_EventSheet.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Credits">
+            <event-sheet>Credits1_EventSheet.xml</event-sheet>
+            <event-sheet>Credits2_EventSheet.xml</event-sheet>
         </event-folder>
         <event-sheet>_Global_EventSheet.xml</event-sheet>
         <event-sheet>_Player_EventSheet.xml</event-sheet>
@@ -3166,6 +4056,7 @@
         <event-sheet>GameMobMoves_EventSheet.xml</event-sheet>
         <event-sheet>GameBossMoves_EventSheet.xml</event-sheet>
         <event-sheet>Level1_EventSheet.xml</event-sheet>
+        <event-sheet>HistoryFinished_EventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
@@ -3230,6 +4121,16 @@
         <file name="vita bassa.ogg" />
     </sounds-folder>
     <music-folder>
+        <music-folder name="Cutscenes">
+            <file name="Bag_Raiders_-_Shooting_Stars_Meme_Song_only_.m4a" />
+            <file name="Bag_Raiders_-_Shooting_Stars_Meme_Song_only_.ogg" />
+        </music-folder>
+        <music-folder name="Credits">
+            <file name="Florence_The_Machine_-_Stand_By_Me.m4a" />
+            <file name="Florence_The_Machine_-_Stand_By_Me.ogg" />
+            <file name="Rick_Astley_-_Never_Gonna_Give_You_Up.m4a" />
+            <file name="Rick_Astley_-_Never_Gonna_Give_You_Up.ogg" />
+        </music-folder>
         <file name="Game.ogg" />
         <file name="Game.m4a" />
         <file name="intense suspense.m4a" />

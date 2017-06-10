@@ -17,7 +17,7 @@
             <actions>
                 <action id="0" name="Call function" sid="607797398396909" type="Function">
                     <param id="0" name="Name">&quot;SetDialogueText&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;intro-&quot; &amp; (GameTypeNumberOfPlayers = 1 ? &quot;S&quot; : &quot;M&quot;) &amp; &quot;-&quot; &amp; (GameTypeNumberOfPlayers = 1 ? Human_1_SelectedCharacter : min(Human_1_SelectedCharacter, Human_2_SelectedCharacter) &amp; max(Human_1_SelectedCharacter, Human_2_SelectedCharacter)){###}1</param>
+                    <param id="1" name="Parameter {n}">&quot;intro&quot;{###}1</param>
                 </action>
             </actions>
         </event-block>

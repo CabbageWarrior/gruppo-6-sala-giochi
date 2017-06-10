@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CutsceneIntro1_EventSheet</name>
+    <events>
+        <event-block sid="821573271435660">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="140133562532496" type="System" />
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="853732622391505" type="System">
+                    <param id="0" name="Scale">1.3</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="995639416789645" type="StreetFighterCutScenesIntro">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="368383590544392" type="DonkeyKongCutScenesIntro">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="508532967512868" type="PacManCutScenesIntro">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-5" name="Set width" sid="205467555540646" type="RaggioneIntro">
+                    <param id="0" name="Width">20</param>
+                </action>
+                <action id="-12" name="Set group active" sid="694876027211504" type="System">
+                    <param id="0" name="Group name">&quot;Allungazione&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="486002410380679" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-12" name="Set group active" sid="538681571714567" type="System">
+                    <param id="0" name="Group name">&quot;Allargazione&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="574618203612364" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="800746890636185" type="StreetFighterCutScenesIntro">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="783490295667199" type="StreetFighterCutScenesIntro">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="651784907675130" type="DonkeyKongCutScenesIntro">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="766978922709551" type="DonkeyKongCutScenesIntro">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="942296355470499" type="DonkeyKongCutScenesIntro">
+                    <param id="0" name="Speed">-10</param>
+                </action>
+                <action behavior="Rotate" id="1" name="Set acceleration" sid="631502578661171" type="DonkeyKongCutScenesIntro">
+                    <param id="0" name="Acceleration">10</param>
+                </action>
+                <action behavior="Rotate" id="1" name="Set acceleration" sid="365403743265584" type="PacManCutScenesIntro">
+                    <param id="0" name="Acceleration">15</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="362098191989271" type="PacManCutScenesIntro">
+                    <param id="0" name="Speed">15</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="755610065829976" type="PacManCutScenesIntro">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="768478757253376" type="PacManCutScenesIntro">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action id="-16" name="Wait" sid="147758471381337" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="743223168152350" type="System">
+                    <param id="0" name="Layout">&quot;CutsceneIntro2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="979913070004002" title="Allargazione">
+            <sub-events>
+                <event-block sid="477549191114328">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="761659840857247" type="System">
+                            <param id="0" name="Interval (seconds)">0.01</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="490965762037873" type="RaggioneIntro">
+                            <param id="0" name="Width">Self.Width+30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771654220602181">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="566001948767671" type="System">
+                            <param id="0" name="First value">RaggioneIntro.Width</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">1756</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="996330982293218" type="RaggioneIntro">
+                            <param id="0" name="Width">1756</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="163029328225148" title="Allungazione">
+            <sub-events>
+                <event-block sid="173423644405429">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="808663936843524" type="System">
+                            <param id="0" name="Interval (seconds)">0.01</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="716959664787730" type="RaggioneIntro">
+                            <param id="0" name="Height">Self.height+50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="655969234833186">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="775677490753607" type="System">
+                            <param id="0" name="First value">RaggioneIntro.height</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">4800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="409273459438455" type="RaggioneIntro">
+                            <param id="0" name="Height">4800</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

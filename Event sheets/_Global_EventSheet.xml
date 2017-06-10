@@ -21,6 +21,7 @@
         <variable constant="0" name="Team1Score" sid="708607705493034" static="0" type="number">0</variable>
         <variable constant="0" name="Team2Score" sid="581961243140851" static="0" type="number">0</variable>
         <variable comment="Number of players playing." constant="0" name="GameTypeNumberOfPlayers" sid="949260005840429" static="0" type="number">0</variable>
+        <variable comment="0: No; 1: Yes." constant="0" name="IsGameFinishedAlmostOnce" sid="881425131393377" static="0" type="number">0</variable>
         <event-block sid="310475909449286">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="693286711239400" type="System" />
@@ -123,12 +124,37 @@
                                     <param id="1" name="Y">1</param>
                                     <param id="2" name="Value">&quot;Sono l&apos;eroina che veste alla MOOHrinara e sono qui per amMOOHnirti!&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="510348954571498" type="CharactersArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">1</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="465365612414219">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="201421661540867" type="System">
+                                            <param id="0" name="Variable">IsGameFinishedAlmostOnce</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="823938145646151" type="CharactersArray">
+                                            <param id="0" name="X">3</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="778281709264442">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="415267798397797" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="244564260761549" type="CharactersArray">
+                                            <param id="0" name="X">3</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

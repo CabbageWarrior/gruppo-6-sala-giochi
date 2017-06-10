@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Terra_EventSheet</name>
+    <events>
+        <event-block sid="358736997968254">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="724181992263631" type="System" />
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="360403438343476" type="System">
+                    <param id="0" name="Scale">1.35</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="399031249311561" type="PacManCutScenes">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="543019724252232" type="PacManCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="781251284600591" type="StreetFighterCutScenes">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="767549704982841" type="StreetFighterCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="382786037703280" type="DonkeyKongCutScenes">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="540472596769238" type="DonkeyKongCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="146416097313645" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="258474327038533" type="System">
+                    <param id="0" name="Layout">&quot;Sala Giochi&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

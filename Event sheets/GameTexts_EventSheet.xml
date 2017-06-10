@@ -3,42 +3,43 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameTexts_EventSheet</name>
     <events>
+        <include>_Global_EventSheet</include>
         <comment>https://www.scirra.com/tutorials/807/how-to-read-an-xml-and-make-your-game-talk</comment>
         <variable constant="0" name="TextFlow_NumberOfLines" sid="361201202390775" static="0" type="number">1</variable>
         <variable constant="0" name="TextFlow_CurrentDialogNodeName" sid="595289729258120" static="0" type="text"></variable>
         <variable comment="0: No; 1: Yes." constant="0" name="XMLTextsLoaded" sid="568675283567065" static="0" type="number">0</variable>
-        <event-block sid="496754491272281">
+        <event-block sid="384721928099768">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="957477250009346" type="System" />
+                <condition id="-2" name="On start of layout" sid="959472556701085" type="System" />
             </conditions>
             <actions>
-                <action id="1" name="Request project file" sid="857613768242695" type="AJAX">
+                <action id="1" name="Request project file" sid="396764101304443" type="AJAX">
                     <param id="0" name="Tag">&quot;Dialogue&quot;</param>
                     <param id="1" name="File">Level1Dialogues.xml</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="790413470567462">
+        <event-block sid="884324277151174">
             <conditions>
-                <condition id="0" name="On completed" sid="657855628364479" type="AJAX">
+                <condition id="0" name="On completed" sid="284249824007906" type="AJAX">
                     <param id="0" name="Tag">&quot;Dialogue&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Load" sid="780848735208286" type="XML">
+                <action id="0" name="Load" sid="290337287469809" type="XML">
                     <param id="0" name="XML">AJAX.LastData</param>
                 </action>
-                <action id="-9" name="Set value" sid="799808819526347" type="System">
+                <action id="-9" name="Set value" sid="757171534236719" type="System">
                     <param id="0" name="Variable">XMLTextsLoaded</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="926042814461580" title="Dialogues Commands">
+        <event-group description="" sid="357485668384643" title="Dialogues Commands">
             <sub-events>
-                <event-block sid="920980282166871">
+                <event-block sid="154629979461111">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="729070680740466" type="System">
+                        <condition id="-14" name="Compare variable" sid="745099774429723" type="System">
                             <param id="0" name="Variable">CommandType</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
@@ -47,72 +48,72 @@
                     <actions />
                     <sub-events>
                         <comment>P1 Selection</comment>
-                        <event-block sid="237111348284634">
+                        <event-block sid="330341294366443">
                             <conditions>
-                                <condition id="6" name="On button pressed" sid="432834904748145" type="Gamepad">
+                                <condition id="6" name="On button pressed" sid="622244095031824" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Button">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Add to" sid="912055007962431" type="System">
+                                <action id="-10" name="Add to" sid="178853204161166" type="System">
                                     <param id="0" name="Variable">TextFlow_NumberOfLines</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="122718585555707" type="Function">
+                                <action id="0" name="Call function" sid="600993024724857" type="Function">
                                     <param id="0" name="Name">&quot;SetDialogueText&quot;</param>
                                     <param id="1" name="Parameter {n}">TextFlow_CurrentDialogNodeName{###}TextFlow_NumberOfLines{###}Human_1_SelectedCharacter</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="132804933823840">
+                        <event-block sid="697374560071342">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="528307926260976" type="Keyboard">
+                                <condition id="0" name="On key pressed" sid="473166412979519" type="Keyboard">
                                     <param id="0" name="Key">32 (Barra Spaziatrice)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Add to" sid="264054816465154" type="System">
+                                <action id="-10" name="Add to" sid="496956526924190" type="System">
                                     <param id="0" name="Variable">TextFlow_NumberOfLines</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="219455358970962" type="Function">
+                                <action id="0" name="Call function" sid="314768847006966" type="Function">
                                     <param id="0" name="Name">&quot;SetDialogueText&quot;</param>
                                     <param id="1" name="Parameter {n}">TextFlow_CurrentDialogNodeName{###}TextFlow_NumberOfLines{###}Human_1_SelectedCharacter</param>
                                 </action>
                             </actions>
                         </event-block>
                         <comment>P2 Selection</comment>
-                        <event-block sid="943815195793986">
+                        <event-block sid="282986991419596">
                             <conditions>
-                                <condition id="6" name="On button pressed" sid="326992750553793" type="Gamepad">
+                                <condition id="6" name="On button pressed" sid="190935856034034" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
                                     <param id="1" name="Button">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Add to" sid="105840335463389" type="System">
+                                <action id="-10" name="Add to" sid="246148705539701" type="System">
                                     <param id="0" name="Variable">TextFlow_NumberOfLines</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="310098019850570" type="Function">
+                                <action id="0" name="Call function" sid="840246628846173" type="Function">
                                     <param id="0" name="Name">&quot;SetDialogueText&quot;</param>
                                     <param id="1" name="Parameter {n}">TextFlow_CurrentDialogNodeName{###}TextFlow_NumberOfLines{###}Human_1_SelectedCharacter</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="339989110902968">
+                        <event-block sid="330915505758164">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="382692563838585" type="Keyboard">
+                                <condition id="0" name="On key pressed" sid="212872744027828" type="Keyboard">
                                     <param id="0" name="Key">13 (Return)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Add to" sid="150179445824519" type="System">
+                                <action id="-10" name="Add to" sid="622100094788512" type="System">
                                     <param id="0" name="Variable">TextFlow_NumberOfLines</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="972063991716072" type="Function">
+                                <action id="0" name="Call function" sid="295558370897199" type="Function">
                                     <param id="0" name="Name">&quot;SetDialogueText&quot;</param>
                                     <param id="1" name="Parameter {n}">TextFlow_CurrentDialogNodeName{###}TextFlow_NumberOfLines{###}Human_1_SelectedCharacter</param>
                                 </action>
@@ -122,150 +123,138 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="281952993026476" title="Dialogues Functions">
+        <event-group description="" sid="764926185106445" title="Dialogues Functions">
             <sub-events>
                 <comment>Creates the XPath query string.</comment>
                 <comment>Parameters: 0: Chapter Number; 1: Message Number.</comment>
-                <event-block sid="213838660814402">
+                <event-block sid="163237301711844">
                     <conditions>
-                        <condition id="0" name="On function" sid="260626676034722" type="Function">
+                        <condition id="0" name="On function" sid="528648672118843" type="Function">
                             <param id="0" name="Name">&quot;GetXPathQueryString&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set return value" sid="666509686430148" type="Function">
-                            <param id="0" name="Value">&quot;/texts/&quot; &amp; Function.Param(0) &amp; &quot;/hint[@seq=&apos;&quot; &amp; Function.Param(1) &amp; &quot;&apos;]&quot;</param>
+                        <action id="1" name="Set return value" sid="663385070549063" type="Function">
+                            <param id="0" name="Value">&quot;/texts/&quot; &amp; Function.Param(0) &amp; Function.Call(&quot;GetLabelPlayersParameter&quot;) &amp; &quot;/hint[@seq=&apos;&quot; &amp; Function.Param(1) &amp; &quot;&apos;]&quot;</param>
                         </action>
-                        <action id="0" name="Set text" sid="612316075669095" type="DebugText">
-                            <param id="0" name="Text">&quot;/texts/&quot; &amp; Function.Param(0) &amp; &quot;/hint[@seq=&apos;&quot; &amp; Function.Param(1) &amp; &quot;&apos;]&quot;</param>
+                    </actions>
+                </event-block>
+                <event-block sid="194520929188395">
+                    <conditions>
+                        <condition id="0" name="On function" sid="797899058413326" type="Function">
+                            <param id="0" name="Name">&quot;GetLabelPlayersParameter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="341481429343983" type="Function">
+                            <param id="0" name="Value">&quot;-&quot; &amp; (GameTypeNumberOfPlayers = 1 ? &quot;S&quot; : &quot;M&quot;) &amp; &quot;-&quot; &amp; (GameTypeNumberOfPlayers = 1 ? Human_1_SelectedCharacter : min(Human_1_SelectedCharacter, Human_2_SelectedCharacter) &amp; &quot;-&quot; &amp; max(Human_1_SelectedCharacter, Human_2_SelectedCharacter))</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Sets the dialogue box with the correct informations.</comment>
                 <comment>Parameters: 0: Chapter Number; 1: Message Number.</comment>
                 <comment>ToDo: ADD CHARACTER IMAGES!</comment>
-                <event-block sid="163161157605998">
+                <event-block sid="985944122373815">
                     <conditions>
-                        <condition id="0" name="On function" sid="262716577196226" type="Function">
+                        <condition id="0" name="On function" sid="119970951018238" type="Function">
                             <param id="0" name="Name">&quot;SetDialogueText&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="913315914931169">
+                        <event-block sid="667469184955333">
                             <conditions>
-                                <condition id="-23" name="While" sid="429539707369550" type="System" />
-                                <condition id="-14" name="Compare variable" sid="775855247178470" type="System">
-                                    <param id="0" name="Variable">XMLTextsLoaded</param>
+                                <condition id="-8" name="Compare two values" sid="917740503565152" type="System">
+                                    <param id="0" name="First value">XML.NodeCount(Function.Call(&quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1)))</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                    <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="517187799570171" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
+                                <action id="-15" name="Set visible" sid="229783707842213" type="DialogueBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="684177192158341" type="DialogueText">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="451494808709914" type="DialogueDisplayName">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="736217959212968" type="System">
+                                    <param id="0" name="Variable">TextFlow_NumberOfLines</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="588151993992768" type="System">
+                                    <param id="0" name="Variable">TextFlow_CurrentDialogNodeName</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="559621875168571" type="System">
+                                    <param id="0" name="Variable">CommandType</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="562271275012166" type="System">
+                                    <param id="0" name="Time scale">1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="630152059876641">
-                            <conditions />
-                            <actions />
                             <sub-events>
-                                <event-block sid="371443153911405">
+                                <event-block sid="136256957327628">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="180091618419412" type="System">
-                                            <param id="0" name="First value">XML.NodeCount(Function.Call(&quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1), Function.Param(2)))</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">0</param>
+                                        <condition id="-16" name="Is on layer" sid="244962422997814" type="GamePadComponent">
+                                            <param id="0" name="Layer">&quot;StaticHUDTexts&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="735810877467598" type="DialogueBox">
+                                        <action id="-15" name="Set visible" sid="701322243482747" type="GamePadComponent">
                                             <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="852699281948239" type="DialogueText">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="809520591504888" type="DialogueDisplayName">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="747657777406762" type="System">
-                                            <param id="0" name="Variable">TextFlow_NumberOfLines</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="530504616686687" type="System">
-                                            <param id="0" name="Variable">TextFlow_CurrentDialogNodeName</param>
-                                            <param id="1" name="Value">&quot;&quot;</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="952129939384620" type="System">
-                                            <param id="0" name="Variable">CommandType</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-13" name="Set time scale" sid="374709819608935" type="System">
-                                            <param id="0" name="Time scale">1</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="538895080400688">
-                                            <conditions>
-                                                <condition id="-16" name="Is on layer" sid="965826223140783" type="GamePadComponent">
-                                                    <param id="0" name="Layer">&quot;StaticHUDTexts&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="126875676453188" type="GamePadComponent">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
-                                <event-block sid="607284446346573">
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="127186956905203">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="186536657164928" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="245745408214297" type="System">
+                                    <param id="0" name="Variable">CommandType</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="117696185421895" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="195530777594486" type="System">
+                                    <param id="0" name="Variable">TextFlow_CurrentDialogNodeName</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="552373193510545" type="DialogueBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="821489912174059" type="DialogueText">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="633801790771051" type="DialogueDisplayName">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="911539011528261" type="DialogueDisplayName">
+                                    <param id="0" name="Text">CharactersArray.At(xml.NumberValue( Function.Call( &quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1) ) &amp; &quot;/@charnum&quot;) - 1, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="545947333792440" type="DialogueText">
+                                    <param id="0" name="Text">xml.StringValue( Function.Call( &quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1) ) &amp; &quot;/text()&quot;)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="525262450010397">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="898897244845382" type="System" />
+                                        <condition id="-16" name="Is on layer" sid="493478527602222" type="GamePadComponent">
+                                            <param id="0" name="Layer">&quot;StaticHUDTexts&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="615042985478668" type="System">
-                                            <param id="0" name="Variable">CommandType</param>
-                                            <param id="1" name="Value">5</param>
-                                        </action>
-                                        <action id="-13" name="Set time scale" sid="816007156959786" type="System">
-                                            <param id="0" name="Time scale">0</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="529344127709991" type="System">
-                                            <param id="0" name="Variable">TextFlow_CurrentDialogNodeName</param>
-                                            <param id="1" name="Value">Function.Param(0)</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="508814003147702" type="DialogueBox">
+                                        <action id="-15" name="Set visible" sid="133014034893963" type="GamePadComponent">
                                             <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="576799129847872" type="DialogueText">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="448877236531500" type="DialogueDisplayName">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="702491941023746" type="DialogueDisplayName">
-                                            <param id="0" name="Text">CharactersArray.At(xml.NumberValue( Function.Call( &quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1) ) &amp; &quot;/@charnum&quot;) - 1, 0)</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="369473678805578" type="DialogueText">
-                                            <param id="0" name="Text">xml.StringValue( Function.Call( &quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1) ) &amp; &quot;/text()&quot;)</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="361295336050767">
-                                            <conditions>
-                                                <condition id="-16" name="Is on layer" sid="649434215253290" type="GamePadComponent">
-                                                    <param id="0" name="Layer">&quot;StaticHUDTexts&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="631329283220503" type="GamePadComponent">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

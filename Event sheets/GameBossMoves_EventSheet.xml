@@ -1291,6 +1291,12 @@
             <actions>
                 <action id="-9" name="Destroy" sid="891571441409301" type="BossRobotte" />
                 <action id="-9" name="Destroy" sid="978346505774465" type="BossRobotteName" />
+                <action id="-16" name="Wait" sid="538012205975197" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="784090411530706" type="System">
+                    <param id="0" name="Layout">Astronave</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="816047656961091">
@@ -1302,6 +1308,12 @@
             <actions>
                 <action id="-9" name="Destroy" sid="381724437181478" type="BossRobotte" />
                 <action id="-9" name="Destroy" sid="950887569226358" type="BossRobotteName" />
+                <action id="-16" name="Wait" sid="232935309591844" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="797319895769871" type="System">
+                    <param id="0" name="Layout">Astronave</param>
+                </action>
             </actions>
         </event-block>
     </events>

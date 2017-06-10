@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Astronave_EventSheet</name>
+    <events>
+        <event-block sid="992162429193179">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="972797069501733" type="System" />
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="839169333114632" type="System">
+                    <param id="0" name="Scale">1.35</param>
+                </action>
+                <action id="0" name="Play" sid="862337029875478" type="Audio">
+                    <param id="0" name="Audio file">Bag_Raiders_-_Shooting_Stars_Meme_Song_only_</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="511344810921369" type="System">
+                    <param id="0" name="Seconds">23.5</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="627458409602133" type="DonkeyKongCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="588492664796627" type="PacManCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="619441121330416" type="StreetFighterCutScenes">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="935005336541412" type="System">
+                    <param id="0" name="Seconds">6.5</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="578700191476021" type="System">
+                    <param id="0" name="Layout">&quot;Saturno&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="645036198406266">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="906632930972073" type="ThanksForPlayingText" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="828665448885896" type="Function">
+                    <param id="0" name="Name">&quot;ShowNextFinishText&quot;</param>
+                    <param id="1" name="Parameter {n}">ThanksForPlayingText.TextSeqNumber</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Parameters: 0: Actual number.</comment>
+        <event-block sid="366850772912623">
+            <conditions>
+                <condition id="0" name="On function" sid="132619902048809" type="Function">
+                    <param id="0" name="Name">&quot;ShowNextFinishText&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="968810796801081" type="ThanksForPlayingText">
+                    <param id="0" name="Instance variable">TextSeqNumber</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Function.Param(0) + 1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="969430581189924" type="ThanksForPlayingText">
+                    <param id="0" name="X">1250</param>
+                    <param id="1" name="Y">750</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="138195163103430" type="ThanksForPlayingText" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
