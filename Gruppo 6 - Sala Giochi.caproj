@@ -738,124 +738,346 @@
                         <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="927194393049460" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="129589328750103" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="878683397608147" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="18" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="808819683487892" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="2" loop="0" name="Stun" pingpong="0" repeatcount="1" repeatto="0" sid="450038830420081" speed="4">
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.9375" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="8" loop="0" name="Special" pingpong="1" repeatcount="1" repeatto="0" sid="153043592851473" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.833333" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.833333" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.833333" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.833333" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.833333" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.833333" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.833333" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <image-point name="AttackPoint" x="0.833333" y="1" />
+                                <collision-poly>
+                                    <point x="0.078125" y="0.6875" />
+                                    <point x="0.921875" y="0.6875" />
+                                    <point x="0.921875" y="1" />
+                                    <point x="0.078125" y="1" />
+                                </collision-poly>
                             </frame>
                         </animation>
                     </animation-folder>
@@ -1228,7 +1450,7 @@
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="RobotteHp" sid="233066080558134" type="number" />
-                        <instance-variable name="RobotteAttack" sid="807643532000406" type="number" />
+                        <instance-variable name="RobotteMeleeAttack" sid="807643532000406" type="number" />
                         <instance-variable name="MeleeTimer" sid="871364535049264" type="number" />
                         <instance-variable name="RangedTimer" sid="125339204987280" type="number" />
                         <instance-variable name="AimTimer" sid="360961023212471" type="number" />
@@ -1237,6 +1459,9 @@
                         <instance-variable name="PlayerY" sid="456339149384670" type="number" />
                         <instance-variable name="RangedAimTimer" sid="544778030286261" type="number" />
                         <instance-variable name="Spit" sid="982671847074698" type="boolean" />
+                        <instance-variable name="MeleeHit" sid="765763815108880" type="boolean" />
+                        <instance-variable name="RobotteWaveAttack" sid="586892961135616" type="number" />
+                        <instance-variable name="RobotteRangedAttack" sid="663832493989364" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="DestroyOutsideLayout" sid="222658747414228">
@@ -1480,34 +1705,34 @@
                         <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490815528344812" speed="5">
                             <frame duration="1" hotspotX="1.78125" hotspotY="0.9">
                                 <collision-poly>
-                                    <point x="0.15625" y="0.82" />
-                                    <point x="0.8125" y="0.82" />
-                                    <point x="0.8125" y="0.98" />
-                                    <point x="0.15625" y="0.98" />
+                                    <point x="0.3125" y="0.76" />
+                                    <point x="0.8125" y="0.76" />
+                                    <point x="0.8125" y="1" />
+                                    <point x="0.3125" y="1" />
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="1.78125" hotspotY="0.9">
                                 <collision-poly>
-                                    <point x="0.15625" y="0.82" />
-                                    <point x="0.8125" y="0.82" />
-                                    <point x="0.8125" y="0.98" />
-                                    <point x="0.15625" y="0.98" />
+                                    <point x="0.3125" y="0.76" />
+                                    <point x="0.8125" y="0.76" />
+                                    <point x="0.8125" y="1" />
+                                    <point x="0.3125" y="1" />
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="1.78125" hotspotY="0.9">
                                 <collision-poly>
-                                    <point x="0.15625" y="0.82" />
-                                    <point x="0.8125" y="0.82" />
-                                    <point x="0.8125" y="0.98" />
-                                    <point x="0.15625" y="0.98" />
+                                    <point x="0.3125" y="0.76" />
+                                    <point x="0.8125" y="0.76" />
+                                    <point x="0.8125" y="1" />
+                                    <point x="0.3125" y="1" />
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="1.78125" hotspotY="0.9">
                                 <collision-poly>
-                                    <point x="0.15625" y="0.82" />
-                                    <point x="0.8125" y="0.82" />
-                                    <point x="0.8125" y="0.98" />
-                                    <point x="0.15625" y="0.98" />
+                                    <point x="0.3125" y="0.76" />
+                                    <point x="0.8125" y="0.76" />
+                                    <point x="0.8125" y="1" />
+                                    <point x="0.3125" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1568,6 +1793,42 @@
                                     <point x="0.625" y="0.7" />
                                     <point x="0.625" y="0.9" />
                                     <point x="0.25" y="0.9" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Splash" sid="745133676680505">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="739630819903695">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="189042889617629" speed="5">
+                            <frame duration="1" hotspotX="1.78125" hotspotY="0.9" original-source="C:\Users\Alex\Desktop\MOB ALIENI GRASSI E BRUTTI\Splash1.png">
+                                <collision-poly>
+                                    <point x="0.34375" y="0.22" />
+                                    <point x="0.5" y="0.16" />
+                                    <point x="0.75" y="0.16" />
+                                    <point x="0.5" y="0.3" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="1.78125" hotspotY="0.9" original-source="C:\Users\Alex\Desktop\MOB ALIENI GRASSI E BRUTTI\Splash2.png">
+                                <collision-poly>
+                                    <point x="0.34375" y="0.22" />
+                                    <point x="0.5" y="0.14" />
+                                    <point x="0.53125" y="0.3" />
+                                    <point x="0.5" y="0.34" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="1.78125" hotspotY="0.9" original-source="C:\Users\Alex\Desktop\MOB ALIENI GRASSI E BRUTTI\splash3.png">
+                                <collision-poly>
+                                    <point x="0.375" y="0.24" />
+                                    <point x="0.5" y="0.1" />
+                                    <point x="0.46875" y="0.34" />
+                                    <point x="0.5" y="0.4" />
                                 </collision-poly>
                             </frame>
                         </animation>

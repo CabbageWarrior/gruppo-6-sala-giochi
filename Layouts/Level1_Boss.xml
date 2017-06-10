@@ -49,6 +49,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Splash" uid="110">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3148</x>
+                        <y>20</y>
+                        <z>0</z>
+                        <width>237</width>
+                        <height>417</height>
+                        <depth>0</depth>
+                        <hotspotX>1.78125</hotspotX>
+                        <hotspotY>0.899999976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -360,10 +385,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2019</x>
+                        <x>1993.5</x>
                         <y>-554</y>
                         <z>0</z>
-                        <width>283</width>
+                        <width>334</width>
                         <height>258</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -880,15 +905,18 @@
                     </properties>
                     <instance-variables>
                         <RobotteHp>30</RobotteHp>
-                        <RobotteAttack>7</RobotteAttack>
+                        <RobotteMeleeAttack>7</RobotteMeleeAttack>
                         <MeleeTimer>0</MeleeTimer>
-                        <RangedTimer>6</RangedTimer>
+                        <RangedTimer>4</RangedTimer>
                         <AimTimer>2</AimTimer>
                         <Movement>3</Movement>
                         <PlayerX>0</PlayerX>
                         <PlayerY>0</PlayerY>
                         <RangedAimTimer>2</RangedAimTimer>
                         <Spit>false</Spit>
+                        <MeleeHit>false</MeleeHit>
+                        <RobotteWaveAttack>14</RobotteWaveAttack>
+                        <RobotteRangedAttack>10</RobotteRangedAttack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
