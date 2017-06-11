@@ -936,7 +936,7 @@
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
-                        <Special_DMG>0</Special_DMG>
+                        <Special_DMG>7</Special_DMG>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -973,7 +973,7 @@
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
                         <PlayerHP_Max>50</PlayerHP_Max>
-                        <Special_Max>130</Special_Max>
+                        <Special_Max>45</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
@@ -984,6 +984,7 @@
                         <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Timer" />
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Timer2" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2251,14 +2252,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>341</x>
-                        <y>-511</y>
+                        <x>1595</x>
+                        <y>-715</y>
                         <z>0</z>
                         <width>172</width>
-                        <height>273</height>
+                        <height>341.25</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotY>0.899999976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2290,10 +2291,10 @@
                         <y>-696</y>
                         <z>0</z>
                         <width>201</width>
-                        <height>291.25</height>
+                        <height>466</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotY>0.8125</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
