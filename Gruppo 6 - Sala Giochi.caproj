@@ -4574,6 +4574,108 @@
         <object-type name="WelcomePressStartText" sid="646933313945993">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Hadouken" sid="875077469455315">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="925505413223815">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="980381937018933">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128044352491573" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.4" />
+                            <point x="1" y="0.4" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.4" />
+                            <point x="1" y="0.4" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.4" />
+                            <point x="1" y="0.4" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.4" />
+                            <point x="1" y="0.4" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.4" />
+                            <point x="1" y="0.4" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Dk_Barile" sid="273031973865504">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="970066318323165">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="323321239354236">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="475598134655229" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.1" />
+                            <point x="1" y="0.1" />
+                            <point x="1" y="0.9" />
+                            <point x="0" y="0.9" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.1" />
+                            <point x="1" y="0.1" />
+                            <point x="1" y="0.9" />
+                            <point x="0" y="0.9" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.1" />
+                            <point x="1" y="0.1" />
+                            <point x="1" y="0.9" />
+                            <point x="0" y="0.9" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.1" />
+                            <point x="1" y="0.1" />
+                            <point x="1" y="0.9" />
+                            <point x="0" y="0.9" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -4646,6 +4748,7 @@
                 <instance-variable name="PlayerHitsCount_Max" sid="752156120970867" type="number" />
                 <instance-variable comment="Used during Attack animation." name="HasHitSomeone" sid="381723361535470" type="boolean" />
                 <instance-variable name="IsStunned" sid="179504234957214" type="boolean" />
+                <instance-variable name="Special_DMG" sid="314520458969301" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="PinToCollider" sid="309520120978813">
@@ -4732,6 +4835,16 @@
         </family>
     </families>
     <layout-folder>
+        <layout-folder name="GameFlow">
+            <layout>WelcomePage.xml</layout>
+            <layout>CutsceneIntro1.xml</layout>
+            <layout>CutsceneIntro2.xml</layout>
+            <layout>Intro.xml</layout>
+            <layout>CharacterSelection.xml</layout>
+            <layout>Level1.xml</layout>
+            <layout>Level1_Boss.xml</layout>
+            <layout>HistoryFinished.xml</layout>
+        </layout-folder>
         <layout-folder name="CutscenesEnd">
             <layout>Astronave.xml</layout>
             <layout>Saturno.xml</layout>
@@ -4744,14 +4857,6 @@
             <layout>Credits1.xml</layout>
             <layout>Credits2.xml</layout>
         </layout-folder>
-        <layout>WelcomePage.xml</layout>
-        <layout>CutsceneIntro1.xml</layout>
-        <layout>CutsceneIntro2.xml</layout>
-        <layout>Intro.xml</layout>
-        <layout>CharacterSelection.xml</layout>
-        <layout>Level1.xml</layout>
-        <layout>Level1_Boss.xml</layout>
-        <layout>HistoryFinished.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="_General">

@@ -819,15 +819,16 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>1</PlayerNumber>
-                        <PlayerHP>75</PlayerHP>
+                        <PlayerHP>50</PlayerHP>
                         <PlayerDMG>1</PlayerDMG>
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
-                        <PlayerHP_Max>75</PlayerHP_Max>
+                        <PlayerHP_Max>50</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
+                        <Special_DMG>2</Special_DMG>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -885,15 +886,16 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>2</PlayerNumber>
-                        <PlayerHP>75</PlayerHP>
+                        <PlayerHP>50</PlayerHP>
                         <PlayerDMG>1</PlayerDMG>
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
-                        <PlayerHP_Max>75</PlayerHP_Max>
-                        <Special_Max>130</Special_Max>
+                        <PlayerHP_Max>50</PlayerHP_Max>
+                        <Special_Max>45</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
+                        <Special_DMG>5</Special_DMG>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -925,15 +927,16 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>3</PlayerNumber>
-                        <PlayerHP>75</PlayerHP>
+                        <PlayerHP>50</PlayerHP>
                         <PlayerDMG>1</PlayerDMG>
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
-                        <PlayerHP_Max>75</PlayerHP_Max>
+                        <PlayerHP_Max>50</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
+                        <Special_DMG>0</Special_DMG>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -965,15 +968,16 @@
                     </properties>
                     <instance-variables>
                         <PlayerNumber>3</PlayerNumber>
-                        <PlayerHP>75</PlayerHP>
+                        <PlayerHP>50</PlayerHP>
                         <PlayerDMG>1</PlayerDMG>
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
-                        <PlayerHP_Max>75</PlayerHP_Max>
+                        <PlayerHP_Max>50</PlayerHP_Max>
                         <Special_Max>130</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
+                        <Special_DMG>2</Special_DMG>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -2222,6 +2226,76 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="Hadouken" uid="324">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>341</x>
+                        <y>-511</y>
+                        <z>0</z>
+                        <width>172</width>
+                        <height>273</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Dk_Barile" uid="325">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1919</x>
+                        <y>-696</y>
+                        <z>0</z>
+                        <width>201</width>
+                        <height>291.25</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
