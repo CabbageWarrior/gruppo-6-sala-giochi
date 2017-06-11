@@ -180,6 +180,9 @@
                                 <action id="-15" name="Set visible" sid="451494808709914" type="DialogueDisplayName">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="124995356253338" type="DialogueImage">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="736217959212968" type="System">
                                     <param id="0" name="Variable">TextFlow_NumberOfLines</param>
                                     <param id="1" name="Value">1</param>
@@ -236,14 +239,35 @@
                                 <action id="-15" name="Set visible" sid="633801790771051" type="DialogueDisplayName">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="797314515680637" type="DialogueImage">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                                 <action id="0" name="Set text" sid="911539011528261" type="DialogueDisplayName">
                                     <param id="0" name="Text">CharactersArray.At(xml.NumberValue( Function.Call( &quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1) ) &amp; &quot;/@charnum&quot;) - 1, 0)</param>
                                 </action>
                                 <action id="0" name="Set text" sid="545947333792440" type="DialogueText">
                                     <param id="0" name="Text">xml.StringValue( Function.Call( &quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1) ) &amp; &quot;/text()&quot;)</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="465261312591373" type="DialogueImage">
+                                    <param id="0" name="Animation">xml.NumberValue( Function.Call( &quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1) ) &amp; &quot;/@charnum&quot;) &amp; xml.StringValue( Function.Call( &quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1) ) &amp; &quot;/@mood&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                             </actions>
                             <sub-events>
+                                <event-block sid="201091453148302">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="495927939301495" type="System">
+                                            <param id="0" name="First value">xml.NumberValue( Function.Call( &quot;GetXPathQueryString&quot;, Function.Param(0), Function.Param(1) ) &amp; &quot;/@charnum&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="482380734732117" type="DialogueDisplayName">
+                                            <param id="0" name="Text">&quot;Robotte&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="525262450010397">
                                     <conditions>
                                         <condition id="-16" name="Is on layer" sid="493478527602222" type="GamePadComponent">

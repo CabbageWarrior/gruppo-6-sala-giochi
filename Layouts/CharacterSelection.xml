@@ -106,7 +106,7 @@
                     <effect-instances>
                         <effect-instance type="HexagonalPixellate">
                             <parameters>
-                                <scale>160</scale>
+                                <scale>10</scale>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -141,7 +141,7 @@
                     <effect-instances>
                         <effect-instance type="HexagonalPixellate">
                             <parameters>
-                                <scale>160</scale>
+                                <scale>10</scale>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -176,7 +176,7 @@
                     <effect-instances>
                         <effect-instance type="HexagonalPixellate">
                             <parameters>
-                                <scale>160</scale>
+                                <scale>10</scale>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -714,7 +714,7 @@
                     <effect-instances>
                         <effect-instance type="HexagonalPixellate">
                             <parameters>
-                                <scale>160</scale>
+                                <scale>10</scale>
                             </parameters>
                         </effect-instance>
                     </effect-instances>

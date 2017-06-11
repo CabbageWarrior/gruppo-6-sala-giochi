@@ -1173,6 +1173,10 @@
                                     <param id="0" name="Animation">&quot;Death&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="295554724463758" type="ArcadeAlieno">
+                                    <param id="0" name="Instance variable">WaveNumber</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="399179178386563">

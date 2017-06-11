@@ -391,7 +391,7 @@
                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                     <param id="2" name="Image point">&quot;Origin&quot;</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="280150000966504" type="ArcadePlayerCollider">
+                                <action id="-10" name="Set value" sid="209478674151497" type="ArcadeCabinato_AttackCollider">
                                     <param id="0" name="Instance variable">PlayerNumber</param>
                                     <param id="1" name="Value">ArcadePlayerCollider.PlayerNumber</param>
                                 </action>

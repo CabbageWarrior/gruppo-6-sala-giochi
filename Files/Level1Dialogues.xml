@@ -79,9 +79,9 @@
 	<lab-S-3>
 		<hint seq='1' charnum='3' mood='normal'>Waka waka waka? Waka waka waka. (Cosa sta succedendo qui? Sarà meglio muoversi, sto perdendo l'appetito.)</hint>
 	</lab-S-3>
-	<lab-S-3>
+	<lab-S-4>
 		<hint seq='1' charnum='4' mood='normal'>Oddio... Sangue... L'oscurità domina questo posto... La luce lunare la sconfiggerà!</hint>
-	</lab-S-3>
+	</lab-S-4>
 	
 	<lab-M-1-2>
 		<hint seq='1' charnum='1' mood='normal'>Ma da dove ploviene tutto questo sangue?</hint>

@@ -2,7 +2,7 @@
 <c2layout>
     <name>Level1_Boss</name>
     <sid>543016688396679</sid>
-    <event-sheet>Game_EventSheet</event-sheet>
+    <event-sheet>Level1_Boss_EventSheet</event-sheet>
     <size>
         <width>2500</width>
         <height>1500</height>
@@ -62,8 +62,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3148</x>
-                        <y>20</y>
+                        <x>1750</x>
+                        <y>-625</y>
                         <z>0</z>
                         <width>237</width>
                         <height>417</height>
@@ -473,8 +473,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-204</x>
-                        <y>514</y>
+                        <x>449</x>
+                        <y>1408</y>
                         <z>0</z>
                         <width>200</width>
                         <height>250</height>
@@ -520,8 +520,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>500</x>
-                        <y>1125</y>
+                        <x>247</x>
+                        <y>1092</y>
                         <z>0</z>
                         <width>200</width>
                         <height>250</height>
@@ -601,210 +601,6 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-125</x>
-                        <y>-125</y>
-                        <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="AlienYellow" uid="77">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Allert>false</Allert>
-                        <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <CurrentX>0</CurrentX>
-                        <Direction>-1</Direction>
-                        <Speed>5</Speed>
-                        <PlayerNumberTarget>0</PlayerNumberTarget>
-                        <AlienHP>2</AlienHP>
-                        <AlienAttack>5</AlienAttack>
-                        <CanAttack>true</CanAttack>
-                        <IsStunned>false</IsStunned>
-                        <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
-                        <Type>2</Type>
-                        <AttackTimer>0</AttackTimer>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>800</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>200</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="DeathFade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>10</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>875</x>
-                        <y>-125</y>
-                        <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="AlienBlue" uid="80">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Allert>false</Allert>
-                        <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <CurrentX>0</CurrentX>
-                        <Direction>-1</Direction>
-                        <Speed>5</Speed>
-                        <PlayerNumberTarget>0</PlayerNumberTarget>
-                        <AlienHP>3</AlienHP>
-                        <AlienAttack>2</AlienAttack>
-                        <CanAttack>true</CanAttack>
-                        <IsStunned>false</IsStunned>
-                        <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
-                        <Type>1</Type>
-                        <AttackTimer>0</AttackTimer>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>800</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>200</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="DeathFade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>10</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1125</x>
-                        <y>-125</y>
-                        <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="AlienRed" uid="81">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Allert>false</Allert>
-                        <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <CurrentX>0</CurrentX>
-                        <Direction>-1</Direction>
-                        <Speed>5</Speed>
-                        <PlayerNumberTarget>0</PlayerNumberTarget>
-                        <AlienHP>5</AlienHP>
-                        <AlienAttack>3</AlienAttack>
-                        <CanAttack>true</CanAttack>
-                        <IsStunned>false</IsStunned>
-                        <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
-                        <Type>1</Type>
-                        <AttackTimer>0</AttackTimer>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>800</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>200</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="DeathFade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>10</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1375</x>
                         <y>-125</y>
                         <z>0</z>
                         <width>250</width>
@@ -904,6 +700,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <RobotteHP_Max>30</RobotteHP_Max>
                         <RobotteHp>30</RobotteHp>
                         <RobotteMeleeAttack>7</RobotteMeleeAttack>
                         <MeleeTimer>0</MeleeTimer>
@@ -970,8 +767,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1778</x>
-                        <y>-166</y>
+                        <x>1750</x>
+                        <y>-250</y>
                         <z>0</z>
                         <width>237</width>
                         <height>425</height>
@@ -1119,8 +916,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-125</x>
-                        <y>-750</y>
+                        <x>-215</x>
+                        <y>-687</y>
                         <z>0</z>
                         <width>1000</width>
                         <height>250</height>
@@ -1526,6 +1323,80 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Robotte_LifeBarContainer" uid="81">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1359</x>
+                        <y>307</y>
+                        <z>0</z>
+                        <width>2000</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterDetailTitle" uid="318">
+                    <properties>
+                        <text>Robotte</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-48,400,0</font>
+                        <color>204,51,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <PlayerNumber>0</PlayerNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>63</x>
+                        <y>297</y>
+                        <z>0</z>
+                        <width>625</width>
+                        <height>84</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Robotte_LifeBar" uid="319">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>369.372497559</x>
+                        <y>307</y>
+                        <z>0</z>
+                        <width>1980</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1545,7 +1416,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DialogueBox" uid="123">
+                <instance type="DialogueBox" uid="12">
                     <properties>
                         <left-margin>40</left-margin>
                         <right-margin>40</right-margin>
@@ -1553,15 +1424,15 @@
                         <bottom-margin>40</bottom-margin>
                         <edges>Stretch</edges>
                         <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>452</x>
-                        <y>1681</y>
+                        <x>500</x>
+                        <y>1000</y>
                         <z>0</z>
                         <width>1500</width>
                         <height>500</height>
@@ -1571,63 +1442,63 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DialogueText" uid="124">
+                <instance type="DialogueText" uid="90">
                     <properties>
                         <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
+                        <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>989</x>
-                        <y>1783</y>
+                        <x>1375</x>
+                        <y>1250</y>
                         <z>0</z>
                         <width>875</width>
                         <height>250</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DialogueDisplayName" uid="126">
+                <instance type="DialogueDisplayName" uid="92">
                     <properties>
                         <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
+                        <hotspot>Top</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>875</x>
+                        <x>1375</x>
                         <y>1000</y>
                         <z>0</z>
-                        <width>1125</width>
+                        <width>875</width>
                         <height>125</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GamePadComponent" uid="127">
+                <instance type="GamePadComponent" uid="94">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1638,11 +1509,33 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2060</x>
-                        <y>2213</y>
+                        <x>1875</x>
+                        <y>1375</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DialogueImage" uid="95">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>750</x>
+                        <y>1250</y>
+                        <z>0</z>
+                        <width>306.186218262</width>
+                        <height>306.186218262</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1904,6 +1797,119 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GamePadComponent" uid="77">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2050</x>
+                        <y>1425</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MenuTutorialText" uid="80">
+                    <properties>
+                        <text>Riprendi</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-37,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2125</x>
+                        <y>1375</y>
+                        <z>0</z>
+                        <width>325</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="StaticHUDFader" sid="363469508329467">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="LevelFader" uid="317">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LevelStart_Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LevelEnd_Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1250</x>
+                        <y>875</y>
+                        <z>0</z>
+                        <width>2500</width>
+                        <height>1250</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

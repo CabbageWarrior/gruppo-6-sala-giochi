@@ -243,7 +243,7 @@
                     <conditions />
                     <actions>
                         <action id="-16" name="Wait" sid="158081597427367" type="System">
-                            <param id="0" name="Seconds">5</param>
+                            <param id="0" name="Seconds">1.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="308066011922118" type="System">
                             <param id="0" name="Layout">Level1</param>
@@ -253,7 +253,7 @@
             </sub-events>
         </event-block>
         <comment>Reset animations when selected.</comment>
-        <event-block sid="197133598881137">
+        <event-block disabled="1" sid="197133598881137">
             <conditions>
                 <condition id="4" name="On finished" sid="252405963435414" type="CharacterDetailImage">
                     <param id="0" name="Animation">&quot;P1Selected&quot;</param>
@@ -266,7 +266,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="454074347435751">
+        <event-block disabled="1" sid="454074347435751">
             <conditions>
                 <condition id="4" name="On finished" sid="947846634447497" type="CharacterDetailImage">
                     <param id="0" name="Animation">&quot;P2Selected&quot;</param>
@@ -279,7 +279,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="641279297040498">
+        <event-block disabled="1" sid="641279297040498">
             <conditions>
                 <condition id="4" name="On finished" sid="232431959434664" type="CharacterDetailImage">
                     <param id="0" name="Animation">&quot;P3Selected&quot;</param>
@@ -292,7 +292,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="643838718707668">
+        <event-block disabled="1" sid="643838718707668">
             <conditions>
                 <condition id="4" name="On finished" sid="325137486094818" type="CharacterDetailImage">
                     <param id="0" name="Animation">&quot;P4Selected&quot;</param>

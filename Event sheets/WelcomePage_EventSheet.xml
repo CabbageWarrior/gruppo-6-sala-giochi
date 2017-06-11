@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>WelcomePage_EventSheet</name>
+    <events>
+        <include>_Global_EventSheet</include>
+        <event-block sid="435225002214086">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="394604631279281" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="160975808308960" type="WelcomeBackground">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action behavior="LevelEnd_Fade" id="1" name="Start fade" sid="561550985112678" type="LevelFader" />
+            </actions>
+        </event-block>
+        <event-block sid="908024865303751">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="570477232790228" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="810705060562790" type="WelcomeBackground">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action behavior="LevelEnd_Fade" id="1" name="Start fade" sid="584369818386168" type="LevelFader" />
+            </actions>
+        </event-block>
+        <event-block sid="667370576978776">
+            <conditions>
+                <condition behavior="LevelEnd_Fade" id="1" name="On fade-in finished" sid="308783529036616" type="LevelFader" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="237331569403679" type="System">
+                    <param id="0" name="Layout">CutsceneIntro1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

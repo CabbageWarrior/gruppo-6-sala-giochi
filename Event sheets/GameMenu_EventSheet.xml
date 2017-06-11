@@ -730,6 +730,9 @@
                                                 <condition id="-11" name="For Each" sid="940769050207138" type="System">
                                                     <param id="0" name="Object">GamePadComponent</param>
                                                 </condition>
+                                                <condition id="-16" name="Is on layer" sid="776758461425344" type="GamePadComponent">
+                                                    <param id="0" name="Layer">&quot;StaticHUDPause&quot;</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-15" name="Set visible" sid="621716322394396" type="GamePadComponent">
@@ -854,6 +857,9 @@
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="267029785579897" type="System">
                                             <param id="0" name="Object">GamePadComponent</param>
+                                        </condition>
+                                        <condition id="-16" name="Is on layer" sid="635660219869699" type="GamePadComponent">
+                                            <param id="0" name="Layer">&quot;StaticHUDPause&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
