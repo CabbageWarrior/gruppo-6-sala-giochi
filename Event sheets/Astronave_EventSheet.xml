@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Astronave_EventSheet</name>
     <events>
+        <include>_Global_EventSheet</include>
         <event-block sid="992162429193179">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="972797069501733" type="System" />

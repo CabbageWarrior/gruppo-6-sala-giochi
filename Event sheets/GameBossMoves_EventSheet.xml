@@ -1052,7 +1052,12 @@
                 <event-block sid="315047726092930">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="303947099767840" type="Boss_Bullet">
-                            <param id="0" name="Object">ArcadeCabinato</param>
+                            <param id="0" name="Object">ArcadePlayerCollider</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="351447446310996" type="ArcadeCabinato">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1181,6 +1186,24 @@
                 <action id="-12" name="Subtract from" sid="806344241881364" type="BossRobotte">
                     <param id="0" name="Instance variable">RobotteHp</param>
                     <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="699218517573821" type="BossRobotte">
+                    <param id="0" name="Object">Kapow</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="442433670173969" type="Kapow">
+                    <param id="0" name="Instance variable">EnemyUID</param>
+                    <param id="1" name="Value">BossRobotte.UID</param>
+                </action>
+                <action id="-29" name="Move to object" sid="166782921347717" type="Kapow">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">BossRobotte</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="831699048518823" type="Kapow">
+                    <param id="0" name="Duration">0.5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Destroy&quot;</param>
                 </action>
             </actions>
             <sub-events>

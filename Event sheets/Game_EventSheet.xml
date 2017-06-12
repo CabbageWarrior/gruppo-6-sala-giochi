@@ -684,15 +684,6 @@
                         <action id="-24" name="Move to top" sid="224683191639698" type="ArcadeGraphicOnFloor" />
                     </actions>
                     <sub-events>
-                        <event-block sid="105863237754162">
-                            <conditions />
-                            <actions>
-                                <action id="-29" name="Move to object" sid="205351112695073" type="BossRobotteName">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Object">BossRobotte</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="420350888504216">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="372962720698334" type="ArcadeCabinato">
@@ -764,6 +755,30 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="919453506063040">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="405776507226065" type="ArcadeAlieno">
+                                    <param id="0" name="Unique ID">ArcadeGraphicOnFloor.UID</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="868798687943997" type="Kapow">
+                                    <param id="0" name="Instance variable">EnemyUID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ArcadeGraphicOnFloor.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="546125147398817" type="Kapow">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">ArcadeAlieno</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="464710551130462">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="681014797301295">
@@ -811,6 +826,16 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="936459649384711">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="260133568909278" type="Kapow">
+                    <param id="0" name="Tag">&quot;Destroy&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="408455163250766" type="Kapow" />
+            </actions>
         </event-block>
         <event-group description="" sid="664093754628313" title="Game Layout Functions">
             <sub-events>

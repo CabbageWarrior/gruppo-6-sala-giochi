@@ -37,7 +37,7 @@
                                                         <condition id="2" name="Key is down" sid="972414507915029" type="Keyboard">
                                                             <param id="0" name="Key">65 (A)</param>
                                                         </condition>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="834242843928861" type="ArcadeCabinato">
+                                                        <condition disabled="1" id="2" inverted="1" name="Is playing" sid="834242843928861" type="ArcadeCabinato">
                                                             <param id="0" name="Animation">&quot;Special&quot;</param>
                                                         </condition>
                                                     </conditions>
@@ -53,7 +53,7 @@
                                                         <condition id="2" name="Key is down" sid="568146445173128" type="Keyboard">
                                                             <param id="0" name="Key">68 (D)</param>
                                                         </condition>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="128664901083264" type="ArcadeCabinato">
+                                                        <condition disabled="1" id="2" inverted="1" name="Is playing" sid="128664901083264" type="ArcadeCabinato">
                                                             <param id="0" name="Animation">&quot;Special&quot;</param>
                                                         </condition>
                                                     </conditions>
@@ -69,7 +69,7 @@
                                                         <condition id="2" name="Key is down" sid="710299564141346" type="Keyboard">
                                                             <param id="0" name="Key">87 (W)</param>
                                                         </condition>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="667219691365981" type="ArcadeCabinato">
+                                                        <condition disabled="1" id="2" inverted="1" name="Is playing" sid="667219691365981" type="ArcadeCabinato">
                                                             <param id="0" name="Animation">&quot;Special&quot;</param>
                                                         </condition>
                                                     </conditions>
@@ -85,7 +85,7 @@
                                                         <condition id="2" name="Key is down" sid="808695456564687" type="Keyboard">
                                                             <param id="0" name="Key">83 (S)</param>
                                                         </condition>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="259611083562682" type="ArcadeCabinato">
+                                                        <condition disabled="1" id="2" inverted="1" name="Is playing" sid="259611083562682" type="ArcadeCabinato">
                                                             <param id="0" name="Animation">&quot;Special&quot;</param>
                                                         </condition>
                                                     </conditions>
@@ -833,7 +833,7 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action behavior="Timer2" id="0" name="Start timer" sid="649114180007083" type="ArcadeCabinatoPM">
-                            <param id="0" name="Duration">3</param>
+                            <param id="0" name="Duration">7</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;GodMode&quot;</param>
                         </action>
@@ -902,6 +902,9 @@
                                         </condition>
                                         <condition id="2" name="Is playing" sid="413276590582084" type="ArcadeCabinato">
                                             <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="412016778793919" type="ArcadeCabinato">
+                                            <param id="0" name="Animation">&quot;WakaWaka&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -1349,7 +1352,7 @@
                                     <conditions />
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="898111945625422">
+                                        <event-block disabled="1" sid="898111945625422">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="739400848898778" type="ArcadeCabinato">
                                                     <param id="0" name="Instance variable">HasHitSomeone</param>
@@ -1371,11 +1374,11 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="291835971636300">
+                                                <event-block disabled="1" sid="291835971636300">
                                                     <conditions />
                                                     <actions />
                                                 </event-block>
-                                                <event-block sid="582810741751405">
+                                                <event-block disabled="1" sid="582810741751405">
                                                     <conditions>
                                                         <condition id="7" name="Is mirrored" sid="718283476443499" type="ArcadeCabinato" />
                                                     </conditions>
@@ -1754,6 +1757,11 @@
                                     <param id="1" name="X">ArcadeAlieno.X</param>
                                     <param id="2" name="Y">ArcadeAlieno.Y</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="679447274851631" type="ArcadeAlieno">
+                                    <param id="0" name="Instance variable">AlienHP</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="950065289389846" type="Function">
@@ -1762,10 +1770,15 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="936113672219697">
+                        <event-block sid="936113672219697">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="140031081323918" type="Dk_Barile">
                                     <param id="0" name="Object">BossRobotte_HitArea</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="187743605177668" type="BossRobotte">
+                                    <param id="0" name="Instance variable">RobotteHp</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1773,6 +1786,14 @@
                                     <param id="0" name="Name">&quot;HitRobotte&quot;</param>
                                     <param id="1" name="Parameter {n}">ArcadeCabinato.Special_DMG</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="783207032624221">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="411101266016839" type="Dk_Barile" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="754608524930473" type="Dk_Barile" />
                             </actions>
                         </event-block>
                         <comment>SF</comment>
@@ -1786,6 +1807,11 @@
                                     <param id="1" name="X">ArcadeAlieno.X</param>
                                     <param id="2" name="Y">ArcadeAlieno.Y</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="373070356829265" type="ArcadeAlieno">
+                                    <param id="0" name="Instance variable">AlienHP</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="693054574644505" type="Hadouken" />
@@ -1795,10 +1821,15 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="468164133308186">
+                        <event-block sid="468164133308186">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="335950982703472" type="Hadouken">
                                     <param id="0" name="Object">BossRobotte_HitArea</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="500392538004647" type="BossRobotte">
+                                    <param id="0" name="Instance variable">RobotteHp</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1807,6 +1838,14 @@
                                     <param id="0" name="Name">&quot;HitRobotte&quot;</param>
                                     <param id="1" name="Parameter {n}">ArcadeCabinato.Special_DMG</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="311665818595421">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="540186271564602" type="Hadouken" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="528857911868301" type="Hadouken" />
                             </actions>
                         </event-block>
                         <comment>Parametri 0: Numero del giocatore</comment>
@@ -1887,7 +1926,7 @@
                                                 <action id="0" name="Spawn another object" sid="560129421107440" type="ArcadeCabinato">
                                                     <param id="0" name="Object">Hadouken</param>
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
-                                                    <param id="2" name="Image point">1</param>
+                                                    <param id="2" name="Image point">0</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="277450497737190" type="ArcadeCabinato">
                                                     <param id="0" name="Instance variable">Special</param>
@@ -1916,14 +1955,6 @@
                                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="424565692116140" type="Hadouken">
                                                             <param id="0" name="Angle">180</param>
                                                         </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block any="1" sid="311665818595421">
-                                                    <conditions>
-                                                        <condition id="-3" inverted="1" name="Is on-screen" sid="540186271564602" type="Hadouken" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-9" name="Destroy" sid="528857911868301" type="Hadouken" />
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
@@ -1955,95 +1986,27 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="165757685145342">
+                                                <event-block sid="309012199448214">
                                                     <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="572972862397287" type="System">
-                                                            <param id="0" name="Variable">Human_1_SelectedCharacter</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">2</param>
-                                                        </condition>
+                                                        <condition id="7" inverted="1" name="Is mirrored" sid="164362805754313" type="ArcadeCabinato" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="4" name="Set animation" sid="814956676738746" type="ArcadeCabinato">
-                                                            <param id="0" name="Animation">&quot;Special&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="966834491444103" type="System">
-                                                            <param id="0" name="Seconds">1.0</param>
-                                                        </action>
-                                                        <action id="0" name="Spawn another object" sid="545410652455680" type="ArcadeCabinato">
-                                                            <param id="0" name="Object">Dk_Barile</param>
-                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                                                            <param id="2" name="Image point">1</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="275301724131794" type="ArcadeCabinato">
-                                                            <param id="0" name="Instance variable">Special</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                    </actions>
-                                                    <sub-events>
-                                                        <event-block sid="522278360296012">
-                                                            <conditions>
-                                                                <condition id="7" inverted="1" name="Is mirrored" sid="368551038529680" type="ArcadeCabinato" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="596036412332845" type="Dk_Barile">
-                                                                    <param id="0" name="Angle">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="708397677564206">
-                                                            <conditions>
-                                                                <condition id="7" name="Is mirrored" sid="848989895026195" type="ArcadeCabinato" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="828474301964747" type="Dk_Barile">
-                                                                    <param id="0" name="Angle">180</param>
-                                                                </action>
-                                                                <action id="7" name="Set mirrored" sid="373926145072234" type="Dk_Barile">
-                                                                    <param id="0" name="State">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="849780191298974">
-                                                            <conditions>
-                                                                <condition id="-3" inverted="1" name="Is on-screen" sid="714427583134920" type="Dk_Barile" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-9" name="Destroy" sid="445982420441371" type="Dk_Barile" />
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                                <event-block sid="307785765759114">
-                                                    <conditions>
-                                                        <condition id="7" inverted="1" name="Is mirrored" sid="459787303415445" type="ArcadeCabinato" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="923280871099158" type="Dk_Barile">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="123395611566929" type="Dk_Barile">
                                                             <param id="0" name="Angle">0</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="410073221186793">
+                                                <event-block sid="159431087616997">
                                                     <conditions>
-                                                        <condition id="7" name="Is mirrored" sid="561324580763847" type="ArcadeCabinato" />
+                                                        <condition id="7" name="Is mirrored" sid="492107355959453" type="ArcadeCabinato" />
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="687274491885821" type="Dk_Barile">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="769406620131530" type="Dk_Barile">
                                                             <param id="0" name="Angle">180</param>
                                                         </action>
-                                                        <action id="7" name="Set mirrored" sid="711218426171769" type="Dk_Barile">
+                                                        <action id="7" name="Set mirrored" sid="539702236795023" type="Dk_Barile">
                                                             <param id="0" name="State">0</param>
                                                         </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="813527300751627">
-                                                    <conditions>
-                                                        <condition id="-3" inverted="1" name="Is on-screen" sid="879769975907109" type="Dk_Barile" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-9" name="Destroy" sid="820116388505250" type="Dk_Barile" />
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
@@ -2123,7 +2086,7 @@
                                                 <action id="0" name="Spawn another object" sid="110236859376830" type="ArcadeCabinato">
                                                     <param id="0" name="Object">Hadouken</param>
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
-                                                    <param id="2" name="Image point">1</param>
+                                                    <param id="2" name="Image point">0</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="681334498062814" type="ArcadeCabinato">
                                                     <param id="0" name="Instance variable">Special</param>
@@ -2152,20 +2115,6 @@
                                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="374009495360687" type="Hadouken">
                                                             <param id="0" name="Angle">180</param>
                                                         </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block any="1" sid="912986805466472">
-                                                    <conditions>
-                                                        <condition id="-3" inverted="1" name="Is on-screen" sid="390002064552888" type="Hadouken" />
-                                                        <condition id="1" name="Is overlapping another object" sid="931418315119385" type="Hadouken">
-                                                            <param id="0" name="Object">ArcadeAlieno</param>
-                                                        </condition>
-                                                        <condition id="1" name="Is overlapping another object" sid="338337569323730" type="Hadouken">
-                                                            <param id="0" name="Object">BossRobotte_HitArea</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-9" name="Destroy" sid="315639771742708" type="Hadouken" />
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
@@ -2220,14 +2169,6 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="375200975323995">
-                                                    <conditions>
-                                                        <condition id="-3" inverted="1" name="Is on-screen" sid="269317157641610" type="Dk_Barile" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-9" name="Destroy" sid="959028897056044" type="Dk_Barile" />
-                                                    </actions>
-                                                </event-block>
                                             </sub-events>
                                         </event-block>
                                         <event-block sid="537321590983208">
@@ -2247,6 +2188,28 @@
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="595742180721529" type="ArcadeCabinato">
+                                                    <param id="0" name="Instance variable">Special</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="612498869234306">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="323241217328656" type="System">
+                                                    <param id="0" name="Variable">Human_1_SelectedCharacter</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="786173296419907" type="ArcadeCabinato">
+                                                    <param id="0" name="Animation">&quot;Special&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="500969658225446" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="494573626308604" type="ArcadeCabinato">
                                                     <param id="0" name="Instance variable">Special</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
