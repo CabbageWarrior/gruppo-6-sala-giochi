@@ -525,6 +525,9 @@
                         <behavior-type name="Pin" sid="680039632468762">
                             <behavior id="Pin" />
                         </behavior-type>
+                        <behavior-type name="Flash" sid="783431846633188">
+                            <behavior id="Flash" />
+                        </behavior-type>
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="788354539266654" speed="5">

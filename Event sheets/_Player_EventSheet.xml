@@ -1868,7 +1868,7 @@
                         <event-block sid="771593024023066">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="817085986176201" type="System">
-                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                    <param id="0" name="Interval (seconds)">0.7</param>
                                 </condition>
                                 <condition id="2" name="Is playing" sid="959426998304323" type="ArcadeCabinato">
                                     <param id="0" name="Animation">&quot;WakaWaka&quot;</param>

@@ -602,7 +602,7 @@
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
                         <PlayerHP_Max>50</PlayerHP_Max>
-                        <Special_Max>130</Special_Max>
+                        <Special_Max>100</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
@@ -728,11 +728,11 @@
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
                         <PlayerHP_Max>50</PlayerHP_Max>
-                        <Special_Max>45</Special_Max>
+                        <Special_Max>110</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
-                        <Special_DMG>2</Special_DMG>
+                        <Special_DMG>1</Special_DMG>
                         <IsSpecialStarted>false</IsSpecialStarted>
                     </instance-variables>
                     <behavior-instances>
@@ -1286,6 +1286,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1314,6 +1315,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
