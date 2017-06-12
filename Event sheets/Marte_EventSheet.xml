@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Marte_EventSheet</name>
     <events>
+        <include>_Global_Cutscenes_EventSheet</include>
         <variable constant="0" name="SizeSF" sid="349676352361215" static="0" type="number">0</variable>
         <variable constant="0" name="SizeDK" sid="435533596910149" static="0" type="number">0</variable>
         <variable constant="0" name="SizePM" sid="987944734059124" static="0" type="number">0</variable>

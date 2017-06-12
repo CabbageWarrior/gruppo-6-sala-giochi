@@ -906,11 +906,11 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="2" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="554480385500740" speed="5">
+                        <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="554480385500740" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         </animation>
-                        <animation framecount="2" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="912592293019120" speed="5">
+                        <animation framecount="2" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="912592293019120" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="1">
                                 <collision-poly>
                                     <point x="0.15625" y="0.15625" />
@@ -1057,6 +1057,45 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987245781223369" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="GameOverDeathPlayer" sid="459448184268223">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421461538789684" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Construct 2\DBGA-Construct-2-Project-2\Animations\ArcadeCabinatoSF\Death\002.png">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Construct 2\DBGA-Construct-2-Project-2\Animations\ArcadeCabinatoDK\Death\000.png">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Construct 2\DBGA-Construct-2-Project-2\Animations\ArcadeCabinatoPM\Death\001.png">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Construct 2\DBGA-Construct-2-Project-2\Animations\ArcadeCabinatoSM\Death\001.png">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -4577,6 +4616,171 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TileBackgroundBoss" sid="152525936228024">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\dbga_37\Downloads\Tiles Navicella2 250x250.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TileMiddleBoss" sid="114114057277208">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\dbga_37\Downloads\Tiles Navicella da 250x250 per Construct.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Poster5Boss" sid="703911489338391">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="753932043312075" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\You_Have_No_Friends_Poster.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TileForwardBoss" sid="420343636181364">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\dbga_37\Downloads\Tiles Navicella da 250x250 per Construct.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Poster2Boss" sid="810001195205651">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341080384828759" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Sugar_Daddy_Poster.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Poster4Boss" sid="994226702430234">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="971840615451563" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Poster1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Poster3Boss" sid="528036888214092">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="252433523387784" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Poster4.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Poster1Boss" sid="249694852675563">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="323246130023295" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Poster3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite14" sid="267238980609685">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573857257837984" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Bo$$_Battle_Poster.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.125" />
+                            <point x="0.875" y="0.125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="452137767945203">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="997383730962697" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Whops_Poster.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.65625" y="0.34375" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.09375" y="0.90625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="144976530070508">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826945431300813" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_37\Downloads\Poster2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOverP1SpawnPoint" sid="530660781587345">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249600899552430" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOverP2SpawnPoint" sid="824671577836067">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="153794877057040" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fader" sid="488959762755724">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="StartFade" sid="410815094760219">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="EndFade" sid="153447184573474">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="955721206634136" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOverText" sid="994285585781751">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -4598,6 +4802,7 @@
                 <member>DialogueText</member>
                 <member>EndGameMenuText</member>
                 <member>GameMode</member>
+                <member>GameOverText</member>
                 <member>GameStory</member>
                 <member>GameTitle</member>
                 <member>GameTutorialText</member>
@@ -4752,6 +4957,7 @@
             <layout>Level1.xml</layout>
             <layout>Level1_Boss.xml</layout>
             <layout>HistoryFinished.xml</layout>
+            <layout>GameOver.xml</layout>
         </layout-folder>
         <layout-folder name="CutscenesEnd">
             <layout>Astronave.xml</layout>
@@ -4781,6 +4987,7 @@
             <event-sheet>Marte_EventSheet.xml</event-sheet>
             <event-sheet>Terra_EventSheet.xml</event-sheet>
             <event-sheet>Sala Giochi_EventSheet.xml</event-sheet>
+            <event-sheet>_Global_Cutscenes_EventSheet.xml</event-sheet>
         </event-folder>
         <event-folder name="Credits">
             <event-sheet>Credits1_EventSheet.xml</event-sheet>
@@ -4799,6 +5006,7 @@
         <event-sheet>HistoryFinished_EventSheet.xml</event-sheet>
         <event-sheet>Level1_Boss_EventSheet.xml</event-sheet>
         <event-sheet>WelcomePage_EventSheet.xml</event-sheet>
+        <event-sheet>GameOver_EventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

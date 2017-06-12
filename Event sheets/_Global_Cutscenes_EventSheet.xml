@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_Global_Cutscenes_EventSheet</name>
+    <events>
+        <include>_Global_EventSheet</include>
+        <event-block sid="275820587360058">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="134800592629144" type="System">
+                    <param id="0" name="Variable">IsGameFinishedAlmostOnce</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="466123173504287">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="665844304129027" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="108736944706034" type="System">
+                            <param id="0" name="Layout">Intro</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="880970680557021">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="729623291297785" type="Gamepad">
+                            <param id="0" name="Gamepad">1</param>
+                            <param id="1" name="Button">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="980154691635283" type="System">
+                            <param id="0" name="Layout">Intro</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="424944422344483">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="167675827032852" type="Keyboard">
+                            <param id="0" name="Key">27 (Esc)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="154695568851617" type="System">
+                            <param id="0" name="Layout">Intro</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="383917268754387">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="241968628521949" type="Keyboard">
+                            <param id="0" name="Key">8 (Backspace)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="771983709227359" type="System">
+                            <param id="0" name="Layout">Intro</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -219,8 +219,8 @@
 	</bossend-S-4>
 	
 	<bossend-M-1-2>
-		<hint seq='1' charnum='1' mood='happy'>Finalmente, tappetto... Adesso posso finire di bere in pace...</hint>
-		<hint seq='2' charnum='2' mode='happy'>Ben fatto, Don. Ma ola... dove andlemo?</hint>
+		<hint seq='1' charnum='2' mood='happy'>Finalmente, tappetto... Adesso posso finire di bere in pace...</hint>
+		<hint seq='2' charnum='1' mode='happy'>Ben fatto, Don. Ma ola... dove andlemo?</hint>
 	</bossend-M-1-2>
 	<bossend-M-2-3>
 		<hint seq='1' charnum='2' mood='happy'>Finalmente possiamo farci un bell'aperitivo e festeggiare! Tsamina mina eh eh...</hint>

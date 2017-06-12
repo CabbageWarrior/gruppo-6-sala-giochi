@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Sala Giochi_EventSheet</name>
     <events>
+        <include>_Global_Cutscenes_EventSheet</include>
         <event-block sid="117792859106284">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="205201491269675" type="System" />

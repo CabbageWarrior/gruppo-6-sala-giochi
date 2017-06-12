@@ -1712,6 +1712,34 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="431186936162233">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="870990962827231" type="System">
+                                            <param id="0" name="Variable">PlayersInGame</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="131952628276759">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="182923557451707" type="System">
+                                                    <param id="0" name="Variable">PlayersInGame</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="757596756895676" type="System">
+                                                    <param id="0" name="Seconds">5</param>
+                                                </action>
+                                                <action id="-2" name="Go to layout" sid="768497177822950" type="System">
+                                                    <param id="0" name="Layout">GameOver</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="627531064909599">

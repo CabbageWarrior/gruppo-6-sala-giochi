@@ -22,6 +22,7 @@
         <variable constant="0" name="Team2Score" sid="581961243140851" static="0" type="number">0</variable>
         <variable comment="Number of players playing." constant="0" name="GameTypeNumberOfPlayers" sid="949260005840429" static="0" type="number">0</variable>
         <variable comment="0: No; 1: Yes." constant="0" name="IsGameFinishedAlmostOnce" sid="881425131393377" static="0" type="number">0</variable>
+        <variable constant="0" name="PlayersInGame" sid="349028099987836" static="0" type="number">0</variable>
         <event-block sid="310475909449286">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="693286711239400" type="System" />

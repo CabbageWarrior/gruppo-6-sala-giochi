@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOver_EventSheet</name>
+    <events>
+        <include>_Global_EventSheet</include>
+        <event-block sid="596099996685727">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="866959323883346" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="783355179634031" type="GameOverP1SpawnPoint">
+                    <param id="0" name="Object">GameOverDeathPlayer</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="785841999359245" type="GameOverDeathPlayer">
+                    <param id="0" name="Frame number">Human_1_SelectedCharacter - 1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="214029173415015">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="999950300797058" type="System">
+                            <param id="0" name="Variable">GameTypeNumberOfPlayers</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="187699397357115" type="GameOverP2SpawnPoint">
+                            <param id="0" name="Object">GameOverDeathPlayer</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="482086909944456" type="GameOverDeathPlayer">
+                            <param id="0" name="Frame number">Human_2_SelectedCharacter - 1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="380745614716494" type="GameOverDeathPlayer">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="707453687346123">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="758787558733037" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action behavior="EndFade" id="1" name="Start fade" sid="694978834009740" type="Fader" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="292903866655480">
+            <conditions>
+                <condition behavior="EndFade" id="1" name="On fade-in finished" sid="210020351049294" type="Fader" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="568724827801865" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

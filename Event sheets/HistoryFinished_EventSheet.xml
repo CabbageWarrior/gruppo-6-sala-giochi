@@ -4,6 +4,7 @@
     <name>HistoryFinished_EventSheet</name>
     <events>
         <include>_Global_EventSheet</include>
+        <include>_Global_Cutscenes_EventSheet</include>
         <event-block sid="616927754065541">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="205959636847127" type="System" />

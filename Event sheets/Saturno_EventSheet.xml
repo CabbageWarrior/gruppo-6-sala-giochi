@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Saturno_EventSheet</name>
     <events>
+        <include>_Global_Cutscenes_EventSheet</include>
         <event-block sid="814118038504968">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="785032496559708" type="System" />

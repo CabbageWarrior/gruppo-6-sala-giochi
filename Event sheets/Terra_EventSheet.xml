@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Terra_EventSheet</name>
     <events>
+        <include>_Global_Cutscenes_EventSheet</include>
         <event-block sid="358736997968254">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="724181992263631" type="System" />
