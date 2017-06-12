@@ -706,7 +706,7 @@
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
                         <PlayerHP_Max>50</PlayerHP_Max>
-                        <Special_Max>130</Special_Max>
+                        <Special_Max>150</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>

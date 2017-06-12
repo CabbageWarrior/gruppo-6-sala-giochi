@@ -932,7 +932,7 @@
                         <Special>0</Special>
                         <PlayerHitsCount>0</PlayerHitsCount>
                         <PlayerHP_Max>50</PlayerHP_Max>
-                        <Special_Max>130</Special_Max>
+                        <Special_Max>150</Special_Max>
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
@@ -977,7 +977,7 @@
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
-                        <Special_DMG>2</Special_DMG>
+                        <Special_DMG>1</Special_DMG>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -1472,8 +1472,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5625</x>
-                        <y>1500</y>
+                        <x>5630</x>
+                        <y>1447</y>
                         <z>0</z>
                         <width>375</width>
                         <height>375</height>
@@ -2918,75 +2918,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AlienBlue" uid="338">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Allert>false</Allert>
-                        <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <CurrentX>0</CurrentX>
-                        <Direction>-1</Direction>
-                        <Speed>5</Speed>
-                        <PlayerNumberTarget>0</PlayerNumberTarget>
-                        <AlienHP>4</AlienHP>
-                        <AlienAttack>4</AlienAttack>
-                        <CanAttack>true</CanAttack>
-                        <IsStunned>false</IsStunned>
-                        <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
-                        <Type>1</Type>
-                        <AttackTimer>0</AttackTimer>
-                        <WaveNumber>5</WaveNumber>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>800</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>200</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="DeathFade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>10</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>16360</x>
-                        <y>1223</y>
-                        <z>0</z>
-                        <width>375</width>
-                        <height>375</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="AlienRed" uid="339">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -4048,75 +3979,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AlienBlue" uid="355">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Allert>false</Allert>
-                        <CollisionPreventionDirection>0</CollisionPreventionDirection>
-                        <CurrentX>0</CurrentX>
-                        <Direction>-1</Direction>
-                        <Speed>5</Speed>
-                        <PlayerNumberTarget>0</PlayerNumberTarget>
-                        <AlienHP>4</AlienHP>
-                        <AlienAttack>4</AlienAttack>
-                        <CanAttack>true</CanAttack>
-                        <IsStunned>false</IsStunned>
-                        <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
-                        <Type>1</Type>
-                        <AttackTimer>0</AttackTimer>
-                        <WaveNumber>5</WaveNumber>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>800</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>200</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="DeathFade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>10</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>15767</x>
-                        <y>1196</y>
-                        <z>0</z>
-                        <width>375</width>
-                        <height>375</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="AlienBlue" uid="356">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -4590,6 +4452,213 @@
                     <world>
                         <x>16584</x>
                         <y>1191</y>
+                        <z>0</z>
+                        <width>375</width>
+                        <height>375</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AlienYellow" uid="338">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Allert>false</Allert>
+                        <CollisionPreventionDirection>0</CollisionPreventionDirection>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>3</AlienHP>
+                        <AlienAttack>7</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
+                        <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
+                        <Type>2</Type>
+                        <AttackTimer>0</AttackTimer>
+                        <WaveNumber>5</WaveNumber>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>800</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="DeathFade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>10</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>15903</x>
+                        <y>1191</y>
+                        <z>0</z>
+                        <width>375</width>
+                        <height>375</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AlienBlue" uid="355">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Attack</initial-animation>
+                        <initial-frame>2</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Allert>false</Allert>
+                        <CollisionPreventionDirection>0</CollisionPreventionDirection>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>4</AlienHP>
+                        <AlienAttack>4</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
+                        <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
+                        <Type>1</Type>
+                        <AttackTimer>0</AttackTimer>
+                        <WaveNumber>1</WaveNumber>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>800</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="DeathFade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>10</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3279</x>
+                        <y>1298</y>
+                        <z>0</z>
+                        <width>-375</width>
+                        <height>375</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AlienRed" uid="363">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Allert>false</Allert>
+                        <CollisionPreventionDirection>0</CollisionPreventionDirection>
+                        <CurrentX>0</CurrentX>
+                        <Direction>-1</Direction>
+                        <Speed>5</Speed>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <AlienHP>6</AlienHP>
+                        <AlienAttack>5</AlienAttack>
+                        <CanAttack>true</CanAttack>
+                        <IsStunned>false</IsStunned>
+                        <SpecialPointsGivenWhenHit>5</SpecialPointsGivenWhenHit>
+                        <Type>1</Type>
+                        <AttackTimer>0</AttackTimer>
+                        <WaveNumber>2</WaveNumber>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>800</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="DeathFade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>10</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5341</x>
+                        <y>1199</y>
                         <z>0</z>
                         <width>375</width>
                         <height>375</height>
