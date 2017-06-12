@@ -1382,6 +1382,7 @@
                         <instance-variable name="RobotteWaveAttack" sid="586892961135616" type="number" />
                         <instance-variable name="RobotteRangedAttack" sid="663832493989364" type="number" />
                         <instance-variable name="IsStunned" sid="807199190949159" type="boolean" />
+                        <instance-variable name="PlayerNumberTarget" sid="638813773926005" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="DestroyOutsideLayout" sid="222658747414228">
@@ -1547,20 +1548,56 @@
                             </frame>
                         </animation>
                         <animation framecount="8" loop="0" name="DeathLeft" pingpong="0" repeatcount="1" repeatto="0" sid="505882081608586" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="StunLeft" pingpong="0" repeatcount="1" repeatto="0" sid="407853770683221" speed="1">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
+                            </frame>
                         </animation>
                         <animation framecount="2" loop="0" name="IdleRight" pingpong="0" repeatcount="1" repeatto="0" sid="558095625016699" speed="5">
-                            <frame duration="1" hotspotX="0.5625" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
                                 <image-point name="BaseCollision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
@@ -1571,7 +1608,7 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5625" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
                                 <image-point name="BaseCollision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
@@ -1588,6 +1625,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1599,6 +1637,7 @@
                                 <image-point name="Ranged" x="0" y="0.90625" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Base Collision" x="0.5" y="1" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1610,6 +1649,7 @@
                                 <image-point name="Ranged" x="0" y="0.90625" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Base Collision" x="0.5" y="1" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1621,6 +1661,7 @@
                                 <image-point name="Ranged" x="0" y="0.90625" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Base Collision" x="0.5" y="1" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1634,6 +1675,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1645,6 +1687,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1656,6 +1699,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1669,6 +1713,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1680,6 +1725,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1691,6 +1737,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1702,6 +1749,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1715,6 +1763,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1726,6 +1775,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1737,6 +1787,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1748,6 +1799,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1759,6 +1811,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1770,6 +1823,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1781,6 +1835,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1792,6 +1847,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1803,6 +1859,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1814,6 +1871,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1825,6 +1883,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1836,6 +1895,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1847,6 +1907,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1858,6 +1919,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1869,6 +1931,7 @@
                                 <image-point name="Base Collision" x="0.5" y="1" />
                                 <image-point name="Melee" x="0.239583" y="0.828125" />
                                 <image-point name="Ranged" x="0" y="0.90625" />
+                                <image-point name="BaseCollision" x="0.5" y="1" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1878,7 +1941,10 @@
                             </frame>
                         </animation>
                         <animation framecount="8" loop="0" name="DeathRight" pingpong="0" repeatcount="1" repeatto="0" sid="157867940888758" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1886,7 +1952,10 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1894,7 +1963,10 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1902,7 +1974,10 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1910,7 +1985,10 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1918,7 +1996,10 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1926,7 +2007,10 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1934,7 +2018,10 @@
                                     <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1944,7 +2031,10 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="StunRight" pingpong="0" repeatcount="1" repeatto="0" sid="727963747539645" speed="1">
-                            <frame duration="5" hotspotX="0.5" hotspotY="1">
+                            <frame duration="5" hotspotX="0.583333" hotspotY="1">
+                                <image-point name="BaseCollision" x="0.5" y="1" />
+                                <image-point name="Melee" x="0.239583" y="0.828125" />
+                                <image-point name="Ranged" x="0" y="0.90625" />
                                 <collision-poly>
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
@@ -1972,7 +2062,7 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="915381565308053" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>

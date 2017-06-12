@@ -1715,6 +1715,20 @@
                         </action>
                         <action id="-9" name="Destroy" sid="831027462585951" type="ArcadeCabinato" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="274601028684688">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="388284959899245" type="ArcadeCabinato_AttackCollider">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ArcadeCabinato.PlayerNumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="666693348061836" type="ArcadeCabinato_AttackCollider" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-group description="" sid="291075357674507" title="Special">
                     <sub-events>

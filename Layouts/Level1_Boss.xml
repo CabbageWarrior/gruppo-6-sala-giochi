@@ -438,14 +438,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2375</x>
-                        <y>-375</y>
+                        <x>2446</x>
+                        <y>-508</y>
                         <z>0</z>
                         <width>356</width>
                         <height>186</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -471,28 +471,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="BossRobotte_MeleeDamageArea" uid="118">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2375</x>
-                        <y>-250</y>
-                        <z>0</z>
-                        <width>227</width>
-                        <height>176</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -798,6 +776,7 @@
                         <RobotteWaveAttack>30</RobotteWaveAttack>
                         <RobotteRangedAttack>10</RobotteRangedAttack>
                         <IsStunned>false</IsStunned>
+                        <PlayerNumberTarget>0</PlayerNumberTarget>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -815,8 +794,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2045</x>
-                        <y>1424</y>
+                        <x>2068</x>
+                        <y>1405</y>
                         <z>0</z>
                         <width>750</width>
                         <height>1000</height>
