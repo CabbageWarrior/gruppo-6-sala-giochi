@@ -463,11 +463,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1993.5</x>
-                        <y>-554</y>
+                        <x>1043</x>
+                        <y>-509</y>
                         <z>0</z>
                         <width>334</width>
-                        <height>258</height>
+                        <height>376</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -618,8 +618,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>125</x>
-                        <y>-125</y>
+                        <x>108</x>
+                        <y>-118</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -781,6 +781,7 @@
                         <RobotteRangedAttack>10</RobotteRangedAttack>
                         <IsStunned>false</IsStunned>
                         <PlayerNumberTarget>0</PlayerNumberTarget>
+                        <IsHitByBarile>false</IsHitByBarile>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -798,8 +799,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2068</x>
-                        <y>1405</y>
+                        <x>2115</x>
+                        <y>1407</y>
                         <z>0</z>
                         <width>750</width>
                         <height>1000</height>

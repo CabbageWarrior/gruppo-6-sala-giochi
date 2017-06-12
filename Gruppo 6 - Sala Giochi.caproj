@@ -1383,6 +1383,7 @@
                         <instance-variable name="RobotteRangedAttack" sid="663832493989364" type="number" />
                         <instance-variable name="IsStunned" sid="807199190949159" type="boolean" />
                         <instance-variable name="PlayerNumberTarget" sid="638813773926005" type="number" />
+                        <instance-variable name="IsHitByBarile" sid="323442439366779" type="boolean" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="DestroyOutsideLayout" sid="222658747414228">
@@ -4706,6 +4707,7 @@
                 <instance-variable comment="1: Melee; 2: Ranged." name="Type" sid="133461841734294" type="number" />
                 <instance-variable name="AttackTimer" sid="842003840373864" type="number" />
                 <instance-variable name="WaveNumber" sid="598147358096980" type="number" />
+                <instance-variable name="IsHitByBarile" sid="464379800533537" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="824193179318370">
