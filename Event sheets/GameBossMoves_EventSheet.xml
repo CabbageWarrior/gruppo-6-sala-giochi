@@ -95,6 +95,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-16" name="Wait" sid="344515668897696" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
                         <action id="-13" name="Set boolean" sid="712818068825826" type="BossRobotte">
                             <param id="0" name="Instance variable">IsStunned</param>
                             <param id="1" name="Value">0</param>
@@ -112,6 +115,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-16" name="Wait" sid="347266051885501" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
                         <action id="-13" name="Set boolean" sid="174446028269393" type="BossRobotte">
                             <param id="0" name="Instance variable">IsStunned</param>
                             <param id="1" name="Value">0</param>
@@ -938,116 +944,106 @@
             <sub-events>
                 <comment>Ranged attack Damage on Player</comment>
                 <comment>----&gt;BUG &lt;---- Non resetta Spit a False dopo il primo utilizzo</comment>
-                <event-block sid="734513451816905">
-                    <conditions />
-                    <actions />
-                    <sub-events>
-                        <event-block sid="855946547801009">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="714741959206926" type="BossRobotte">
-                                    <param id="0" name="Animation">&quot;LaserLeft&quot;</param>
-                                </condition>
-                                <condition id="3" name="Compare frame" sid="369029827332582" type="BossRobotte">
-                                    <param id="0" name="Comparison">5</param>
-                                    <param id="1" name="Number">9</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="803430416886319" type="BossRobotte">
-                                    <param id="0" name="Instance variable">Spit</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="980857689760999" type="BossRobotte">
-                                    <param id="0" name="Object">Boss_Bullet</param>
-                                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                                    <param id="2" name="Image point">&quot;BaseCollision&quot;</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="970055972344360" type="Boss_Bullet">
-                                    <param id="0" name="Angle">180</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="785983632853841" type="BossRobotte">
-                                    <param id="0" name="Instance variable">Spit</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="934371239314511">
-                                    <conditions>
-                                        <condition id="2" name="Is playing" sid="334041923696326" type="BossRobotte">
-                                            <param id="0" name="Animation">&quot;LaserLeft&quot;</param>
-                                        </condition>
-                                        <condition id="3" name="Compare frame" sid="856783108609358" type="BossRobotte">
-                                            <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="Number">13</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="373252935889337" type="BossRobotte">
-                                            <param id="0" name="Animation">&quot;IdleLeft&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="401996872104806" type="BossRobotte">
-                                            <param id="0" name="Instance variable">Spit</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="723485910580047">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="933328121862327" type="BossRobotte">
-                                    <param id="0" name="Animation">&quot;LaserRight&quot;</param>
-                                </condition>
-                                <condition id="3" name="Compare frame" sid="434799060644079" type="BossRobotte">
-                                    <param id="0" name="Comparison">5</param>
-                                    <param id="1" name="Number">9</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="234158003080028" type="BossRobotte">
-                                    <param id="0" name="Instance variable">Spit</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="621355614027214" type="BossRobotte">
-                                    <param id="0" name="Object">Boss_Bullet</param>
-                                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                                    <param id="2" name="Image point">&quot;BaseCollision&quot;</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="145341207867320" type="Boss_Bullet">
-                                    <param id="0" name="Angle">0</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="419079878757763" type="Boss_Bullet">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="930146096460187" type="BossRobotte">
-                                    <param id="0" name="Instance variable">Spit</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="567724651342932">
-                                    <conditions>
-                                        <condition id="2" name="Is playing" sid="515733278159145" type="BossRobotte">
-                                            <param id="0" name="Animation">&quot;LaserRight&quot;</param>
-                                        </condition>
-                                        <condition id="3" name="Compare frame" sid="452234894124944" type="BossRobotte">
-                                            <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="Number">13</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="792214118505446" type="BossRobotte">
-                                            <param id="0" name="Animation">&quot;IdleRight&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="758062701903844" type="BossRobotte">
-                                            <param id="0" name="Instance variable">Spit</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
+                <event-block sid="855946547801009">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="714741959206926" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;LaserLeft&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="369029827332582" type="BossRobotte">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Number">9</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="803430416886319" type="BossRobotte">
+                            <param id="0" name="Instance variable">Spit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="980857689760999" type="BossRobotte">
+                            <param id="0" name="Object">Boss_Bullet</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;BaseCollision&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="970055972344360" type="Boss_Bullet">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="785983632853841" type="BossRobotte">
+                            <param id="0" name="Instance variable">Spit</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="723485910580047">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="933328121862327" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;LaserRight&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="434799060644079" type="BossRobotte">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Number">9</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="234158003080028" type="BossRobotte">
+                            <param id="0" name="Instance variable">Spit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="621355614027214" type="BossRobotte">
+                            <param id="0" name="Object">Boss_Bullet</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;BaseCollision&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="145341207867320" type="Boss_Bullet">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="419079878757763" type="Boss_Bullet">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="930146096460187" type="BossRobotte">
+                            <param id="0" name="Instance variable">Spit</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="934371239314511">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="334041923696326" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;LaserLeft&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="856783108609358" type="BossRobotte">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Number">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="373252935889337" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;IdleLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="401996872104806" type="BossRobotte">
+                            <param id="0" name="Instance variable">Spit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="567724651342932">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="515733278159145" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;LaserRight&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="452234894124944" type="BossRobotte">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Number">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="792214118505446" type="BossRobotte">
+                            <param id="0" name="Animation">&quot;IdleRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="758062701903844" type="BossRobotte">
+                            <param id="0" name="Instance variable">Spit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="315047726092930">
                     <conditions>
@@ -1061,6 +1057,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="140378116455881" type="Function">
+                            <param id="0" name="Name">&quot;HitPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}">ArcadeCabinato.PlayerNumber{###}BossRobotte.RobotteRangedAttack</param>
+                        </action>
                         <action id="0" name="Spawn another object" sid="637864799508085" type="Boss_Bullet">
                             <param id="0" name="Object">Splash</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
@@ -1092,10 +1092,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="140378116455881" type="Function">
-                            <param id="0" name="Name">&quot;HitPlayer&quot;</param>
-                            <param id="1" name="Parameter {n}">ArcadeCabinato.PlayerNumber{###}BossRobotte.RobotteRangedAttack</param>
-                        </action>
                         <action id="-9" name="Destroy" sid="117993311766555" type="Splash" />
                     </actions>
                 </event-block>

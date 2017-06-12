@@ -920,12 +920,11 @@
                 <comment>End of Special Animation</comment>
                 <event-block sid="233703698159908">
                     <conditions>
-                        <condition id="2" name="Is playing" sid="803527491421528" type="ArcadeCabinatoPM">
+                        <condition id="4" name="On finished" sid="803527491421528" type="ArcadeCabinatoPM">
                             <param id="0" name="Animation">&quot;Special&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Stop" sid="918597552605350" type="ArcadeCabinatoPM" />
                         <action id="4" name="Set animation" sid="590420279867489" type="ArcadeCabinatoPM">
                             <param id="0" name="Animation">&quot;WakaWaka&quot;</param>
                             <param id="1" name="From">1</param>
@@ -1808,6 +1807,11 @@
                                             <param id="1" name="X">ArcadeAlieno.X</param>
                                             <param id="2" name="Y">ArcadeAlieno.Y</param>
                                         </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="794652091939155" type="ArcadeAlieno">
+                                            <param id="0" name="Instance variable">AlienHP</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="358590006204566" type="Function">
@@ -1816,23 +1820,15 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="293119175414283">
-                            <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="402691365518222" type="ArcadeCabinato">
-                                    <param id="0" name="Object">BossRobotte_HitArea</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="130213266099296" type="ArcadeCabinato">
-                                    <param id="0" name="Animation">&quot;WakaWaka&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="760726170129295">
+                                <event-block sid="394991570021078">
                                     <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="844794756790453" type="System">
-                                            <param id="0" name="Interval (seconds)">0.5</param>
+                                        <condition id="1" name="Is overlapping another object" sid="402691365518222" type="ArcadeCabinato">
+                                            <param id="0" name="Object">BossRobotte_HitArea</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="348427327068015" type="BossRobotte">
+                                            <param id="0" name="Instance variable">RobotteHp</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
