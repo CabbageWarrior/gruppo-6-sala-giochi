@@ -829,6 +829,7 @@
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
                         <Special_DMG>2</Special_DMG>
+                        <IsSpecialStarted>false</IsSpecialStarted>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -896,6 +897,7 @@
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
                         <Special_DMG>5</Special_DMG>
+                        <IsSpecialStarted>false</IsSpecialStarted>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -937,6 +939,7 @@
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
                         <Special_DMG>15</Special_DMG>
+                        <IsSpecialStarted>false</IsSpecialStarted>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />
@@ -978,6 +981,7 @@
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
                         <Special_DMG>1</Special_DMG>
+                        <IsSpecialStarted>false</IsSpecialStarted>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />

@@ -734,6 +734,10 @@
                             <param id="0" name="Animation">&quot;Idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="813881866891281" type="ArcadeCabinatoSF">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="879611830631780">
@@ -747,6 +751,10 @@
                             <param id="0" name="Animation">&quot;Idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="487295698295874" type="ArcadeCabinatoDK">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="617216619654223">
@@ -756,9 +764,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="238050760104566" type="ArcadeCabinatoPM">
-                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                        <action id="4" name="Set animation" sid="590420279867489" type="ArcadeCabinatoPM">
+                            <param id="0" name="Animation">&quot;WakaWaka&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Timer2" id="0" name="Start timer" sid="649114180007083" type="ArcadeCabinatoPM">
+                            <param id="0" name="Duration">7</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;GodMode&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -772,6 +785,14 @@
                         <action id="4" name="Set animation" sid="939155857383541" type="ArcadeCabinatoSM">
                             <param id="0" name="Animation">&quot;Idle&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="640327536490404" type="ArcadeCabinatoSM">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="450857658985893" type="ArcadeCabinatoSM">
+                            <param id="0" name="Instance variable">IsSpecialStarted</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -881,25 +902,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>End of Special Animation</comment>
-                <event-block sid="233703698159908">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="803527491421528" type="ArcadeCabinatoPM">
-                            <param id="0" name="Animation">&quot;Special&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="590420279867489" type="ArcadeCabinatoPM">
-                            <param id="0" name="Animation">&quot;WakaWaka&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Timer2" id="0" name="Start timer" sid="649114180007083" type="ArcadeCabinatoPM">
-                            <param id="0" name="Duration">7</param>
-                            <param id="1" name="Type">0</param>
-                            <param id="2" name="Tag">&quot;GodMode&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="755217169858978" title="Player Timers">
@@ -914,6 +916,10 @@
                         <action id="4" name="Set animation" sid="364758606616490" type="ArcadeCabinatoPM">
                             <param id="0" name="Animation">&quot;Idle&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="840704944078800" type="ArcadeCabinatoPM">
+                            <param id="0" name="Instance variable">IsStunned</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1742,12 +1748,8 @@
                 </event-block>
                 <event-group description="" sid="291075357674507" title="Special">
                     <sub-events>
-                        <event-block sid="362144789169655">
+                        <event-block sid="758496448648769">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="315516880823378" type="System">
-                                    <param id="0" name="Object">ArcadeAlieno</param>
-                                </condition>
-                                <condition id="-3" name="Is on-screen" sid="279314311256837" type="ArcadeAlieno" />
                                 <condition id="2" name="Is playing" sid="104078382963324" type="ArcadeCabinatoSM">
                                     <param id="0" name="Animation">&quot;Special&quot;</param>
                                 </condition>
@@ -1755,41 +1757,53 @@
                                     <param id="0" name="Comparison">5</param>
                                     <param id="1" name="Number">7</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="522642692752295" type="ArcadeAlieno">
-                                    <param id="0" name="Instance variable">AlienHP</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="666699689307782" type="ArcadeCabinatoSM">
+                                    <param id="0" name="Instance variable">IsSpecialStarted</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="381581438281578" type="Function">
-                                    <param id="0" name="Name">&quot;HitAlien&quot;</param>
-                                    <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinato.Special_DMG</param>
+                                <action id="-13" name="Set boolean" sid="628072704638334" type="ArcadeCabinatoSM">
+                                    <param id="0" name="Instance variable">IsSpecialStarted</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="562582616433198">
-                            <conditions>
-                                <condition id="-3" name="Is on-screen" sid="692850741855545" type="BossRobotte" />
-                                <condition id="2" name="Is playing" sid="941061722073175" type="ArcadeCabinatoSM">
-                                    <param id="0" name="Animation">&quot;Special&quot;</param>
-                                </condition>
-                                <condition id="3" name="Compare frame" sid="576021313831082" type="ArcadeCabinatoSM">
-                                    <param id="0" name="Comparison">5</param>
-                                    <param id="1" name="Number">7</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="915435136361560" type="BossRobotte">
-                                    <param id="0" name="Instance variable">RobotteHp</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="400776160364793" type="Function">
-                                    <param id="0" name="Name">&quot;HitRobotte&quot;</param>
-                                    <param id="1" name="Parameter {n}">ArcadeCabinato.Special_DMG</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="362144789169655">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="315516880823378" type="System">
+                                            <param id="0" name="Object">ArcadeAlieno</param>
+                                        </condition>
+                                        <condition id="-3" name="Is on-screen" sid="279314311256837" type="ArcadeAlieno" />
+                                        <condition id="-7" name="Compare instance variable" sid="522642692752295" type="ArcadeAlieno">
+                                            <param id="0" name="Instance variable">AlienHP</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="381581438281578" type="Function">
+                                            <param id="0" name="Name">&quot;HitAlien&quot;</param>
+                                            <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinato.Special_DMG</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="562582616433198">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="692850741855545" type="BossRobotte" />
+                                        <condition id="-7" name="Compare instance variable" sid="915435136361560" type="BossRobotte">
+                                            <param id="0" name="Instance variable">RobotteHp</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="400776160364793" type="Function">
+                                            <param id="0" name="Name">&quot;HitRobotte&quot;</param>
+                                            <param id="1" name="Parameter {n}">ArcadeCabinato.Special_DMG</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Pacman</comment>
                         <event-block sid="771593024023066">
