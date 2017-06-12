@@ -897,7 +897,7 @@
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
-                        <Special_DMG>5</Special_DMG>
+                        <Special_DMG>10</Special_DMG>
                         <IsSpecialStarted>false</IsSpecialStarted>
                     </instance-variables>
                     <behavior-instances>

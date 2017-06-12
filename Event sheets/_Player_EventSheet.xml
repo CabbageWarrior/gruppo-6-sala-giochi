@@ -1831,7 +1831,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="381581438281578" type="Function">
                                             <param id="0" name="Name">&quot;HitAlien&quot;</param>
-                                            <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinato.Special_DMG</param>
+                                            <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinatoSM.Special_DMG</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1856,7 +1856,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="400776160364793" type="Function">
                                                     <param id="0" name="Name">&quot;HitRobotte&quot;</param>
-                                                    <param id="1" name="Parameter {n}">ArcadeCabinato.Special_DMG</param>
+                                                    <param id="1" name="Parameter {n}">ArcadeCabinatoSM.Special_DMG</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1895,7 +1895,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="358590006204566" type="Function">
                                             <param id="0" name="Name">&quot;HitAlien&quot;</param>
-                                            <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinato.Special_DMG</param>
+                                            <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinatoPM.Special_DMG</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1913,7 +1913,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="657524930528991" type="Function">
                                             <param id="0" name="Name">&quot;HitRobotte&quot;</param>
-                                            <param id="1" name="Parameter {n}">ArcadeCabinato.Special_DMG</param>
+                                            <param id="1" name="Parameter {n}">ArcadeCabinatoPM.Special_DMG</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1946,7 +1946,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="950065289389846" type="Function">
                                     <param id="0" name="Name">&quot;HitAlien&quot;</param>
-                                    <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinato.Special_DMG</param>
+                                    <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinatoDK.Special_DMG</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1971,7 +1971,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="255611915913217" type="Function">
                                     <param id="0" name="Name">&quot;HitRobotte&quot;</param>
-                                    <param id="1" name="Parameter {n}">ArcadeCabinato.Special_DMG</param>
+                                    <param id="1" name="Parameter {n}">ArcadeCabinatoDK.Special_DMG</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2004,7 +2004,7 @@
                                 <action id="-9" name="Destroy" sid="693054574644505" type="Hadouken" />
                                 <action id="0" name="Call function" sid="955326587518113" type="Function">
                                     <param id="0" name="Name">&quot;HitAlien&quot;</param>
-                                    <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinato.Special_DMG</param>
+                                    <param id="1" name="Parameter {n}">ArcadeAlieno.UID{###}ArcadeCabinatoSF.Special_DMG</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2023,7 +2023,7 @@
                                 <action id="-9" name="Destroy" sid="842241436454962" type="Hadouken" />
                                 <action id="0" name="Call function" sid="352747673494573" type="Function">
                                     <param id="0" name="Name">&quot;HitRobotte&quot;</param>
-                                    <param id="1" name="Parameter {n}">ArcadeCabinato.Special_DMG</param>
+                                    <param id="1" name="Parameter {n}">ArcadeCabinatoSF.Special_DMG</param>
                                 </action>
                             </actions>
                         </event-block>

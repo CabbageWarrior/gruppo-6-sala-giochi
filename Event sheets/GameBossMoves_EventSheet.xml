@@ -58,6 +58,9 @@
                         <action id="-2" name="Set Y" sid="654099974947038" type="BossRobotte">
                             <param id="0" name="Y">Self.Y</param>
                         </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="145251659520393" type="BossRobotte">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="190115115416237">
