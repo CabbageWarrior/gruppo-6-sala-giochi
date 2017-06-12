@@ -13,6 +13,7 @@
                 <action id="-20" name="Set layout scale" sid="839169333114632" type="System">
                     <param id="0" name="Scale">1.35</param>
                 </action>
+                <action id="33" name="Stop all" sid="121736534505154" type="Audio" />
                 <action id="0" name="Play" sid="862337029875478" type="Audio">
                     <param id="0" name="Audio file">Bag_Raiders_-_Shooting_Stars_Meme_Song_only_</param>
                     <param id="2" name="Loop">0</param>

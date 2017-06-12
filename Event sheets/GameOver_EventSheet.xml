@@ -9,6 +9,7 @@
                 <condition id="-2" name="On start of layout" sid="866959323883346" type="System" />
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="108421138796138" type="Audio" />
                 <action id="0" name="Spawn another object" sid="783355179634031" type="GameOverP1SpawnPoint">
                     <param id="0" name="Object">GameOverDeathPlayer</param>
                     <param id="1" name="Layer">0</param>

@@ -816,8 +816,14 @@
                             <param id="0" name="Animation">&quot;WakaWaka&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Play" sid="459043333826209" type="Audio">
+                            <param id="0" name="Audio file">waka waka</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;waka waka&quot;</param>
+                        </action>
                         <action behavior="Timer2" id="0" name="Start timer" sid="649114180007083" type="ArcadeCabinatoPM">
-                            <param id="0" name="Duration">7</param>
+                            <param id="0" name="Duration">7.5</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;GodMode&quot;</param>
                         </action>
