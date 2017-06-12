@@ -688,7 +688,7 @@
                         <PlayerHitsCount_Max>3</PlayerHitsCount_Max>
                         <HasHitSomeone>false</HasHitSomeone>
                         <IsStunned>false</IsStunned>
-                        <Special_DMG>7</Special_DMG>
+                        <Special_DMG>15</Special_DMG>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="PinToCollider" />

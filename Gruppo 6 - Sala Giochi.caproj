@@ -4736,6 +4736,8 @@
                 <member>Boss_Bullet</member>
                 <member>BossRobotte</member>
                 <member>Bullet</member>
+                <member>Dk_Barile</member>
+                <member>Hadouken</member>
             </members>
         </family>
         <family name="ArcadeAlieno_AttackCollider" plugin-id="Sprite" sid="333371599522378">

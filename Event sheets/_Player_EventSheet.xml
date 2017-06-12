@@ -153,6 +153,11 @@
                                         </event-group>
                                         <event-block sid="452564615097045">
                                             <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="468861079216268" type="ArcadeCabinato">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                                </condition>
                                                 <condition id="2" inverted="1" name="Is playing" sid="627715235191529" type="ArcadeCabinato">
                                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                                                 </condition>
@@ -417,6 +422,11 @@
                                         </event-group>
                                         <event-block sid="988064648273010">
                                             <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="813282440478046" type="ArcadeCabinato">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">ArcadePlayerCollider.PlayerNumber</param>
+                                                </condition>
                                                 <condition id="2" inverted="1" name="Is playing" sid="145431115674541" type="ArcadeCabinato">
                                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                                                 </condition>
@@ -2286,7 +2296,7 @@
                                         <event-block sid="612498869234306">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="323241217328656" type="System">
-                                                    <param id="0" name="Variable">Human_1_SelectedCharacter</param>
+                                                    <param id="0" name="Variable">Human_2_SelectedCharacter</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">4</param>
                                                 </condition>

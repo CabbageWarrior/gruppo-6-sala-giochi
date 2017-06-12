@@ -892,7 +892,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="799581271747737" type="Function">
                                     <param id="0" name="Name">&quot;HitPlayer&quot;</param>
-                                    <param id="1" name="Parameter {n}">ArcadeCabinato.PlayerNumber{###}BossRobotte.RobotteWaveAttack</param>
+                                    <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}BossRobotte.RobotteWaveAttack</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1072,7 +1072,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="140378116455881" type="Function">
                             <param id="0" name="Name">&quot;HitPlayer&quot;</param>
-                            <param id="1" name="Parameter {n}">ArcadeCabinato.PlayerNumber{###}BossRobotte.RobotteRangedAttack</param>
+                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}BossRobotte.RobotteRangedAttack</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="637864799508085" type="Boss_Bullet">
                             <param id="0" name="Object">Splash</param>
@@ -1149,7 +1149,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="746518524622408" type="Function">
                                             <param id="0" name="Name">&quot;HitPlayer&quot;</param>
-                                            <param id="1" name="Parameter {n}">ArcadeCabinato.PlayerNumber{###}BossRobotte.RobotteMeleeAttack</param>
+                                            <param id="1" name="Parameter {n}">ArcadePlayerCollider.PlayerNumber{###}BossRobotte.RobotteMeleeAttack</param>
                                         </action>
                                     </actions>
                                 </event-block>
