@@ -4781,6 +4781,44 @@
         <object-type name="GameOverText" sid="994285585781751">
             <plugin id="Text" />
         </object-type>
+        <object-type name="IntroMenuBackground" sid="818396504486363">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371047256193338" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\2_Progetti di gruppo\Group 02 - Construct 2\Construct 2 - Sala Giochi\Grafica\menu\menu alien abduscion 1.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\2_Progetti di gruppo\Group 02 - Construct 2\Construct 2 - Sala Giochi\Grafica\menu\menu alien abduscion 2.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\2_Progetti di gruppo\Group 02 - Construct 2\Construct 2 - Sala Giochi\Grafica\menu\menu alien abduscion 3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SMExplosion" sid="837590016646599">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="471426273021325" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="5" loop="0" name="Casting" pingpong="0" repeatcount="1" repeatto="0" sid="757603715245198" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SMExplosionFader" sid="926224207503405">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="908499930141297">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="438048131495236" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -5087,6 +5125,8 @@
         <file name="intense suspense.ogg" />
         <file name="waka waka.m4a" />
         <file name="waka waka.ogg" />
+        <file name="gameover.m4a" />
+        <file name="gameover.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

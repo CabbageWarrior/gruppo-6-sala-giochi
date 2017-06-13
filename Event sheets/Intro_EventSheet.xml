@@ -10,6 +10,9 @@
                 <condition id="-2" name="On start of layout" sid="620034693683060" type="System" />
             </conditions>
             <actions>
+                <action id="6" name="Stop" sid="928914886040261" type="Audio">
+                    <param id="0" name="Tag">&quot;gamefinished&quot;</param>
+                </action>
                 <action id="-9" name="Set value" sid="613441711331347" type="System">
                     <param id="0" name="Variable">CommandType</param>
                     <param id="1" name="Value">-1</param>
@@ -205,6 +208,9 @@
                                 <action id="-3" name="Set position" sid="957436890915572" type="IntroMenuSelected">
                                     <param id="0" name="X">IntroMenuButton.X</param>
                                     <param id="1" name="Y">IntroMenuButton.Y</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="754012920253170" type="IntroMenuBackground">
+                                    <param id="0" name="Frame number">Function.Param(0) - 1</param>
                                 </action>
                             </actions>
                             <sub-events>

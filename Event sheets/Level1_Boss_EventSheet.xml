@@ -19,6 +19,13 @@
                     <param id="0" name="Variable">CommandType</param>
                     <param id="1" name="Value">6</param>
                 </action>
+                <action id="33" name="Stop all" sid="942324526650942" type="Audio" />
+                <action id="0" name="Play" sid="264779686181378" type="Audio">
+                    <param id="0" name="Audio file">boss fight</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;GameBackgroundMusic&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="827251360568319">

@@ -18,6 +18,12 @@
                 <action id="5" name="Set frame" sid="785841999359245" type="GameOverDeathPlayer">
                     <param id="0" name="Frame number">Human_1_SelectedCharacter - 1</param>
                 </action>
+                <action id="0" name="Play" sid="835243546954248" type="Audio">
+                    <param id="0" name="Audio file">gameover</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;gameover&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="214029173415015">

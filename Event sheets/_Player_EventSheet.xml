@@ -956,6 +956,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="900526129790334">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="881209614704826" type="SMExplosion">
+                            <param id="0" name="Animation">&quot;Casting&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="285900380916089" type="SMExplosion">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="755217169858978" title="Player Timers">
@@ -1230,8 +1243,11 @@
                             <param id="0" name="Instance variable">PlayerNumber</param>
                             <param id="1" name="Value">ArcadeCabinato.PlayerNumber</param>
                         </action>
-                        <action id="0" name="Set text" sid="690442279869729" type="DebugText">
-                            <param id="0" name="Text">ArcadeCabinato.PlayerHitsCount &amp; &quot; / &quot; &amp; ArcadeCabinato.PlayerHitsCount_Max</param>
+                        <action id="0" name="Play" sid="329287938113749" type="Audio">
+                            <param id="0" name="Audio file">punch</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;punch&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1848,6 +1864,11 @@
                                     <param id="0" name="Instance variable">IsSpecialStarted</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="464426565428325" type="SMExplosion">
+                                    <param id="0" name="Animation">&quot;Casting&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="764039806562647" type="SMExplosionFader" />
                             </actions>
                             <sub-events>
                                 <event-block sid="362144789169655">
